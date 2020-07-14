@@ -36,6 +36,16 @@ export default new Router({
         name: 'registered',
         component: (resolve) => require(['@/view/login/registered.vue'], resolve)
       }, {
+        // 注册页面
+        path: '/registeredQ',
+        name: 'registeredQ',
+        component: (resolve) => require(['@/view/login/registeredQ.vue'], resolve)
+      }, {
+        // 注册页面
+        path: '/registeredF',
+        name: 'registeredF',
+        component: (resolve) => require(['@/view/login/registeredF.vue'], resolve)
+      }, {
         path: '/login',
         name: 'login',
         component: (resolve) => require(['@/view/login/login.vue'], resolve)

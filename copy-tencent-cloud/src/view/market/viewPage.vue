@@ -28,12 +28,57 @@
         </div>
       </div>
     </div>
+    <div class="market-place-section">
+      <div class="module-section-hd">
+        <span class="text-gradient">0元</span>
+        <span>・免费体验</span>
+      </div>
+      <div class="mp__tryout">
+        <div class="tab">
+          <!-- @tab-click="handleClick" -->
+          <el-tabs v-model="activeName">
+            <el-tab-pane label="小程序"
+                         name="first">
+            </el-tab-pane>
+            <el-tab-pane label="网站建设"
+                         name="second">
+            </el-tab-pane>
+            <el-tab-pane label="企业应用"
+                         name="third"></el-tab-pane>
+            <el-tab-pane label="定时任务补偿"
+                         name="fourth"></el-tab-pane>
+          </el-tabs>
+        </div>
+        <ul class="mp__tryout-list">
+          <li>
+            <div class="product-card-hd">
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p>分销商城小程序</p>
+            <div class="product-card-text">
+              <p class="text-tag-warning">
+
+              </p>
+              <p class="hot-tips">
+                43 人在用
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'viewPage'
+  name: 'viewPage',
+  data () {
+    return {
+      activeName: 'first',
+    }
+  }
 }
 </script>
 
@@ -41,6 +86,29 @@ export default {
 .block {
   width: 100%;
   height: 314px;
+}
+
+.market-place-section {
+  width: 100%;
+  height: 788px;
+  background-color: #f4f5f9;
+  box-sizing: border-box;
+  padding: 0 200px;
+  .module-section-hd {
+    width: 100%;
+    height: 90px;
+    // margin: 20px 0;
+    line-height: 90px;
+    font-size: 30px;
+    color: #383838;
+    .text-gradient {
+      font-size: 30px;
+      color: #f2a056;
+      font-weight: 700;
+      background-image: -webkit-linear-gradient(left, #f2a056, #f16863);
+      -webkit-background-clip: text;
+    }
+  }
 }
 
 .el-carousel__item h3 {

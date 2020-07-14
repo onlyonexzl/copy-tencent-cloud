@@ -33,10 +33,10 @@
           </el-form-item>
           <el-form-item label="手机号"
                         v-if="!seleCtChange"
-                        prop="checkPass">
+                        prop="phe">
             <el-input type="input"
                       placeholder='请输入手机号'
-                      v-model="ruleForm.checkPass"
+                      v-model="ruleForm.phe"
                       autocomplete="off"></el-input>
           </el-form-item>
           <el-form-item label="验证码"
@@ -46,7 +46,7 @@
               <el-input type="input"
                         placeholder='请输入验证码'
                         style="width:60%"
-                        v-model="ruleForm.checkPass"
+                        v-model="ruleForm.getNum"
                         autocomplete="off"></el-input>
               <el-button type="primary"
                          @click="getSeleNum"
@@ -84,7 +84,7 @@ export default {
   data () {
     var validatePass = (rule, value, callback) => {
       if (value === '') {
-        callback(new Error('请输入账号'));
+        callback(new Error('请填写账号'));
       } else {
         if (this.ruleForm.checkPass !== '') {
           this.$refs.ruleForm.validateField('checkPass');
@@ -94,14 +94,29 @@ export default {
     };
     var validatePass2 = (rule, value, callback) => {
       if (value === '') {
-        callback(new Error('请输入密码'));
+        callback(new Error('请填写密码'));
       } else {
         callback();
       }
     }
     var phenum = (rule, value, callback) => {
       if (value === '') {
-        callback(new Error('请输入密码'));
+        callback(new Error('请填写手机号'));
+      } else {
+        var myreg = /^[1][3,4,5,7,8,9][0-9]{9}$/;
+        if (!myreg.test(value)) {
+          callback(new Error('请填写正确的手机号'));
+          return false;
+        } else {
+          callback();
+
+        }
+      }
+    }
+
+    var getNum = (rule, value, callback) => {
+      if (value === '') {
+        callback(new Error('请填写验证码'));
       } else {
         callback();
       }
@@ -110,6 +125,8 @@ export default {
       ruleForm: {
         pass: '',
         checkPass: '',
+        phe: '',
+        getNum: ''
       },
       rules: {
         pass: [
@@ -118,11 +135,11 @@ export default {
         checkPass: [
           { validator: validatePass2, trigger: 'blur' }
         ],
-        pheNum: [
+        phe: [
           { validator: phenum, trigger: 'blur' }
         ],
         getNum: [
-          { validator: validatePass2, trigger: 'blur' }
+          { validator: getNum, trigger: 'blur' }
         ]
       },
       seleCtChange: true,
@@ -136,7 +153,24 @@ export default {
     },
 
     getSeleNum () {
-      // if ()
+      // this.$refs.ruleForm.validate((valid) => {
+      //   if (valid) {
+      var myreg = /^[1][3,4,5,7,8,9][0-9]{9}$/;
+
+      if (!this.ruleForm.phe.length) {
+        this.$message({
+          message: '请填写手机号',
+          type: 'warning'
+        });
+        return
+      }
+      if (!myreg.test(this.ruleForm.phe)) {
+        this.$message({
+          message: '请填写正确的手机号',
+          type: 'warning'
+        });
+        return false;
+      }
       if (!this.thenum) return false
       this.thenum = false
       let time = setInterval(() => {
@@ -147,6 +181,12 @@ export default {
         }
         this.num--
       }, 1000);
+      // } else {
+      //   console.log('error submit!!');
+      //   return false;
+      // }
+      // });
+
 
     },
 
@@ -162,6 +202,7 @@ export default {
     },
 
     changeSelect () {
+      this.$refs.ruleForm.resetFields();
       this.seleCtChange = !this.seleCtChange
     },
 
@@ -174,7 +215,7 @@ export default {
 
 <style lang="scss" scoped>
 .el-divider__text {
-  background: #e3e5f4;
+  background: #f6f6fb;
 }
 .el-divider {
   background: #fff;
@@ -182,7 +223,7 @@ export default {
 .login {
   width: 100%;
   height: 100%;
-  // background: #eeeeee;
+  // background: #f6f6fb;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -210,7 +251,7 @@ export default {
   .main-content {
     width: 454px;
     height: 453px;
-    background: #e3e5f4;
+    background: #f6f6fb;
     border-radius: 5px;
     margin-top: 40px;
     display: flex;

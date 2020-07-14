@@ -22,9 +22,11 @@
         <div class="list">
           <!-- <span class="hoverColor">备案</span> -->
           <span class="hoverColor"
-                @click="registereDteil('q')">企业入驻</span>
-          <span class="hoverColor"
+                :style="{'color': activeQ ? '#00a4ff' : ''}"
                 @click="registereDteil('f')">服务商入驻</span>
+          <span class="hoverColor"
+                :style="{'color': activeF ? '#00a4ff' : ''}"
+                @click="registereDteil('q')">企业入驻</span>
         </div>
         <div class="search">
           美城云
@@ -289,6 +291,9 @@ export default {
       }],
 
       left: 0,
+
+      activeQ: false,
+      activeF: false,
     }
   },
 
@@ -319,12 +324,15 @@ export default {
     },
 
     registereDteil (res) {
-      this.$router.push({
-        path: '/registered',
-        query: {
-          name: res
-        }
-      })
+      if (res === 'f') {
+        this.$router.push({
+          path: '/registeredQ',
+        })
+      } else {
+        this.$router.push({
+          path: '/registeredF',
+        })
+      }
     },
 
     goDetial (e, index) {
@@ -347,7 +355,22 @@ export default {
         this.navIndex = index
       }
     })
-  }
+  },
+
+  watch: {
+    $route (to, from) {
+      if (to.name === 'registeredQ') {
+        this.activeQ = true
+        this.activeF = false
+      } else if (to.name === 'registeredF') {
+        this.activeQ = false
+        this.activeF = true
+      } else {
+        this.activeQ = false
+        this.activeF = false
+      }
+    }
+  },
 }
 
 </script>
