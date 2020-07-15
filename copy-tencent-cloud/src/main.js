@@ -9,6 +9,11 @@ import Loading from './components/loading.js'
 import api from './request/api/index'
 import loading from './components/loading.js';
 
+//引入echart
+import echarts from 'echarts'
+//将echarts引入到vue的原型中
+Vue.prototype.$echarts = echarts
+
 // 挂租公共组建
 Vue.use(Loading)
 

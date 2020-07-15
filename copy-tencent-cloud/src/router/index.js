@@ -70,7 +70,7 @@ export default new Router({
         path: '/homePage',
         name: 'homepage',
         component: (resolve) => require(['@/view/BackgroundManagement/homePage/homePage.vue'], resolve),
-        meta: ['心理管理', '心理健康指导', '详情']
+        // meta: ['心理管理', '心理健康指导', '详情']
       }]
     },
 

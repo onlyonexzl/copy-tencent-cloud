@@ -24,38 +24,54 @@
                      active-text-color="rgb(101, 206, 167)"
                      @close="handleClose"
                      :collapse="isCollapse">
-              <el-menu-item index="0">
-                <i class="el-icon-menu"></i>
-                <span slot="title">首页</span>
-              </el-menu-item>
-              <el-submenu index="1">
+              <el-menu-item index="0"
+                            @click="goRightDetial('one', menu_two)">
                 <template slot="title">
-                  <i class="el-icon-location"></i>
-                  <span slot="title">导航一</span>
+                  <i class="el-icon-menu"></i>
+                  <span slot="title">首页</span>
                 </template>
-                <el-menu-item-group>
-                  <el-menu-item index="1-1">选项1</el-menu-item>
-                  <el-menu-item index="1-2">选项2</el-menu-item>
-                </el-menu-item-group>
-                <el-menu-item index="1-3">选项3</el-menu-item>
-                <el-submenu index="1-4">
-                  <span slot="title">选项4</span>
-                  <el-menu-item index="1-4-1">选项1</el-menu-item>
+              </el-menu-item>
+
+              <!-- 一级菜单 -->
+              <el-submenu v-for="(menu_one, index_one) in menu"
+                          :index="index_one + 1 + ''"
+                          :key="index_one">
+                <template slot="title">
+                  <i :class="menu_one.icon"></i>
+                  <span slot="title">{{menu_one.name}}</span>
+                </template>
+                <!-- 二级菜单  没有子集菜单-->
+                <el-menu-item v-for="(menu_two, index_two) in menu_one.subset"
+                              v-if="!menu_two.actions"
+                              :key="index_two"
+                              @click="goRightDetial('two', menu_two)"
+                              :index="index_one + '-' + index_two">
+                  <template slot="title">
+                    <i :class="menu_two.icon"></i>
+                    <span slot="title">{{menu_two.name}}</span>
+                  </template>
+                </el-menu-item>
+
+                <!-- 二级菜单 有子集-->
+                <el-submenu v-for="(menu_two, index_two) in menu_one.subset"
+                            v-if="menu_two.actions"
+                            :key="index_two"
+                            :index="index_one + '-' + index_two">
+                  <template slot="title">
+                    <i :class="menu_two.icon"></i>
+                    <span slot="title">{{menu_two.name}}</span>
+                  </template>
+                  <el-menu-item v-for="(menu_three, index_three) in menu_two.actions"
+                                :key="index_three"
+                                @click="goRightDetial('three', menu_three)"
+                                :index="index_one + '-' + index_two + '-' + index_three">
+                    <template slot="title">
+                      <i :class="menu_three.icon"></i>
+                      <span slot="title">{{menu_three.name}}</span>
+                    </template>
+                  </el-menu-item>
                 </el-submenu>
               </el-submenu>
-              <el-menu-item index="2">
-                <i class="el-icon-menu"></i>
-                <span slot="title">导航二</span>
-              </el-menu-item>
-              <el-menu-item index="3"
-                            disabled>
-                <i class="el-icon-document"></i>
-                <span slot="title">导航三</span>
-              </el-menu-item>
-              <el-menu-item index="4">
-                <i class="el-icon-setting"></i>
-                <span slot="title">导航四</span>
-              </el-menu-item>
             </el-menu>
           </div>
         </div>
@@ -83,19 +99,18 @@
           </div>
         </el-header>
         <el-main>
-          <div class="main">
-            <div class="item-box">
-              <ul class="box pad">
-                <li v-for="(item, index) in meta"
-                    :key="index">
-                  {{item}}
-                  <i class="el-icon-arrow-right"
-                     v-if="index !== meta.length - 1"></i>
-                </li>
-              </ul>
-            </div>
-            <router-view></router-view>
+          <div class="item-box"
+               v-if="flagtit">
+            <ul class="box pad">
+              <li v-for="(item, index) in meta"
+                  :key="index">
+                {{item}}
+                <i class="el-icon-arrow-right"
+                   v-if="index !== meta.length - 1"></i>
+              </li>
+            </ul>
           </div>
+          <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -103,13 +118,16 @@
 </template>
 
 <script>
+import nav from '../../router/nav'
 export default {
   name: 'page',
   data () {
     return {
       isCollapse: false,
       height: window.innerHeight,
-      meta: []
+      meta: [],
+      flagtit: true,
+      menu: nav
     };
   },
   methods: {
@@ -121,6 +139,16 @@ export default {
       this.isCollapse = false
     },
 
+    goRightDetial (type, item) {
+      switch (type) {
+        case 'one':
+          this.$router.push('/homePage')
+          break;
+        default:
+          break;
+      }
+    },
+
     handleOpen (key, keyPath) {
       console.log(key, keyPath);
     },
@@ -129,22 +157,27 @@ export default {
       console.log(key, keyPath);
     },
 
-    getPath () {
-      console.log(this.$route);
+    // 顶部title显示
+    getTitleBox () {
+      const routerArray = [
+
+      ]
+      this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
         this.meta = this.$route.meta
       }
-    }
+    },
   },
 
   mounted () {
-    this.getPath()
+    console.log(this.menu)
+    this.getTitleBox()
   },
 
   watch: {
     $route: {
       handler: function (val, oldVal) {
-        this.getPath()
+        this.getTitleBox()
       },
       // 深度观察监听
       deep: true
