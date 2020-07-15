@@ -61,6 +61,18 @@ export default new Router({
         component: (resolve) => require(['@/view/market/viewPage.vue'], resolve)
       }]
     },
+    // 后台管理
+    {
+      path: '/pageHome',
+      name: 'pageHome',
+      component: (resolve) => require(['@/view/BackgroundManagement/pageHome.vue'], resolve),
+      children: [{
+        path: '/homePage',
+        name: 'homepage',
+        component: (resolve) => require(['@/view/BackgroundManagement/homePage/homePage.vue'], resolve),
+        meta: ['心理管理', '心理健康指导', '详情']
+      }]
+    },
 
   ]
 })
