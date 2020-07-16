@@ -177,7 +177,9 @@ export default {
       const routerArray = [
         '/provider/list',
         '/product/list',
-        '/product/category/list'
+        '/product/category/list',
+        '/information/list',
+        '/information/type/list'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -189,10 +191,16 @@ export default {
     getTitleName () {
       const routerArray = [
         '/provider/add',
-        '/product/category/edit'
+        '/product/category/edit',
+        '/information/edit',
+        '/information/type/edit'
       ]
+
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false
-      this.titleName = this.$route.meta[0]
+
+      if (this.$route.query.nameType) {
+        this.titleName = this.$route.query.nameType
+      }
     },
 
     goBack () {
@@ -201,7 +209,6 @@ export default {
   },
 
   mounted () {
-    console.log(this.menu)
     this.getTitleBox()
     this.getTitleName()
     if (sessionStorage.getItem('index_menu')) this.index_menu = sessionStorage.getItem('index_menu') + ''
@@ -211,6 +218,7 @@ export default {
     $route: {
       handler: function (val, oldVal) {
         this.getTitleBox()
+        this.getTitleName()
       },
       // 深度观察监听
       deep: true

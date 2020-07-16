@@ -93,40 +93,40 @@ export default {
       });
     },
     initCategoryOptions () {
-      productCategoryService.queryTreeData().then(res => {
-        if (res.data.state === 1) {
-          this.categoryOptions = res.data.data;
-        }
-      }).catch(error => {
-        this.$message.error(error.message);
-      })
+      // productCategoryService.queryTreeData().then(res => {
+      //   if (res.data.state === 1) {
+      //     this.categoryOptions = res.data.data;
+      //   }
+      // }).catch(error => {
+      //   this.$message.error(error.message);
+      // })
     }
   },
   created () {
-    const id = this.$route.query.id;
-    productCategoryService.getById(id).then(res => {
-      if (res.data.state === 1) {
-        const info = res.data.data;
-        return new Promise((resolve, reject) => {
-          productCategoryService.queryTreeData().then(res => {
-            if (res.data.state === 1) {
-              resolve([info, res.data.data]);
-            }
-          }).catch(error => {
-            reject(error.message);
-          })
-        })
-      } else {
-        throw new Error(res.data.msg);
-      }
-    }).then(([info, options]) => {
-      this.categoryOptions = options;
-      this.form = info;
-    }).catch(error => {
-      this.$message.error(error.message);
-    }).finally(() => {
+    // const id = this.$route.query.id;
+    // productCategoryService.getById(id).then(res => {
+    //   if (res.data.state === 1) {
+    //     const info = res.data.data;
+    //     return new Promise((resolve, reject) => {
+    //       productCategoryService.queryTreeData().then(res => {
+    //         if (res.data.state === 1) {
+    //           resolve([info, res.data.data]);
+    //         }
+    //       }).catch(error => {
+    //         reject(error.message);
+    //       })
+    //     })
+    //   } else {
+    //     throw new Error(res.data.msg);
+    //   }
+    // }).then(([info, options]) => {
+    //   this.categoryOptions = options;
+    //   this.form = info;
+    // }).catch(error => {
+    //   this.$message.error(error.message);
+    // }).finally(() => {
 
-    })
+    // })
   }
 }
 </script>

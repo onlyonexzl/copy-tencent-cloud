@@ -81,7 +81,6 @@ export default new Router({
       {
         path: '/provider/add',
         name: 'provider_add',
-        meta: ['新增服务商'],
         component: (resolve) => require(['@/view/BackgroundManagement/provider/add.vue'], resolve)
       }, {
         // 服务商管理
@@ -99,8 +98,29 @@ export default new Router({
       {
         path: '/product/category/edit',
         name: 'provider_add',
-        meta: ['修改产品分类'],
         component: (resolve) => require(['@/view/BackgroundManagement/product/category/edit.vue'], resolve)
+      }, {
+        // 资讯管理
+        path: '/information/list',
+        name: 'information',
+        component: (resolve) => require(['@/view/BackgroundManagement/information/list.vue'], resolve),
+        meta: ['资讯管理', '资讯列表']
+      }, {
+        path: '/information/edit',
+        name: 'information',
+        meta: ['商品管理', '产品分类列表'],
+        component: (resolve) => require(['@/view/BackgroundManagement/information/edit.vue'], resolve)
+      },
+      {
+        path: '/information/type/list',
+        name: 'information',
+        meta: ['资讯管理', '资讯类型列表'],
+        component: (resolve) => require(['@/view/BackgroundManagement/information/type/list.vue'], resolve)
+      },
+      {
+        path: '/information/type/edit',
+        name: 'information',
+        component: (resolve) => require(['@/view/BackgroundManagement/information/type/edit.vue'], resolve)
       }]
     },
 

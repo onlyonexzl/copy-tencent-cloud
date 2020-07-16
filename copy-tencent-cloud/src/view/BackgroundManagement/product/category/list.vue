@@ -5,7 +5,7 @@
                  type="primary"
                  icon="el-icon-plus"
                  style="width: 70px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;margin: 10px 0 10px 10px;"
-                 @click="sesarchFun()">
+                 @click="add()">
         新增
       </el-button>
       <div class="flex">
@@ -22,15 +22,18 @@
               {{scope.$index+1}}
             </template>
           </el-table-column>
-          <el-table-column prop="date"
+          <el-table-column show-overflow-tooltip
+                           prop="date"
                            label="分类名称"
                            width="180">
           </el-table-column>
-          <el-table-column prop="name"
+          <el-table-column show-overflow-tooltip
+                           prop="name"
                            label="备注"
                            width="180">
           </el-table-column>
-          <el-table-column prop="address"
+          <el-table-column show-overflow-tooltip
+                           prop="address"
                            label="创建时间">
           </el-table-column>
           <el-table-column show-overflow-tooltip
@@ -139,8 +142,11 @@ export default {
   },
 
   methods: {
+    add () {
+      this.$router.push('/product/category/edit?nameType=新增资讯类型')
+    },
     editor () {
-      this.$router.push('/product/category/edit')
+      this.$router.push('/product/category/edit?nameType=修改资讯类型')
     },
     // 分页
     handleCurrentChangeFun (val) {

@@ -2,8 +2,8 @@
   <div class="provider">
     <div class="top_button">
       <div class="top_left">
-        <span>名称</span>
-        <el-input placeholder="服务商名称"
+        <span>类型名称</span>
+        <el-input placeholder="类型名称"
                   v-model="sName"
                   style="width: 200px"
                   clearable>
@@ -48,22 +48,18 @@
               {{scope.$index+1}}
             </template>
           </el-table-column>
-          <el-table-column show-overflow-tooltip
-                           prop="date"
-                           label="QQ"
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="类型名称"
                            width="180">
           </el-table-column>
-          <el-table-column show-overflow-tooltip
-                           prop="name"
-                           label="手机号"
+          <el-table-column prop="name"
+                           show-overflow-tooltip
+                           label="备注"
                            width="180">
           </el-table-column>
-          <el-table-column show-overflow-tooltip
-                           prop="address"
-                           label="邮箱">
-          </el-table-column>
-          <el-table-column show-overflow-tooltip
-                           prop="address"
+          <el-table-column prop="address"
+                           show-overflow-tooltip
                            label="创建时间">
           </el-table-column>
           <el-table-column show-overflow-tooltip
@@ -136,11 +132,11 @@ export default {
 
   methods: {
     add () {
-      this.$router.push('/provider/add?nameType=新建服务商')
+      this.$router.push('/information/type/edit?nameType=新建资讯类型')
 
     },
     editor () {
-      this.$router.push('/provider/add?nameType=修改服务商')
+      this.$router.push('/information/type/edit?nameType=修改资讯类型')
     },
     // 分页
     handleCurrentChangeFun (val) {
