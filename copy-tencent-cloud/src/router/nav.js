@@ -321,22 +321,22 @@ let navArr = [
     subset: [
       {
         id: 'ADMIN_LIST',
-        name: "账号列表",
+        name: "管理员列表",
         icon: "el-icon-user",
         url: "/admin/list",
         menu: true,
-        actions: [
-          {
-            name: "新增账号",
-            url: "/admin/add",
-            parent: '/admin/list'
-          },
-          {
-            name: "修改账号",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: "新增账号",
+        //     url: "/admin/add",
+        //     parent: '/admin/list'
+        //   },
+        //   {
+        //     name: "修改账号",
+        //     url: "/admin/edit",
+        //     parent: '/admin/list'
+        //   }
+        // ]
       },
       {
         id: 'ROLE_LIST',
@@ -344,23 +344,23 @@ let navArr = [
         icon: "el-icon-edit",
         url: "/role/list",
         menu: true,
-        actions: [
-          {
-            name: "新增角色",
-            url: "/role/add",
-            parent: '/role/list'
-          },
-          {
-            name: "修改角色",
-            url: "/role/edit",
-            parent: '/role/list'
-          },
-          {
-            name: "菜单功能权限",
-            url: "/role/menus",
-            parent: '/role/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: "新增角色",
+        //     url: "/role/add",
+        //     parent: '/role/list'
+        //   },
+        //   {
+        //     name: "修改角色",
+        //     url: "/role/edit",
+        //     parent: '/role/list'
+        //   },
+        //   {
+        //     name: "菜单功能权限",
+        //     url: "/role/menus",
+        //     parent: '/role/list'
+        //   }
+        // ]
       },
       {
         id: 'MENU_LIST',
@@ -368,18 +368,18 @@ let navArr = [
         icon: "el-icon-edit",
         url: "/menu/list",
         menu: true,
-        actions: [
-          {
-            name: "新增菜单",
-            url: "/menu/add",
-            parent: '/menu/list'
-          },
-          {
-            name: "修改菜单",
-            url: "/menu/edit",
-            parent: '/menu/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: "新增菜单",
+        //     url: "/menu/add",
+        //     parent: '/menu/list'
+        //   },
+        //   {
+        //     name: "修改菜单",
+        //     url: "/menu/edit",
+        //     parent: '/menu/list'
+        //   }
+        // ]
       }
 
     ]

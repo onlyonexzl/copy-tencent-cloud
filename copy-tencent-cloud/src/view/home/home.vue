@@ -35,7 +35,8 @@
         </div>
         <div class="list">
           <!-- <span class="hoverColor">备案</span> -->
-          <span class="hoverColor">控制台</span>
+          <span class="hoverColor"
+                @click="goHomePage">控制台</span>
         </div>
       </div>
     </div>
@@ -298,6 +299,9 @@ export default {
   },
 
   methods: {
+    goHomePage () {
+      this.$router.push('/homepage')
+    },
     mouseOver (e) {
       let name = e.srcElement.className
       if (name !== 'hoverColor') return false

@@ -6,10 +6,13 @@
              :style="{'height': + height + 'px'}">
           <div class="tit">
             <div class="item">
-              <img src="../../assets/img/favicon1.png"
-                   @click="right"
-                   alt="">
-              <span v-if="!isCollapse">美城云</span>
+              <div>
+                <img src="../../assets/img/favicon.png"
+                     @click="right"
+                     alt="">
+              </div>
+              <span v-if="!isCollapse"
+                    @click="geColund">服务商管理后台</span>
             </div>
             <i class="el-icon-s-fold"
                v-if="!isCollapse"
@@ -149,6 +152,10 @@ export default {
       this.isCollapse = true
     },
 
+    geColund () {
+      this.$router.push('/home/product')
+    },
+
     right () {
       this.isCollapse = false
     },
@@ -186,7 +193,13 @@ export default {
         '/driver/list',
         '/driverAttribute/list',
         '/pointAttribute/list',
-        '/driverInfo/list'
+        '/driverInfo/list',
+        '/profile/list',
+        '/point/list',
+        '/pointInfo/list',
+        '/admin/list',
+        '/role/list',
+        '/menu/list'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -206,7 +219,14 @@ export default {
         '/driver/edit',
         '/driverAttribute/edit',
         '/pointAttribute/edit',
-        '/driverInfo/edit'
+        '/driverInfo/edit',
+        '/profile/edit',
+        '/point/edit',
+        '/pointInfo/edit',
+        '/admin/edit',
+        '/role/edit',
+        '/role/menus',
+        '/menu/edit'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false
@@ -364,10 +384,17 @@ export default {
     box-sizing: border-box;
     padding: 0 10px;
     .item {
+      // width: 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: #fff;
+      > div {
+        width: 30px;
+        > img {
+          width: 100%;
+        }
+      }
     }
   }
   // .el-menu,

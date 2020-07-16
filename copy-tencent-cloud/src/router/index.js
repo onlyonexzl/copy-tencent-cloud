@@ -192,6 +192,88 @@ export default new Router({
         path: '/pointAttribute/edit',
         name: 'pointAttribute',
         component: (resolve) => require(['@/view/BackgroundManagement/pointAttribute/edit.vue'], resolve),
+      }, {
+        //  模板列表
+        path: '/profile/list',
+        name: 'profile',
+        component: (resolve) => require(['@/view/BackgroundManagement/profile/list.vue'], resolve),
+        meta: ['物联网管理', '模板列表']
+      }, {
+        //模板列表编辑
+        path: '/profile/edit',
+        name: 'profile',
+        component: (resolve) => require(['@/view/BackgroundManagement/profile/edit.vue'], resolve),
+      }, {
+        //  位号列表
+        path: '/point/list',
+        name: 'point',
+        component: (resolve) => require(['@/view/BackgroundManagement/point/list.vue'], resolve),
+        meta: ['物联网管理', '位号列表']
+      }, {
+        //位号列表编辑
+        path: '/point/edit',
+        name: 'point',
+        component: (resolve) => require(['@/view/BackgroundManagement/point/edit.vue'], resolve),
+      }, {
+        //  位号配置列表
+        path: '/pointInfo/list',
+        name: 'pointInfo',
+        component: (resolve) => require(['@/view/BackgroundManagement/pointInfo/list.vue'], resolve),
+        meta: ['物联网管理', '位号配置列表']
+      }, {
+        //位号配置列表编辑
+        path: '/pointInfo/edit',
+        name: 'pointInfo',
+        component: (resolve) => require(['@/view/BackgroundManagement/pointInfo/edit.vue'], resolve),
+      }, {
+
+        //  管理员列表
+        path: '/admin/list',
+        name: 'admin',
+        component: (resolve) => require(['@/view/BackgroundManagement/admin/list.vue'], resolve),
+        meta: ['系统管理', '管理员列表']
+      }, {
+        //管理员列表编辑
+        path: '/admin/edit',
+        name: 'admin',
+        component: (resolve) => require(['@/view/BackgroundManagement/admin/edit.vue'], resolve),
+      }, {
+        //  角色列表
+        path: '/role/list',
+        name: 'role',
+        component: (resolve) => require(['@/view/BackgroundManagement/role/list.vue'], resolve),
+        meta: ['系统管理', '角色列表']
+      }, {
+        //角色列表编辑
+        path: '/role/edit',
+        name: 'role',
+        component: (resolve) => require(['@/view/BackgroundManagement/role/edit.vue'], resolve),
+      }, {
+        //授权角色
+        path: '/role/menus',
+        name: 'role',
+        component: (resolve) => require(['@/view/BackgroundManagement/role/menus.vue'], resolve),
+      }, {
+        //角色列表编辑
+        path: '/role/edit',
+        name: 'role',
+        component: (resolve) => require(['@/view/BackgroundManagement/role/edit.vue'], resolve),
+      }, {
+        //授权角色
+        path: '/role/menus',
+        name: 'role',
+        component: (resolve) => require(['@/view/BackgroundManagement/role/menus.vue'], resolve),
+      }, {
+        // 菜单列表
+        path: '/menu/edit',
+        name: 'menu',
+        component: (resolve) => require(['@/view/BackgroundManagement/menu/edit.vue'], resolve),
+      }, {
+        //菜单列表
+        path: '/menu/list',
+        name: 'menu',
+        component: (resolve) => require(['@/view/BackgroundManagement/menu/list.vue'], resolve),
+        meta: ['系统管理', '菜单列表']
       }]
 
     },
