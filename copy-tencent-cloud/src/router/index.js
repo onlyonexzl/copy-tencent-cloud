@@ -116,11 +116,15 @@ export default new Router({
         name: 'information',
         meta: ['资讯管理', '资讯类型列表'],
         component: (resolve) => require(['@/view/BackgroundManagement/information/type/list.vue'], resolve)
-      },
-      {
+      }, {
         path: '/information/type/edit',
         name: 'information',
         component: (resolve) => require(['@/view/BackgroundManagement/information/type/edit.vue'], resolve)
+      }, {
+        // 地图
+        path: '/report/main',
+        name: 'report',
+        component: (resolve) => require(['@/view/BackgroundManagement/report/main.vue'], resolve)
       }]
     },
 

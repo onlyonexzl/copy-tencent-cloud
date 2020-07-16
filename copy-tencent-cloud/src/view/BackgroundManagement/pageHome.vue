@@ -21,6 +21,7 @@
                      @open="handleOpen"
                      background-color="#424f63"
                      text-color="#fff"
+                     :unique-opened='true'
                      active-text-color="rgb(101, 206, 167)"
                      @close="handleClose"
                      :collapse="isCollapse">

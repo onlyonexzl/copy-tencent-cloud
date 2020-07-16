@@ -142,18 +142,18 @@ let navArr = [
         icon: 'el-icon-link',
         url: '/group/list',
         menu: true,
-        actions: [
-          {
-            name: '新增分组',
-            url: '/group/add',
-            parent: '/group/list'
-          },
-          {
-            name: '修改分组',
-            url: '/group/edit',
-            parent: '/group/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增分组',
+        //     url: '/group/add',
+        //     parent: '/group/list'
+        //   },
+        //   {
+        //     name: '修改分组',
+        //     url: '/group/edit',
+        //     parent: '/group/list'
+        //   }
+        // ]
       },
       {
         id: 'DEVICE_LIST',
@@ -161,18 +161,18 @@ let navArr = [
         icon: 'el-icon-link',
         url: '/device/list',
         menu: true,
-        actions: [
-          {
-            name: '新增设备',
-            url: '/device/add',
-            parent: '/device/list'
-          },
-          {
-            name: '修改设备',
-            url: '/device/edit',
-            parent: '/device/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增设备',
+        //     url: '/device/add',
+        //     parent: '/device/list'
+        //   },
+        //   {
+        //     name: '修改设备',
+        //     url: '/device/edit',
+        //     parent: '/device/list'
+        //   }
+        // ]
       },
       {
         id: 'DRIVER_LIST',
@@ -180,18 +180,18 @@ let navArr = [
         icon: 'el-icon-link',
         url: '/driver/list',
         menu: true,
-        actions: [
-          {
-            name: '新增驱动',
-            url: '/driver/add',
-            parent: '/driver/list'
-          },
-          {
-            name: '修改驱动',
-            url: '/driver/edit',
-            parent: '/driver/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增驱动',
+        //     url: '/driver/add',
+        //     parent: '/driver/list'
+        //   },
+        //   {
+        //     name: '修改驱动',
+        //     url: '/driver/edit',
+        //     parent: '/driver/list'
+        //   }
+        // ]
       },
 
       {
@@ -200,18 +200,18 @@ let navArr = [
         icon: 'el-icon-link',
         url: '/driverAttribute/list',
         menu: true,
-        actions: [
-          {
-            name: '新增驱动属性',
-            url: '/driverAttribute/add',
-            parent: '/driverAttribute/list'
-          },
-          {
-            name: '修改驱动属性',
-            url: '/driverAttribute/edit',
-            parent: '/driverAttribute/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增驱动属性',
+        //     url: '/driverAttribute/add',
+        //     parent: '/driverAttribute/list'
+        //   },
+        //   {
+        //     name: '修改驱动属性',
+        //     url: '/driverAttribute/edit',
+        //     parent: '/driverAttribute/list'
+        //   }
+        // ]
       },
       {
         id: 'DRIVER_INFO_LIST',
@@ -219,18 +219,18 @@ let navArr = [
         icon: 'el-icon-link',
         url: '/driverInfo/list',
         menu: true,
-        actions: [
-          {
-            name: '新增驱动配置',
-            url: '/driverInfo/add',
-            parent: '/driverInfo/list'
-          },
-          {
-            name: '修改驱动配置',
-            url: '/driverInfo/edit',
-            parent: '/driverInfo/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增驱动配置',
+        //     url: '/driverInfo/add',
+        //     parent: '/driverInfo/list'
+        //   },
+        //   {
+        //     name: '修改驱动配置',
+        //     url: '/driverInfo/edit',
+        //     parent: '/driverInfo/list'
+        //   }
+        // ]
       },
 
       {
@@ -239,18 +239,18 @@ let navArr = [
         icon: 'el-icon-link',
         url: '/pointAttribute/list',
         menu: true,
-        actions: [
-          {
-            name: '新增位号属性',
-            url: '/pointAttribute/add',
-            parent: '/pointAttribute/list'
-          },
-          {
-            name: '修改位号属性',
-            url: '/pointAttribute/edit',
-            parent: '/pointAttribute/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增位号属性',
+        //     url: '/pointAttribute/add',
+        //     parent: '/pointAttribute/list'
+        //   },
+        //   {
+        //     name: '修改位号属性',
+        //     url: '/pointAttribute/edit',
+        //     parent: '/pointAttribute/list'
+        //   }
+        // ]
       },
 
       {
@@ -259,18 +259,18 @@ let navArr = [
         icon: 'el-icon-link',
         url: '/profile/list',
         menu: true,
-        actions: [
-          {
-            name: '新增模板',
-            url: '/profile/add',
-            parent: '/profile/list'
-          },
-          {
-            name: '修改模板',
-            url: '/profile/edit',
-            parent: '/profile/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增模板',
+        //     url: '/profile/add',
+        //     parent: '/profile/list'
+        //   },
+        //   {
+        //     name: '修改模板',
+        //     url: '/profile/edit',
+        //     parent: '/profile/list'
+        //   }
+        // ]
       },
 
       {
@@ -279,18 +279,18 @@ let navArr = [
         icon: 'el-icon-link',
         url: '/point/list',
         menu: true,
-        actions: [
-          {
-            name: '新增位号',
-            url: '/point/add',
-            parent: '/point/list'
-          },
-          {
-            name: '修改位号',
-            url: '/point/edit',
-            parent: '/point/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增位号',
+        //     url: '/point/add',
+        //     parent: '/point/list'
+        //   },
+        //   {
+        //     name: '修改位号',
+        //     url: '/point/edit',
+        //     parent: '/point/list'
+        //   }
+        // ]
       },
 
       {
@@ -299,18 +299,18 @@ let navArr = [
         icon: 'el-icon-link',
         url: '/pointInfo/list',
         menu: true,
-        actions: [
-          {
-            name: '新增位号配置',
-            url: '/pointInfo/add',
-            parent: '/pointInfo/list'
-          },
-          {
-            name: '修改位号配置',
-            url: '/pointInfo/edit',
-            parent: '/pointInfo/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增位号配置',
+        //     url: '/pointInfo/add',
+        //     parent: '/pointInfo/list'
+        //   },
+        //   {
+        //     name: '修改位号配置',
+        //     url: '/pointInfo/edit',
+        //     parent: '/pointInfo/list'
+        //   }
+        // ]
       },
     ]
   },
