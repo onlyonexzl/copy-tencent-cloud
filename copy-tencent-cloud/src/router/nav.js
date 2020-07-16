@@ -13,32 +13,32 @@ let navArr = [
       }
     ]
   },
-  {
-    id: 'COMPANY',
-    name: '企业户管理',
-    icon: 'el-icon-box',
-    subset: [
-      {
-        id: 'PROVIDER_LIST',
-        name: '企业户列表',
-        icon: 'el-icon-menu',
-        url: '/company/list',
-        menu: true,
-        actions: [
-          {
-            name: '新增企业户',
-            url: '/company/add',
-            parent: '/company/list'
-          },
-          {
-            name: '修改企业户',
-            url: '/company/edit',
-            parent: '/company/list'
-          }
-        ]
-      }
-    ]
-  },
+  // {
+  //   id: 'COMPANY',
+  //   name: '企业户管理',
+  //   icon: 'el-icon-box',
+  //   subset: [
+  //     {
+  //       id: 'PROVIDER_LIST',
+  //       name: '企业户列表',
+  //       icon: 'el-icon-menu',
+  //       url: '/company/list',
+  //       menu: true,
+  //       actions: [
+  //         {
+  //           name: '新增企业户',
+  //           url: '/company/add',
+  //           parent: '/company/list'
+  //         },
+  //         {
+  //           name: '修改企业户',
+  //           url: '/company/edit',
+  //           parent: '/company/list'
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // },
   {
     id: 'PRODUCT',
     name: '商品管理',
@@ -52,24 +52,31 @@ let navArr = [
         menu: true
       },
       {
-        id: 'PRODUCT_CATEGORY_LIST',
+        id: 'PRODUCT_LIST',
         name: '产品分类列表',
         icon: 'el-icon-menu',
         url: '/product/category/list',
-        menu: true,
-        actions: [
-          {
-            name: '新增产品分类',
-            url: '/product/category/add',
-            parent: '/product/category/list'
-          },
-          {
-            name: '修改产品分类',
-            url: '/product/category/edit',
-            parent: '/product/category/list'
-          }
-        ]
-      }
+        menu: true
+      },
+      // {
+      //   id: 'PRODUCT_CATEGORY_LIST',
+      //   name: '产品分类列表',
+      //   icon: 'el-icon-menu',
+      //   url: '/product/category/list',
+      //   menu: true,
+      //   actions: [
+      //     {
+      //       name: '新增产品分类',
+      //       url: '/product/category/add',
+      //       parent: '/product/category/list'
+      //     },
+      //     {
+      //       name: '修改产品分类',
+      //       url: '/product/category/edit',
+      //       parent: '/product/category/list'
+      //     }
+      //   ]
+      // }
     ]
   },
   {
@@ -83,18 +90,18 @@ let navArr = [
         icon: 'el-icon-menu',
         url: '/information/list',
         menu: true,
-        actions: [
-          {
-            name: '新增资讯',
-            url: '/information/add',
-            parent: '/information/list'
-          },
-          {
-            name: '修改资讯',
-            url: '/information/edit',
-            parent: '/information/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增资讯',
+        //     url: '/information/add',
+        //     parent: '/information/list'
+        //   },
+        //   {
+        //     name: '修改资讯',
+        //     url: '/information/edit',
+        //     parent: '/information/list'
+        //   }
+        // ]
       },
       {
         id: 'INFORMATION_TYPE_LIST',
@@ -102,18 +109,18 @@ let navArr = [
         icon: 'el-icon-menu',
         url: '/information/type/list',
         menu: true,
-        actions: [
-          {
-            name: '新增资讯类型',
-            url: '/information/type/add',
-            parent: '/information/type/list'
-          },
-          {
-            name: '修改资讯类型',
-            url: '/information/type/edit',
-            parent: '/information/type/list'
-          }
-        ]
+        // actions: [
+        //   {
+        //     name: '新增资讯类型',
+        //     url: '/information/type/add',
+        //     parent: '/information/type/list'
+        //   },
+        //   {
+        //     name: '修改资讯类型',
+        //     url: '/information/type/edit',
+        //     parent: '/information/type/list'
+        //   }
+        // ]
       }
     ]
   },

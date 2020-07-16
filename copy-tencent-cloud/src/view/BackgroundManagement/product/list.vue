@@ -3,7 +3,7 @@
     <div class="top_button">
       <div class="top_left">
         <span>名称</span>
-        <el-input placeholder="服务商名称"
+        <el-input placeholder="商品名称"
                   v-model="sName"
                   style="width: 200px"
                   clearable>
@@ -28,13 +28,6 @@
       </div>
     </div>
     <div class="table_bottom">
-      <el-button slot="append"
-                 type="primary"
-                 icon="el-icon-plus"
-                 style="width: 70px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;margin: 10px 0 10px 10px;"
-                 @click="sesarchFun()">
-        新增
-      </el-button>
       <div class="flex">
         <el-table :data="tableData"
                   stripe
@@ -49,35 +42,21 @@
             </template>
           </el-table-column>
           <el-table-column prop="date"
-                           label="QQ"
+                           label="商品名称"
                            width="180">
           </el-table-column>
           <el-table-column prop="name"
-                           label="手机号"
+                           label="所属分类"
                            width="180">
           </el-table-column>
           <el-table-column prop="address"
-                           label="邮箱">
+                           label="价格">
           </el-table-column>
           <el-table-column prop="address"
-                           label="创建时间">
+                           label="服务商">
           </el-table-column>
-          <el-table-column show-overflow-tooltip
-                           label="操作"
-                           width="150"
-                           min-width="60">
-            <template slot-scope="scope">
-              <div>
-                <el-button size="medium"
-                           type="text"
-                           class="yellowColor right20"
-                           @click="editor(scope.$index, scope.row)">编辑</el-button>
-                <el-button size="medium"
-                           type="text"
-                           class="redColor"
-                           @click="checkTrackQueryFun(scope.$index, scope.row)">删除</el-button>
-              </div>
-            </template>
+          <el-table-column prop="name"
+                           label="创建时间">
           </el-table-column>
         </el-table>
         <div class="btootm_paination">

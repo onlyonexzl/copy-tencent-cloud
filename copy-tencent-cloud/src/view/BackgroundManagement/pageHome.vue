@@ -175,7 +175,9 @@ export default {
     // 顶部title显示
     getTitleBox () {
       const routerArray = [
-        '/provider/list'
+        '/provider/list',
+        '/product/list',
+        '/product/category/list'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -186,7 +188,8 @@ export default {
     // 顶部t返回显示
     getTitleName () {
       const routerArray = [
-        '/provider/add'
+        '/provider/add',
+        '/product/category/edit'
       ]
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false
       this.titleName = this.$route.meta[0]
@@ -242,6 +245,7 @@ export default {
   align-items: center;
   box-sizing: border-box;
   padding-left: 10px;
+  margin-bottom: 10px;
   > p {
     margin: 0 10px;
   }

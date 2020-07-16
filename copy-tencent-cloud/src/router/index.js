@@ -72,6 +72,7 @@ export default new Router({
         component: (resolve) => require(['@/view/BackgroundManagement/homePage/homePage.vue'], resolve),
         // meta: ['心理管理', '心理健康指导', '详情']
       }, {
+        // 服务商管理
         path: '/provider/list',
         name: 'provider',
         component: (resolve) => require(['@/view/BackgroundManagement/provider/list.vue'], resolve),
@@ -82,6 +83,24 @@ export default new Router({
         name: 'provider_add',
         meta: ['新增服务商'],
         component: (resolve) => require(['@/view/BackgroundManagement/provider/add.vue'], resolve)
+      }, {
+        // 服务商管理
+        path: '/product/list',
+        name: 'provider',
+        component: (resolve) => require(['@/view/BackgroundManagement/product/list.vue'], resolve),
+        meta: ['商品管理', '产品列表']
+      },
+      {
+        path: '/product/category/list',
+        name: 'provider_add',
+        meta: ['商品管理', '产品分类列表'],
+        component: (resolve) => require(['@/view/BackgroundManagement/product/category/list.vue'], resolve)
+      },
+      {
+        path: '/product/category/edit',
+        name: 'provider_add',
+        meta: ['修改产品分类'],
+        component: (resolve) => require(['@/view/BackgroundManagement/product/category/edit.vue'], resolve)
       }]
     },
 
