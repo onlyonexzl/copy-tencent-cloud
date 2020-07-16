@@ -39,20 +39,48 @@
       </ul>
     </div>
     <div class="pri_con">
-      <div class="con_left">
+      <div
+        :class="fixed ? 'fixed con_left' : 'con_left'"
+        :style="absolu ? 'position: absolute;bottom: 0 ; ' : ''"
+      >
         <h4>产品类别</h4>
+        <div class="navigation">
+          <div v-for="(item, index) in cantData" :key="index" class="section">
+            <h3 @click="cate_scroll(index)">
+              <i class="el-icon-platform-eleme"></i>
+              {{ item.name }}
+            </h3>
+            <ul v-show="item.type">
+              <li
+                v-for="(itm, idx) in item.data"
+                :key="idx"
+                @click="scrollGn(itm.cid)"
+              >
+                {{ itm.cname }}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="con_right">
-        <div class="right_ront">
-          <h4>计算</h4>
-          <ul class="ront_con">
-            <li><span>对象存储</span></li>
-            <li><span>文件存储</span></li>
-            <li><span>归档存储</span></li>
-            <li><span>云 HDFS</span></li>
-            <li><span>存储网关</span></li>
-            <li><span>云硬盘</span></li>
-          </ul>
+      <div :class="fixed || absolu ? 'right_fixed con_right' : 'con_right'">
+        <div
+          v-for="(item, index) in cantData"
+          :key="index"
+          :class="'inte' + item.id"
+        >
+          <div
+            class="right_ront"
+            v-for="(itm, idx) in item.data"
+            :key="idx"
+            :class="'ront' + itm.cid"
+          >
+            <h4>{{ itm.cname }}</h4>
+            <ul class="ront_con">
+              <li v-for="(im, ix) in itm.data" :key="ix">
+                <span>{{ im.kname }}</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -60,6 +88,7 @@
 </template>
 
 <script>
+import jsonData from "./data";
 export default {
   name: "price",
   data() {
@@ -96,20 +125,70 @@ export default {
           con: "腾讯云基本概念速查"
         }
       ],
-      coverTop: false
+      cantData: jsonData.data,
+      coverTop: false,
+      fixed: "",
+      absolu: false,
+      dataHeig: []
     };
   },
   mounted() {
-    this.getScrollTop();
+    this.dataHeight();
     window.onscroll = () => {
       this.getScrollTop();
-      // var height=getClientHeight();
-      // var theight = this.getScrollTop();
     };
   },
   methods: {
-    //取窗口滚动条高度
+    // 获取右侧数据高度
+    dataHeight() {
+      this.dataHeig = [];
+      this.cantData.forEach((item, index) => {
+        var getElement = document.getElementsByClassName("inte" + item.id);
+        var height =
+          getElement[0].offsetTop + getElement[0].offsetParent.offsetTop - 100;
+        this.dataHeig.push(height);
+      });
+      console.log(this.dataHeig);
+    },
 
+    // 点击左侧导航定位页面
+    scrollGn(id) {
+      var str = "ront" + id;
+      var getElement = document.getElementsByClassName(str);
+      const currentY =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      const targetY =
+        getElement[0].offsetTop + getElement[0].offsetParent.offsetTop - 80;
+      this.scrollAnimation(currentY, targetY);
+    },
+
+    // 页面定位 滚动动画
+    scrollAnimation(currentY, targetY) {
+      let needScrollTop = targetY - currentY;
+      let _currentY = currentY;
+      setTimeout(() => {
+        const dist = Math.ceil(needScrollTop / 10);
+        _currentY += dist;
+        window.scrollTo(_currentY, currentY);
+        if (needScrollTop > 10 || needScrollTop < -10) {
+          this.scrollAnimation(_currentY, targetY);
+        } else {
+          window.scrollTo(_currentY, targetY);
+        }
+      }, 1);
+    },
+
+    // 左侧点击 展开
+    cate_scroll(index) {
+      this.cantData.forEach((item, idx) => {
+        item.type = false;
+        if (idx == index) {
+          item.type = true;
+        }
+      });
+    },
+
+    // 取窗口滚动条高度
     getScrollTop() {
       var scrollTop = 0;
       if (document.documentElement && document.documentElement.scrollTop) {
@@ -117,11 +196,36 @@ export default {
       } else if (document.body) {
         scrollTop = document.body.scrollTop;
       }
+      var footer = document.getElementsByClassName("footer");
+      var conLeft = document.getElementsByClassName("con_left");
+      console.log(conLeft[0].offsetHeight);
+      var num = footer[0].offsetTop - scrollTop;
+      // 浮顶展示
       if (scrollTop > 390) {
         this.coverTop = true;
+        this.fixed = true;
       } else {
         this.coverTop = false;
+        this.fixed = false;
       }
+      // 左侧导航 定位
+      // conLeft[0].offsetHeight > num
+      if (num < 700) {
+        this.absolu = true;
+        this.fixed = false;
+      } else {
+        this.absolu = false;
+      }
+
+      // if (scrollTop > this.dataHeig[this.dataHeig.length - 1]) {
+      //   this.cate_scroll(this.dataHeig.length - 1);
+      // } else {
+      //   for (var i = 0; i < this.dataHeig.length; i++) {
+      //     if (scrollTop > this.dataHeig[i] < this.dataHeig[i + 1]) {
+      //       this.cate_scroll(i);
+      //     }
+      //   }
+      // }
     }
   }
 };
@@ -133,6 +237,7 @@ export default {
   height: 100%;
 
   .floating_cover {
+    z-index: 9;
     width: 100%;
     height: 70px;
     background: #f5f7fa;
@@ -237,6 +342,7 @@ export default {
     }
 
     .addition-list {
+      z-index: 1;
       position: absolute;
       left: 50%;
       margin-left: -50%;
@@ -306,19 +412,105 @@ export default {
     }
   }
 
+  .fixed {
+    position: fixed;
+    top: 100px;
+    // left: 200px;
+    bottom: 30px;
+  }
+  .absolues {
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+  }
+  .right_fixed {
+    width: calc(100% - 220px);
+    margin-left: 220px;
+  }
+
   .pri_con {
     width: 100%;
-    min-height: 100px;
+    min-height: 500px;
     background: #fff;
     padding: 0 200px;
     box-sizing: border-box;
     display: flex;
     padding-top: 100px;
+    position: relative;
+    margin-bottom: 60px;
     .con_left {
       width: 220px;
+      // height: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: column;
+      h4 {
+        font-size: 18px;
+        color: #000;
+        line-height: 28px;
+        font-weight: 400;
+      }
+      .navigation {
+        overflow-y: auto;
+        max-height: 500px;
+        margin-top: 12px;
+        .section {
+          margin-bottom: 10px;
+          h3 {
+            font-size: 14px;
+            color: #000;
+            line-height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            word-wrap: break-word;
+            font-weight: 500;
+            i {
+              color: #00a4ff;
+              font-size: 16px;
+            }
+            &:hover {
+              color: #00a4ff;
+              cursor: pointer;
+            }
+          }
+          ul {
+            position: relative;
+            li {
+              padding-left: 18px;
+              margin-bottom: 4px;
+              line-height: 24px;
+              font-size: 14px;
+              color: #666;
+              display: block;
+              padding-right: 18px;
+              word-wrap: break-word;
+              font-weight: 400;
+              &:hover {
+                color: #00a4ff;
+                cursor: pointer;
+              }
+            }
+            :after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              width: 2px;
+              background-color: #e5e8ed;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
     .con_right {
       flex: 1;
+      float: right;
       .right_ront {
         width: 100%;
         margin-bottom: 10px;
@@ -337,6 +529,7 @@ export default {
           flex-wrap: wrap;
           padding: 12px 20px 0;
           box-sizing: border-box;
+          position: relative;
           li {
             width: 18%;
             padding-left: 5px;
@@ -361,5 +554,28 @@ export default {
       }
     }
   }
+}
+
+// 滚动条样式
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+#app div::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f5f5f5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+div::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+/*定义滑块 内阴影+圆角*/
+div::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #aaa;
 }
 </style>
