@@ -10,18 +10,6 @@ let navArr = [
         icon: 'el-icon-menu',
         url: '/provider/list',
         menu: true,
-        actions: [
-          {
-            name: '新增服务商',
-            url: '/provider/add',
-            parent: '/provider/list'
-          },
-          {
-            name: '修改服务商',
-            url: '/provider/edit',
-            parent: '/provider/list'
-          }
-        ]
       }
     ]
   },

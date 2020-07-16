@@ -92,3 +92,102 @@ input{ outline:none; border:0; }
   box-sizing: border-box;
   padding-left: 20px;
 }
+
+/*表格头部变灰*/
+.head-gray {
+  .has-gutter {
+    th {
+      background: #f4f6f9;
+    }
+  }
+
+  .is-leaf {
+    background: #f4f6f9;
+  }
+
+  .el-table__row {
+    td:not(.is-hidden):last-child {
+      right: -1px;
+    }
+  }
+}
+
+
+.el-table.head-gray {
+  .el-input__inner {
+    border: 0;
+  }
+}
+
+/*表格鼠标悬停，表格背景颜色取消*/
+
+.table-background-none {
+  .el-table__body tr:hover > td {
+    background-color: #fff !important;
+  }
+
+  .el-table__body tr > td {
+    background-color: #fff !important;
+  }
+
+  .el-table__body tr.current-row > td {
+    background-color: #fff !important;
+  }
+
+  .el-table__fixed-body-wrapper tr.current-row > td {
+    background-color: #fff !important;
+  }
+}
+
+
+/*表格里禁用状态的表单显示正常*/
+
+.selectDisabledShow {
+  .el-input__inner {
+    border: 0 !important;
+    background: #fff !important;
+    color: #606266 !important;
+  }
+
+  .el-input__suffix {
+    display: none;
+  }
+
+  .el-input__prefix {
+    display: none;
+  }
+}
+
+/*表格内嵌套input去掉边框*/
+
+.table-input-none {
+  .el-input__inner {
+    border: 0 !important;
+  }
+}
+
+//分页样式
+.table-pagination {
+  text-align: right;
+  margin-top: 10px;
+
+  span {
+    float: left;
+  }
+}
+
+.el-table .cell.el-tooltip {
+  white-space: nowrap;
+  min-width: 50px;
+  height: 26px !important;
+  font-size: 13px;
+}
+
+.el-table__body-wrapper {
+  font-size: 13px !important;
+  
+}
+  .el-button--text {
+    font-size: 13px !important;
+    line-height: 8px !important;
+  }

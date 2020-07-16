@@ -16,7 +16,7 @@
                @click="left"></i>
           </div>
           <div class="menu">
-            <el-menu default-active="0"
+            <el-menu :default-active="index_menu"
                      class="el-menu-vertical-demo"
                      @open="handleOpen"
                      background-color="#424f63"
@@ -25,7 +25,7 @@
                      @close="handleClose"
                      :collapse="isCollapse">
               <el-menu-item index="0"
-                            @click="goRightDetial('one', menu_two)">
+                            @click="goRightDetial('one')">
                 <template slot="title">
                   <i class="el-icon-menu"></i>
                   <span slot="title">首页</span>
@@ -44,8 +44,8 @@
                 <el-menu-item v-for="(menu_two, index_two) in menu_one.subset"
                               v-if="!menu_two.actions"
                               :key="index_two"
-                              @click="goRightDetial('two', menu_two)"
-                              :index="index_one + '-' + index_two">
+                              @click="goRightDetial('two', menu_two, index_one + 1 + '-' + (index_two + 1))"
+                              :index="index_one + 1 + '-' + (index_two + 1)">
                   <template slot="title">
                     <i :class="menu_two.icon"></i>
                     <span slot="title">{{menu_two.name}}</span>
@@ -56,15 +56,15 @@
                 <el-submenu v-for="(menu_two, index_two) in menu_one.subset"
                             v-if="menu_two.actions"
                             :key="index_two"
-                            :index="index_one + '-' + index_two">
+                            :index="index_one + 1 + '-' +  (index_two + 1)">
                   <template slot="title">
                     <i :class="menu_two.icon"></i>
                     <span slot="title">{{menu_two.name}}</span>
                   </template>
                   <el-menu-item v-for="(menu_three, index_three) in menu_two.actions"
                                 :key="index_three"
-                                @click="goRightDetial('three', menu_three)"
-                                :index="index_one + '-' + index_two + '-' + index_three">
+                                @click="goRightDetial('three', menu_three, index_one + 1 + '-' +  (index_two + 1) + '-' + index_three)"
+                                :index="index_one + 1 + '-' +  (index_two + 1) + '-' + index_three">
                     <template slot="title">
                       <i :class="menu_three.icon"></i>
                       <span slot="title">{{menu_three.name}}</span>
@@ -127,7 +127,8 @@ export default {
       height: window.innerHeight,
       meta: [],
       flagtit: true,
-      menu: nav
+      menu: nav,
+      index_menu: '0'
     };
   },
   methods: {
@@ -139,12 +140,14 @@ export default {
       this.isCollapse = false
     },
 
-    goRightDetial (type, item) {
+    goRightDetial (type, item, index) {
+      sessionStorage.setItem('index_menu', index)
       switch (type) {
         case 'one':
           this.$router.push('/homePage')
           break;
         default:
+          this.$router.push(item.url)
           break;
       }
     },
@@ -160,7 +163,7 @@ export default {
     // 顶部title显示
     getTitleBox () {
       const routerArray = [
-
+        '/provider/list'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -172,6 +175,7 @@ export default {
   mounted () {
     console.log(this.menu)
     this.getTitleBox()
+    if (sessionStorage.getItem('index_menu')) this.index_menu = sessionStorage.getItem('index_menu') + ''
   },
 
   watch: {
@@ -199,6 +203,10 @@ export default {
 </style>
 
 <style lang="scss" scoped>
+.pageHome {
+  font-size: 14px;
+  color: #606266;
+}
 .item-box {
   background: #fff;
   border-radius: 2px;
