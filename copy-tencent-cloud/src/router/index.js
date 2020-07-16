@@ -76,6 +76,12 @@ export default new Router({
         name: 'provider',
         component: (resolve) => require(['@/view/BackgroundManagement/provider/list.vue'], resolve),
         meta: ['服务商管理', '服务商列表']
+      },
+      {
+        path: '/provider/add',
+        name: 'provider_add',
+        meta: ['新增服务商'],
+        component: (resolve) => require(['@/view/BackgroundManagement/provider/add.vue'], resolve)
       }]
     },
 

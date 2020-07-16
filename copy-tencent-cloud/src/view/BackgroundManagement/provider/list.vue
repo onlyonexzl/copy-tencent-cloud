@@ -30,54 +30,72 @@
     <div class="table_bottom">
       <el-button slot="append"
                  type="primary"
-                 icon="el-icon-search"
+                 icon="el-icon-plus"
+                 style="width: 70px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;margin: 0 0 10px 10px;"
                  @click="sesarchFun()">
         新增
       </el-button>
-      <el-table :data="tableData"
-                stripe
-                style="width: 100%">
-        <el-table-column show-overflow-tooltip
-                         type="index"
-                         width="50"
-                         label="序号">
-          <template slot-scope="scope">
-            {{(currentPage-1)*10+scope.$index+1}}
-          </template>
-        </el-table-column>
-        <el-table-column prop="date"
-                         label="日期"
-                         width="180">
-        </el-table-column>
-        <el-table-column prop="name"
-                         label="姓名"
-                         width="180">
-        </el-table-column>
-        <el-table-column prop="address"
-                         label="地址">
-        </el-table-column>
-        <el-table-column show-overflow-tooltip
-                         label="操作"
-                         min-width="60">
-          <template slot-scope="scope">
-            <div>
-              <el-button size="medium"
-                         type="text"
-                         class="operateColumn yellowColor"
-                         @click="checkTrackQueryFun(scope.$index, scope.row)">查看</el-button>
-            </div>
-          </template>
-        </el-table-column>
-      </el-table>
-      <template>
-        <div class="block">
-          <el-pagination @current-change="handleCurrentChangeFun"
+      <div class="flex">
+        <el-table :data="tableData"
+                  stripe
+                  style="width: 100%">
+          <el-table-column show-overflow-tooltip
+                           type="index"
+                           width="50"
+                           label="序号">
+            <template slot-scope="scope">
+              <!-- {{(currentPage-1)*10+scope.$index+1}} -->
+              {{scope.$index+1}}
+            </template>
+          </el-table-column>
+          <el-table-column prop="date"
+                           label="QQ"
+                           width="180">
+          </el-table-column>
+          <el-table-column prop="name"
+                           label="手机号"
+                           width="180">
+          </el-table-column>
+          <el-table-column prop="address"
+                           label="邮箱">
+          </el-table-column>
+          <el-table-column prop="address"
+                           label="创建时间">
+          </el-table-column>
+          <el-table-column show-overflow-tooltip
+                           label="操作"
+                           width="150"
+                           min-width="60">
+            <template slot-scope="scope">
+              <div>
+                <el-button size="medium"
+                           type="text"
+                           class="yellowColor right20"
+                           @click="editor(scope.$index, scope.row)">编辑</el-button>
+                <el-button size="medium"
+                           type="text"
+                           class="redColor"
+                           @click="checkTrackQueryFun(scope.$index, scope.row)">删除</el-button>
+              </div>
+            </template>
+          </el-table-column>
+        </el-table>
+        <div class="btootm_paination">
+          <!-- <el-pagination @current-change="handleCurrentChangeFun"
                          :hide-on-single-page="false"
                          :current-page="currentPage"
                          layout="total, jumper,  ->, prev, pager, next"
-                         :total="totalData"></el-pagination>
+                         :total="totalData"></el-pagination> -->
+          <el-pagination @size-change="handleSizeChange"
+                         @current-change="handleCurrentChangeFun"
+                         :current-page="currentPage"
+                         :page-sizes="[100, 200, 300, 400]"
+                         :page-size="100"
+                         layout="total, sizes, prev, pager, next, jumper"
+                         :total="400">
+          </el-pagination>
         </div>
-      </template>
+      </div>
     </div>
   </div>
 </template>
@@ -93,19 +111,19 @@ export default {
       tableData: [{
         date: '2016-05-02',
         name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
+        address: '上海市普陀区金沙'
       }, {
         date: '2016-05-04',
         name: '王小虎',
-        address: '上海市普陀区金沙江路 1517 弄'
+        address: '上海市普陀区金沙江'
       }, {
         date: '2016-05-01',
         name: '王小虎',
-        address: '上海市普陀区金沙江路 1519 弄'
+        address: '上海市 1519 弄'
       }, {
         date: '2016-05-03',
         name: '王小虎',
-        address: '上海市普陀区金沙江路 1516 弄'
+        address: '上海市普陀区516 弄'
       }],
       currentPage: 1, //当前页数
       totalData: 1, //总页数
@@ -113,10 +131,17 @@ export default {
   },
 
   methods: {
+    editor () {
+      this.$router.push('/provider/add')
+    },
     // 分页
     handleCurrentChangeFun (val) {
       this.currentPage = val;
       tableDataRenderFun(this);
+    },
+
+    handleSizeChange (val) {
+      console.log(`每页 ${val} 条`);
     },
   }
 }
@@ -126,6 +151,8 @@ export default {
 .provider {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   .top_button {
     width: 100%;
     height: auto;
@@ -140,7 +167,27 @@ export default {
     width: 100%;
     height: auto;
     background: #fff;
-    margin: 20px 0;
+    // margin-top: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  .el-table {
+    flex: 1;
+  }
+
+  .flex {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btootm_paination {
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
   }
 }
 </style>

@@ -107,8 +107,18 @@
                 {{item}}
                 <i class="el-icon-arrow-right"
                    v-if="index !== meta.length - 1"></i>
+
               </li>
             </ul>
+          </div>
+          <!-- v-if="goReturn" -->
+          <div class="item_title"
+               v-if="flagTttName">
+            <span class="left"
+                  @click="goBack"><i class="el-icon-arrow-left"></i>
+              返回</span>
+            <p>|</p>
+            <span>{{titleName}}</span>
           </div>
           <router-view></router-view>
         </el-main>
@@ -127,8 +137,10 @@ export default {
       height: window.innerHeight,
       meta: [],
       flagtit: true,
+      flagTttName: true,
       menu: nav,
-      index_menu: '0'
+      index_menu: '0',
+      titleName: ''
     };
   },
   methods: {
@@ -170,11 +182,25 @@ export default {
         this.meta = this.$route.meta
       }
     },
+
+    // 顶部t返回显示
+    getTitleName () {
+      const routerArray = [
+        '/provider/add'
+      ]
+      this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false
+      this.titleName = this.$route.meta[0]
+    },
+
+    goBack () {
+      this.$router.go(-1);
+    },
   },
 
   mounted () {
     console.log(this.menu)
     this.getTitleBox()
+    this.getTitleName()
     if (sessionStorage.getItem('index_menu')) this.index_menu = sessionStorage.getItem('index_menu') + ''
   },
 
@@ -204,8 +230,24 @@ export default {
 
 <style lang="scss" scoped>
 .pageHome {
-  font-size: 14px;
-  color: #606266;
+}
+
+.item_title {
+  background: #fff;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 10px;
+  > p {
+    margin: 0 10px;
+  }
+  .left {
+    cursor: pointer;
+  }
 }
 .item-box {
   background: #fff;
@@ -231,10 +273,25 @@ export default {
   }
 }
 
+.is-vertical {
+  display: flex;
+  flex-direction: column;
+  > header {
+    width: 100%;
+    height: 60px;
+  }
+}
+
 .el-main {
   width: 100%;
   height: 100%;
   background: #f8f8f8;
+  display: flex;
+  font-size: 14px;
+  color: #606266;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
 }
 .tip {
   width: 100%;

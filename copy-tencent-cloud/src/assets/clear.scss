@@ -187,7 +187,42 @@ input{ outline:none; border:0; }
   font-size: 13px !important;
   
 }
-  .el-button--text {
-    font-size: 13px !important;
-    line-height: 8px !important;
-  }
+.el-button--text {
+  font-size: 13px !important;
+  line-height: 8px !important;
+}
+
+.btootm_paination {
+  position: relative;
+}
+// #4BB3FF biaji
+// #FF6666 删除
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 颜色*/
+.yellowColor {
+  color: #f5a623 !important;
+  font-weight: 360;
+}
+
+.greenColor {
+  color: #1bbc9b !important;
+  font-weight: 360;
+}
+
+.blueColor {
+  color: #4bb3ff !important;
+  font-weight: 360;
+}
+
+.redColor {
+  color: #df2722 !important;
+  font-weight: 360;
+}
+
+.right20 {
+  margin-right: 20px;
+}
