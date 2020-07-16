@@ -170,6 +170,28 @@ export default new Router({
         path: '/driverAttribute/edit',
         name: 'driverAttribute',
         component: (resolve) => require(['@/view/BackgroundManagement/driverAttribute/edit.vue'], resolve),
+      }, {
+        //  驱动配置列表
+        path: '/driverInfo/list',
+        name: 'driverInfo',
+        component: (resolve) => require(['@/view/BackgroundManagement/driverInfo/list.vue'], resolve),
+        meta: ['物联网管理', '驱动配置列表']
+      }, {
+        //驱动配置列表编辑
+        path: '/driverInfo/edit',
+        name: 'driverInfo',
+        component: (resolve) => require(['@/view/BackgroundManagement/driverInfo/edit.vue'], resolve),
+      }, {
+        //  位号属性列表
+        path: '/pointAttribute/list',
+        name: 'pointAttribute',
+        component: (resolve) => require(['@/view/BackgroundManagement/pointAttribute/list.vue'], resolve),
+        meta: ['物联网管理', '位号属性列表']
+      }, {
+        //位号属性列表编辑
+        path: '/pointAttribute/edit',
+        name: 'pointAttribute',
+        component: (resolve) => require(['@/view/BackgroundManagement/pointAttribute/edit.vue'], resolve),
       }]
 
     },

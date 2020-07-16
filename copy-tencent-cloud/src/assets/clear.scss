@@ -230,3 +230,15 @@ input{ outline:none; border:0; }
 .container {
   height: 200px;
 }
+
+.table {
+  flex: 1;
+  height: 200px;
+  overflow: auto;
+}
+
+.provider .flex {
+  height: 200px;
+}
+
+

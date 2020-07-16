@@ -184,7 +184,9 @@ export default {
         '/group/list',
         '/device/list',
         '/driver/list',
-        '/driverAttribute/list'
+        '/driverAttribute/list',
+        '/pointAttribute/list',
+        '/driverInfo/list'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -202,7 +204,9 @@ export default {
         '/group/edit',
         '/device/edit',
         '/driver/edit',
-        '/driverAttribute/edit'
+        '/driverAttribute/edit',
+        '/pointAttribute/edit',
+        '/driverInfo/edit'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false
@@ -250,6 +254,7 @@ export default {
 
 <style lang="scss" scoped>
 .pageHome {
+  // overflow: hidden !important;
 }
 
 .item_title {

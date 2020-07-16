@@ -2,13 +2,8 @@
   <div class="provider">
     <div class="top_button">
       <div class="top_left">
-        <span>名称</span>
-        <el-input placeholder="名称"
-                  v-model="sName"
-                  style="width: 200px"
-                  clearable>
-        </el-input>
-        <span style="margin-left: 20px">所属驱动</span>
+        <span style="margin-left: 20px">模板
+        </span>
         <el-select v-model="status"
                    placeholder="全部">
           <el-option v-for="item in drivers"
@@ -59,26 +54,18 @@
                 {{scope.$index+1}}
               </template>
             </el-table-column>
-            <el-table-column prop="date"
+            <el-table-column prop="name"
                              show-overflow-tooltip
-                             label="显示名称"
+                             label="模版"
                              width="180">
             </el-table-column>
             <el-table-column prop="name"
                              show-overflow-tooltip
-                             label="名称">
+                             label="驱动属性">
             </el-table-column>
             <el-table-column prop="address"
                              show-overflow-tooltip
-                             label="类型">
-            </el-table-column>
-            <el-table-column prop="name"
-                             show-overflow-tooltip
-                             label="默认值">
-            </el-table-column>
-            <el-table-column prop="name"
-                             show-overflow-tooltip
-                             label="所属驱动">
+                             label="属性值">
             </el-table-column>
             <el-table-column prop="name"
                              show-overflow-tooltip
@@ -210,11 +197,11 @@ export default {
 
   methods: {
     add () {
-      this.$router.push('/driverAttribute/edit?nameType=新建驱动属性')
+      this.$router.push('/driverInfo/edit?nameType=新建驱动配置')
 
     },
     editor () {
-      this.$router.push('/driverAttribute/edit?nameType=修改驱动属性')
+      this.$router.push('/driverInfo/edit?nameType=修改驱动配置')
     },
     // 分页
     handleCurrentChangeFun (val) {

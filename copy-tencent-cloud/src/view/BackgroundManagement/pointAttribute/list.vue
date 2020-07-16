@@ -210,11 +210,11 @@ export default {
 
   methods: {
     add () {
-      this.$router.push('/driverAttribute/edit?nameType=新建驱动属性')
+      this.$router.push('/pointAttribute/edit?nameType=新建位号属性')
 
     },
     editor () {
-      this.$router.push('/driverAttribute/edit?nameType=修改驱动属性')
+      this.$router.push('/pointAttribute/edit?nameType=修改位号属性')
     },
     // 分页
     handleCurrentChangeFun (val) {
