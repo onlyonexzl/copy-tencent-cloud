@@ -125,7 +125,53 @@ export default new Router({
         path: '/report/main',
         name: 'report',
         component: (resolve) => require(['@/view/BackgroundManagement/report/main.vue'], resolve)
+      }, {
+        // 设备分组
+        path: '/group/list',
+        name: 'group',
+        component: (resolve) => require(['@/view/BackgroundManagement/group/list.vue'], resolve),
+        meta: ['物联网管理', '设备分组列表']
+      }, {
+        // 设备分组编辑
+        path: '/group/edit',
+        name: 'group',
+        component: (resolve) => require(['@/view/BackgroundManagement/group/edit.vue'], resolve),
+        meta: ['物联网管理', '设备分组列表']
+      }, {
+        //  设备列表
+        path: '/device/list',
+        name: 'device',
+        component: (resolve) => require(['@/view/BackgroundManagement/device/list.vue'], resolve),
+        meta: ['物联网管理', '设备分组列表']
+      }, {
+        //设备列表binaji
+        path: '/device/edit',
+        name: 'device',
+        component: (resolve) => require(['@/view/BackgroundManagement/device/edit.vue'], resolve),
+      }, {
+        //  驱动列表
+        path: '/driver/list',
+        name: 'driver',
+        component: (resolve) => require(['@/view/BackgroundManagement/driver/list.vue'], resolve),
+        meta: ['物联网管理', '驱动列表']
+      }, {
+        //驱动列表编辑
+        path: '/driver/edit',
+        name: 'driver',
+        component: (resolve) => require(['@/view/BackgroundManagement/driver/edit.vue'], resolve),
+      }, {
+        //  驱动属性列表
+        path: '/driverAttribute/list',
+        name: 'driverAttribute',
+        component: (resolve) => require(['@/view/BackgroundManagement/driverAttribute/list.vue'], resolve),
+        meta: ['物联网管理', '驱动属性列表']
+      }, {
+        //驱动属性列表编辑
+        path: '/driverAttribute/edit',
+        name: 'driverAttribute',
+        component: (resolve) => require(['@/view/BackgroundManagement/driverAttribute/edit.vue'], resolve),
       }]
+
     },
 
   ]

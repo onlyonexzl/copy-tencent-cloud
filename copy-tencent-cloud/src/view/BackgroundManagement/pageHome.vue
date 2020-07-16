@@ -180,7 +180,11 @@ export default {
         '/product/list',
         '/product/category/list',
         '/information/list',
-        '/information/type/list'
+        '/information/type/list',
+        '/group/list',
+        '/device/list',
+        '/driver/list',
+        '/driverAttribute/list'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -194,7 +198,11 @@ export default {
         '/provider/add',
         '/product/category/edit',
         '/information/edit',
-        '/information/type/edit'
+        '/information/type/edit',
+        '/group/edit',
+        '/device/edit',
+        '/driver/edit',
+        '/driverAttribute/edit'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false
