@@ -62,10 +62,12 @@
       </div>
       <div class="classify-bd"
            ref="bd"
+           v-if="$route.path !== '/marketHome/details'"
            id="bd">
         <div class="classItem-bd">
           <ul>
-            <li @click="gepProducts">小程序</li>
+            <li @click="gepProducts">
+              小程序 </li>
             <li>电商零件</li>
             <li>餐饮外卖</li>
             <div class="banner__main-list">
@@ -278,6 +280,10 @@ export default {
     registered () {
       this.$router.push('/registered')
     },
+  },
+
+  mounted () {
+    // console.log(this.)
   }
 }
 </script>

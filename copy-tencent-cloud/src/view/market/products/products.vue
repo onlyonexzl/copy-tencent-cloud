@@ -89,7 +89,8 @@
 
           <div class="mp__product-contone"
                v-if="changeType === 'menu'">
-            <div class="mp__product-item">
+            <div class="mp__product-item"
+                 @click="geDetail">
               <div class="img">
                 <img src="../../../assets/img/img.jpeg"
                      alt="">
@@ -564,6 +565,11 @@ export default {
   },
 
   methods: {
+
+    geDetail () {
+      this.$router.push('/marketHome/details')
+    },
+
     changeTypeS (type) {
       this.changeType = type
     },

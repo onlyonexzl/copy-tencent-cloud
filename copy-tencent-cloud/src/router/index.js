@@ -63,6 +63,10 @@ export default new Router({
         path: '/marketHome/products',
         name: 'products',
         component: (resolve) => require(['@/view/market/products/products.vue'], resolve)
+      }, {
+        path: '/marketHome/details',
+        name: 'details',
+        component: (resolve) => require(['@/view/market/products/details.vue'], resolve)
       }]
     },
     // 后台管理
