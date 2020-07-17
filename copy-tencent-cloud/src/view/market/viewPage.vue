@@ -625,7 +625,7 @@
           <div class="mp__product-list-item">
             <p class="mp__solution-item-title">电商零售全渠道建站</p>
             <p class="mp__solution-item-desc">电商零售全渠道覆盖：PC品牌商城/微信商城/手机商城/小程序商城，域名购买，网站备案一站式服务。</p>
-            <p class="mp__solution-item-text">打包购买 <span>￥3842</span> <span style="    color: #8B8B8B; margin-left: 5px;text-decoration: line-through;font-size: 22px;">￥3842</span> </p>
+            <p class="mp__solution-item-text">打包购买 <span>￥3842</span> <span style="    color: #8B8B8B; margin-left: 5px;text-decoration: line-through;font-size: 18px;">￥3842</span> </p>
             <div class="button">立即购买</div>
           </div>
 
@@ -679,7 +679,7 @@
           <div class="mp__product-list-item">
             <p class="mp__solution-item-title">电商零售全渠道建站</p>
             <p class="mp__solution-item-desc">电商零售全渠道覆盖：PC品牌商城/微信商城/手机商城/小程序商城，域名购买，网站备案一站式服务。</p>
-            <p class="mp__solution-item-text">打包购买 <span>￥3842</span> <span style="    color: #8B8B8B; margin-left: 5px;text-decoration: line-through;font-size: 22px;">￥3842</span> </p>
+            <p class="mp__solution-item-text">打包购买 <span>￥3842</span> <span style="    color: #8B8B8B; margin-left: 5px;text-decoration: line-through;font-size: 18px;">￥3842</span> </p>
             <div class="button">立即购买</div>
           </div>
 
@@ -730,6 +730,304 @@
         </div>
       </div>
     </div>
+
+    <div class="market-place-sectionThree">
+      <div class="market-place-section-content">
+        <div class="module-section-hd">
+          <span class="text-gradient">荐</span>
+          <span>・为您推荐</span>
+        </div>
+        <div class="module-section-se">
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-inner">
+        <ul>
+          <li class="hoverColor">
+            <i class="el-icon-help"></i>
+            <span>5天内无理由退款</span>
+          </li>
+          <li class="hoverColor">
+            <i class="el-icon-success"></i>
+            <span>免费备案</span>
+          </li>
+          <li class="hoverColor">
+            <i class="el-icon-user-solid"></i>
+            <span>1V1大客户服务</span>
+          </li>
+          <li class="hoverColor">
+            <i class="el-icon-phone"></i>
+            <span>7x24小时服务</span>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-website">
+        <div class="websiteL">
+          <div class="footer-website-group">
+            <p>腾讯云计算</p>
+            <ul>
+              <li>产品</li>
+              <li>产阿斯顿啊品</li>
+              <li>产品</li>
+              <li>产品</li>
+            </ul>
+          </div>
+          <div class="footer-website-group">
+            <p>解决方案</p>
+            <ul>
+              <li>产品请问</li>
+              <li>云市请问场</li>
+              <li>认证蔷薇蔷薇信息</li>
+              <li>产品请问请问</li>
+              <li>产阿请问斯顿啊品</li>
+              <li>产请问品</li>
+              <li>产请问品</li>
+            </ul>
+          </div>
+          <div class="footer-website-group">
+            <p>资源和社区</p>
+            <ul>
+              <li>产我企鹅品</li>
+              <li>云啊市场</li>
+              <li>产品和发布</li>
+              <li>认证阿斯顿说信息</li>
+              <li>产品行请问</li>
+              <li>斯顿啊品</li>
+              <li>产说品</li>
+              <li>产品</li>
+            </ul>
+          </div>
+          <div class="footer-website-group">
+            <p>合作与生态</p>
+            <ul>
+              <li>产品</li>
+              <li>云市场</li>
+              <li>和发布</li>
+              <li>认证信息</li>
+              <li>产我品</li>
+            </ul>
+          </div>
+          <div class="footer-website-group">
+            <p>管理和支持</p>
+            <ul>
+              <li>产品</li>
+              <li>云市去我场</li>
+              <li>产品和发布</li>
+              <li>认证我企鹅信息</li>
+              <li>产品我请问</li>
+              <li>产我阿斯顿啊品</li>
+            </ul>
+          </div>
+        </div>
+        <div class="websiteR">
+          <div>
+            Copyright © 2013 - 2020
+            Tencent Cloud. All Rights Reserved.
+            腾讯云 版权所有
+          </div>
+          <div class="buttonS">购买咨询-----</div>
+        </div>
+      </div>
+      <div class="footer-recommend">
+        <div>
+          <ul class="footer-recommend-cell">
+            <p>热门产品</p>
+            <li>域名注册</li>
+            <li>云务器</li>
+            <li>区块链服务</li>
+            <li>消息队列</li>
+            <li>域名解析</li>
+            <li>视直播</li>
+            <li>云储</li>
+            <li>云数据库</li>
+            <li>消息队列</li>
+            <li>网络加速</li>
+          </ul>
+          <ul class="footer-recommend-cell">
+            <p>热门推荐</p>
+            <li>域名注册</li>
+            <li>云服务器</li>
+            <li>区块链服务</li>
+            <li>消列</li>
+            <li>域析</li>
+            <li>视直播</li>
+            <li>云存储</li>
+            <li>云数据库</li>
+            <li>消息队列</li>
+            <li>网络加速</li>
+          </ul>
+          <ul class="footer-recommend-cell">
+            <p>更多推荐</p>
+            <li>域名注册</li>
+            <li>云务器</li>
+            <li>区服务</li>
+            <li>消息队列</li>
+            <li>域名解析</li>
+            <li>视频直播</li>
+            <li>云存储</li>
+            <li>云数据</li>
+            <li>消列qwe</li>
+            <li>网加速</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-blogroll">
+        <div>
+          <ul class="footer-recommend-cell">
+            <p style="margin-right:20px">tencent</p>
+            <li> 腾讯开放平台</li>
+            <li>云腾讯会议</li>
+            <li> 腾讯优图</li>
+            <li>消息队列</li>
+            <li>域名解析</li>
+            <li> 微信公众平台</li>
+            <li>消息队列</li>
+            <li>网络加速</li>
+          </ul>
+          <ul class="footer-recommend-cell">
+            <li style="margin-left: 0">京公网安备 11010802017518</li>
+            <li>云服务器</li>
+            <li> 粤B2-20090059-1</li>
+            <span>域名注册服务机构批复文号：京信信管发〔2018〕156号 鲁通管〔2019〕83号</span>
+          </ul>
+          <ul class="footer-recommend-cell">
+            <span style="margin-left:0">代理域名注册服务机构：烟台帝思普网络科技有限公司（DNSPod） 新网数码</span>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -745,6 +1043,102 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.market-place-sectionThree {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0 200px;
+  .market-place-section-content {
+    width: 100%;
+    .module-section-hd {
+      width: 100%;
+      height: 90px;
+      // margin: 20px 0;
+      line-height: 90px;
+      font-size: 30px;
+      color: #383838;
+      .text-gradient {
+        font-size: 30px;
+        color: #f2a056;
+        font-weight: 700;
+        background-image: -webkit-linear-gradient(left, #f2a056, #f16863);
+        -webkit-background-clip: text;
+      }
+    }
+    .module-section-se {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .se-item {
+        width: 19%;
+        border: solid 1px #efefef;
+        margin-bottom: 10px;
+        .img {
+          width: 100%;
+          overflow: hidden;
+
+          > img {
+            transition: all 0.25s;
+            width: 100%;
+            height: 100%;
+          }
+
+          > :hover {
+            background: red;
+            transform: scale(1.2);
+            -ms-transform: scale(1.2);
+          }
+        }
+        .o {
+          box-sizing: border-box;
+          padding: 0 10px;
+          line-height: 20px;
+          height: 20px;
+          display: block;
+          font-size: 14px;
+          color: #000;
+          transition: color 0.15s;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          box-sizing: border-box;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          margin-top: 5px;
+          -webkit-box-sizing: border-box;
+        }
+        .t {
+          box-sizing: border-box;
+          padding: 0 10px;
+          font-size: 22px;
+          color: #f43f2d;
+          margin-top: 5px;
+          letter-spacing: -1px;
+          display: inline-block;
+          font-family: DINNextLTPro;
+        }
+        .f {
+          box-sizing: border-box;
+          padding: 0 10px;
+          font-size: 12px;
+          color: #4a4a4a;
+          line-height: 12px;
+          min-height: 12px;
+          margin-top: 3px;
+          text-align: right;
+          box-sizing: border-box;
+          padding: 10px;
+          > span {
+            color: #e14d42;
+          }
+        }
+      }
+    }
+  }
+}
+
 .market-place-sectionTwo {
   width: 100%;
   height: 670px;
@@ -1591,6 +1985,164 @@ export default {
         color: #fff;
         line-height: 18px;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 200px;
+  background: #2d3033;
+  .footer-website {
+    width: 100%;
+    padding-bottom: 27px;
+    min-height: 200px;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #45484c;
+    margin-bottom: 5px;
+    padding-top: 30px;
+    .websiteL {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      .footer-website-group {
+        flex: 1;
+        > p {
+          margin-bottom: 15px;
+          font-size: 14px;
+          line-height: 1.5;
+          font-weight: 400;
+          color: #fff;
+        }
+        > ul li {
+          cursor: pointer;
+          display: block;
+          padding: 4px 0;
+          font-size: 12px;
+          line-height: 1.5;
+          color: #ccc;
+        }
+        > ul li:hover {
+          color: #409eff !important;
+        }
+      }
+    }
+    .websiteR {
+      width: 190px;
+      > div {
+        margin-bottom: 14px;
+        font-size: 12px;
+        line-height: 24px;
+        color: #ccc;
+      }
+    }
+  }
+
+  .footer-inner {
+    width: 100%;
+    height: 93px;
+    border-bottom: 1px solid #45484c;
+    display: flex;
+    align-items: center;
+    > ul {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      color: #fff;
+      li > i {
+        vertical-align: middle;
+        margin-right: 10px;
+        font-size: 32px;
+      }
+      li > span {
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+  }
+
+  .footer-blogroll {
+    width: 100%;
+    min-height: 133px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #45484c;
+    // align-items: center;
+    justify-content: center;
+    > div {
+      min-height: 72px;
+      > ul {
+        display: flex;
+        // justify-content: space-between;
+        margin-bottom: 10px;
+        > p {
+          font-size: 14px;
+          color: #fff;
+          font-weight: 400;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        > li {
+          font-size: 12px;
+          color: #999;
+          // width: 80px;
+          // margin: 0 40px;
+          margin-left: 20px;
+        }
+
+        > span {
+          font-size: 12px;
+          color: #999;
+          white-space: nowrap;
+          margin-left: 20px;
+        }
+
+        > li:hover {
+          cursor: pointer;
+          color: #0999e8;
+        }
+      }
+    }
+  }
+
+  .footer-recommend {
+    width: 100%;
+    min-height: 133px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #45484c;
+    // align-items: center;
+    justify-content: center;
+    > div {
+      min-height: 72px;
+      > ul {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        > p {
+          font-size: 14px;
+          color: #fff;
+          font-weight: 400;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        > li {
+          font-size: 12px;
+          color: #999;
+          width: 60px;
+        }
+
+        > li:hover {
+          cursor: pointer;
+          color: #0999e8;
+        }
       }
     }
   }
