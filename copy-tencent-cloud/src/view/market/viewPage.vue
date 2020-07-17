@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="viewPage">
     <div class="block">
       <el-carousel height="100%">
         <el-carousel-item v-for="item in 4"
@@ -455,6 +455,10 @@ export default {
   height: 314px;
 }
 
+.viewPage {
+  // width: 1250px;
+}
+
 .section {
   width: 100%;
   height: auto;
@@ -571,6 +575,12 @@ export default {
             justify-content: space-between;
             flex-wrap: wrap;
             // margin-top: 10px;
+            > :first-child {
+              margin-top: 0;
+            }
+            > :nth-child(2) {
+              margin-top: 0;
+            }
             > li {
               width: 49%;
               height: 130px;
@@ -580,6 +590,7 @@ export default {
               background-color: #f7f8fa;
               transition: all 0.25s;
               display: flex;
+              margin-top: 10px;
               .mp_r_img {
                 width: 163px;
                 height: 109px;
@@ -706,7 +717,8 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
     > li {
-      width: 216px;
+      // width: 216px;
+      width: 17%;
       height: 250px;
       border: solid 1px #eee;
       .product-card-hd {
