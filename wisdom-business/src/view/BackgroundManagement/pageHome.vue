@@ -183,23 +183,7 @@ export default {
     // 顶部title显示
     getTitleBox () {
       const routerArray = [
-        '/provider/list',
-        '/product/list',
-        '/product/category/list',
-        '/information/list',
-        '/information/type/list',
-        '/group/list',
-        '/device/list',
-        '/driver/list',
-        '/driverAttribute/list',
-        '/pointAttribute/list',
-        '/driverInfo/list',
-        '/profile/list',
-        '/point/list',
-        '/pointInfo/list',
-        '/admin/list',
-        '/role/list',
-        '/menu/list'
+
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -210,23 +194,7 @@ export default {
     // 顶部t返回显示
     getTitleName () {
       const routerArray = [
-        '/provider/add',
-        '/product/category/edit',
-        '/information/edit',
-        '/information/type/edit',
-        '/group/edit',
-        '/device/edit',
-        '/driver/edit',
-        '/driverAttribute/edit',
-        '/pointAttribute/edit',
-        '/driverInfo/edit',
-        '/profile/edit',
-        '/point/edit',
-        '/pointInfo/edit',
-        '/admin/edit',
-        '/role/edit',
-        '/role/menus',
-        '/menu/edit'
+
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false
