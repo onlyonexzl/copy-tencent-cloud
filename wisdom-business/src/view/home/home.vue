@@ -16,20 +16,25 @@
              alt=""
              @click="goDetial('home')">
         <div style=" width: 200px;margin-left: 5px;    min-width: 150px;"
-             @click="goDetial('home')">美城智慧企业</div>
+             @click="goDetial('home')">美城智慧商业</div>
       </div>
       <div class="titleRight">
         <div class="list">
+
+          <span class="hoverColor"
+                :style="{'color': activeF ? '#00a4ff' : ''}"
+                @click="registereDteil('q')">商家入驻</span>
+          <span class="hoverColor"
+                :style="{'color': activeQ ? '#00a4ff' : ''}"
+                @click="registereDteil('f')">网约工入驻</span>
           <!-- <span class="hoverColor">备案</span> -->
           <span class="hoverColor"
                 :style="{'color': activeQ ? '#00a4ff' : ''}"
                 @click="registereDteil('f')">服务商入驻</span>
-          <span class="hoverColor"
-                :style="{'color': activeF ? '#00a4ff' : ''}"
-                @click="registereDteil('q')">企业入驻</span>
+
         </div>
         <div class="search">
-          美城智慧企业
+          美城智慧商业
           <i class="el-icon-search"
              style="color:#fff;font-size: 17px;font-weight: 800;"></i>
         </div>
@@ -476,7 +481,7 @@ export default {
       width: 280px;
 
       > img {
-        height: 30px;
+        height: 20px;
         margin-left: 20px;
       }
     }
@@ -584,7 +589,7 @@ export default {
     width: 100%;
     box-sizing: border-box;
     padding: 0 200px;
-    background: #2a3658;
+    background: #2f3e69;
     .footer-website {
       width: 100%;
       padding-bottom: 27px;

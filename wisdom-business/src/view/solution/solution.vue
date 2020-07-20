@@ -2,7 +2,7 @@
   <div class="soultion">
     <div class="tit">
       <div class="overview-hero">
-        <p>美城智慧企业</p>
+        <p>美城智慧商业</p>
         <span>从基础设施到行业应用领域，腾讯云提供完善的产品体系，助力您的业务腾飞,腾讯云解决方案涵盖游戏、金融、教育、大数据、智慧零售、小程序等多个领域。</span>
         <div class="divButtonHover"
              style="display:block">

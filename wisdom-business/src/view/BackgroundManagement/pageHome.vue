@@ -12,7 +12,7 @@
                      alt="">
               </div>
               <span v-if="!isCollapse"
-                    @click="geColund">服务商管理后台</span>
+                    @click="geColund">商家中心</span>
             </div>
             <i class="el-icon-s-fold"
                v-if="!isCollapse"
@@ -22,7 +22,7 @@
             <el-menu :default-active="index_menu"
                      class="el-menu-vertical-demo"
                      @open="handleOpen"
-                     background-color="#424f63"
+                     background-color="#2f3e69"
                      text-color="#fff"
                      :unique-opened='true'
                      active-text-color="rgb(101, 206, 167)"
@@ -371,7 +371,7 @@ export default {
   width: auto;
   display: flex;
   flex-direction: column;
-  background-color: #424f63;
+  background-color: #2f3e69;
 
   // border-right: solid #ccc 1px;
   // background-color: #424f63 !important;

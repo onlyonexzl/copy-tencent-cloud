@@ -2,7 +2,7 @@
   <div class="productPage">
     <div class="banner">
       <div class="overview-hero">
-        <p>美城智慧企业</p>
+        <p>美城智慧商业</p>
         <span>从基础设施到行业应用领域，腾讯云提供完善的产品体系，助力您的业务腾飞</span>
         <div>
           <input type="text"

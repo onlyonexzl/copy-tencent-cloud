@@ -16,7 +16,7 @@
              alt=""
              @click="goDetial('home')">
         <div style=" width: 125px;margin-left: 5px"
-             @click="goDetial('home')">美城云</div>
+             @click="goDetial('home')">美城智慧商业</div>
       </div>
       <div class="titleRight">
         <div class="list">
@@ -29,7 +29,7 @@
                 @click="registereDteil('q')">企业入驻</span>
         </div>
         <div class="search">
-          美城智慧企业
+          商业
           <i class="el-icon-search"
              style="color:#fff;font-size: 17px;font-weight: 800;"></i>
         </div>

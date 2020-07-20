@@ -14,11 +14,11 @@
 
         <img src="../../assets/img/favicon.png"
              alt="">
-        <div style="width: 200px;margin-left: 5px;    min-width: 150px;">美城智慧企业</div>
+        <div style="width: 200px;margin-left: 5px;    min-width: 150px;">美城智慧商业</div>
       </div>
       <div class="titleRight">
         <div class="list">
-          <span class="hoverColor">美城智慧企业首页</span>
+          <span class="hoverColor">美城智慧商业首页</span>
           <span class="hoverColor">买家中心</span>
           <span class="hoverColor">卖家中心</span>
           <span class="hoverColor">服务中心</span>
@@ -297,7 +297,7 @@ export default {
   .titleBanner {
     width: 100%;
     height: 40px;
-    background-color: #2b303b;
+    background-color: #2f3e69;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -334,7 +334,7 @@ export default {
       width: 280px;
 
       > img {
-        height: 30px;
+        height: 20px;
         margin-left: 20px;
       }
     }
@@ -564,7 +564,7 @@ export default {
   width: 100%;
   box-sizing: border-box;
   padding: 0 200px;
-  background: #2d3033;
+  background: #2f3e69;
   .footer-website {
     width: 100%;
     padding-bottom: 27px;

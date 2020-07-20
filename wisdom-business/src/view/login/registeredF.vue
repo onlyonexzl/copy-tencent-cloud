@@ -3,7 +3,7 @@
     <div class="form">
       <div class="tit">
         <i class="el-icon-tickets"></i>
-        企业入驻
+        商家入驻
       </div>
       <div class="con-form">
         <!-- 服务商入驻 -->
