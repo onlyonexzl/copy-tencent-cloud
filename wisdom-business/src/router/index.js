@@ -88,67 +88,67 @@ export default new Router({
         // 页面管理
         path: '/shopManagement/shopManagement',
         name: 'shopManagement',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/pageManagement.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/pageManagement.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '页面管理']
       }, {
         //增加页面
         path: '/shopManagement/addPageManagement',
         name: 'addPageManagement',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/addPageManagement.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/addPageManagement.vue'], resolve),
         // meta: ['商铺管理', '商铺维修', '页面管理']
       }, {
         //手机轮播图
         path: '/shopManagement/mobilePhoneBy',
         name: 'mobilePhoneBy',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/mobilePhoneBy.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/mobilePhoneBy.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '手机轮播广告']
       }, {
         //手机轮播图
         path: '/shopManagement/phoneBy',
         name: 'phoneBy',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/phoneBy.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/phoneBy.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '轮播广告']
       }, {
         // 图片广告
         path: '/shopManagement/imageAds',
         name: 'imageAds',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/imageAds.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/imageAds.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '图片广告']
       }, {
         // 增加图片广告
         path: '/shopManagement/editImageAds',
         name: 'editImageAds',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/editImageAds.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/editImageAds.vue'], resolve),
         // meta: ['商铺管理', '商铺维修', '轮播广告']
       }, {
         // 友情连接
         path: '/shopManagement/friendshipConnection',
         name: 'friendshipConnection',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/friendshipConnection.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/friendshipConnection.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '友情连接']
       }, {
         // 增加友情连接
         path: '/shopManagement/editFriendshipConnection',
         name: 'editFriendshipConnection',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/editFriendshipConnection.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/editFriendshipConnection.vue'], resolve),
         // meta: ['商铺管理', '商铺维修', '轮播广告']
       }, {
         // 购买模版
         path: '/shopManagement/templateToBuy',
         name: 'templateToBuy',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/templateToBuy.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/templateToBuy.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '购买模版']
       }, {
         // 弹窗广告
         path: '/shopManagement/popUpAds',
         name: 'popUpAds',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/popUpAds.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/popUpAds.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '弹窗广告']
       }, {
         // 商家展示
         path: '/shopManagement/showMerchants',
         name: 'showMerchants',
-        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/showMerchants.vue'], resolve),
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/showMerchants.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '商家展示']
       }]
     },
