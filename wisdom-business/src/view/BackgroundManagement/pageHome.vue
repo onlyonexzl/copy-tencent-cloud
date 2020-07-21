@@ -183,7 +183,14 @@ export default {
     // 顶部title显示
     getTitleBox () {
       const routerArray = [
-
+        '/shopManagement/shopManagement',
+        '/shopManagement/mobilePhoneBy',
+        '/shopManagement/phoneBy',
+        '/shopManagement/imageAds',
+        '/shopManagement/friendshipConnection',
+        '/shopManagement/templateToBuy',
+        '/shopManagement/popUpAds',
+        '/shopManagement/showMerchants'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -194,7 +201,9 @@ export default {
     // 顶部t返回显示
     getTitleName () {
       const routerArray = [
-
+        '/shopManagement/addPageManagement',
+        '/shopManagement/editImageAds',
+        '/shopManagement/editFriendshipConnection'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

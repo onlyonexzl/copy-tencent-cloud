@@ -46,6 +46,11 @@ export default new Router({
         name: 'registeredF',
         component: (resolve) => require(['@/view/login/registeredF.vue'], resolve)
       }, {
+        // 注册页面
+        path: '/registeredW',
+        name: 'registeredW',
+        component: (resolve) => require(['@/view/login/registeredW.vue'], resolve)
+      }, {
         path: '/login',
         name: 'login',
         component: (resolve) => require(['@/view/login/login.vue'], resolve)
@@ -79,8 +84,73 @@ export default new Router({
         name: 'homepage',
         component: (resolve) => require(['@/view/BackgroundManagement/homePage/homePage.vue'], resolve),
         // meta: ['心理管理', '心理健康指导', '详情']
+      }, {
+        // 页面管理
+        path: '/shopManagement/shopManagement',
+        name: 'shopManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/pageManagement.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '页面管理']
+      }, {
+        //增加页面
+        path: '/shopManagement/addPageManagement',
+        name: 'addPageManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/addPageManagement.vue'], resolve),
+        // meta: ['商铺管理', '商铺维修', '页面管理']
+      }, {
+        //手机轮播图
+        path: '/shopManagement/mobilePhoneBy',
+        name: 'mobilePhoneBy',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/mobilePhoneBy.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '手机轮播广告']
+      }, {
+        //手机轮播图
+        path: '/shopManagement/phoneBy',
+        name: 'phoneBy',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/phoneBy.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '轮播广告']
+      }, {
+        // 图片广告
+        path: '/shopManagement/imageAds',
+        name: 'imageAds',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/imageAds.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '图片广告']
+      }, {
+        // 增加图片广告
+        path: '/shopManagement/editImageAds',
+        name: 'editImageAds',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/editImageAds.vue'], resolve),
+        // meta: ['商铺管理', '商铺维修', '轮播广告']
+      }, {
+        // 友情连接
+        path: '/shopManagement/friendshipConnection',
+        name: 'friendshipConnection',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/friendshipConnection.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '友情连接']
+      }, {
+        // 增加友情连接
+        path: '/shopManagement/editFriendshipConnection',
+        name: 'editFriendshipConnection',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/editFriendshipConnection.vue'], resolve),
+        // meta: ['商铺管理', '商铺维修', '轮播广告']
+      }, {
+        // 购买模版
+        path: '/shopManagement/templateToBuy',
+        name: 'templateToBuy',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/templateToBuy.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '购买模版']
+      }, {
+        // 弹窗广告
+        path: '/shopManagement/popUpAds',
+        name: 'popUpAds',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/popUpAds.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '弹窗广告']
+      }, {
+        // 商家展示
+        path: '/shopManagement/showMerchants',
+        name: 'showMerchants',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/showMerchants.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '商家展示']
       }]
-
     },
 
   ]

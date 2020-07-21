@@ -25,8 +25,8 @@
                 :style="{'color': activeF ? '#00a4ff' : ''}"
                 @click="registereDteil('q')">商家入驻</span>
           <span class="hoverColor"
-                :style="{'color': activeQ ? '#00a4ff' : ''}"
-                @click="registereDteil('f')">网约工入驻</span>
+                :style="{'color': activeW ? '#00a4ff' : ''}"
+                @click="registereDteil('w')">网约工入驻</span>
           <!-- <span class="hoverColor">备案</span> -->
           <span class="hoverColor"
                 :style="{'color': activeQ ? '#00a4ff' : ''}"
@@ -304,6 +304,7 @@ export default {
 
       activeQ: false,
       activeF: false,
+      activeW: false
     }
   },
 
@@ -341,9 +342,13 @@ export default {
         this.$router.push({
           path: '/registeredQ',
         })
-      } else {
+      } else if (res === 'q') {
         this.$router.push({
           path: '/registeredF',
+        })
+      } else {
+        this.$router.push({
+          path: '/registeredW',
         })
       }
     },
@@ -375,12 +380,15 @@ export default {
       if (to.name === 'registeredQ') {
         this.activeQ = true
         this.activeF = false
+        this.activeW = false
       } else if (to.name === 'registeredF') {
         this.activeQ = false
         this.activeF = true
+        this.activeW = false
       } else {
         this.activeQ = false
         this.activeF = false
+        this.activeW = true
       }
     }
   },

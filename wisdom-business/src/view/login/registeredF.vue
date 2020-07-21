@@ -12,14 +12,44 @@
                  ref="ruleForm"
                  label-width="130px"
                  class="demo-ruleForm">
-          <el-form-item label="企业名称  "
+          <el-form-item label="店主姓名"
                         prop="name">
             <el-input type="input"
                       clearable
-                      placeholder='请填写您企业营业执照上完整名称'
+                      placeholder='请填写店铺负责人姓名'
                       v-model="service.name"
                       autocomplete="off"></el-input>
           </el-form-item>
+
+          <el-form-item label="店铺名称"
+                        prop="addName">
+            <el-input v-model="service.addName"
+                      clearable
+                      placeholder="请填写商家店铺名称"></el-input>
+          </el-form-item>
+          <!-- <el-form-item label="类型"
+                        prop="resource">
+            <el-radio-group v-model="service.resource">
+              <el-radio label="个人"></el-radio>
+              <el-radio label="企业/政府"></el-radio>
+            </el-radio-group>
+          </el-form-item> -->
+          <el-form-item label="所属行业"
+                        prop="industry">
+            <el-select v-model="service.industry"
+                       style="width:100%"
+                       placeholder="请选择店铺所属行业">
+              <el-option label="软件服务商"
+                         value="1"></el-option>
+              <el-option label="硬件服务商"
+                         value="2"></el-option>
+              <el-option label="行业服务商"
+                         value="3"></el-option>
+              <el-option label="城市服务商"
+                         value="4"></el-option>
+            </el-select>
+          </el-form-item>
+
           <el-form-item label="所在区域"
                         prop="region">
             <div style="width:100%; display: flex">
@@ -43,29 +73,35 @@
               </el-select>
             </div>
           </el-form-item>
+
           <el-form-item label="详细地址"
                         prop="address">
             <el-input v-model="service.address"
                       clearable
-                      placeholder="请填写您企业详细地址，具体到门牌号"></el-input>
+                      placeholder="请填写店铺详细地址具体到门牌号"></el-input>
           </el-form-item>
-          <!-- <el-form-item label="类型"
-                        prop="resource">
-            <el-radio-group v-model="service.resource">
-              <el-radio label="个人"></el-radio>
-              <el-radio label="企业/政府"></el-radio>
-            </el-radio-group>
-          </el-form-item> -->
-          <el-form-item label="所属行业"
-                        prop="industry">
-            <el-input type="input"
+
+          <el-form-item label="固定电话"
+                        prop="PePhe">
+            <el-input placeholder="请填写店铺固定电话"
                       clearable
-                      placeholder="请填写您企业所从事的行业"
-                      v-model="service.industry"></el-input>
+                      v-model="service.PePhe"></el-input>
           </el-form-item>
-          <el-form-item label="营业执照"
+          <el-form-item label="联系手机"
+                        prop="PePheS">
+            <el-input placeholder="请填写店铺负责人常用手机号"
+                      clearable
+                      v-model="service.PePhe"></el-input>
+          </el-form-item>
+          <el-form-item label="联系邮箱"
+                        prop="email">
+            <el-input placeholder="请填写店铺负责人常用邮箱"
+                      clearable
+                      v-model="service.email"></el-input>
+          </el-form-item>
+          <el-form-item label="店主证件"
                         prop="license">
-            <span>请上传您的营业执照</span>
+            <span>请上传店主身份证</span>
             <el-upload action="https://jsonplaceholder.typicode.com/posts/"
                        list-type="picture-card"
                        :on-preview="handlePictureCardPreview"
@@ -78,36 +114,53 @@
                    alt="">
             </el-dialog>
           </el-form-item>
-          <el-form-item label="企业负责人姓名"
+
+          <el-form-item label="营业执照"
+                        prop="business">
+            <span>请上传店铺营业执照</span>
+            <el-upload action="https://jsonplaceholder.typicode.com/posts/"
+                       list-type="picture-card"
+                       :on-preview="handlePictureCardPreview"
+                       :on-remove="handleRemove">
+              <i class="el-icon-plus"></i>
+            </el-upload>
+            <el-dialog :visible.sync="dialogVisible">
+              <img width="100%"
+                   :src="dialogImageUrl"
+                   alt="">
+            </el-dialog>
+          </el-form-item>
+
+          <el-form-item label="账户名称"
+                        prop="accountName">
+            <el-input v-model="service.accountName"
+                      clearable
+                      placeholder="请输入微信（支付宝）提现的账户名称"></el-input>
+          </el-form-item>
+
+          <el-form-item label="账号"
+                        prop="account">
+            <el-input placeholder="请输入您 微信（支付宝）提现的账号"
+                      clearable
+                      v-model="service.account"></el-input>
+          </el-form-item>
+          <!-- <el-form-item label="企业负责人姓名"
                         prop="peName">
             <el-input type="input"
                       clearable
                       placeholder="请填写您企业联系人姓名"
                       v-model="service.peName"></el-input>
-          </el-form-item>
-          <el-form-item label="企业负责人电话"
-                        prop="PePhe">
-            <el-input placeholder="请填写企业负责人联系电话"
-                      clearable
-                      v-model="service.PePhe"></el-input>
-          </el-form-item>
-          <el-form-item label="企业联系邮箱"
-                        prop="email">
-            <el-input placeholder="请填写企业联系邮箱"
-                      clearable
-                      v-model="service.email"></el-input>
-          </el-form-item>
-
+          </el-form-item> -->
+          <div class="reg-agreement">
+            <el-checkbox v-model="checked">我已认真阅读并完全同意美城茂商家入驻协议中的所有条款</el-checkbox>
+          </div>
           <el-form-item>
             <el-button type="primary"
                        style="width: 100%"
-                       @click="submitForm('ruleForm')">同意协议并提交</el-button>
+                       @click="submitForm('ruleForm')">立即开店</el-button>
           </el-form-item>
         </el-form>
-        <div class="reg-agreement">
-          <span>《景安网络用户注册协议》</span>
-          <span>《法律声明及隐私权政策》</span>
-        </div>
+
       </div>
     </div>
     <div class="bottom"></div>
@@ -122,10 +175,10 @@ export default {
 
     var regions = (rule, value, callback) => {
       if (!this.service.province.length) {
-        callback(new Error('请选择所在省'));
+        callback(new Error('请选择店铺所在省'));
       }
       if (!this.service.city.length) {
-        callback(new Error('请选择所在市'));
+        callback(new Error('请选择店铺所在市'));
       }
 
       if (this.service.province.length && this.service.city.length) {
@@ -135,7 +188,15 @@ export default {
 
     var license = (rule, value, callback) => {
       if (!this.dialogImageUrl.length) {
-        callback(new Error('请上传您的营业执照'));
+        callback(new Error('请上传店主身份证'));
+      } else {
+        callback();
+      }
+    }
+
+    var business = (rule, value, callback) => {
+      if (!this.dialogImageUrl.length) {
+        callback(new Error('请上传店铺营业执照'));
       } else {
         callback();
       }
@@ -149,6 +210,7 @@ export default {
         city: '',
         address: '',
         industry: '',
+        addName: '',
         peName: '',
         PePhe: '',
         email: ''
@@ -156,29 +218,48 @@ export default {
 
       serviceLes: {
         name: [
-          { required: true, message: '请填写您企业营业执照上完整名称', trigger: 'blur' }
+          { required: true, message: '请填写店铺负责人姓名', trigger: 'blur' }
         ],
         region: [
           { required: true, validator: regions, trigger: 'change' }
         ],
         address: [
-          { required: true, message: '请填写您企业详细地址，具体到门牌号', trigger: 'blur' },
+          { required: true, message: '请填写店铺详细地址具体到门牌号', trigger: 'blur' },
+        ],
+
+        addName: [
+          { required: true, message: '请填写商家店铺名称', trigger: 'blur' },
         ],
         email: [
-          { required: true, message: '请填写企业联系邮箱', trigger: 'blur' }
+          { required: true, message: '请填写店铺负责人常用邮箱', trigger: 'blur' }
         ],
         industry: [
-          { required: true, message: '请填写您企业所从事的行业', trigger: 'blur' }
+          { required: true, message: '请选择店铺所属行业', trigger: 'change' }
         ],
         peName: [
           { required: true, message: '请填写您企业联系人姓名', trigger: 'blur' }
         ],
 
+        accountName: [
+          { required: true, message: '账户名称：请输入微信（支付宝）提现的账户名称', trigger: 'blur' }
+        ],
+        account: [
+          { required: true, message: '请输入您 微信（支付宝）提现的账号', trigger: 'blur' }
+        ],
+
+
         PePhe: [
           { required: true, message: '请填写企业负责人联系电话', trigger: 'blur' }
         ],
+        PePheS: [
+          { required: true, message: '请填写店铺负责人常用手机号', trigger: 'blur' }
+        ],
         license: [{
           required: true, validator: license, trigger: 'change'
+        }]
+        ,
+        business: [{
+          required: true, validator: business, trigger: 'change'
         }]
         // PePhe: [
         //   { required: true, message: '请填写您企业联系人姓名', trigger: 'blur' }
@@ -281,6 +362,8 @@ export default {
   margin: 0 8px;
   box-sizing: border-box;
   padding-left: 70px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .reg-agreement :hover {
   text-decoration: underline;
