@@ -14,7 +14,20 @@ let navArr = [
         name: '修改资料',
         icon: 'el-icon-menu',
         url: '/provider/list',
-        menu: true
+        menu: true,
+        actions: [{
+          name: '收货地址',
+          url: '/shopManagement/modifyTheData'
+        }, {
+          name: '修改资料',
+          url: '/shopManagement/shippingAddress'
+        },
+          // {
+          //   name: '短消息',
+          //   url: '/company/edit',
+          //   parent: '/company/list'
+          // }
+        ]
       }, {
         id: 'PROVIDER_LIST',
         name: '商铺维修',

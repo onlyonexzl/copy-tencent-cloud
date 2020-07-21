@@ -150,7 +150,29 @@ export default new Router({
         name: 'showMerchants',
         component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/repairShops/showMerchants.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '商家展示']
+      },
+
+      //-----------------------------------------------------------------修改资料
+      {
+        // 收获地址
+        path: '/shopManagement/modifyTheData',
+        name: 'modifyTheData',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/modifyTheData/modifyTheData.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '收获地址']
+      }, {
+        // 收获地址
+        path: '/shopManagement/addModifyTheData',
+        name: 'addModifyTheData',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/modifyTheData/addModifyTheData.vue'], resolve),
+        // meta: ['商铺管理', '商铺维修', '收获地址']
+      }, {
+        // 修改资料
+        path: '/shopManagement/shippingAddress',
+        name: 'shippingAddress',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/modifyTheData/shippingAddress.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '修改资料']
       }]
+
     },
 
   ]

@@ -190,7 +190,9 @@ export default {
         '/shopManagement/friendshipConnection',
         '/shopManagement/templateToBuy',
         '/shopManagement/popUpAds',
-        '/shopManagement/showMerchants'
+        '/shopManagement/showMerchants',
+        '/shopManagement/modifyTheData',
+        '/shopManagement/shippingAddress'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -203,7 +205,8 @@ export default {
       const routerArray = [
         '/shopManagement/addPageManagement',
         '/shopManagement/editImageAds',
-        '/shopManagement/editFriendshipConnection'
+        '/shopManagement/editFriendshipConnection',
+        '/shopManagement/addModifyTheData'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

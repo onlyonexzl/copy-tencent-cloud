@@ -117,7 +117,7 @@ export default {
       array: [{
         name: '证书'
       }],
-      height: window.innerHeight - 150 + 'px'
+      height: window.innerHeight - 180 + 'px'
       // rules: {
       //   name: [
       //     { required: true, message: '请输入服务商名称', trigger: 'blur' }
