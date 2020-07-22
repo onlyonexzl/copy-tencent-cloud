@@ -171,6 +171,33 @@ export default new Router({
         name: 'shippingAddress',
         component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/modifyTheData/shippingAddress.vue'], resolve),
         meta: ['商铺管理', '商铺维修', '修改资料']
+      },
+
+      //-----------------------------------------------------------------商铺设置
+      {
+        // 导航管理
+        path: '/setUpShops/navigationManagement',
+        name: 'navigationManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/navigationManagement.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '导航管理']
+      }, {
+        // 添加导航管理
+        path: '/setUpShops/editNavigationManagement',
+        name: 'editNavigationManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/editNavigationManagement.vue'], resolve),
+        // meta: ['商铺管理', '商铺维修', '导航管理']
+      }, {
+        // 基础信息
+        path: '/setUpShops/information',
+        name: 'information',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/information.vue'], resolve),
+        meta: ['商铺管理', '商铺维修', '基础信息']
+      }, {
+        // 头部样式设置
+        path: '/setUpShops/navigationStyleSettings',
+        name: 'navigationStyleSettings',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/navigationStyleSettings.vue'], resolve),
+        // meta: ['商铺管理', '商铺维修', '基础信息']
       }]
 
     },

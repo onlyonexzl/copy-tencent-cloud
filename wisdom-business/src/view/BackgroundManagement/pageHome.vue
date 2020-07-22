@@ -192,7 +192,9 @@ export default {
         '/shopManagement/popUpAds',
         '/shopManagement/showMerchants',
         '/shopManagement/modifyTheData',
-        '/shopManagement/shippingAddress'
+        '/shopManagement/shippingAddress',
+        '/setUpShops/navigationManagement',
+        '/setUpShops/information'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -206,7 +208,9 @@ export default {
         '/shopManagement/addPageManagement',
         '/shopManagement/editImageAds',
         '/shopManagement/editFriendshipConnection',
-        '/shopManagement/addModifyTheData'
+        '/shopManagement/addModifyTheData',
+        '/setUpShops/editNavigationManagement',
+        '/setUpShops/navigationStyleSettings'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false
@@ -219,12 +223,37 @@ export default {
     goBack () {
       this.$router.go(-1);
     },
+
+    getmenu () {
+      console.log(this.$route.path, nav)
+      nav.forEach((item, index) => {
+        if (item.subset) {
+          item.subset.forEach((item_two, index_t) => {
+            if (item_two.actions) {
+              item_two.actions.forEach((item_f, index_f) => {
+                if (item_f.url === this.$route.path) {
+                  this.index_menu = (index + 1) + '-' + (index_t + 1) + '-' + index_f
+                }
+              })
+            } else {
+              if (item_two.url === this.$route.path) {
+                this.index_menu = (index + 1) + '-' + (index_t + 1)
+              }
+            }
+          })
+        } else {
+          if (item.url === this.$route.path) {
+            this.index_menu = index + 1
+          }
+        }
+      })
+    }
   },
 
   mounted () {
     this.getTitleBox()
     this.getTitleName()
-    if (sessionStorage.getItem('index_menu')) this.index_menu = sessionStorage.getItem('index_menu') + ''
+    this.getmenu()
   },
 
   watch: {
@@ -232,6 +261,7 @@ export default {
       handler: function (val, oldVal) {
         this.getTitleBox()
         this.getTitleName()
+        this.getmenu()
       },
       // 深度观察监听
       deep: true

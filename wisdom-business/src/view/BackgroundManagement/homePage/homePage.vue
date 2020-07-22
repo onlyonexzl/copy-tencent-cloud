@@ -3,32 +3,6 @@
     <div class="title">
       <span class="hovertext"> <i class="el-icon-message-solid"
            style="color:#00a4ff"></i> 消息提示：您有（<span style="color: #f30">3</span>）条新消息</span>
-      <div>
-        <el-button slot="append"
-                   type="primary"
-                   icon="el-icon-plus"
-                   style="width: 100px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;">
-          马上申请
-        </el-button>
-        <el-button slot="append"
-                   type="primary"
-                   icon="el-icon-plus"
-                   style="width: 100px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;">
-          积分购买
-        </el-button>
-        <el-button slot="append"
-                   type="primary"
-                   icon="el-icon-plus"
-                   style="width: 100px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;">
-          商铺续费
-        </el-button>
-        <el-button slot="append"
-                   type="primary"
-                   icon="el-icon-plus"
-                   style="width: 100px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;">
-          我的商铺
-        </el-button>
-      </div>
     </div>
     <div class="hyzx-card-col">
       <div class="hyzx-card-1">
@@ -144,6 +118,32 @@
         <div style="margin-top: 20px;">
           您当前店铺为：普通店铺，<span class="hovertext"
                 style="color: #409eff">点此升级</span>
+        </div>
+        <div style="margin-top: 20px">
+          <el-button slot="append"
+                     type="primary"
+                     icon="el-icon-plus"
+                     style="width: 100px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;">
+            马上申请
+          </el-button>
+          <el-button slot="append"
+                     type="primary"
+                     icon="el-icon-plus"
+                     style="width: 100px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;">
+            积分购买
+          </el-button>
+          <el-button slot="append"
+                     type="primary"
+                     icon="el-icon-plus"
+                     style="width: 100px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;">
+            商铺续费
+          </el-button>
+          <el-button slot="append"
+                     type="primary"
+                     icon="el-icon-plus"
+                     style="width: 100px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;">
+            我的商铺
+          </el-button>
         </div>
       </div>
     </div>

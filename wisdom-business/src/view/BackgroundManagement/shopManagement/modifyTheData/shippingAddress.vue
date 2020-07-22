@@ -1,7 +1,7 @@
 <template>
   <div class="shippingAddress"
        :style="{'height': height}">
-    <p style="font-size: 15px; margin-bottom: 10px">
+    <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
       <i class="el-icon-edit"
          style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 修改用户密码
     </p>
@@ -23,7 +23,7 @@
         <el-input v-model="form.name"></el-input>
       </el-form-item>
     </el-form>
-    <p style="font-size: 15px; margin-bottom: 10px">
+    <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
       <i class="el-icon-edit"
          style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 修改支付密码
     </p>
@@ -46,7 +46,7 @@
         <el-input v-model="form.name"></el-input>
       </el-form-item>
     </el-form>
-    <p style="font-size: 15px; margin-bottom: 10px">
+    <p style="font-size: 15px; margin-bottom: 10pxfont-weight: 360; color:#000">
       <i class="el-icon-tickets"
          style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 基本信息
     </p>
