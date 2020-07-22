@@ -5,7 +5,7 @@
              :rules="rules"
              :model="form"
              label-width="150px">
-      <el-form-item label="收货人"
+      <el-form-item label="收货人："
                     prop="displayName"
                     required>
         <div class="form-item">
@@ -15,13 +15,13 @@
                        style="margin-left: 20px"> 默认地址</el-checkbox>
         </div>
       </el-form-item>
-      <el-form-item label="手机号码"
+      <el-form-item label="手机号码："
                     prop="name"
                     required>
         <el-input v-model="form.name"
                   style="width: 600px;"></el-input>
       </el-form-item>
-      <el-form-item label="所属地区">
+      <el-form-item label="所属地区：">
         <div class="form-item">
           <el-select v-model="form.province"
                      style="width:200px"
@@ -52,7 +52,7 @@
           </el-select>
         </div>
       </el-form-item>
-      <el-form-item label="街道地址"
+      <el-form-item label="街道地址："
                     prop="value"
                     required>
         <el-input v-model="form.value"
@@ -71,7 +71,7 @@
           </el-option>
         </el-select>
       </el-form-item> -->
-      <el-form-item label="邮政编码">
+      <el-form-item label="邮政编码：">
         <el-input v-model="form.description"
                   style="width: 600px;"
                   rows="5"></el-input>

@@ -179,25 +179,76 @@ export default new Router({
         path: '/setUpShops/navigationManagement',
         name: 'navigationManagement',
         component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/navigationManagement.vue'], resolve),
-        meta: ['商铺管理', '商铺维修', '导航管理']
+        meta: ['商铺管理', '商铺设置', '导航管理']
       }, {
         // 添加导航管理
         path: '/setUpShops/editNavigationManagement',
         name: 'editNavigationManagement',
         component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/editNavigationManagement.vue'], resolve),
-        // meta: ['商铺管理', '商铺维修', '导航管理']
+        // meta: ['商铺管理', '商铺设置', '导航管理']
       }, {
         // 基础信息
         path: '/setUpShops/information',
         name: 'information',
         component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/information.vue'], resolve),
-        meta: ['商铺管理', '商铺维修', '基础信息']
+        meta: ['商铺管理', '商铺设置', '基础信息']
       }, {
         // 头部样式设置
         path: '/setUpShops/navigationStyleSettings',
         name: 'navigationStyleSettings',
         component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/navigationStyleSettings.vue'], resolve),
-        // meta: ['商铺管理', '商铺维修', '基础信息']
+        // meta: ['商铺管理', '商铺设置', '基础信息']
+      }, {
+        // 客服设置
+        path: '/setUpShops/settingService',
+        name: 'settingService',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/settingService.vue'], resolve),
+        meta: ['商铺管理', '商铺设置', '客服设置']
+      }, {
+        // 域名设置
+        path: '/setUpShops/theHttp',
+        name: 'theHttp',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/theHttp.vue'], resolve),
+        meta: ['商铺管理', '商铺设置', '域名设置']
+      }, {
+        // 短信设置
+        path: '/setUpShops/shopCertification',
+        name: 'shopCertification',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/shopCertification.vue'], resolve),
+        meta: ['商铺管理', '商铺设置', '短信设置']
+      }, {
+        // 商铺认证
+        path: '/setUpShops/SMSSettings',
+        name: 'SMSSettings',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/setUpShops/SMSSettings.vue'], resolve),
+        meta: ['商铺管理', '商铺设置', '商铺认证']
+      },
+
+      //-----------------------------------------------------------------拓展管理
+      {
+        // 图片管理
+        path: '/developManagement/imageManagement',
+        name: 'imageManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/developManagement/imageManagement.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '图片管理']
+      }, {
+        // 淘宝转换
+        path: '/developManagement/taobaoConversion',
+        name: 'taobaoConversion',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/developManagement/taobaoConversion.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '淘宝导出']
+      }, {
+        // 淘宝导入
+        path: '/developManagement/theImport',
+        name: 'theImport',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/developManagement/theImport.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '淘宝导入']
+      }, {
+        // 托管管理
+        path: '/developManagement/trustManagement',
+        name: 'trustManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/developManagement/trustManagement.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '托管管理']
       }]
 
     },

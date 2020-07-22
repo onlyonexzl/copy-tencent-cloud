@@ -88,20 +88,16 @@ let navArr = [
           url: '/setUpShops/information'
         }, {
           name: '客服设置',
-          url: '/company/edit',
-          parent: '/company/list'
+          url: '/setUpShops/settingService'
         }, {
           name: '短信设置',
-          url: '/company/edit',
-          parent: '/company/list'
+          url: '/setUpShops/SMSSettings',
         }, {
           name: '商铺认证',
-          url: '/company/edit',
-          parent: '/company/list'
+          url: '/setUpShops/shopCertification'
         }, {
           name: '域名设置',
-          url: '/company/edit',
-          parent: '/company/list'
+          url: '/setUpShops/theHttp'
         }]
       }, {
         id: 'PROVIDER_LIST',
@@ -111,21 +107,20 @@ let navArr = [
         menu: true,
         actions: [{
           name: '图片管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          url: '/developManagement/imageManagement'
         }, {
           name: '淘宝转换',
-          url: '/company/edit',
-          parent: '/company/list'
+          url: '/developManagement/taobaoConversion'
         }, {
           name: '托管管理',
-          url: '/company/edit',
-          parent: '/company/list'
-        }, {
-          name: '微信菜单管理',
-          url: '/company/edit',
-          parent: '/company/list'
-        }]
+          url: '/developManagement/trustManagement'
+        },
+          // {
+          //   name: '微信菜单管理',
+          //   url: '/company/edit',
+          //   parent: '/company/list'
+          // }
+        ]
       }
     ]
   },

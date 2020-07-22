@@ -194,7 +194,15 @@ export default {
         '/shopManagement/modifyTheData',
         '/shopManagement/shippingAddress',
         '/setUpShops/navigationManagement',
-        '/setUpShops/information'
+        '/setUpShops/information',
+        '/setUpShops/settingService',
+        '/setUpShops/theHttp',
+        '/developManagement/imageManagement',
+        '/developManagement/taobaoConversion',
+        '/developManagement/theImport',
+        '/developManagement/trustManagement',
+        '/setUpShops/SMSSettings',
+        '/setUpShops/shopCertification'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -225,7 +233,6 @@ export default {
     },
 
     getmenu () {
-      console.log(this.$route.path, nav)
       nav.forEach((item, index) => {
         if (item.subset) {
           item.subset.forEach((item_two, index_t) => {
@@ -254,6 +261,7 @@ export default {
     this.getTitleBox()
     this.getTitleName()
     this.getmenu()
+    if (sessionStorage.getItem('index_menu')) this.index_menu = sessionStorage.getItem('index_menu') + ''
   },
 
   watch: {

@@ -27,6 +27,17 @@ input{ outline:none; border:0; }
   color: #f30 !important;
 }
 
+.allDiv {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 20px;
+  overflow: auto;
+}
+
 
 .divButtonHover {
   display: inline-block;
