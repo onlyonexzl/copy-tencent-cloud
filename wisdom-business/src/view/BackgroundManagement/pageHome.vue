@@ -202,7 +202,17 @@ export default {
         '/developManagement/theImport',
         '/developManagement/trustManagement',
         '/setUpShops/SMSSettings',
-        '/setUpShops/shopCertification'
+        '/setUpShops/shopCertification',
+        '/commodity/conventionalKnowledge',
+        '/commodity/productsKnowledge',
+        '/commodity/spellMassGoods',
+        '/commodity/rebateGoods',
+        '/commodity/secondsKillGoods',
+        '/commodity/bulkGoods',
+        '/commodity/auctionGoods',
+        '/commodity/distributionGoods',
+        '/commodity/wholesaleGoods',
+        '/commodity/notGoods'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -233,6 +243,7 @@ export default {
     },
 
     getmenu () {
+      if (sessionStorage.getItem('index_menu')) this.index_menu = sessionStorage.getItem('index_menu') + ''
       nav.forEach((item, index) => {
         if (item.subset) {
           item.subset.forEach((item_two, index_t) => {
@@ -261,7 +272,6 @@ export default {
     this.getTitleBox()
     this.getTitleName()
     this.getmenu()
-    if (sessionStorage.getItem('index_menu')) this.index_menu = sessionStorage.getItem('index_menu') + ''
   },
 
   watch: {

@@ -174,45 +174,35 @@ let navArr = [
         url: '/product/list',
         menu: true,
         actions: [{
-          name: '常规产品管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          name: '常规商品管理',
+          url: '/commodity/conventionalKnowledge'
         }, {
-          name: '知识产品管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          name: '知识商品管理',
+          url: '/commodity/productsKnowledge'
         }, {
-          name: '拼团产品管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          name: '拼团商品管理',
+          url: '/commodity/spellMassGoods'
         }, {
-          name: '返利产品管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          name: '返利商品管理',
+          url: '/commodity/rebateGoods'
         }, {
-          name: '秒杀产品管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          name: '秒杀商品管理',
+          url: '/commodity/secondsKillGoods'
         }, {
           name: '团购商品管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          url: '/commodity/bulkGoods'
         }, {
-          name: '拍卖产品管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          name: '拍卖商品管理',
+          url: '/commodity/auctionGoods'
         }, {
-          name: '分销产品管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          name: '分销商品管理',
+          url: '/commodity/distributionGoods'
         }, {
-          name: '批发产品管理',
-          url: '/company/edit',
-          parent: '/company/list'
+          name: '批发商品管理',
+          url: '/commodity/wholesaleGoods'
         }, {
           name: '未上架商品',
-          url: '/company/edit',
-          parent: '/company/list'
+          url: '/commodity/notGoods'
         }]
       },
       {

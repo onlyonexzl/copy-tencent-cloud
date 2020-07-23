@@ -249,9 +249,72 @@ export default new Router({
         name: 'trustManagement',
         component: (resolve) => require(['@/view/BackgroundManagement/shopManagement/developManagement/trustManagement.vue'], resolve),
         meta: ['商铺管理', '拓展管理', '托管管理']
+      },
+
+      // --------------------------------------商品管理
+      // 
+      {
+        // 常规产品管理
+        path: '/commodity/conventionalKnowledge',
+        name: 'conventionalKnowledge',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/conventionalKnowledge.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '常规商品管理']
+      }, {
+        // 知识商品管理
+        path: '/commodity/productsKnowledge',
+        name: 'productsKnowledge',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/productsKnowledge.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '知识商品管理']
+      }, {
+        // 拼团商品管理
+        path: '/commodity/spellMassGoods',
+        name: 'spellMassGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/spellMassGoods.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '拼团商品管理']
+      }, {
+        // 返利商品管理
+        path: '/commodity/rebateGoods',
+        name: 'rebateGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/rebateGoods.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '返利商品管理']
+      }, {
+        // 秒杀商品管理
+        path: '/commodity/secondsKillGoods',
+        name: 'secondsKillGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/secondsKillGoods.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '秒杀商品管理']
+      }, {
+        // 团购商品管理
+        path: '/commodity/bulkGoods',
+        name: 'bulkGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/bulkGoods.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '团购商品管理']
+      }, {
+        // 拍卖商品管理
+        path: '/commodity/auctionGoods',
+        name: 'auctionGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/auctionGoods.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '拍卖商品管理']
+      }, {
+        // 分销商品管理
+        path: '/commodity/distributionGoods',
+        name: 'distributionGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/distributionGoods.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '分销商品管理']
+      }, {
+        // 批发商品管理
+        path: '/commodity/wholesaleGoods',
+        name: 'wholesaleGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/wholesaleGoods.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '批发商品管理']
+      }, {
+        // 未上架商品
+        path: '/commodity/notGoods',
+        name: 'notGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/notGoods.vue'], resolve),
+        meta: ['商铺管理', '拓展管理', '未上架商品']
       }]
 
     },
-
   ]
 })
