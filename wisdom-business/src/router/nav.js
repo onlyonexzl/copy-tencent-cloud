@@ -207,14 +207,13 @@ let navArr = [
       },
       {
         id: 'PRODUCT_LIST',
-        name: '常规商品分类',
+        name: '分类设置',
         icon: 'el-icon-menu',
         url: '/product/category/list',
         menu: true,
         actions: [{
-          name: '商品分类',
-          url: '/company/edit',
-          parent: '/company/list'
+          name: '常规商品分类',
+          url: '/conventionalProducts/conventionalProducts'
         }]
       },
       // {

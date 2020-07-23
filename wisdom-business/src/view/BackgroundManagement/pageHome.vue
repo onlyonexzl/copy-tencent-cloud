@@ -212,7 +212,8 @@ export default {
         '/commodity/auctionGoods',
         '/commodity/distributionGoods',
         '/commodity/wholesaleGoods',
-        '/commodity/notGoods'
+        '/commodity/notGoods',
+        '/conventionalProducts/conventionalProducts'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -228,7 +229,8 @@ export default {
         '/shopManagement/editFriendshipConnection',
         '/shopManagement/addModifyTheData',
         '/setUpShops/editNavigationManagement',
-        '/setUpShops/navigationStyleSettings'
+        '/setUpShops/navigationStyleSettings',
+        '/conventionalProducts/editConventional'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

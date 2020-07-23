@@ -313,6 +313,20 @@ export default new Router({
         name: 'notGoods',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/notGoods.vue'], resolve),
         meta: ['商铺管理', '拓展管理', '未上架商品']
+      },
+
+      {
+        // 未上架商品
+        path: '/conventionalProducts/conventionalProducts',
+        name: 'conventionalProducts',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/conventionalProducts/conventionalProducts.vue'], resolve),
+        meta: ['商铺管理', '分类设置', '常规商品分类']
+      }, {
+        // 编辑未上架商品
+        path: '/conventionalProducts/editConventional',
+        name: 'editConventional',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/conventionalProducts/editConventional.vue'], resolve),
+        // meta: ['商铺管理', '分类设置', '常规商品分类']
       }]
 
     },
