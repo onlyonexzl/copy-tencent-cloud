@@ -137,8 +137,9 @@
                     label="4">微信wap支付 微信wap支付</el-radio>
         </div>
       </el-form-item>
-
     </el-form>
+    <el-button type="primary"
+               style="float: right">确定</el-button>
   </div>
 </template>
 

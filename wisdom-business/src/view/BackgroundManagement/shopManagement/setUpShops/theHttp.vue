@@ -42,6 +42,8 @@
         未审核
       </el-form-item>
     </el-form>
+    <el-button type="primary"
+               style="float: right">确定</el-button>
   </div>
 </template>
 

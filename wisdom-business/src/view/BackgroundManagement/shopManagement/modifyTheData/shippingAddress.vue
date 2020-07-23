@@ -185,7 +185,12 @@
         <el-radio v-model="form.radio"
                   label="2">无</el-radio>
       </el-form-item>
+      <el-form-item label="营业执照编号"
+                    prop="name">
+        <el-input v-model="form.name"></el-input>
+      </el-form-item>
       <el-form-item label="营业执照图片"
+                    style="width: 100%"
                     prop="name">
         <el-upload action="https://jsonplaceholder.typicode.com/posts/"
                    list-type="picture-card"
@@ -199,16 +204,43 @@
                alt="">
         </el-dialog>
       </el-form-item>
+      <el-form-item label="地图定位"
+                    style="width: 100%"
+                    prop="name">
+        <div class="amap-wrapper">
+          <el-amap ref="map"
+                   :vid="'amapDemo'"
+                   :center="center"
+                   :zoom="zoom"
+                   :plugin="plugin"
+                   :events="events"
+                   class="amap-demo">
+          </el-amap>
+        </div>
+        <div class="toolbar">
+          <span v-if="loaded">
+            当前位置: lng = {{ lng }} lat = {{ lat }}
+          </span>
+          <span v-else>正在定位</span>
+        </div>
+      </el-form-item>
     </el-form>
+
+    <el-button type="primary"
+               style="float: right">确定</el-button>
   </div>
 </template>
 
 <script>
 import E from "wangeditor";
+import BMap from 'BMap'
+
 export default {
   name: 'shippingAddress',
 
   data () {
+    let self = this;
+
     return {
       dialogImageUrl: '',
       dialogVisible: false,
@@ -248,6 +280,68 @@ export default {
         ]
       },
       imgData: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1121833438,3473430102&fm=26&gp=0.jpg',
+
+      center: [121.5273285, 31.21515044],
+      zoom: 12,
+      position: [121.5273285, 31.21515044],
+      icon: '/huoche.png',
+      events: {
+        init (o) {
+          console.log(o.getCenter());
+        },
+        zoomchange: (e) => {
+          console.log(e);
+        },
+        zoomend: (e) => {
+          //获取当前缩放zoom值
+          console.log(this.$refs.map.$$getInstance().getZoom());
+          console.log(e);
+        },
+        click: e => {
+          alert('map clicked')
+        }
+      },
+      lng: 0,
+      lat: 0,
+      loaded: false,
+      markers: [
+
+      ],
+      //使用其他组件
+      plugin: [
+        {
+          pName: 'Geolocation',   //定位
+          events: {
+            init (o) {
+              // o 是高德地图定位插件实例
+              o.getCurrentPosition((status, result) => {
+                if (result && result.position) {
+                  self.lng = result.position.lng;             //设置经度
+                  self.lat = result.position.lat;             //设置维度
+                  self.center = [self.lng, self.lat];         //设置坐标
+                  self.loaded = true;                         //load
+                }
+              })
+            }
+          }
+        },
+        {
+          pName: 'Scale',
+          events: {
+            init (instance) {
+              console.log(instance)
+            }
+          }
+        },
+        {
+          pName: 'ToolBar',
+          events: {
+            init (instance) {
+              console.log(instance)
+            }
+          }
+        }
+      ]
     }
   },
 
@@ -278,9 +372,33 @@ export default {
       'code' // 插入代码
     ];
     this.editor.create(); // 创建富文本实例
+    this.addMarker()
+    this.onSearchResult()
   },
 
   methods: {
+    addMarker: function () {
+      let lng = 121.5 + Math.round(Math.random() * 1000) / 10000;
+      let lat = 31.197646 + Math.round(Math.random() * 500) / 10000;
+      this.markers.push([lng, lat]);
+    },
+    onSearchResult (pois) {
+      let latSum = 0;
+      let lngSum = 0;
+      if (pois.length > 0) {
+        pois.forEach(poi => {
+          let { lng, lat } = poi;
+          lngSum += lng;
+          latSum += lat;
+          this.markers.push([poi.lng, poi.lat]);
+        });
+        let center = {
+          lng: lngSum / pois.length,
+          lat: latSum / pois.length
+        };
+        this.mapCenter = [center.lng, center.lat];
+      }
+    },
     handleRemove (file, fileList) {
       console.log(file, fileList);
     },
@@ -313,6 +431,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.amap-wrapper {
+  width: 100%;
+  height: 500px;
+}
 .el-form {
   display: flex;
   justify-content: space-between;

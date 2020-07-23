@@ -3,6 +3,49 @@ let navArr = [
     id: 'PROVIDER',
     name: '用户中心',
     icon: 'el-icon-box',
+    // 1、账号管理  2、资金管理  3、收货地址  4、短消息
+    subset: [{
+      id: 'PROVIDER_LIST',
+      name: '账号管理',  //我的账号
+      icon: 'el-icon-menu',
+      url: '/provider/list',
+      menu: true,
+      actions: [{
+        name: '修改资料',
+        url: '/shopManagement/shippingAddress'
+      },
+      {
+        name: '收货地址',
+        url: '/shopManagement/modifyTheData',
+      }, {
+        name: '短消息',
+        url: '/provider/list',
+      }
+        // {
+        //   name: '短消息',
+        //   url: '/company/edit',
+        //   parent: '/company/list'
+        // }
+      ]
+    }, {
+      id: 'PROVIDER_LIST',
+      name: '资金管理', //我的资金
+      icon: 'el-icon-menu',
+      url: '/provider/list',
+      menu: true,
+      actions: [{
+        name: '账户概览',
+        // url: '/shopManagement/shippingAddress'
+      },
+      {
+        name: '积分明细',
+        // url: '/shopManagement/modifyTheData',
+      }, {
+        name: '资金明细',
+        // url: '/provider/list',
+      }
+      ]
+    },]
   },
   {
     id: 'PROVIDER',
@@ -11,26 +54,7 @@ let navArr = [
     subset: [
       {
         id: 'PROVIDER_LIST',
-        name: '修改资料',
-        icon: 'el-icon-menu',
-        url: '/provider/list',
-        menu: true,
-        actions: [{
-          name: '收货地址',
-          url: '/shopManagement/modifyTheData'
-        }, {
-          name: '修改资料',
-          url: '/shopManagement/shippingAddress'
-        },
-          // {
-          //   name: '短消息',
-          //   url: '/company/edit',
-          //   parent: '/company/list'
-          // }
-        ]
-      }, {
-        id: 'PROVIDER_LIST',
-        name: '商铺维修',
+        name: '商铺装修',
         icon: 'el-icon-menu',
         // url: '/provider/list',
         menu: true,
@@ -170,7 +194,7 @@ let navArr = [
           url: '/company/edit',
           parent: '/company/list'
         }, {
-          name: '团购产品管理',
+          name: '团购商品管理',
           url: '/company/edit',
           parent: '/company/list'
         }, {
@@ -198,7 +222,7 @@ let navArr = [
         url: '/product/category/list',
         menu: true,
         actions: [{
-          name: '常规商品分类',
+          name: '商品分类',
           url: '/company/edit',
           parent: '/company/list'
         }]
