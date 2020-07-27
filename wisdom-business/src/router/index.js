@@ -481,6 +481,183 @@ export default new Router({
         name: 'topUp',
         component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/topUp.vue'], resolve),
         meta: ['订单管理', '交易管理', '消保明细']
+      }, {
+        // 我的返佣订单
+        path: '/transactionManagement/orderManagement',
+        name: 'orderManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/orderManagement.vue'], resolve),
+        meta: ['订单管理', '交易管理', '我的返佣订单']
+      }, , {
+        // 地图
+        path: '/report/main',
+        name: 'report',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/report/main.vue'], resolve)
+      }, {
+        // 设备分组
+        path: '/group/list',
+        name: 'group',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/group/list.vue'], resolve),
+        meta: ['物联网管理', '设备分组列表']
+      }, {
+        // 设备分组编辑
+        path: '/group/edit',
+        name: 'group',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/group/edit.vue'], resolve),
+        meta: ['物联网管理', '设备分组列表']
+      }, {
+        //  设备列表
+        path: '/device/list',
+        name: 'device',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/device/list.vue'], resolve),
+        meta: ['物联网管理', '设备分组列表']
+      }, {
+        //设备列表binaji
+        path: '/device/edit',
+        name: 'device',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/device/edit.vue'], resolve),
+      }, {
+        //  驱动列表
+        path: '/driver/list',
+        name: 'driver',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/driver/list.vue'], resolve),
+        meta: ['物联网管理', '驱动列表']
+      }, {
+        //驱动列表编辑
+        path: '/driver/edit',
+        name: 'driver',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/driver/edit.vue'], resolve),
+      }, {
+        //  驱动属性列表
+        path: '/driverAttribute/list',
+        name: 'driverAttribute',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/driverAttribute/list.vue'], resolve),
+        meta: ['物联网管理', '驱动属性列表']
+      }, {
+        //驱动属性列表编辑
+        path: '/driverAttribute/edit',
+        name: 'driverAttribute',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/driverAttribute/edit.vue'], resolve),
+      }, {
+        //  驱动配置列表
+        path: '/driverInfo/list',
+        name: 'driverInfo',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/driverInfo/list.vue'], resolve),
+        meta: ['物联网管理', '驱动配置列表']
+      }, {
+        //驱动配置列表编辑
+        path: '/driverInfo/edit',
+        name: 'driverInfo',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/driverInfo/edit.vue'], resolve),
+      }, {
+        //  位号属性列表
+        path: '/pointAttribute/list',
+        name: 'pointAttribute',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/pointAttribute/list.vue'], resolve),
+        meta: ['物联网管理', '位号属性列表']
+      }, {
+        //位号属性列表编辑
+        path: '/pointAttribute/edit',
+        name: 'pointAttribute',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/pointAttribute/edit.vue'], resolve),
+      }, {
+        //  模板列表
+        path: '/profile/list',
+        name: 'profile',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/profile/list.vue'], resolve),
+        meta: ['物联网管理', '模板列表']
+      }, {
+        //模板列表编辑
+        path: '/profile/edit',
+        name: 'profile',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/profile/edit.vue'], resolve),
+      }, {
+        //  位号列表
+        path: '/point/list',
+        name: 'point',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/point/list.vue'], resolve),
+        meta: ['物联网管理', '位号列表']
+      }, {
+        //位号列表编辑
+        path: '/point/edit',
+        name: 'point',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/point/edit.vue'], resolve),
+      }, {
+        //  位号配置列表
+        path: '/pointInfo/list',
+        name: 'pointInfo',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/pointInfo/list.vue'], resolve),
+        meta: ['物联网管理', '位号配置列表']
+      }, {
+        //位号配置列表编辑
+        path: '/pointInfo/edit',
+        name: 'pointInfo',
+        component: (resolve) => require(['@/view/BackgroundManagement/smartRetail/pointInfo/edit.vue'], resolve),
+      }, {
+        //  优惠券管理
+        path: '/marketingManagement/couponManagement',
+        name: 'couponManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/couponManagement.vue'], resolve),
+        meta: ['营销管理', '优惠券管理']
+      }, {
+        //  添加优惠券管理
+        path: '/marketingManagement/editCouponManagement',
+        name: 'editCouponManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/editCouponManagement.vue'], resolve),
+        // meta: ['营销管理', '优惠券管理']
+      }, {
+        //  积分汇专区
+        path: '/marketingManagement/bonusPointArea',
+        name: 'bonusPointArea',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/bonusPointArea.vue'], resolve),
+        meta: ['营销管理', '积分汇专区']
+      }, {
+        //  积分汇专区
+        path: '/marketingManagement/editBonusPointArea',
+        name: 'editBonusPointArea',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/editBonusPointArea.vue'], resolve),
+        // meta: ['营销管理', '积分汇专区']
+      }, {
+        //  广告管理
+        path: '/marketingManagement/advertisingManagement',
+        name: 'advertisingManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement.vue'], resolve),
+        meta: ['营销管理', '我的广告']
+      }, {
+        //  广告管理
+        path: '/marketingManagement/editadvertisingManagement',
+        name: 'editadvertisingManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/editadvertisingManagement.vue'], resolve),
+        // meta: ['营销管理', '我的广告']
+      }, {
+        //  自定义区域
+        path: '/marketingManagement/customArea',
+        name: 'customArea',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/customArea.vue'], resolve),
+        meta: ['营销管理', '形象展示']
+      }, {
+        //  商品排行
+        path: '/marketingManagement/commodityList',
+        name: 'commodityList',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/commodityList.vue'], resolve),
+        meta: ['营销管理', '商品排行']
+      }, {
+        //  品牌管理
+        path: '/marketingManagement/brandManagement',
+        name: 'brandManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/brandManagement.vue'], resolve),
+        meta: ['营销管理', '品牌管理']
+      }, {
+        //  品牌管理
+        path: '/marketingManagement/editBrandManagement',
+        name: 'editBrandManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/editBrandManagement.vue'], resolve),
+        // meta: ['营销管理', '品牌管理']
+      }, {
+        //  水印设置
+        path: '/marketingManagement/watermarkIsSet',
+        name: 'watermarkIsSet',
+        component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/watermarkIsSet.vue'], resolve),
+        meta: ['营销管理', '水印设置']
       }]
     },
   ]

@@ -225,7 +225,15 @@ export default {
         '/transactionManagement/logisticsTools',
         '/transactionManagement/consultation',
         '/transactionManagement/evaluationOfTheBuyer',
-        '/transactionManagement/fromTheDetail'
+        '/transactionManagement/fromTheDetail',
+        '/transactionManagement/orderManagement',
+        '/marketingManagement/couponManagement',
+        '/marketingManagement/bonusPointArea',
+        '/marketingManagement/advertisingManagement',
+        '/marketingManagement/customArea',
+        '/marketingManagement/commodityList',
+        '/marketingManagement/brandManagement',
+        '/marketingManagement/watermarkIsSet'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -255,7 +263,11 @@ export default {
         '/transactionManagement/addSpellGroupOrder',
         '/transactionManagement/theLocale',
         '/transactionManagement/addTheLocale',
-        '/transactionManagement/topUp'
+        '/transactionManagement/topUp',
+        '/marketingManagement/editCouponManagement',
+        '/marketingManagement/editBonusPointArea',
+        '/marketingManagement/editadvertisingManagement',
+        '/marketingManagement/editBrandManagement'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false
