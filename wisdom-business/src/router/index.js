@@ -658,6 +658,12 @@ export default new Router({
         name: 'watermarkIsSet',
         component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/watermarkIsSet.vue'], resolve),
         meta: ['营销管理', '水印设置']
+      }, {
+        //  收银台
+        path: '/checkstand',
+        name: 'watermarkIsSet',
+        component: (resolve) => require(['@/view/BackgroundManagement/checkstand/checkstand.vue'], resolve),
+        // meta: ['营销管理', '水印设置']
       }]
     },
   ]

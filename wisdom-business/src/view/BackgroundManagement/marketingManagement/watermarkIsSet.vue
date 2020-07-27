@@ -1,5 +1,6 @@
 <template>
-  <div class="watermarkIsSet">
+  <div class="watermarkIsSet"
+       :style="{'height': height}">
     <el-form ref="form"
              :rules="rules"
              :model="form"
@@ -140,6 +141,7 @@ export default {
         label: '北京烤鸭'
       }],
       value: '',
+      height: window.innerHeight - 180 + 'px',
       rules: {
         name: [
           { required: true, message: '请输入分组名称', trigger: 'blur' }
@@ -197,6 +199,7 @@ export default {
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+  overflow: auto;
 }
 
 .el-form {

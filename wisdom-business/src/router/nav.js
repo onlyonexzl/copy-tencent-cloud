@@ -798,47 +798,10 @@ let navArr = [
     subset: [
       {
         id: 'ADMIN_LIST',
-        name: "营销管理",
+        name: "收银台",
         icon: "el-icon-user",
-        url: "/admin/list",
+        url: "/checkstand",
         menu: true,
-        actions: [
-          {
-            name: "优惠卷管理",
-            url: "/admin/add",
-            parent: '/admin/list'
-          },
-          {
-            name: "积分汇专区",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "广告管理",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "自定义区域",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "商品排行",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "品牌管理",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "水印设置",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          }
-        ]
       },
       // {
       //   id: 'ROLE_LIST',
