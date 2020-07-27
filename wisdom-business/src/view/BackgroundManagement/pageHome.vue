@@ -213,7 +213,19 @@ export default {
         '/commodity/distributionGoods',
         '/commodity/wholesaleGoods',
         '/commodity/notGoods',
-        '/conventionalProducts/conventionalProducts'
+        '/conventionalProducts/conventionalProducts',
+        '/contentManagement/magazineManagement',
+        '/contentManagement/informationManagement',
+        '/transactionManagement/magazineManagement',
+        '/transactionManagement/customerOrder',
+        '/transactionManagement/returnsChannel',
+        '/transactionManagement/spellGroupOrder',
+        '/transactionManagement/toApplyFor',
+        '/transactionManagement/spellGroupReturns',
+        '/transactionManagement/logisticsTools',
+        '/transactionManagement/consultation',
+        '/transactionManagement/evaluationOfTheBuyer',
+        '/transactionManagement/fromTheDetail'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -230,7 +242,20 @@ export default {
         '/shopManagement/addModifyTheData',
         '/setUpShops/editNavigationManagement',
         '/setUpShops/navigationStyleSettings',
-        '/conventionalProducts/editConventional'
+        '/conventionalProducts/editConventional',
+        '/commodity/editConventionalKnowledge',
+        '/commodity/editProductsKnowledge',
+        '/commodity/editSpellMassGoods',
+        '/commodity/editRebateGoods',
+        '/commodity/editSecondsKillGoods',
+        '/commodity/editBulkGoods',
+        '/commodity/editAuctionGoods',
+        '/commodity/editWholesaleGoods',
+        '/contentManagement/addInformationManagement',
+        '/transactionManagement/addSpellGroupOrder',
+        '/transactionManagement/theLocale',
+        '/transactionManagement/addTheLocale',
+        '/transactionManagement/topUp'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

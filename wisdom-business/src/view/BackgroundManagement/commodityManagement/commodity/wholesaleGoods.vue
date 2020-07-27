@@ -63,15 +63,20 @@
         <el-button slot="append"
                    type="primary"
                    icon="el-icon-plus"
-                   style="width: 120px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;margin: 10px 0 10px 10px;"
-                   @click="add">
+                   style="width: 120px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;margin: 10px 0 10px 10px;">
           加入云仓
         </el-button>
         <el-button slot="append"
                    type="primary"
+                   style="width: 120px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;margin: 10px 0 10px 10px;">
+          批量更新
+        </el-button>
+        <el-button slot="append"
+                   type="primary"
+                   icon="el-icon-plus"
                    style="width: 120px; height: 35px;text-aline:center;line-height: 0px;padding: 0 10px;font-size: 12px;margin: 10px 0 10px 10px;"
                    @click="add">
-          批量更新
+          增加商品
         </el-button>
       </div>
       <div class="flex">
@@ -135,7 +140,7 @@
                 <el-button size="medium"
                            type="text"
                            class="blueColor right20"
-                           @click="look(scope.$index, scope.row)">编辑</el-button>
+                           @click="edit(scope.$index, scope.row)">编辑</el-button>
                 <el-button size="medium"
                            type="text"
                            class="redColor"
@@ -232,8 +237,12 @@ export default {
 
   methods: {
     add () {
-      this.$router.push('/information/edit?nameType=新建资讯')
+      this.$router.push('/commodity/editWholesaleGoods?nameType=增加商品')
 
+    },
+
+    edit () {
+      this.$router.push('/commodity/editWholesaleGoods?nameType=编辑商品')
     },
     look () {
       this.$router.push('/marketHome/details')

@@ -134,7 +134,7 @@
                 <el-button size="medium"
                            type="text"
                            class="blueColor right20"
-                           @click="look(scope.$index, scope.row)">编辑</el-button>
+                           @click="edit(scope.$index, scope.row)">编辑</el-button>
                 <el-button size="medium"
                            type="text"
                            class="redColor"
@@ -231,8 +231,10 @@ export default {
 
   methods: {
     add () {
-      this.$router.push('/information/edit?nameType=新建资讯')
-
+      this.$router.push('/commodity/editAuctionGoods?nameType=增加商品')
+    },
+    edit () {
+      this.$router.push('/commodity/editAuctionGoods?nameType=编辑商品')
     },
     look () {
       this.$router.push('/marketHome/details')

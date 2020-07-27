@@ -219,8 +219,7 @@ export default {
 
   methods: {
     add () {
-      this.$router.push('/information/edit?nameType=新建资讯')
-
+      this.$router.push('/commodity/editConventionalKnowledge?nameType=添加商品')
     },
     editor () {
       this.$router.push('/marketHome/details')

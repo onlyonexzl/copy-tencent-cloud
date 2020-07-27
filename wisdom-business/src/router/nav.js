@@ -238,6 +238,51 @@ let navArr = [
     ]
   },
   {
+    id: 'INFORMATION',
+    name: '内容管理',
+    icon: 'el-icon-box',
+    subset: [
+      {
+        id: 'INFORMATION_LIST',
+        name: '杂志管理',
+        icon: 'el-icon-menu',
+        url: '/contentManagement/magazineManagement',
+        menu: true,
+        // actions: [
+        //   {
+        //     name: '新增资讯',
+        //     url: '/information/add',
+        //     parent: '/information/list'
+        //   },
+        //   {
+        //     name: '修改资讯',
+        //     url: '/information/edit',
+        //     parent: '/information/list'
+        //   }
+        // ]
+      },
+      // {
+      // id: 'INFORMATION_TYPE_LIST',
+      // name: '资讯类型列表',
+      // icon: 'el-icon-menu',
+      // url: '/information/type/list',
+      // menu: true,
+      // actions: [
+      //   {
+      //     name: '新增资讯类型',
+      //     url: '/information/type/add',
+      //     parent: '/information/type/list'
+      //   },
+      //   {
+      //     name: '修改资讯类型',
+      //     url: '/information/type/edit',
+      //     parent: '/information/type/list'
+      //   }
+      // ]
+      // }
+    ]
+  },
+  {
     id: 'IOT',
     name: '订单管理',
     icon: 'el-icon-s-platform',
@@ -251,53 +296,43 @@ let navArr = [
         actions: [
           {
             name: '知识订单',
-            url: '/group/add',
-            parent: '/group/list'
+            url: '/transactionManagement/magazineManagement'
           },
           {
             name: '客户订单',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/transactionManagement/customerOrder'
           },
           {
             name: '退货通道',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/transactionManagement/returnsChannel'
           },
           {
             name: '拼团订单',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/transactionManagement/spellGroupOrder'
           },
           {
             name: '体现申请',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/transactionManagement/toApplyFor'
           },
           {
-            name: '评团退货',
-            url: '/group/edit',
-            parent: '/group/list'
+            name: '拼团退货',
+            url: '/transactionManagement/spellGroupReturns'
           },
           {
             name: '物流工具',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/transactionManagement/logisticsTools'
           },
           {
             name: '销售商品咨询',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/transactionManagement/consultation'
           },
           {
             name: '评价买家',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/transactionManagement/evaluationOfTheBuyer'
           },
           {
             name: '消保明细',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/transactionManagement/fromTheDetail'
           },
           {
             name: '信用管理',
@@ -477,51 +512,6 @@ let navArr = [
       //   //   }
       //   // ]
       // },
-    ]
-  },
-  {
-    id: 'INFORMATION',
-    name: '内容管理',
-    icon: 'el-icon-box',
-    subset: [
-      {
-        id: 'INFORMATION_LIST',
-        name: '杂志管理',
-        icon: 'el-icon-menu',
-        url: '/information/list',
-        menu: true,
-        // actions: [
-        //   {
-        //     name: '新增资讯',
-        //     url: '/information/add',
-        //     parent: '/information/list'
-        //   },
-        //   {
-        //     name: '修改资讯',
-        //     url: '/information/edit',
-        //     parent: '/information/list'
-        //   }
-        // ]
-      },
-      // {
-      // id: 'INFORMATION_TYPE_LIST',
-      // name: '资讯类型列表',
-      // icon: 'el-icon-menu',
-      // url: '/information/type/list',
-      // menu: true,
-      // actions: [
-      //   {
-      //     name: '新增资讯类型',
-      //     url: '/information/type/add',
-      //     parent: '/information/type/list'
-      //   },
-      //   {
-      //     name: '修改资讯类型',
-      //     url: '/information/type/edit',
-      //     parent: '/information/type/list'
-      //   }
-      // ]
-      // }
     ]
   },
   {
@@ -806,104 +796,103 @@ let navArr = [
       //   //   }
       //   // ]
       // }
-
     ]
   },
-  {
-    id: "SYSTEM",
-    name: "财务管理",
-    icon: "el-icon-s-cooperation",
-    subset: [
-      {
-        id: 'ADMIN_LIST',
-        name: "营销管理",
-        icon: "el-icon-user",
-        url: "/admin/list",
-        menu: true,
-        actions: [
-          {
-            name: "优惠卷管理",
-            url: "/admin/add",
-            parent: '/admin/list'
-          },
-          {
-            name: "积分汇专区",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "广告管理",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "自定义区域",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "商品排行",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "品牌管理",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "水印设置",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          }
-        ]
-      },
-      // {
-      //   id: 'ROLE_LIST',
-      //   name: "角色列表",
-      //   icon: "el-icon-edit",
-      //   url: "/role/list",
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: "新增角色",
-      //   //     url: "/role/add",
-      //   //     parent: '/role/list'
-      //   //   },
-      //   //   {
-      //   //     name: "修改角色",
-      //   //     url: "/role/edit",
-      //   //     parent: '/role/list'
-      //   //   },
-      //   //   {
-      //   //     name: "菜单功能权限",
-      //   //     url: "/role/menus",
-      //   //     parent: '/role/list'
-      //   //   }
-      //   // ]
-      // },
-      // {
-      //   id: 'MENU_LIST',
-      //   name: "菜单列表",
-      //   icon: "el-icon-edit",
-      //   url: "/menu/list",
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: "新增菜单",
-      //   //     url: "/menu/add",
-      //   //     parent: '/menu/list'
-      //   //   },
-      //   //   {
-      //   //     name: "修改菜单",
-      //   //     url: "/menu/edit",
-      //   //     parent: '/menu/list'
-      //   //   }
-      //   // ]
-      // }
+  // {
+  //   id: "SYSTEM",
+  //   name: "财务管理",
+  //   icon: "el-icon-s-cooperation",
+  //   subset: [
+  //     {
+  //       id: 'ADMIN_LIST',
+  //       name: "营销管理",
+  //       icon: "el-icon-user",
+  //       url: "/admin/list",
+  //       menu: true,
+  //       actions: [
+  //         {
+  //           name: "优惠卷管理",
+  //           url: "/admin/add",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "积分汇专区",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "广告管理",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "自定义区域",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "商品排行",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "品牌管理",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "水印设置",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         }
+  //       ]
+  //     },
+  //     // {
+  //     //   id: 'ROLE_LIST',
+  //     //   name: "角色列表",
+  //     //   icon: "el-icon-edit",
+  //     //   url: "/role/list",
+  //     //   menu: true,
+  //     //   // actions: [
+  //     //   //   {
+  //     //   //     name: "新增角色",
+  //     //   //     url: "/role/add",
+  //     //   //     parent: '/role/list'
+  //     //   //   },
+  //     //   //   {
+  //     //   //     name: "修改角色",
+  //     //   //     url: "/role/edit",
+  //     //   //     parent: '/role/list'
+  //     //   //   },
+  //     //   //   {
+  //     //   //     name: "菜单功能权限",
+  //     //   //     url: "/role/menus",
+  //     //   //     parent: '/role/list'
+  //     //   //   }
+  //     //   // ]
+  //     // },
+  //     // {
+  //     //   id: 'MENU_LIST',
+  //     //   name: "菜单列表",
+  //     //   icon: "el-icon-edit",
+  //     //   url: "/menu/list",
+  //     //   menu: true,
+  //     //   // actions: [
+  //     //   //   {
+  //     //   //     name: "新增菜单",
+  //     //   //     url: "/menu/add",
+  //     //   //     parent: '/menu/list'
+  //     //   //   },
+  //     //   //   {
+  //     //   //     name: "修改菜单",
+  //     //   //     url: "/menu/edit",
+  //     //   //     parent: '/menu/list'
+  //     //   //   }
+  //     //   // ]
+  //     // }
 
-    ]
-  },
+  //   ]
+  // },
   {
     id: "SYSTEM",
     name: "通证管理",

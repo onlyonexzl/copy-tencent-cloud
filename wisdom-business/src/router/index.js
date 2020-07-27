@@ -258,61 +258,109 @@ export default new Router({
         path: '/commodity/conventionalKnowledge',
         name: 'conventionalKnowledge',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/conventionalKnowledge.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '常规商品管理']
+        meta: ['商品管理', '拓展管理', '常规商品管理']
+      }, {
+        // 编辑常规产品管理
+        path: '/commodity/editConventionalKnowledge',
+        name: 'editConventionalKnowledge',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/editConventionalKnowledge.vue'], resolve),
+        // meta: ['商品管理', '拓展管理', '常规商品管理']
       }, {
         // 知识商品管理
         path: '/commodity/productsKnowledge',
         name: 'productsKnowledge',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/productsKnowledge.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '知识商品管理']
+        meta: ['商品管理', '拓展管理', '知识商品管理']
+      }, {
+        // 编辑知识商品管理
+        path: '/commodity/editProductsKnowledge',
+        name: 'editProductsKnowledge',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/editProductsKnowledge.vue'], resolve),
+        // meta: ['商品管理', '拓展管理', '知识商品管理']
       }, {
         // 拼团商品管理
         path: '/commodity/spellMassGoods',
         name: 'spellMassGoods',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/spellMassGoods.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '拼团商品管理']
+        meta: ['商品管理', '拓展管理', '拼团商品管理']
+      }, {
+        // 拼团商品管理
+        path: '/commodity/editSpellMassGoods',
+        name: 'editSpellMassGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/editSpellMassGoods.vue'], resolve),
+        // meta: ['商品管理', '拓展管理', '拼团商品管理']
       }, {
         // 返利商品管理
         path: '/commodity/rebateGoods',
         name: 'rebateGoods',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/rebateGoods.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '返利商品管理']
+        meta: ['商品管理', '拓展管理', '返利商品管理']
+      }, {
+        // 返利商品管理
+        path: '/commodity/editRebateGoods',
+        name: 'editRebateGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/editRebateGoods.vue'], resolve),
+        // meta: ['商品管理', '拓展管理', '返利商品管理']
       }, {
         // 秒杀商品管理
         path: '/commodity/secondsKillGoods',
         name: 'secondsKillGoods',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/secondsKillGoods.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '秒杀商品管理']
+        meta: ['商品管理', '拓展管理', '秒杀商品管理']
+      }, {
+        // 秒杀商品管理
+        path: '/commodity/editSecondsKillGoods',
+        name: 'editSecondsKillGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/editSecondsKillGoods.vue'], resolve),
+        // meta: ['商品管理', '拓展管理', '秒杀商品管理']
       }, {
         // 团购商品管理
         path: '/commodity/bulkGoods',
         name: 'bulkGoods',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/bulkGoods.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '团购商品管理']
+        meta: ['商品管理', '拓展管理', '团购商品管理']
+      }, {
+        // 团购商品管理
+        path: '/commodity/editBulkGoods',
+        name: 'editBulkGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/editBulkGoods.vue'], resolve),
+        // meta: ['商品管理', '拓展管理', '团购商品管理']
       }, {
         // 拍卖商品管理
         path: '/commodity/auctionGoods',
         name: 'auctionGoods',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/auctionGoods.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '拍卖商品管理']
+        meta: ['商品管理', '拓展管理', '拍卖商品管理']
+      }, {
+        // 拍卖商品管理
+        path: '/commodity/editAuctionGoods',
+        name: 'editAuctionGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/editAuctionGoods.vue'], resolve),
+        // meta: ['商品管理', '拓展管理', '拍卖商品管理']
       }, {
         // 分销商品管理
         path: '/commodity/distributionGoods',
         name: 'distributionGoods',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/distributionGoods.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '分销商品管理']
+        meta: ['商品管理', '拓展管理', '分销商品管理']
       }, {
         // 批发商品管理
         path: '/commodity/wholesaleGoods',
         name: 'wholesaleGoods',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/wholesaleGoods.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '批发商品管理']
+        meta: ['商品管理', '拓展管理', '批发商品管理']
+      }, {
+        // 批发商品管理
+        path: '/commodity/editWholesaleGoods',
+        name: 'editWholesaleGoods',
+        component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/editWholesaleGoods.vue'], resolve),
+        meta: ['商品管理', '拓展管理', '批发商品管理']
       }, {
         // 未上架商品
         path: '/commodity/notGoods',
         name: 'notGoods',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodity/notGoods.vue'], resolve),
-        meta: ['商铺管理', '拓展管理', '未上架商品']
+        meta: ['商品管理', '拓展管理', '未上架商品']
       },
 
       {
@@ -320,15 +368,120 @@ export default new Router({
         path: '/conventionalProducts/conventionalProducts',
         name: 'conventionalProducts',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/conventionalProducts/conventionalProducts.vue'], resolve),
-        meta: ['商铺管理', '分类设置', '常规商品分类']
+        meta: ['分类设置', '分类设置', '常规商品分类']
       }, {
         // 编辑未上架商品
         path: '/conventionalProducts/editConventional',
         name: 'editConventional',
         component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/conventionalProducts/editConventional.vue'], resolve),
-        // meta: ['商铺管理', '分类设置', '常规商品分类']
+        // meta: ['商品管理', '分类设置', '常规商品分类']
+      },
+      // ----------------内容管理
+      {
+        // 编辑未上架商品
+        path: '/contentManagement/magazineManagement',
+        name: 'magazineManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/contentManagement/magazineManagement.vue'], resolve),
+        meta: ['内容管理', '杂志管理']
+      }, {
+        // 编辑未上架商品
+        path: '/contentManagement/informationManagement',
+        name: 'informationManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/contentManagement/informationManagement.vue'], resolve),
+        meta: ['内容管理', '杂志管理', '资讯管理']
+      }, {
+        // 编辑未上架商品
+        path: '/contentManagement/addInformationManagement',
+        name: 'addInformationManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/contentManagement/addInformationManagement.vue'], resolve),
+        // meta: ['内容管理', '杂志管理', '资讯管理']
+      },
+      // ----------------订单管理 ---交易管理
+      {
+        // 知识订单
+        path: '/transactionManagement/magazineManagement',
+        name: 'knowledgeOrder',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/knowledgeOrder.vue'], resolve),
+        meta: ['订单管理', '交易管理', '知识订单']
+      }, {
+        // 客户订单
+        path: '/transactionManagement/customerOrder',
+        name: 'customerOrder',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/customerOrder.vue'], resolve),
+        meta: ['订单管理', '交易管理', '客户订单']
+      }, {
+        // 退货通道
+        path: '/transactionManagement/returnsChannel',
+        name: 'returnsChannel',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/returnsChannel.vue'], resolve),
+        meta: ['订单管理', '交易管理', '退货通道']
+      }, {
+        // 拼团订单
+        path: '/transactionManagement/spellGroupOrder',
+        name: 'spellGroupOrder',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/spellGroupOrder.vue'], resolve),
+        meta: ['订单管理', '交易管理', '拼团订单']
+      }, {
+        // 添加拼团订单
+        path: '/transactionManagement/addSpellGroupOrder',
+        name: 'addSpellGroupOrder',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/addSpellGroupOrder.vue'], resolve),
+        // meta: ['订单管理', '交易管理', '添加拼团订单']
+      }, {
+        // 提现申请
+        path: '/transactionManagement/toApplyFor',
+        name: 'toApplyFor',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/toApplyFor.vue'], resolve),
+        meta: ['订单管理', '交易管理', '提现申请']
+      }, {
+        // 拼团退货
+        path: '/transactionManagement/spellGroupReturns',
+        name: 'spellGroupReturns',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/spellGroupReturns.vue'], resolve),
+        meta: ['订单管理', '交易管理', '拼团退货']
+      }, {
+        // 物流工具
+        path: '/transactionManagement/logisticsTools',
+        name: 'logisticsTools',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/logisticsTools.vue'], resolve),
+        meta: ['订单管理', '交易管理', '物流工具']
+      }, {
+        // 物流工具
+        path: '/transactionManagement/theLocale',
+        name: 'theLocale',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/theLocale.vue'], resolve),
+        // meta: ['订单管理', '交易管理', '物流工具']
+      }, {
+        // 添加物流工具
+        path: '/transactionManagement/addTheLocale',
+        name: 'addTheLocale',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/addTheLocale.vue'], resolve),
+        // meta: ['订单管理', '交易管理', '添加物流工具']
+      }, {
+        // 销售商品咨询
+        path: '/transactionManagement/consultation',
+        name: 'consultation',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/consultation.vue'], resolve),
+        meta: ['订单管理', '交易管理', '销售商品咨询']
+      }, {
+        // 评价买家
+        path: '/transactionManagement/evaluationOfTheBuyer',
+        name: 'evaluationOfTheBuyer',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/evaluationOfTheBuyer.vue'], resolve),
+        meta: ['订单管理', '交易管理', '评价买家']
+      }, {
+        // 消保明细
+        path: '/transactionManagement/fromTheDetail',
+        name: 'fromTheDetail',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/fromTheDetail.vue'], resolve),
+        meta: ['订单管理', '交易管理', '消保明细']
+      }, {
+        // 消保明细
+        path: '/transactionManagement/topUp',
+        name: 'topUp',
+        component: (resolve) => require(['@/view/BackgroundManagement/orderManagement/transactionManagement/topUp.vue'], resolve),
+        meta: ['订单管理', '交易管理', '消保明细']
       }]
-
     },
   ]
 })
