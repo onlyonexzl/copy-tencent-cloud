@@ -182,96 +182,59 @@ let navArr = [
     subset: [
       {
         id: 'PROVIDER_LIST',
-        name: '商铺装修',
+        name: '商品信息',
         icon: 'el-icon-menu',
         // url: '/provider/list',
         menu: true,
         actions: [
           {
-            name: '页面管理',
+            name: '常规商品管理',
             url: '/shopManagement/shopManagement',
-            // parent: '/company/list'
           },
-          // {
-          //   name: '商铺地图',
-          //   url: '/company/edit',
-          //   // parent: '/company/list'
-          // },
           {
-            name: '手机轮转广告',
+            name: '知识商品管理',
+            url: '/company/edit',
+          },
+          {
+            name: '拼团商品管理',
             url: '/shopManagement/mobilePhoneBy',
           },
           {
-            name: '轮转广告',
+            name: '返利商品管理',
             url: '/shopManagement/phoneBy',
           },
           {
-            name: '图片广告',
+            name: '秒杀商品管理',
             url: '/shopManagement/imageAds',
           },
           {
-            name: '弹窗广告',
+            name: '展示商品管理',
             url: '/shopManagement/popUpAds',
           },
           {
-            name: '商家展示',
+            name: '团购商品管理',
             url: '/shopManagement/showMerchants'
           },
           {
-            name: '模版购买',
+            name: '拍卖商品管理',
             url: '/shopManagement/templateToBuy',
           },
           {
-            name: '友情连接',
+            name: '分销商品管理',
+            url: '/shopManagement/friendshipConnection',
+          },
+          {
+            name: '批发商品管理',
+            url: '/shopManagement/friendshipConnection',
+          },
+          {
+            name: '代销商品管理',
+            url: '/shopManagement/friendshipConnection',
+          },
+          {
+            name: '未上架商品',
             url: '/shopManagement/friendshipConnection',
           }
-        ]
-      }, {
-        id: 'PROVIDER_LIST',
-        name: '商铺设置',
-        icon: 'el-icon-menu',
-        url: '/provider/list',
-        menu: true,
-        actions: [{
-          name: '导航管理',
-          url: '/setUpShops/navigationManagement'
-        }, {
-          name: '基础信息',
-          url: '/setUpShops/information'
-        }, {
-          name: '客服设置',
-          url: '/setUpShops/settingService'
-        }, {
-          name: '短信设置',
-          url: '/setUpShops/SMSSettings',
-        }, {
-          name: '商铺认证',
-          url: '/setUpShops/shopCertification'
-        }, {
-          name: '域名设置',
-          url: '/setUpShops/theHttp'
-        }]
-      }, {
-        id: 'PROVIDER_LIST',
-        name: '拓展管理',
-        icon: 'el-icon-menu',
-        url: '/provider/list',
-        menu: true,
-        actions: [{
-          name: '图片管理',
-          url: '/developManagement/imageManagement'
-        }, {
-          name: '淘宝转换',
-          url: '/developManagement/taobaoConversion'
-        }, {
-          name: '托管管理',
-          url: '/developManagement/trustManagement'
-        },
-          // {
-          //   name: '微信菜单管理',
-          //   url: '/company/edit',
-          //   parent: '/company/list'
-          // }
         ]
       }
     ]
