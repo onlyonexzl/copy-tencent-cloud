@@ -233,7 +233,9 @@ export default {
         '/marketingManagement/customArea',
         '/marketingManagement/commodityList',
         '/marketingManagement/brandManagement',
-        '/marketingManagement/watermarkIsSet'
+        '/marketingManagement/watermarkIsSet',
+        '/throughTheManagement/throughTheManagement',
+        '/throughTheManagement/throughDd'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -267,7 +269,8 @@ export default {
         '/marketingManagement/editCouponManagement',
         '/marketingManagement/editBonusPointArea',
         '/marketingManagement/editadvertisingManagement',
-        '/marketingManagement/editBrandManagement'
+        '/marketingManagement/editBrandManagement',
+        '/throughTheManagement/editThroughTheManagement',
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

@@ -15,10 +15,17 @@
             <p style="width: 200px">{{item.name}}</p>
             <p style="width: 50px">{{item.num}}</p>
             <p style="width: 50px">{{item.money * item.num}}</p>
-            <p style="width: 50px"><i class="el-icon-delete"
+            <p style="width: 50px">
+              <i class="el-icon-delete"
                  style="cursor: pointer;"
-                 @click="deleteItem(item)"></i></p>
+                 @click="deleteItem(item)">
+              </i>
+            </p>
           </div>
+        </div>
+        <div class="l-bottom">
+          <p>合计 <span class="redColor">{{numLeft}}</span> 项</p>
+          <p class="redColor">总金额：{{moneyNum}}</p>
         </div>
       </div>
       <div class="right">
@@ -38,15 +45,6 @@
           </div>
         </div>
         <div class="btootm_paination">
-          <!-- <el-pagination @current-change="handleCurrentChangeFun"
-                         :hide-on-single-page="false"
-                         :current-page="currentPage"
-                         layout="total, jumper,  ->, prev, pager, next"
-                         :total="totalData"></el-pagination> -->
-
-          <!-- @current-change="handleCurrentChangeFun"
-                         :current-page="currentPage" -->
-          <!-- @size-change="handleSizeChange" -->
           <el-pagination :page-sizes="[100, 200, 300, 400]"
                          :page-size="100"
                          layout="total, sizes, prev, pager, next, jumper"
@@ -56,10 +54,61 @@
       </div>
     </div>
     <div class="bottom">
-      <el-button>重新加载</el-button>
+      <el-button @click="refesh">重新加载</el-button>
       <el-button type="primary"
+                 @click="endMoney"
                  style="float: right">结账</el-button>
     </div>
+    <el-dialog title="结账详情"
+               :visible.sync="dialogVisible"
+               width="60%"
+               :before-close="handleClose">
+      <el-form ref="form"
+               :rules="rules"
+               :model="form"
+               label-width="150px">
+        <el-form-item label="单据金额"
+                      prop="value"
+                      required>
+          <el-input v-model="form.documents"
+                    style="width: 600px;"></el-input>
+        </el-form-item>
+        <el-form-item label="实际金额">
+          <el-input v-model="form.amount"
+                    style="width: 600px;"
+                    rows="5"></el-input>
+        </el-form-item>
+        <el-form-item label="备注信息">
+          <el-input v-model="form.demo"
+                    style="width: 600px;"
+                    rows="5"></el-input>
+        </el-form-item>
+        <el-form-item label="支付方式">
+          <el-radio v-model="radio"
+                    label="1">支付宝</el-radio>
+          <el-radio v-model="radio"
+                    label="2">微信</el-radio>
+        </el-form-item>
+        <el-form-item label="扫付款码">
+          <el-input v-model="form.description"
+                    placeholder="请将鼠标光标聚焦于此框内后进行扫码支付"
+                    style="width: 600px;"
+                    rows="5"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+          <el-button type="primary"
+                     @click="onSubmit('form')"
+                     :loading="submitBtn.loading">{{submitBtn.text}}</el-button>
+        </el-form-item>
+      </el-form>
+      <span slot="footer"
+            class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary"
+                   @click="dialogVisible = false">结 账</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -69,6 +118,8 @@ export default {
 
   data () {
     return {
+      dialogVisible: false,
+      radio: '1',
       jsonData: [{
         name: 'SIXONE 毛衣女2017秋冬新款宽松韩版潮套头V领学生长袖港味针织衫',
         id: '1',
@@ -88,7 +139,7 @@ export default {
         name: 'SIXONE 测试知识性商品2',
         id: '4',
         src: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2584015035,1675429211&fm=26&gp=0.jpg',
-        money: '323.00'
+        money: '323.50'
       }, {
         name: 'SIXONE 测试知识性商品3',
         id: '5',
@@ -125,11 +176,42 @@ export default {
         src: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2879601417,2446400554&fm=26&gp=0.jpg',
         money: '212.00'
       }],
-      leftObj: {}
+      leftObj: {},
+      form: {
+        documents: '',
+        amount: '',
+        demo: '',
+        description: ''
+      },
+      profiles: [],
+      driverAttributes: [],
+      submitBtn: {
+        loading: false,
+        text: '提交'
+      },
+      rules: {
+        profileId: [
+          { required: true, message: '请选择模板', trigger: 'change' }
+        ],
+        driverAttributeId: [
+          { required: true, message: '请选择驱动属性', trigger: 'change' }
+        ],
+        value: [
+          { required: true, message: '请输入属性值', trigger: 'blur' }
+        ]
+      },
+      numLeft: 0,
+      moneyNum: 0,
     }
   },
 
   methods: {
+    endMoney () {
+      this.dialogVisible = true
+      this.form.documents = this.moneyNum
+      this.form.amount = this.moneyNum
+    },
+
     addItem (item) {
       let obj = JSON.parse(JSON.stringify(this.leftObj))
       if (!obj[item.id]) {
@@ -140,12 +222,34 @@ export default {
       }
 
       this.leftObj = obj
+      this.addMoney()
     },
 
     deleteItem (item) {
       let obj = JSON.parse(JSON.stringify(this.leftObj))
       delete obj[item.id]
       this.leftObj = obj
+    },
+
+    addMoney () {
+      this.numLeft = 0
+      this.moneyNum = 0
+      for (let key in this.leftObj) {
+        this.numLeft += this.leftObj[key].num
+        this.moneyNum += this.leftObj[key].num * Number(this.leftObj[key].money)
+      }
+    },
+
+    handleClose (done) {
+      this.$confirm('确认关闭？')
+        .then(_ => {
+          done();
+        })
+        .catch(_ => { });
+    },
+
+    refesh () {
+      this.leftObj = {}
     }
   }
 }
@@ -168,6 +272,8 @@ export default {
       height: 100%;
       overflow: auto;
       border-right: solid 1px #eee;
+      display: flex;
+      flex-direction: column;
       .title {
         width: 100%;
         height: 40px;
@@ -179,15 +285,28 @@ export default {
           text-align: center;
         }
       }
+
       .l-content {
         width: 100%;
-        height: 100%;
+        flex: 1;
+        overflow: auto;
+
         > div {
           width: 100%;
           text-align: center;
           display: flex;
           margin-top: 20px;
         }
+      }
+
+      .l-bottom {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 20px;
+        line-height: 50px;
       }
     }
     .right {

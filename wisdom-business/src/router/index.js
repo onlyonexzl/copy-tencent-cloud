@@ -664,6 +664,24 @@ export default new Router({
         name: 'watermarkIsSet',
         component: (resolve) => require(['@/view/BackgroundManagement/checkstand/checkstand.vue'], resolve),
         // meta: ['营销管理', '水印设置']
+      }, {
+        //  通证管理
+        path: '/throughTheManagement/throughTheManagement',
+        name: 'throughTheManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/throughTheManagement/throughTheManagement.vue'], resolve),
+        meta: ['通证管理', '通证', '通证管理']
+      }, {
+        //  通证管理
+        path: '/throughTheManagement/editThroughTheManagement',
+        name: 'editThroughTheManagement',
+        component: (resolve) => require(['@/view/BackgroundManagement/throughTheManagement/editThroughTheManagement.vue'], resolve),
+        // meta: ['通证管理', '通证', '通证管理']
+      }, {
+        //  通证管理
+        path: '/throughTheManagement/throughDd',
+        name: 'throughDd',
+        component: (resolve) => require(['@/view/BackgroundManagement/throughTheManagement/throughDd.vue'], resolve),
+        meta: ['通证管理', '通证', '通证订单']
       }]
     },
   ]
