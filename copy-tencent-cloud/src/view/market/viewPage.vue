@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="viewPage">
     <div class="block">
       <el-carousel height="100%">
         <el-carousel-item v-for="item in 4" :key="item">
@@ -462,6 +462,443 @@
         </div>
       </div>
     </div>
+
+    <div class="ban"
+         style="widgh100%;height:122px; box-sizing:border-box;padding:0 200px; margin:30px 0px">
+      <div style="width: 100%; height: 100%; background:#1ea8f0"></div>
+    </div>
+
+    <div class="mp__seller">
+      <div class="mp__seller-group">
+        <div class="fn-s-group-item">
+          <p class="hoverColor">镜像服务</p>
+          <div class="all">
+            <div class="fn-left">
+              <div class="mp__seller-list-left">
+                <div class="img">
+                  <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                       alt="">
+                </div>
+                <div class="list-right">
+                  <p class="hoverColor">PHP全能运行环境</p>
+                  <span>预安装Apache+PHP+MySQL+vsFTPd，支持PHP多版本切换</span>
+                  <div>
+                    <p><span>¥</span>0</p>
+                    <span>300人在用</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mp__seller-list-left">
+                <div class="img">
+                  <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                       alt="">
+                </div>
+                <div class="list-right">
+                  <p class="hoverColor">PHP全能运行环境</p>
+                  <span>预安装Apache+PHP+MySQL+vsFTPd，支持PHP多版本切换</span>
+                  <div>
+                    <p><span>¥</span>0</p>
+                    <span>300人在用</span>
+                  </div>
+                </div>
+              </div>
+              <div class="left-bottom">
+                <div class="top">
+                  <span>人气分类</span>
+                  <p class="hoverColor">查看跟多 <i class="el-icon-arrow-right"></i></p>
+                </div>
+                <ul class="bottom">
+                  <li>电商零售</li>
+                  <li>零售</li>
+                  <li>游戏</li>
+                  <li>生活太难</li>
+                  <li>定制开发</li>
+                </ul>
+              </div>
+            </div>
+            <div class="fn-right">
+              <div class="mp__seller-list-right">
+                <div class="img">
+                  <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                       alt="">
+                </div>
+                <div class="list-right">
+                  <p class="hoverColor">PHP全能运行环境</p>
+                  <span>预安装Apache+PHP+MySQL+vsFTPd，支持PHP多版本切换</span>
+                  <div>
+                    <p><span>¥</span>0</p>
+                    <span>300人在用</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mp__seller-list-right">
+                <div class="img">
+                  <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                       alt="">
+                </div>
+                <div class="list-right">
+                  <p class="hoverColor">PHP全能运行环境</p>
+                  <span>预安装Apache+PHP+MySQL+vsFTPd，支持PHP多版本切换</span>
+                  <div>
+                    <p><span>¥</span>0</p>
+                    <span>300人在用</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fn-s-group-item">
+          <p class="hoverColor">专家服务</p>
+          <div class="all">
+            <div class="fn-left">
+              <div class="mp__seller-list-left">
+                <div class="img">
+                  <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                       alt="">
+                </div>
+                <div class="list-right">
+                  <p class="hoverColor">PHP全能运行环境</p>
+                  <span>预安装Apache+PHP+MySQL+vsFTPd，支持PHP多版本切换</span>
+                  <div>
+                    <p><span>¥</span>0</p>
+                    <span>300人在用</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mp__seller-list-left">
+                <div class="img">
+                  <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                       alt="">
+                </div>
+                <div class="list-right">
+                  <p class="hoverColor">PHP全能运行环境</p>
+                  <span>预安装Apache+PHP+MySQL+vsFTPd，支持PHP多版本切换</span>
+                  <div>
+                    <p><span>¥</span>0</p>
+                    <span>300人在用</span>
+                  </div>
+                </div>
+              </div>
+              <div class="left-bottom">
+                <div class="top">
+                  <span>人气分类</span>
+                  <p class="hoverColor">查看跟多 <i class="el-icon-arrow-right"></i></p>
+                </div>
+                <ul class="bottom">
+                  <li>电商零售</li>
+                  <li>零售</li>
+                  <li>游戏</li>
+                  <li>生活太难</li>
+                  <li>定制开发</li>
+                </ul>
+              </div>
+            </div>
+            <div class="fn-right">
+              <div class="mp__seller-list-right">
+                <div class="img">
+                  <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                       alt="">
+                </div>
+                <div class="list-right">
+                  <p class="hoverColor">PHP全能运行环境</p>
+                  <span>预安装Apache+PHP+MySQL+vsFTPd，支持PHP多版本切换</span>
+                  <div>
+                    <p><span>¥</span>0</p>
+                    <span>300人在用</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mp__seller-list-right">
+                <div class="img">
+                  <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                       alt="">
+                </div>
+                <div class="list-right">
+                  <p class="hoverColor">PHP全能运行环境</p>
+                  <span>预安装Apache+PHP+MySQL+vsFTPd，支持PHP多版本切换</span>
+                  <div>
+                    <p><span>¥</span>0</p>
+                    <span>300人在用</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ban"
+         style="widgh100%;height:122px; box-sizing:border-box;padding:0 200px; margin-top:60px; margin-bottom: 30px">
+      <div style="width: 100%; height: 100%; background:#f98661"></div>
+    </div>
+
+    <div class="market-place-sectionTwo">
+      <div class="market-place-section-content">
+        <div class="module-section-hd">
+          <div class="left">
+            <span>一站式</span>
+            <p>・解决方案</p>
+          </div>
+          <div class="right">
+            <i class="el-icon-arrow-left"
+               style="margin-right: 5px"></i><span style="margin-right: 5px">1/1</span><i style="margin-right: 5px"
+               class="el-icon-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="mp__product-list">
+          <div class="mp__product-list-item">
+            <p class="mp__solution-item-title">电商零售全渠道建站</p>
+            <p class="mp__solution-item-desc">电商零售全渠道覆盖：PC品牌商城/微信商城/手机商城/小程序商城，域名购买，网站备案一站式服务。</p>
+            <p class="mp__solution-item-text">打包购买 <span>￥3842</span> <span style="    color: #8B8B8B; margin-left: 5px;text-decoration: line-through;font-size: 18px;">￥3842</span> </p>
+            <div class="button">立即购买</div>
+          </div>
+
+          <div class="mp__product-list-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="product-card-bd hoverColor">商城网站Saas服务解决方案</p>
+            <div class="product-card-text">
+              <p><span>￥</span> 3188</p>
+              <span>免费试用</span>
+            </div>
+          </div>
+          <div class="mp__product-list-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="product-card-bd hoverColor">商城网站Saas服务解决方案</p>
+            <div class="product-card-text">
+              <p><span>￥</span> 3188</p>
+              <span>免费试用</span>
+            </div>
+          </div>
+          <div class="mp__product-list-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="product-card-bd hoverColor">商城网站Saas服务解决方案</p>
+            <div class="product-card-text">
+              <p><span>￥</span> 3188</p>
+              <span>免费试用</span>
+            </div>
+          </div>
+          <div class="mp__product-list-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="product-card-bd hoverColor">商城网站Saas服务解决方案</p>
+            <div class="product-card-text">
+              <p><span>￥</span> 3188</p>
+              <span>免费试用</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mp__product-list">
+          <div class="mp__product-list-item">
+            <p class="mp__solution-item-title">电商零售全渠道建站</p>
+            <p class="mp__solution-item-desc">电商零售全渠道覆盖：PC品牌商城/微信商城/手机商城/小程序商城，域名购买，网站备案一站式服务。</p>
+            <p class="mp__solution-item-text">打包购买 <span>￥3842</span> <span style="    color: #8B8B8B; margin-left: 5px;text-decoration: line-through;font-size: 18px;">￥3842</span> </p>
+            <div class="button">立即购买</div>
+          </div>
+
+          <div class="mp__product-list-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="product-card-bd hoverColor">商城网站Saas服务解决方案</p>
+            <div class="product-card-text">
+              <p><span>￥</span> 3188</p>
+              <span>免费试用</span>
+            </div>
+          </div>
+          <div class="mp__product-list-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="product-card-bd hoverColor">商城网站Saas服务解决方案</p>
+            <div class="product-card-text">
+              <p><span>￥</span> 3188</p>
+              <span>免费试用</span>
+            </div>
+          </div>
+          <div class="mp__product-list-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="product-card-bd hoverColor">商城网站Saas服务解决方案</p>
+            <div class="product-card-text">
+              <p><span>￥</span> 3188</p>
+              <span>免费试用</span>
+            </div>
+          </div>
+          <div class="mp__product-list-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="product-card-bd hoverColor">商城网站Saas服务解决方案</p>
+            <div class="product-card-text">
+              <p><span>￥</span> 3188</p>
+              <span>免费试用</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="market-place-sectionThree">
+      <div class="market-place-section-content">
+        <div class="module-section-hd">
+          <span class="text-gradient">荐</span>
+          <span>・为您推荐</span>
+        </div>
+        <div class="module-section-se">
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+          <div class="se-item">
+            <div class="img">
+              <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                   alt="">
+            </div>
+            <p class="o">H5响应式网站【建站+推广】</p>
+            <p class="t">
+              <span><i style="font-size: 14px !important;">¥</i>100</span>
+              <span style="    color: #8B8B8B;
+    text-decoration: line-through;font-size: 14px !important;">¥99</span>
+            </p>
+            <p class="f"><span>46</span>人在用</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -477,9 +914,528 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.market-place-sectionThree {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0 200px;
+  .market-place-section-content {
+    width: 100%;
+    .module-section-hd {
+      width: 100%;
+      height: 90px;
+      // margin: 20px 0;
+      line-height: 90px;
+      font-size: 30px;
+      color: #383838;
+      .text-gradient {
+        font-size: 30px;
+        color: #f2a056;
+        font-weight: 700;
+        background-image: -webkit-linear-gradient(left, #f2a056, #f16863);
+        -webkit-background-clip: text;
+      }
+    }
+    .module-section-se {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .se-item {
+        width: 19%;
+        border: solid 1px #efefef;
+        margin-bottom: 10px;
+        .img {
+          width: 100%;
+          overflow: hidden;
+
+          > img {
+            transition: all 0.25s;
+            width: 100%;
+            height: 100%;
+          }
+
+          > :hover {
+            background: red;
+            transform: scale(1.2);
+            -ms-transform: scale(1.2);
+          }
+        }
+        .o {
+          box-sizing: border-box;
+          padding: 0 10px;
+          line-height: 20px;
+          height: 20px;
+          display: block;
+          font-size: 14px;
+          color: #000;
+          transition: color 0.15s;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          box-sizing: border-box;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          margin-top: 5px;
+          -webkit-box-sizing: border-box;
+        }
+        .t {
+          box-sizing: border-box;
+          padding: 0 10px;
+          font-size: 22px;
+          color: #f43f2d;
+          margin-top: 5px;
+          letter-spacing: -1px;
+          display: inline-block;
+          font-family: DINNextLTPro;
+        }
+        .f {
+          box-sizing: border-box;
+          padding: 0 10px;
+          font-size: 12px;
+          color: #4a4a4a;
+          line-height: 12px;
+          min-height: 12px;
+          margin-top: 3px;
+          text-align: right;
+          box-sizing: border-box;
+          padding: 10px;
+          > span {
+            color: #e14d42;
+          }
+        }
+      }
+    }
+  }
+}
+
+.market-place-sectionTwo {
+  width: 100%;
+  height: 670px;
+  box-sizing: border-box;
+  padding: 0 200px;
+  background-color: #f4f5f9;
+  .market-place-section-content {
+    width: 100%;
+    height: 100%;
+    .mp__product {
+      width: 100%;
+      height: 264px;
+      display: flex;
+    }
+    .mp__product-list {
+      width: 100%;
+      height: auto;
+      background: #fff;
+      box-sizing: border-box;
+      padding: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      .mp__product-list-item {
+        width: 19%;
+        .img {
+          width: 100%;
+          height: 145px;
+          overflow: hidden;
+
+          > img {
+            transition: all 0.25s;
+            width: 100%;
+            height: 100%;
+          }
+
+          > :hover {
+            background: red;
+            transform: scale(1.2);
+            -ms-transform: scale(1.2);
+          }
+        }
+
+        .product-card-text {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          > p {
+            font-size: 22px;
+            color: #f43f2d;
+            margin-right: 5px;
+            letter-spacing: -1px;
+            display: inline-block;
+            font-family: DINNextLTPro;
+            > span {
+              font-size: 14px !important;
+            }
+          }
+          > span {
+            margin-top: 8px;
+            display: inline-block;
+            border-width: 1px;
+            border-radius: 3px;
+            border-style: solid;
+            box-sizing: border-box;
+            padding: 0 6px;
+            font-size: 12px;
+            height: 18px;
+            line-height: 16px;
+            color: #f09816;
+            border-color: #f09816;
+          }
+        }
+
+        .product-card-bd {
+          line-height: 20px;
+          height: 20px;
+          display: block;
+          font-size: 14px;
+          color: #000;
+          transition: color 0.15s;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          box-sizing: border-box;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          margin: 20px 0;
+        }
+
+        .mp__solution-item-title {
+          font-size: 20px;
+          color: #000;
+          line-height: 34px;
+        }
+        .mp__solution-item-desc {
+          line-height: 20px;
+          color: #888;
+          font-size: 12px;
+          margin-top: 20px;
+          height: 80px;
+          overflow: hidden;
+        }
+        .mp__solution-item-text {
+          line-height: 30px;
+          font-size: 14px;
+          color: #444;
+          > span {
+            font-size: 22px;
+            color: #f43f2d;
+            margin-left: 5px;
+            letter-spacing: -1px;
+            font-family: DINNextLTPro;
+            display: inline-block;
+          }
+        }
+
+        .button {
+          background-color: #00a4ff;
+          height: 30px;
+          line-height: 30px;
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 0 34px;
+          color: #fff;
+          font-size: 12px;
+          margin-top: 27px;
+          transition: background 0.25s;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .module-section-hd {
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 30px 0;
+      .left {
+        display: flex;
+        > span {
+          color: #f2a056;
+          font-weight: 700;
+          background-image: -webkit-linear-gradient(left, #f2a056, #f16863);
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          font-size: 30px;
+        }
+
+        > p {
+          font-size: 30px;
+          color: #383838;
+        }
+      }
+
+      .right {
+        display: inline-block;
+        font-size: 16px;
+        color: #7f7f7f;
+        vertical-align: bottom;
+        height: 20px;
+        line-height: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.mp__seller {
+  width: 100%;
+  height: 466px;
+  box-sizing: border-box;
+  padding: 0 200px;
+  .mp__seller-group {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    .fn-s-group-item {
+      width: 49.5%;
+      > p {
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        font-size: 22px;
+        color: #444;
+        transition: color 0.25s;
+      }
+      .all {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        .fn-left {
+          width: 69%;
+          height: 100%;
+          margin-right: 1%;
+          .mp__seller-list-left {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            height: 158px;
+            background-color: #f7f8fa;
+            transition: all 0.25s;
+            display: flex;
+            margin-bottom: 10px;
+            .img {
+              width: 40%;
+              overflow: hidden;
+              height: 100%;
+              > img {
+                transition: all 0.25s;
+                width: 100%;
+                height: 100%;
+              }
+
+              > :hover {
+                background: red;
+                transform: scale(1.2);
+                -ms-transform: scale(1.2);
+              }
+            }
+            .list-right {
+              width: 59%;
+              height: 100%;
+              margin-left: 1%;
+              > p {
+                line-height: 20px;
+                height: 20px;
+                display: block;
+                font-size: 14px;
+                color: #000;
+                transition: color 0.15s;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+
+              > span {
+                display: block;
+                margin-top: 4px;
+                overflow: hidden;
+                overflow: hidden;
+                color: #7f7f7f;
+                height: 16px;
+                line-height: 16px;
+                white-space: nowrap;
+                font-size: 12px;
+                text-overflow: ellipsis;
+                margin-bottom: 70px;
+              }
+
+              > div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                > span {
+                  color: #7f7f7f;
+                  font-size: 12px;
+                }
+
+                > p {
+                  font-size: 22px;
+                  color: #f43f2d;
+                  margin-right: 5px;
+                  letter-spacing: -1px;
+                  display: inline-block;
+                  font-family: DINNextLTPro;
+                  > span {
+                    font-size: 14px !important;
+                  }
+                }
+              }
+            }
+          }
+
+          .left-bottom {
+            background-color: #f7f8fa;
+            width: 100%;
+            height: 130px;
+            .top {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              margin: 10px 0;
+              > p {
+                vertical-align: middle;
+                display: inline-block;
+                height: 24px;
+                line-height: 24px;
+                font-size: 12px;
+                color: #696969;
+                float: right;
+                padding-right: 12px;
+              }
+
+              > span {
+                vertical-align: middle;
+                display: inline-block;
+                height: 24px;
+                line-height: 24px;
+                font-size: 16px;
+                color: #4a4a4a;
+                font-weight: 700;
+              }
+            }
+            .bottom {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              > li {
+                color: #2ac4d5;
+                height: 20px;
+                line-height: 18px;
+                padding: 0 10px;
+                border-radius: 10px;
+                border: 1px solid #2ac4d5;
+                font-size: 12px;
+                cursor: pointer;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                margin: 10px 10px 5px 0;
+              }
+            }
+          }
+        }
+
+        .fn-right {
+          width: 30%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          > :last-child {
+            height: 49% !important;
+            margin-top: 1% !important;
+          }
+          .mp__seller-list-right {
+            background-color: #f7f8fa;
+            flex: 1;
+            box-sizing: border-box;
+            padding: 10px;
+            .img {
+              width: 100%;
+              height: 94px;
+              overflow: hidden;
+              > img {
+                margin-left: 5%;
+                width: 60%;
+                transition: all 0.25s;
+              }
+
+              > :hover {
+                background: red;
+                transform: scale(1.2);
+                -ms-transform: scale(1.2);
+              }
+            }
+
+            .list-right {
+              width: 100%;
+              height: 100%;
+              > p {
+                line-height: 20px;
+                height: 20px;
+                display: block;
+                font-size: 14px;
+                color: #000;
+                transition: color 0.15s;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+
+              > span {
+                display: block;
+                margin-top: 4px;
+                overflow: hidden;
+                overflow: hidden;
+                color: #7f7f7f;
+                height: 16px;
+                line-height: 16px;
+                white-space: nowrap;
+                font-size: 12px;
+                text-overflow: ellipsis;
+                margin-bottom: 40px;
+              }
+
+              > div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                > span {
+                  color: #7f7f7f;
+                  font-size: 12px;
+                }
+
+                > p {
+                  font-size: 22px;
+                  color: #f43f2d;
+                  margin-right: 5px;
+                  letter-spacing: -1px;
+                  display: inline-block;
+                  font-family: DINNextLTPro;
+                  > span {
+                    font-size: 14px !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .block {
   width: 100%;
   height: 314px;
+}
+
+.viewPage {
+  // width: 1250px;
 }
 
 .section {
@@ -598,6 +1554,14 @@ export default {
             justify-content: space-between;
             flex-wrap: wrap;
             // margin-top: 10px;
+            > :first-child {
+              margin-top: 0;
+            }
+
+            > :nth-child(2) {
+              margin-top: 0;
+            }
+
             > li {
               width: 49%;
               height: 130px;
@@ -607,10 +1571,12 @@ export default {
               background-color: #f7f8fa;
               transition: all 0.25s;
               display: flex;
+              margin-top: 10px;
               .mp_r_img {
                 width: 163px;
                 height: 109px;
                 overflow: hidden;
+                transition: all 0.25s;
                 > img {
                   width: 100%;
                   height: 100%;
@@ -733,13 +1699,19 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
     > li {
+<<<<<<< HEAD
       width: 19%;
+=======
+      // width: 216px;
+      width: 17%;
+>>>>>>> 7fc0a3f2092f419e663f4171f3b0935aaa0036ac
       height: 250px;
       border: solid 1px #eee;
       .product-card-hd {
         width: 100%;
         height: 144px;
         overflow: hidden;
+        transition: all 0.25s;
         > img {
           width: 100%;
           height: 100%;

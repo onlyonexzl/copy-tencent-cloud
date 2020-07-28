@@ -1,0 +1,113 @@
+<template>
+  <div class="container">
+    <el-form ref="form" :model="form" label-width="80px">
+      <el-form-item label="活动名称">
+        <el-input v-model="form.name"></el-input>
+      </el-form-item>
+      <el-form-item label="活动区域">
+        <el-select v-model="form.region" placeholder="请选择活动区域">
+          <el-option label="区域一" value="shanghai"></el-option>
+          <el-option label="区域二" value="beijing"></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="活动时间">
+        <el-col>
+          <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" ></el-date-picker>
+          <el-time-picker placeholder="选择时间" v-model="form.date2" ></el-time-picker>
+        </el-col>
+      </el-form-item>
+      <el-form-item label="即时配送">
+        <el-switch v-model="form.delivery"></el-switch>
+      </el-form-item>
+      <el-form-item label="活动性质">
+        <el-checkbox-group v-model="form.type">
+          <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+          <el-checkbox label="地推活动" name="type"></el-checkbox>
+          <el-checkbox label="线下主题活动" name="type"></el-checkbox>
+          <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+        </el-checkbox-group>
+      </el-form-item>
+      <el-form-item label="特殊资源">
+        <el-radio-group v-model="form.resource">
+          <el-radio label="线上品牌商赞助"></el-radio>
+          <el-radio label="线下场地免费"></el-radio>
+        </el-radio-group>
+      </el-form-item>
+      <el-form-item label="活动形式">
+        <el-input type="textarea" v-model="form.desc"></el-input>
+      </el-form-item>
+      <el-form-item label="上传图片">
+        <el-upload
+          action="https://jsonplaceholder.typicode.com/posts/"
+          list-type="picture-card"
+          :on-preview="handlePictureCardPreview"
+          :on-remove="handleRemove">
+          <i class="el-icon-plus"></i>
+        </el-upload>
+        <el-dialog :visible.sync="dialogVisible">
+          <img width="100%" :src="dialogImageUrl" alt="">
+        </el-dialog>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit">提交</el-button>
+      </el-form-item>
+    </el-form>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'edit',
+  data() {
+    return {
+      form: {
+        name: '',
+        region: '',
+        date1: '',
+        date2: '',
+        delivery: false,
+        type: [],
+        resource: '',
+        desc: ''
+      },
+      dialogImageUrl: '',
+      dialogVisible: false
+    }
+  },
+  computed: {
+
+  },
+  methods: {
+      onSubmit() {
+        console.log('submit!');
+      },
+      handleRemove(file, fileList) {
+        console.log(file, fileList);
+      },
+      handlePictureCardPreview(file) {
+        this.dialogImageUrl = file.url;
+        this.dialogVisible = true;
+      }
+  }
+}
+</script>
+<style scoped>
+ .container{
+    width: 800px;
+  }
+  .el-form{
+    text-align: left!important;
+  }
+  .el-input__inner{
+    width: 600px;
+  }
+  .el-date-editor{
+    width: 290px!important;
+  }
+  .el-date-editor .el-input__inner{
+    width: 100%!important;
+  }
+  .el-textarea__inner{
+    width: 600px;
+  }
+</style>
