@@ -1,5 +1,5 @@
 <template>
-  <div class="magazineManagement">
+  <div class="editMagazineManagement">
     <div class="top_button">
       <div class="top_left">
         <span>文章管理</span>
@@ -10,20 +10,97 @@
         </el-input>
         <el-button slot="append"
                    type="primary"
-                   icon="el-icon-search"
-                   @click="sesarchFun()">
+                   icon="el-icon-search">
           搜索
         </el-button>
       </div>
     </div>
     <div class="table_bottom">
-      <el-button slot="append"
-                 style="width: 120px;margin: 10px 0 10px 10px"
-                 type="primary"
-                 icon="el-icon-plus"
-                 @click="sesarchFun()">
-        添加文章
-      </el-button>
+      <div class="t-b">
+        <span>选择地区</span>
+        <el-select v-model="province"
+                   clearable
+                   placeholder="所在省">
+          <el-option label="区域一"
+                     value="shanghai"></el-option>
+          <el-option label="区域二"
+                     value="beijing"></el-option>
+        </el-select>
+        <el-select v-model="city"
+                   clearable
+                   placeholder="所在市">
+          <el-option label="区域一"
+                     value="shanghai"></el-option>
+          <el-option label="区域二"
+                     value="beijing"></el-option>
+        </el-select>
+        <el-button slot="append"
+                   type="primary"
+                   icon="el-icon-search">
+          批量修改地区
+        </el-button>
+        <el-button slot="append"
+                   type="primary"
+                   @click="add"
+                   style="float: right;margin-right: 20px"
+                   icon="el-icon-plus">
+          添加文章
+        </el-button>
+        <br>
+
+        <span style="margin-top: 10px">选择栏目</span>
+        <el-select v-model="province"
+                   style="margin-top: 10px"
+                   clearable>
+          <el-option label="区域一"
+                     value="shanghai"></el-option>
+          <el-option label="区域二"
+                     value="beijing"></el-option>
+        </el-select>
+        <el-select v-model="city"
+                   style="margin-top: 10px"
+                   clearable>
+          <el-option label="区域一"
+                     value="shanghai"></el-option>
+          <el-option label="区域二"
+                     value="beijing"></el-option>
+        </el-select>
+        <el-button slot="append"
+                   type="primary"
+                   style="margin-top: 10px"
+                   icon="el-icon-search">
+          批量修改栏目
+        </el-button> <br>
+        <el-button slot="append"
+                   type="primary"
+                   style="margin-top: 10px"
+                   icon="el-icon-top">
+          批量置顶
+        </el-button>
+        <el-button slot="append"
+                   type="primary"
+                   style="margin-right: 20px"
+                   icon="el-icon-bottom">
+          取消置顶
+        </el-button>
+        <el-button slot="append"
+                   type="primary"
+                   icon="el-icon-top">
+          批量总置顶
+        </el-button>
+        <el-button slot="append"
+                   type="primary"
+                   icon="el-icon-bottom"
+                   style="margin-right: 20px">
+          取消总置顶
+        </el-button>
+        <el-button slot="append"
+                   type="primary"
+                   icon="el-icon-close">
+          批量删除
+        </el-button>
+
+      </div>
       <div class="flex">
         <el-table :data="tableData"
                   stripe
@@ -39,25 +116,16 @@
           </el-table-column>
           <el-table-column prop="date"
                            show-overflow-tooltip
-                           label="栏目编码"
+                           label="作者"
                            width="180">
           </el-table-column>
           <el-table-column prop="name"
                            show-overflow-tooltip
-                           label="栏目标题">
+                           label="点击量">
           </el-table-column>
-          <el-table-column show-overflow-tooltip
-                           label="排序">
-
-            <template slot-scope="scope">
-              <div>
-                <el-input placeholder="请输入标题关键字"
-                          v-model=" scope.row.address"
-                          style="width: 200px;border:none"
-                          clearable>
-                </el-input>
-              </div>
-            </template>
+          <el-table-column prop="name"
+                           show-overflow-tooltip
+                           label="发布时间">
           </el-table-column>
           <el-table-column show-overflow-tooltip
                            label="操作"
@@ -65,10 +133,6 @@
                            min-width="60">
             <template slot-scope="scope">
               <div>
-                <el-button size="medium"
-                           type="text"
-                           class="blueColor right20"
-                           @click="editor(scope.$index, scope.row)">资讯管理</el-button>
                 <el-button size="medium"
                            type="text"
                            class="yellowColor right20"
@@ -103,20 +167,12 @@
 
 <script>
 export default {
-  name: 'magazineManagement',
+  name: 'editMagazineManagement',
 
   data () {
     return {
-      time: [],
-      status: '',
-      options: [
-        { value: '', label: '全部' },
-        { value: 0, label: '离线' },
-        { value: 1, label: '在线' },
-        { value: 2, label: '维护' },
-        { value: 3, label: '故障' },
-        { value: 4, label: '失效' },
-      ],
+      city: '',
+      province: '',
       sName: '',
       tableData: [{
         date: '2016-05-02',
@@ -134,6 +190,30 @@ export default {
         date: '2016-05-03',
         name: '王小虎',
         address: '上海市普陀区516 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市 1519 弄'
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区516 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市 1519 弄'
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区516 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市 1519 弄'
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区516 弄'
       }],
       currentPage: 1, //当前页数
       totalData: 1, //总页数
@@ -142,7 +222,11 @@ export default {
 
   methods: {
     editor () {
-      this.$router.push('/magazineManagement/editMagazineManagement?nameType=资讯管理')
+      this.$router.push('/magazineManagement/addMagazineManagement?nameType=修改资讯')
+    },
+
+    add () {
+      this.$router.push('/magazineManagement/addMagazineManagement?nameType=添加资讯')
     },
     // 分页
     handleCurrentChangeFun (val) {
@@ -158,10 +242,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/ .el-input__inner {
-  border-color: #fff !important ;
-}
-.magazineManagement {
+.editMagazineManagement {
   width: 100%;
   height: 100%;
   display: flex;
@@ -176,6 +257,9 @@ export default {
     justify-content: space-between;
   }
 
+  .t-b {
+    margin: 10px 0 10px 10px;
+  }
   .table_bottom {
     width: 100%;
     height: auto;
@@ -189,12 +273,14 @@ export default {
 
   .el-table {
     flex: 1;
+    overflow: auto;
   }
 
   .flex {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: 200px;
   }
 
   .btootm_paination {

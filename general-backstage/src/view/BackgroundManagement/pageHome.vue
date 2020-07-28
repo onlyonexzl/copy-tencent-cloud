@@ -204,7 +204,8 @@ export default {
     // 顶部t返回显示
     getTitleName () {
       const routerArray = [
-        '/magazineManagement/editMagazineManagement'
+        '/magazineManagement/editMagazineManagement',
+        '/magazineManagement/addMagazineManagement'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

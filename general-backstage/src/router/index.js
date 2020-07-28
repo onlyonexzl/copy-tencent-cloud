@@ -155,6 +155,12 @@ export default new Router({
           name: 'editMagazineManagement',
           component: (resolve) => require(['@/view/BackgroundManagement/magazineManagement/magazineManagement/editMagazineManagement.vue'], resolve),
           // meta: ['杂志管理', '杂志管理', '资讯一级分类']
+        },
+        {
+          path: '/magazineManagement/addMagazineManagement',
+          name: 'addMagazineManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/magazineManagement/magazineManagement/addMagazineManagement.vue'], resolve),
+          // meta: ['杂志管理', '杂志管理', '资讯一级分类']
         }
       ]
     }

@@ -1,9 +1,16 @@
 <template>
   <div class="magazineManagement">
     <div class="top_button">
+
       <div class="top_left">
-        <span>文章管理</span>
-        <el-input placeholder="请输入标题关键字"
+        <span>栏目编码</span>
+        <el-input placeholder="栏目编码必须为英文输入"
+                  v-model="sName"
+                  style="width: 200px"
+                  clearable>
+        </el-input>
+        <span>栏目标题</span>
+        <el-input placeholder="填写栏目标题,标题为前台显示栏目名称"
                   v-model="sName"
                   style="width: 200px"
                   clearable>
