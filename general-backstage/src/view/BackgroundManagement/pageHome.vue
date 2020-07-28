@@ -183,6 +183,17 @@ export default {
     // 顶部title显示
     getTitleBox () {
       const routerArray = [
+        '/DataBackup/dataBackup',
+        '/DataBackup/recoverData',
+        '/DataBackup/optimizationAndRepair',
+        '/DataBackup/executeSQL',
+        '/topicManagement/topicManagement',
+        '/topicManagement/categoryDeletion',
+        '/videoManagement/videoManagement',
+        '/focusOnManagement/followList',
+        '/Amanagement/Alist',
+        '/Amanagement/commentList',
+        '/magazineManagement/magazineManagement'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -193,6 +204,7 @@ export default {
     // 顶部t返回显示
     getTitleName () {
       const routerArray = [
+        '/magazineManagement/editMagazineManagement'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

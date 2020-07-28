@@ -5,80 +5,97 @@ let navArr = [
     id: 'PROVIDER',
     name: '首页',
     icon: 'el-icon-box',
-    // 1、账号管理  2、资金管理  3、收货地址  4、短消息
     subset: [{
       id: 'PROVIDER_LIST',
-      name: '后台首页',  //我的账号
+      name: '后台首页',
       icon: 'el-icon-menu',
       url: '/provider/list',
       menu: true,
     }, {
       id: 'PROVIDER_LIST',
-      name: '数据备份', //我的资金
+      name: '数据备份',
       icon: 'el-icon-menu',
       url: '/provider/list',
       menu: true,
       actions: [{
-        name: '账户概览',
-        // url: '/shopManagement/shippingAddress'
+        name: '数据备份',
+        url: '/DataBackup/dataBackup'
       },
       {
-        name: '积分明细',
-        // url: '/shopManagement/modifyTheData',
+        name: '恢复数据',
+        url: '/DataBackup/recoverData'
       }, {
-        name: '资金明细',
-        // url: '/provider/list',
+        name: '数据修复',
+        url: '/DataBackup/optimizationAndRepair',
+      }, {
+        name: '执行SQL',
+        url: '/DataBackup/executeSQL',
       }
       ]
-    },]
+    }]
   },
   {
     id: 'PROVIDER',
     name: '杂志管理',
     icon: 'el-icon-box',
-    // 1、账号管理  2、资金管理  3、收货地址  4、短消息
     subset: [{
       id: 'PROVIDER_LIST',
-      name: '账号管理',  //我的账号
+      name: '动态管理',  //我的账号
       icon: 'el-icon-menu',
-      url: '/provider/list',
       menu: true,
       actions: [{
-        name: '修改资料',
-        url: '/shopManagement/shippingAddress'
+        name: '动态话题管理',
+        url: '/topicManagement/topicManagement'
       },
       {
-        name: '收货地址',
-        url: '/shopManagement/modifyTheData',
-      }, {
-        name: '短消息',
-        url: '/provider/list',
-      }
-        // {
-        //   name: '短消息',
-        //   url: '/company/edit',
-        //   parent: '/company/list'
-        // }
-      ]
+        name: '动态类目删除',
+        url: '/topicManagement/categoryDeletion',
+      }]
     }, {
       id: 'PROVIDER_LIST',
-      name: '资金管理', //我的资金
+      name: '视频管理', //我的资金
       icon: 'el-icon-menu',
       url: '/provider/list',
       menu: true,
       actions: [{
-        name: '账户概览',
-        // url: '/shopManagement/shippingAddress'
+        name: '短视频管理',
+        url: '/videoManagement/videoManagement'
+      }]
+    }, {
+      id: 'PROVIDER_LIST',
+      name: '关注管理', //我的资金
+      icon: 'el-icon-menu',
+      url: '/provider/list',
+      menu: true,
+      actions: [{
+        name: '关注管理',
+        url: '/focusOnManagement/followList'
+      }]
+    }, {
+      id: 'PROVIDER_LIST',
+      name: '问答管理', //我的资金
+      icon: 'el-icon-menu',
+      url: '/provider/list',
+      menu: true,
+      actions: [{
+        name: '问答列表',
+        url: '/Amanagement/Alist'
       },
       {
-        name: '积分明细',
-        // url: '/shopManagement/modifyTheData',
-      }, {
-        name: '资金明细',
-        // url: '/provider/list',
-      }
-      ]
-    },]
+        name: '评论列表',
+        url: '/Amanagement/commentList'
+      }]
+    }, {
+      id: 'PROVIDER_LIST',
+      name: '杂志管理', //我的资金
+      icon: 'el-icon-menu',
+      url: '/provider/list',
+      menu: true,
+      actions: [{
+        name: '资讯一级分类',
+        url: '/magazineManagement/magazineManagement'
+      }]
+    }]
   },
   {
     id: 'PROVIDER',
