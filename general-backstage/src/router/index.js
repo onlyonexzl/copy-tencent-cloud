@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import LARouter from './LARouter.js'
 
+console.log(LARouter[0])
 Vue.use(Router)
 
 export default new Router({
@@ -74,17 +76,15 @@ export default new Router({
         component: (resolve) => require(['@/view/market/products/details.vue'], resolve)
       }]
     },
-    // 后台管理
+    // 后台管理 测试
     {
       path: '/pageHome',
       name: 'pageHome',
       component: (resolve) => require(['@/view/BackgroundManagement/pageHome.vue'], resolve),
-      children: [{
-        path: '/homePage',
-        name: 'homepage',
-        component: (resolve) => require(['@/view/BackgroundManagement/homePage/homePage.vue'], resolve),
-        // meta: ['心理管理', '心理健康指导', '详情']
-      }]
-    },
+      children: [
+        ...LARouter
+      ]
+    }
+
   ]
 })
