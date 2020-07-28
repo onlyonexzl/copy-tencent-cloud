@@ -10,17 +10,6 @@ let navArr = [
       icon: 'el-icon-menu',
       url: '/provider/list',
       menu: true,
-      actions: [{
-        name: '修改资料',
-        url: '/shopManagement/shippingAddress'
-      },
-      {
-        name: '收货地址',
-        url: '/shopManagement/modifyTheData',
-      }, {
-        name: '短消息',
-        url: '/provider/list',
-      }]
     }, {
       id: 'PROVIDER_LIST',
       name: '数据备份', //我的资金
