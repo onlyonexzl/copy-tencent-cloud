@@ -28,13 +28,13 @@
                      active-text-color="rgb(101, 206, 167)"
                      @close="handleClose"
                      :collapse="isCollapse">
-              <el-menu-item index="0"
+              <!-- <el-menu-item index="0"
                             @click="goRightDetial('one')">
                 <template slot="title">
                   <i class="el-icon-menu"></i>
                   <span slot="title">首页</span>
                 </template>
-              </el-menu-item>
+              </el-menu-item> -->
 
               <!-- 一级菜单 -->
               <el-submenu v-for="(menu_one, index_one) in menu"
