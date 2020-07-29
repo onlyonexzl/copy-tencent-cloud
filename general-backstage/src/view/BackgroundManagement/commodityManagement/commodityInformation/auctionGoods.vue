@@ -1,14 +1,14 @@
 <template>
-  <div class="knowledgeCommodity">
+  <div class="auctionGoods">
     <div class="top_button">
 
       <div class="top_left">
-        <span>课程名称</span>
+        <span>商品名称</span>
         <el-input v-model="sName"
                   style="width: 200px"
                   clearable>
         </el-input>
-        <span>课程编码</span>
+        <span>商品编码</span>
         <el-input v-model="sName"
                   style="width: 200px"
                   clearable>
@@ -26,17 +26,17 @@
         <el-button slot="append"
                    type="primary"
                    style="margin-right: 20px;width:130px;margin: 10px 0 10px 10px"
-                   icon="el-icon-bottom">
-          批量下架
+                   icon="el-icon-close">
+          批量删除
         </el-button>
       </div>
       <el-tabs v-model="activeName"
                @tab-click="handleClick">
-        <el-tab-pane label="课程价格"
+        <el-tab-pane label="商品价格"
                      name="first"></el-tab-pane>
         <el-tab-pane label="上传时间"
                      name="second"></el-tab-pane>
-        <el-tab-pane label="课程库存"
+        <el-tab-pane label="商品库存"
                      name="third"></el-tab-pane>
       </el-tabs>
       <div class="flex">
@@ -52,86 +52,51 @@
               {{scope.$index+1}}
             </template>
           </el-table-column>
+
+          <el-table-column show-overflow-tooltip
+                           label="商品信息">
+            <template slot-scope="scope">
+              <div>
+                <el-input v-model=" scope.row.name"
+                          style="width: 200px;border:none"
+                          clearable>
+                </el-input>
+              </div>
+            </template>
+          </el-table-column>
           <el-table-column prop="date"
                            show-overflow-tooltip
-                           label="上架情况"
+                           label="起拍价"
+                           width="180">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="终止价"
+                           width="180">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="开始时间"
+                           width="180">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="结束时间"
+                           width="180">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="参与人次"
+                           width="180">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="状态"
                            width="180">
           </el-table-column>
           <el-table-column show-overflow-tooltip
-                           label="课程名称">
-            <template slot-scope="scope">
-              <div>
-                <el-input v-model=" scope.row.name"
-                          style="width: 200px;border:none"
-                          clearable>
-                </el-input>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column show-overflow-tooltip
-                           label="课程编码">
-            <template slot-scope="scope">
-              <div>
-                <el-input v-model=" scope.row.name"
-                          style="width: 200px;border:none"
-                          clearable>
-                </el-input>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="所属分类">
-          </el-table-column>
-          <el-table-column show-overflow-tooltip
-                           label="所属商铺">
-            <template slot-scope="scope">
-              <div>
-                <el-input v-model=" scope.row.name"
-                          style="width: 200px;border:none"
-                          clearable>
-                </el-input>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column show-overflow-tooltip
-                           label="课程价格">
-            <template slot-scope="scope">
-              <div>
-                <el-input v-model=" scope.row.name"
-                          style="width: 200px;border:none"
-                          clearable>
-                </el-input>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="课程有效期">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="授课教师">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="语言">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="课时管理">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="总库存">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="接受预定">
-          </el-table-column>
-          <el-table-column show-overflow-tooltip
                            label="操作"
-                           width="200"
+                           width="150"
                            min-width="60">
             <template slot-scope="scope">
               <div>
@@ -144,10 +109,10 @@
                            type="text"
                            class="redColor  right20"
                            @click="checkTrackQueryFun(scope.$index, scope.row)">删除</el-button>
-                <el-button size="medium"
+                <!-- <el-button size="medium"
                            type="text"
                            @click="release"
-                           class="blueColor">发布</el-button>
+                           class="blueColor">发布</el-button> -->
               </div>
             </template>
           </el-table-column>
@@ -169,7 +134,7 @@
 
 <script>
 export default {
-  name: 'knowledgeCommodity',
+  name: 'auctionGoods',
 
   data () {
     return {
@@ -217,11 +182,11 @@ export default {
 
   methods: {
     editor () {
-      this.$router.push('/commodityInformation/editknowledgeCommodity?nameType=修改课程信息')
+      this.$router.push('/commodityInformation/editauctionGoods?nameType=修改商品信息')
     },
 
     release () {
-      this.$router.push('/commodityInformation/releaseknowledgeCommodity?nameType=发布广告')
+      this.$router.push('/commodityInformation/releaseauctionGoods?nameType=发布广告')
 
     },
     // 分页
@@ -241,7 +206,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.knowledgeCommodity {
+.auctionGoods {
   width: 100%;
   height: 100%;
   display: flex;

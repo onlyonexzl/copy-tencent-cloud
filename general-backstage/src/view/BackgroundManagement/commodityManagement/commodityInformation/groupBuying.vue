@@ -1,14 +1,14 @@
 <template>
-  <div class="knowledgeCommodity">
+  <div class="groupBuying">
     <div class="top_button">
 
       <div class="top_left">
-        <span>课程名称</span>
+        <span>商城名称</span>
         <el-input v-model="sName"
                   style="width: 200px"
                   clearable>
         </el-input>
-        <span>课程编码</span>
+        <span>商城编码</span>
         <el-input v-model="sName"
                   style="width: 200px"
                   clearable>
@@ -32,11 +32,11 @@
       </div>
       <el-tabs v-model="activeName"
                @tab-click="handleClick">
-        <el-tab-pane label="课程价格"
+        <el-tab-pane label="商城价格"
                      name="first"></el-tab-pane>
         <el-tab-pane label="上传时间"
                      name="second"></el-tab-pane>
-        <el-tab-pane label="课程库存"
+        <el-tab-pane label="商城库存"
                      name="third"></el-tab-pane>
       </el-tabs>
       <div class="flex">
@@ -58,7 +58,7 @@
                            width="180">
           </el-table-column>
           <el-table-column show-overflow-tooltip
-                           label="课程名称">
+                           label="商城名称">
             <template slot-scope="scope">
               <div>
                 <el-input v-model=" scope.row.name"
@@ -69,7 +69,7 @@
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip
-                           label="课程编码">
+                           label="商城编码">
             <template slot-scope="scope">
               <div>
                 <el-input v-model=" scope.row.name"
@@ -81,10 +81,12 @@
           </el-table-column>
           <el-table-column prop="date"
                            show-overflow-tooltip
-                           label="所属分类">
+                           label="所属分类"
+                           width="180">
           </el-table-column>
           <el-table-column show-overflow-tooltip
-                           label="所属商铺">
+                           label="所属商铺"
+                           width="180">
             <template slot-scope="scope">
               <div>
                 <el-input v-model=" scope.row.name"
@@ -95,7 +97,7 @@
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip
-                           label="课程价格">
+                           label="商城价格">
             <template slot-scope="scope">
               <div>
                 <el-input v-model=" scope.row.name"
@@ -107,27 +109,13 @@
           </el-table-column>
           <el-table-column prop="date"
                            show-overflow-tooltip
-                           label="课程有效期">
+                           label="总库存"
+                           width="180">
           </el-table-column>
           <el-table-column prop="date"
                            show-overflow-tooltip
-                           label="授课教师">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="语言">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="课时管理">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="总库存">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="接受预定">
+                           label="接受预定"
+                           width="180">
           </el-table-column>
           <el-table-column show-overflow-tooltip
                            label="操作"
@@ -169,7 +157,7 @@
 
 <script>
 export default {
-  name: 'knowledgeCommodity',
+  name: 'groupBuying',
 
   data () {
     return {
@@ -217,11 +205,11 @@ export default {
 
   methods: {
     editor () {
-      this.$router.push('/commodityInformation/editknowledgeCommodity?nameType=修改课程信息')
+      this.$router.push('/commodityInformation/editgroupGoods?nameType=修改商城信息')
     },
 
     release () {
-      this.$router.push('/commodityInformation/releaseknowledgeCommodity?nameType=发布广告')
+      this.$router.push('/commodityInformation/releasegroupGoods?nameType=发布广告')
 
     },
     // 分页
@@ -241,7 +229,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.knowledgeCommodity {
+.groupBuying {
   width: 100%;
   height: 100%;
   display: flex;

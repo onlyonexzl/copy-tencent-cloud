@@ -198,7 +198,13 @@ export default {
         '/commodityInformation/knowledgeCommodity',
         '/commodityInformation/groupGoods',
         '/commodityInformation/secondKill',
-        '/commodityInformation/displayProducts'
+        '/commodityInformation/displayProducts',
+        '/commodityInformation/groupBuying',
+        '/commodityInformation/auctionGoods',
+        '/commodityInformation/wholesaleGoods',
+        '/commodityInformation/consignmentGoods',
+        '/commodityInformation/notOn',
+        '/commodityInformation/rebateGoods'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -218,7 +224,11 @@ export default {
         '/commodityInformation/editgroupGoods',
         '/commodityInformation/releasegroupGoods',
         '/commodityInformation/editsecondKil',
-        '/commodityInformation/editdisplayProducts'
+        '/commodityInformation/editdisplayProducts',
+        '/commodityInformation/editauctionGoods',
+        '/commodityInformation/editwholesaleGoods',
+        '/commodityInformation/releasewholesaleGoods',
+        '/commodityInformation/editnotOn'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

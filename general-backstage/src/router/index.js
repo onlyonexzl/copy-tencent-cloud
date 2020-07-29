@@ -201,13 +201,20 @@ export default new Router({
           path: '/commodityInformation/groupGoods',
           name: 'groupGoods',
           component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/groupGoods.vue'], resolve),
-          meta: ['商品管理', '商品信息', '销售商品列表']
+          meta: ['商品管理', '商品信息', '评团商品列表']
         }, {
           path: '/commodityInformation/editgroupGoods',
           name: 'editgroupGoods',
           component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editgroupGoods.vue'], resolve),
           // meta: ['商品管理', '商品信息', '常规商品管理']
         },
+        {
+          path: '/commodityInformation/rebateGoods',
+          name: 'rebateGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/rebateGoods.vue'], resolve),
+          meta: ['商品管理', '商品信息', '返利商品列表']
+        },
+
         {
           path: '/commodityInformation/releasegroupGoods',
           name: 'releasegroupGoods',
@@ -237,6 +244,60 @@ export default new Router({
           name: 'editdisplayProducts',
           component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editdisplayProducts.vue'], resolve),
           // meta: ['商品管理', '商品信息', '秒杀商品列表']
+        },
+        {
+          path: '/commodityInformation/groupBuying',
+          name: 'groupBuying',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/groupBuying.vue'], resolve),
+          meta: ['商品管理', '商品信息', '团购商品列表']
+        },
+        {
+          path: '/commodityInformation/auctionGoods',
+          name: 'auctionGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/auctionGoods.vue'], resolve),
+          meta: ['商品管理', '商品信息', '拍卖商品列表']
+        },
+        {
+          path: '/commodityInformation/editauctionGoods',
+          name: 'editauctionGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editauctionGoods.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '拍卖商品列表']
+        },
+        {
+          path: '/commodityInformation/wholesaleGoods',
+          name: 'wholesaleGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/wholesaleGoods.vue'], resolve),
+          meta: ['商品管理', '商品信息', '批发商品列表']
+        },
+        {
+          path: '/commodityInformation/editwholesaleGoods',
+          name: 'editwholesaleGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editwholesaleGoods.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '批发商品列表']
+        },
+        {
+          path: '/commodityInformation/releasewholesaleGoods',
+          name: 'releasewholesaleGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/releasewholesaleGoods.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '批发商品列表']
+        },
+        {
+          path: '/commodityInformation/consignmentGoods',
+          name: 'consignmentGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/consignmentGoods.vue'], resolve),
+          meta: ['商品管理', '商品信息', '代销商品列表']
+        },
+        {
+          path: '/commodityInformation/notOn',
+          name: 'notOn',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/notOn.vue'], resolve),
+          meta: ['商品管理', '商品信息', '未上架商品列表']
+        },
+        {
+          path: '/commodityInformation/editNotOn',
+          name: 'editNotOn',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editNotOn.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '未上架商品列表']
         }
       ]
     }

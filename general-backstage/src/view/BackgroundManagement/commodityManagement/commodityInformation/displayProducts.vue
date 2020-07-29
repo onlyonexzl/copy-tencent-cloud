@@ -120,6 +120,10 @@
                            type="text"
                            class="redColor  right20"
                            @click="checkTrackQueryFun(scope.$index, scope.row)">删除</el-button>
+                <el-button size="medium"
+                           type="text"
+                           @click="release"
+                           class="blueColor">发布</el-button>
               </div>
             </template>
           </el-table-column>
@@ -190,6 +194,10 @@ export default {
   methods: {
     editor () {
       this.$router.push('/commodityInformation/editdisplayProducts?nameType=修改商品信息')
+    },
+    release () {
+      this.$router.push('/commodityInformation/releasegroupGoods?nameType=发布广告')
+
     },
     // 分页
     handleCurrentChangeFun (val) {

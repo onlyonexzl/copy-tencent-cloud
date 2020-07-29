@@ -201,7 +201,7 @@ let navArr = [
           },
           {
             name: '返利商品管理',
-            url: '/commodityInformation/groupGoods',
+            url: '/commodityInformation/rebateGoods',
           },
           {
             name: '秒杀商品管理',
@@ -213,27 +213,27 @@ let navArr = [
           },
           {
             name: '团购商品管理',
-            url: '/shopManagement/showMerchants'
+            url: '/commodityInformation/groupBuying'
           },
           {
             name: '拍卖商品管理',
-            url: '/shopManagement/templateToBuy',
+            url: '/commodityInformation/auctionGoods',
           },
-          {
-            name: '分销商品管理',
-            url: '/shopManagement/friendshipConnection',
-          },
+          // {
+          //   name: '分销商品管理',
+          //   url: '/commodityInformation/auctionGoods',
+          // },
           {
             name: '批发商品管理',
-            url: '/shopManagement/friendshipConnection',
+            url: '/commodityInformation/wholesaleGoods',
           },
           {
             name: '代销商品管理',
-            url: '/shopManagement/friendshipConnection',
+            url: '/commodityInformation/consignmentGoods',
           },
           {
             name: '未上架商品',
-            url: '/shopManagement/friendshipConnection',
+            url: '/commodityInformation/notOn',
           }
         ]
       }
