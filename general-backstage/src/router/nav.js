@@ -94,6 +94,84 @@ let navArr = [
       actions: [{
         name: '资讯一级分类',
         url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '美食',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '娱乐',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '美妆',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '服饰',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '时尚',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '文化',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '艺术',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '商业',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '酒店',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '旅游',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '亲子',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '健康',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '医疗',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '教育',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '运动',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '家政',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '生鲜',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '农场',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '家居',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '电器',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '装饰',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '房产',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '装饰',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '汽车',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '科技',
+        url: '/magazineManagement/magazineManagement'
+      }, {
+        name: '国际',
+        url: '/magazineManagement/magazineManagement'
       }]
     }]
   },
@@ -104,96 +182,59 @@ let navArr = [
     subset: [
       {
         id: 'PROVIDER_LIST',
-        name: '商铺装修',
+        name: '商品信息',
         icon: 'el-icon-menu',
         // url: '/provider/list',
         menu: true,
         actions: [
           {
-            name: '页面管理',
-            url: '/shopManagement/shopManagement',
-            // parent: '/company/list'
+            name: '常规商品管理',
+            url: '/commodityInformation/generalMerchandise',
+          },
+          {
+            name: '知识商品管理',
+            url: '/commodityInformation/knowledgeCommodity',
+          },
+          {
+            name: '拼团商品管理',
+            url: '/commodityInformation/groupGoods',
+          },
+          {
+            name: '返利商品管理',
+            url: '/commodityInformation/rebateGoods',
+          },
+          {
+            name: '秒杀商品管理',
+            url: '/commodityInformation/secondKill',
+          },
+          {
+            name: '展示商品管理',
+            url: '/commodityInformation/displayProducts',
+          },
+          {
+            name: '团购商品管理',
+            url: '/commodityInformation/groupBuying'
+          },
+          {
+            name: '拍卖商品管理',
+            url: '/commodityInformation/auctionGoods',
           },
           // {
-          //   name: '商铺地图',
-          //   url: '/company/edit',
-          //   // parent: '/company/list'
+          //   name: '分销商品管理',
+          //   url: '/commodityInformation/auctionGoods',
           // },
           {
-            name: '手机轮转广告',
-            url: '/shopManagement/mobilePhoneBy',
+            name: '批发商品管理',
+            url: '/commodityInformation/wholesaleGoods',
           },
           {
-            name: '轮转广告',
-            url: '/shopManagement/phoneBy',
+            name: '代销商品管理',
+            url: '/commodityInformation/consignmentGoods',
           },
           {
-            name: '图片广告',
-            url: '/shopManagement/imageAds',
-          },
-          {
-            name: '弹窗广告',
-            url: '/shopManagement/popUpAds',
-          },
-          {
-            name: '商家展示',
-            url: '/shopManagement/showMerchants'
-          },
-          {
-            name: '模版购买',
-            url: '/shopManagement/templateToBuy',
-          },
-          {
-            name: '友情连接',
-            url: '/shopManagement/friendshipConnection',
+            name: '未上架商品',
+            url: '/commodityInformation/notOn',
           }
-        ]
-      }, {
-        id: 'PROVIDER_LIST',
-        name: '商铺设置',
-        icon: 'el-icon-menu',
-        url: '/provider/list',
-        menu: true,
-        actions: [{
-          name: '导航管理',
-          url: '/setUpShops/navigationManagement'
-        }, {
-          name: '基础信息',
-          url: '/setUpShops/information'
-        }, {
-          name: '客服设置',
-          url: '/setUpShops/settingService'
-        }, {
-          name: '短信设置',
-          url: '/setUpShops/SMSSettings',
-        }, {
-          name: '商铺认证',
-          url: '/setUpShops/shopCertification'
-        }, {
-          name: '域名设置',
-          url: '/setUpShops/theHttp'
-        }]
-      }, {
-        id: 'PROVIDER_LIST',
-        name: '拓展管理',
-        icon: 'el-icon-menu',
-        url: '/provider/list',
-        menu: true,
-        actions: [{
-          name: '图片管理',
-          url: '/developManagement/imageManagement'
-        }, {
-          name: '淘宝转换',
-          url: '/developManagement/taobaoConversion'
-        }, {
-          name: '托管管理',
-          url: '/developManagement/trustManagement'
-        },
-          // {
-          //   name: '微信菜单管理',
-          //   url: '/company/edit',
-          //   parent: '/company/list'
-          // }
         ]
       }
     ]
@@ -219,53 +260,100 @@ let navArr = [
     subset: [
       {
         id: 'PRODUCT_LIST',
-        name: '商品管理',
+        name: '商铺订单',
         icon: 'el-icon-menu',
         url: '/product/list',
         menu: true,
         actions: [{
-          name: '常规商品管理',
-          url: '/commodity/conventionalKnowledge'
+          name: '客户订单',
+          url: '/shopOrder/customerOrder'
         }, {
-          name: '知识商品管理',
+          name: '知识订单',
           url: '/commodity/productsKnowledge'
         }, {
-          name: '拼团商品管理',
+          name: '退货通道',
           url: '/commodity/spellMassGoods'
         }, {
-          name: '返利商品管理',
+          name: '拼团订单',
           url: '/commodity/rebateGoods'
         }, {
-          name: '秒杀商品管理',
+          name: '提现申请',
           url: '/commodity/secondsKillGoods'
         }, {
-          name: '团购商品管理',
+          name: '拼团退货',
           url: '/commodity/bulkGoods'
-        }, {
-          name: '拍卖商品管理',
-          url: '/commodity/auctionGoods'
-        }, {
-          name: '分销商品管理',
-          url: '/commodity/distributionGoods'
-        }, {
-          name: '批发商品管理',
-          url: '/commodity/wholesaleGoods'
-        }, {
-          name: '未上架商品',
-          url: '/commodity/notGoods'
         }]
       },
       {
         id: 'PRODUCT_LIST',
-        name: '分类设置',
+        name: '配送方式',
         icon: 'el-icon-menu',
         url: '/product/category/list',
         menu: true,
         actions: [{
-          name: '常规商品分类',
+          name: '物流工具',
           url: '/conventionalProducts/conventionalProducts'
         }]
-      },
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '商品咨询管理',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '销售商品咨询',
+          url: '/conventionalProducts/conventionalProducts'
+        }, {
+          name: '展示商品咨询',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '评价留言',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '评价买家',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '支付方式',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '收款设置',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '交易明细',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '积分明细',
+          url: '/conventionalProducts/conventionalProducts'
+        }, {
+          name: '资金明细',
+          url: '/conventionalProducts/conventionalProducts'
+        }, {
+          name: '消保明细',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '信用管理',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '信用管理',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }
       // {
       //   id: 'PRODUCT_CATEGORY_LIST',
       //   name: '产品分类列表',

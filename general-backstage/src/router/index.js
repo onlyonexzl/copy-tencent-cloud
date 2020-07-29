@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import LARouter from './LARouter.js'
 
-console.log(LARouter[0])
 Vue.use(Router)
 
 export default new Router({
@@ -155,9 +154,157 @@ export default new Router({
           name: 'editMagazineManagement',
           component: (resolve) => require(['@/view/BackgroundManagement/magazineManagement/magazineManagement/editMagazineManagement.vue'], resolve),
           // meta: ['杂志管理', '杂志管理', '资讯一级分类']
+        },
+        {
+          path: '/magazineManagement/addMagazineManagement',
+          name: 'addMagazineManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/magazineManagement/magazineManagement/addMagazineManagement.vue'], resolve),
+          // meta: ['杂志管理', '杂志管理', '资讯一级分类']
+        },
+        {
+          path: '/commodityInformation/generalMerchandise',
+          name: 'generalMerchandise',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/generalMerchandise.vue'], resolve),
+          meta: ['商品管理', '商品信息', '常规商品管理']
+        },
+        {
+          path: '/commodityInformation/editGeneralMerchandise',
+          name: 'editGeneralMerchandise',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editGeneralMerchandise.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '常规商品管理']
+        },
+        {
+          path: '/commodityInformation/releaseGeneralMerchandise',
+          name: 'releaseGeneralMerchandise',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/releaseGeneralMerchandise.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '常规商品管理']
+        },
+        {
+          path: '/commodityInformation/knowledgeCommodity',
+          name: 'knowledgeCommodity',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/knowledgeCommodity.vue'], resolve),
+          meta: ['商品管理', '商品信息', '知识商品管理']
+        }, {
+          path: '/commodityInformation/editknowledgeCommodity',
+          name: 'editknowledgeCommodity',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editknowledgeCommodity.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '常规商品管理']
+        },
+        {
+          path: '/commodityInformation/releaseknowledgeCommodity',
+          name: 'releaseknowledgeCommodity',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/releaseknowledgeCommodity.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '常规商品管理']
+        },
+        {
+          path: '/commodityInformation/groupGoods',
+          name: 'groupGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/groupGoods.vue'], resolve),
+          meta: ['商品管理', '商品信息', '评团商品列表']
+        }, {
+          path: '/commodityInformation/editgroupGoods',
+          name: 'editgroupGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editgroupGoods.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '常规商品管理']
+        },
+        {
+          path: '/commodityInformation/rebateGoods',
+          name: 'rebateGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/rebateGoods.vue'], resolve),
+          meta: ['商品管理', '商品信息', '返利商品列表']
+        },
+
+        {
+          path: '/commodityInformation/releasegroupGoods',
+          name: 'releasegroupGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/releasegroupGoods.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '常规商品管理']
+        },
+        {
+          path: '/commodityInformation/secondKill',
+          name: 'secondKill',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/secondKill.vue'], resolve),
+          meta: ['商品管理', '商品信息', '秒杀商品列表']
+        },
+        {
+          path: '/commodityInformation/editsecondKil',
+          name: 'editsecondKil',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editsecondKil.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '秒杀商品列表']
+        },
+        {
+          path: '/commodityInformation/displayProducts',
+          name: 'displayProducts',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/displayProducts.vue'], resolve),
+          meta: ['商品管理', '商品信息', '展示商品列表']
+        },
+        {
+          path: '/commodityInformation/editdisplayProducts',
+          name: 'editdisplayProducts',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editdisplayProducts.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '秒杀商品列表']
+        },
+        {
+          path: '/commodityInformation/groupBuying',
+          name: 'groupBuying',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/groupBuying.vue'], resolve),
+          meta: ['商品管理', '商品信息', '团购商品列表']
+        },
+        {
+          path: '/commodityInformation/auctionGoods',
+          name: 'auctionGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/auctionGoods.vue'], resolve),
+          meta: ['商品管理', '商品信息', '拍卖商品列表']
+        },
+        {
+          path: '/commodityInformation/editauctionGoods',
+          name: 'editauctionGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editauctionGoods.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '拍卖商品列表']
+        },
+        {
+          path: '/commodityInformation/wholesaleGoods',
+          name: 'wholesaleGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/wholesaleGoods.vue'], resolve),
+          meta: ['商品管理', '商品信息', '批发商品列表']
+        },
+        {
+          path: '/commodityInformation/editwholesaleGoods',
+          name: 'editwholesaleGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editwholesaleGoods.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '批发商品列表']
+        },
+        {
+          path: '/commodityInformation/releasewholesaleGoods',
+          name: 'releasewholesaleGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/releasewholesaleGoods.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '批发商品列表']
+        },
+        {
+          path: '/commodityInformation/consignmentGoods',
+          name: 'consignmentGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/consignmentGoods.vue'], resolve),
+          meta: ['商品管理', '商品信息', '代销商品列表']
+        },
+        {
+          path: '/commodityInformation/notOn',
+          name: 'notOn',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/notOn.vue'], resolve),
+          meta: ['商品管理', '商品信息', '未上架商品列表']
+        },
+        {
+          path: '/commodityInformation/editNotOn',
+          name: 'editNotOn',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editNotOn.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '未上架商品列表']
+        },
+        {
+          path: '/shopOrder/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/shopOrder/customerOrder.vue'], resolve),
+          meta: ['交易管理', '商铺订单', '客户订单']
         }
       ]
     }
-
   ]
 })

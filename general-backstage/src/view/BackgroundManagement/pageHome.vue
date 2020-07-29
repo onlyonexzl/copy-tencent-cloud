@@ -193,7 +193,19 @@ export default {
         '/focusOnManagement/followList',
         '/Amanagement/Alist',
         '/Amanagement/commentList',
-        '/magazineManagement/magazineManagement'
+        '/magazineManagement/magazineManagement',
+        '/commodityInformation/generalMerchandise',
+        '/commodityInformation/knowledgeCommodity',
+        '/commodityInformation/groupGoods',
+        '/commodityInformation/secondKill',
+        '/commodityInformation/displayProducts',
+        '/commodityInformation/groupBuying',
+        '/commodityInformation/auctionGoods',
+        '/commodityInformation/wholesaleGoods',
+        '/commodityInformation/consignmentGoods',
+        '/commodityInformation/notOn',
+        '/commodityInformation/rebateGoods',
+        '/shopOrder/customerOrder'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -204,7 +216,20 @@ export default {
     // 顶部t返回显示
     getTitleName () {
       const routerArray = [
-        '/magazineManagement/editMagazineManagement'
+        '/magazineManagement/editMagazineManagement',
+        '/magazineManagement/addMagazineManagement',
+        '/commodityInformation/editGeneralMerchandise',
+        '/commodityInformation/releaseGeneralMerchandise',
+        '/commodityInformation/editknowledgeCommodity',
+        '/commodityInformation/releaseknowledgeCommodity',
+        '/commodityInformation/editgroupGoods',
+        '/commodityInformation/releasegroupGoods',
+        '/commodityInformation/editsecondKil',
+        '/commodityInformation/editdisplayProducts',
+        '/commodityInformation/editauctionGoods',
+        '/commodityInformation/editwholesaleGoods',
+        '/commodityInformation/releasewholesaleGoods',
+        '/commodityInformation/editnotOn'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

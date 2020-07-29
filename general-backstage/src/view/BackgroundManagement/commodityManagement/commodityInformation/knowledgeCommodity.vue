@@ -1,17 +1,15 @@
 <template>
-  <div class="magazineManagement">
+  <div class="knowledgeCommodity">
     <div class="top_button">
 
       <div class="top_left">
-        <span>栏目编码</span>
-        <el-input placeholder="栏目编码必须为英文输入"
-                  v-model="sName"
+        <span>课程名称</span>
+        <el-input v-model="sName"
                   style="width: 200px"
                   clearable>
         </el-input>
-        <span>栏目标题</span>
-        <el-input placeholder="填写栏目标题,标题为前台显示栏目名称"
-                  v-model="sName"
+        <span>课程编码</span>
+        <el-input v-model="sName"
                   style="width: 200px"
                   clearable>
         </el-input>
@@ -24,6 +22,23 @@
       </div>
     </div>
     <div class="table_bottom">
+      <div class="form-item">
+        <el-button slot="append"
+                   type="primary"
+                   style="margin-right: 20px;width:130px;margin: 10px 0 10px 10px"
+                   icon="el-icon-bottom">
+          批量下架
+        </el-button>
+      </div>
+      <el-tabs v-model="activeName"
+               @tab-click="handleClick">
+        <el-tab-pane label="课程价格"
+                     name="first"></el-tab-pane>
+        <el-tab-pane label="上传时间"
+                     name="second"></el-tab-pane>
+        <el-tab-pane label="课程库存"
+                     name="third"></el-tab-pane>
+      </el-tabs>
       <div class="flex">
         <el-table :data="tableData"
                   stripe
@@ -39,20 +54,14 @@
           </el-table-column>
           <el-table-column prop="date"
                            show-overflow-tooltip
-                           label="栏目编码"
+                           label="上架情况"
                            width="180">
           </el-table-column>
-          <el-table-column prop="name"
-                           show-overflow-tooltip
-                           label="栏目标题">
-          </el-table-column>
           <el-table-column show-overflow-tooltip
-                           label="排序">
-
+                           label="课程名称">
             <template slot-scope="scope">
               <div>
-                <el-input placeholder="请输入标题关键字"
-                          v-model=" scope.row.address"
+                <el-input v-model=" scope.row.name"
                           style="width: 200px;border:none"
                           clearable>
                 </el-input>
@@ -60,33 +69,90 @@
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip
+                           label="课程编码">
+            <template slot-scope="scope">
+              <div>
+                <el-input v-model=" scope.row.name"
+                          style="width: 200px;border:none"
+                          clearable>
+                </el-input>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="所属分类">
+          </el-table-column>
+          <el-table-column show-overflow-tooltip
+                           label="所属商铺">
+            <template slot-scope="scope">
+              <div>
+                <el-input v-model=" scope.row.name"
+                          style="width: 200px;border:none"
+                          clearable>
+                </el-input>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column show-overflow-tooltip
+                           label="课程价格">
+            <template slot-scope="scope">
+              <div>
+                <el-input v-model=" scope.row.name"
+                          style="width: 200px;border:none"
+                          clearable>
+                </el-input>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="课程有效期">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="授课教师">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="语言">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="课时管理">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="总库存">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="接受预定">
+          </el-table-column>
+          <el-table-column show-overflow-tooltip
                            label="操作"
                            width="200"
                            min-width="60">
             <template slot-scope="scope">
               <div>
-                <el-button size="medium"
-                           type="text"
-                           class="blueColor right20"
-                           @click="editor(scope.$index, scope.row)">资讯管理</el-button>
+
                 <el-button size="medium"
                            type="text"
                            class="yellowColor right20"
                            @click="editor(scope.$index, scope.row)">修改</el-button>
                 <el-button size="medium"
                            type="text"
-                           class="redColor"
+                           class="redColor  right20"
                            @click="checkTrackQueryFun(scope.$index, scope.row)">删除</el-button>
+                <el-button size="medium"
+                           type="text"
+                           @click="release"
+                           class="blueColor">发布</el-button>
               </div>
             </template>
           </el-table-column>
         </el-table>
         <div class="btootm_paination">
-          <!-- <el-pagination @current-change="handleCurrentChangeFun"
-                         :hide-on-single-page="false"
-                         :current-page="currentPage"
-                         layout="total, jumper,  ->, prev, pager, next"
-                         :total="totalData"></el-pagination> -->
           <el-pagination @size-change="handleSizeChange"
                          @current-change="handleCurrentChangeFun"
                          :current-page="currentPage"
@@ -103,7 +169,7 @@
 
 <script>
 export default {
-  name: 'magazineManagement',
+  name: 'knowledgeCommodity',
 
   data () {
     return {
@@ -134,15 +200,29 @@ export default {
         date: '2016-05-03',
         name: '王小虎',
         address: '上海市普陀区516 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市 1519 弄'
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区516 弄'
       }],
       currentPage: 1, //当前页数
       totalData: 1, //总页数
+      activeName: ''
     }
   },
 
   methods: {
     editor () {
-      this.$router.push('/magazineManagement/editMagazineManagement?nameType=资讯管理')
+      this.$router.push('/commodityInformation/editknowledgeCommodity?nameType=修改课程信息')
+    },
+
+    release () {
+      this.$router.push('/commodityInformation/releaseknowledgeCommodity?nameType=发布广告')
+
     },
     // 分页
     handleCurrentChangeFun (val) {
@@ -153,12 +233,15 @@ export default {
     handleSizeChange (val) {
       console.log(`每页 ${val} 条`);
     },
+    handleClick (tab, event) {
+      console.log(tab, event);
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.magazineManagement {
+.knowledgeCommodity {
   width: 100%;
   height: 100%;
   display: flex;
@@ -186,6 +269,7 @@ export default {
 
   .el-table {
     flex: 1;
+    overflow: auto;
 
     /deep/ .el-input__inner {
       border-color: #fff !important ;
@@ -196,6 +280,7 @@ export default {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: 200px;
   }
 
   .btootm_paination {

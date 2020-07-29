@@ -1,106 +1,44 @@
 <template>
-  <div class="editMagazineManagement">
+  <div class="generalMerchandise">
     <div class="top_button">
+
       <div class="top_left">
-        <span>文章管理</span>
-        <el-input placeholder="请输入标题关键字"
-                  v-model="sName"
+        <span>商品名称</span>
+        <el-input v-model="sName"
+                  style="width: 200px"
+                  clearable>
+        </el-input>
+        <span>商品编码</span>
+        <el-input v-model="sName"
                   style="width: 200px"
                   clearable>
         </el-input>
         <el-button slot="append"
                    type="primary"
-                   icon="el-icon-search">
+                   icon="el-icon-search"
+                   @click="sesarchFun()">
           搜索
         </el-button>
       </div>
     </div>
     <div class="table_bottom">
-      <div class="t-b">
-        <span>选择地区</span>
-        <el-select v-model="province"
-                   clearable
-                   placeholder="所在省">
-          <el-option label="区域一"
-                     value="shanghai"></el-option>
-          <el-option label="区域二"
-                     value="beijing"></el-option>
-        </el-select>
-        <el-select v-model="city"
-                   clearable
-                   placeholder="所在市">
-          <el-option label="区域一"
-                     value="shanghai"></el-option>
-          <el-option label="区域二"
-                     value="beijing"></el-option>
-        </el-select>
+      <div class="form-item">
         <el-button slot="append"
                    type="primary"
-                   icon="el-icon-search">
-          批量修改地区
-        </el-button>
-        <el-button slot="append"
-                   type="primary"
-                   @click="add"
-                   style="float: right;margin-right: 20px"
-                   icon="el-icon-plus">
-          添加文章
-        </el-button>
-        <br>
-
-        <span style="margin-top: 10px">选择栏目</span>
-        <el-select v-model="province"
-                   style="margin-top: 10px"
-                   clearable>
-          <el-option label="区域一"
-                     value="shanghai"></el-option>
-          <el-option label="区域二"
-                     value="beijing"></el-option>
-        </el-select>
-        <el-select v-model="city"
-                   style="margin-top: 10px"
-                   clearable>
-          <el-option label="区域一"
-                     value="shanghai"></el-option>
-          <el-option label="区域二"
-                     value="beijing"></el-option>
-        </el-select>
-        <el-button slot="append"
-                   type="primary"
-                   style="margin-top: 10px"
-                   icon="el-icon-search">
-          批量修改栏目
-        </el-button> <br>
-        <el-button slot="append"
-                   type="primary"
-                   style="margin-top: 10px"
-                   icon="el-icon-top">
-          批量置顶
-        </el-button>
-        <el-button slot="append"
-                   type="primary"
-                   style="margin-right: 20px"
+                   style="margin-right: 20px;width:130px;margin: 10px 0 10px 10px"
                    icon="el-icon-bottom">
-          取消置顶
+          批量下架
         </el-button>
-        <el-button slot="append"
-                   type="primary"
-                   icon="el-icon-top">
-          批量总置顶
-        </el-button>
-        <el-button slot="append"
-                   type="primary"
-                   icon="el-icon-bottom"
-                   style="margin-right: 20px">
-          取消总置顶
-        </el-button>
-        <el-button slot="append"
-                   type="primary"
-                   icon="el-icon-close">
-          批量删除
-        </el-button>
-
       </div>
+      <el-tabs v-model="activeName"
+               @tab-click="handleClick">
+        <el-tab-pane label="商品价格"
+                     name="first"></el-tab-pane>
+        <el-tab-pane label="上传时间"
+                     name="second"></el-tab-pane>
+        <el-tab-pane label="商品库存"
+                     name="third"></el-tab-pane>
+      </el-tabs>
       <div class="flex">
         <el-table :data="tableData"
                   stripe
@@ -116,16 +54,61 @@
           </el-table-column>
           <el-table-column prop="date"
                            show-overflow-tooltip
-                           label="作者"
+                           label="上架情况"
                            width="180">
           </el-table-column>
-          <el-table-column prop="name"
-                           show-overflow-tooltip
-                           label="点击量">
+          <el-table-column show-overflow-tooltip
+                           label="商品名称">
+            <template slot-scope="scope">
+              <div>
+                <el-input v-model=" scope.row.name"
+                          style="width: 200px;border:none"
+                          clearable>
+                </el-input>
+              </div>
+            </template>
           </el-table-column>
-          <el-table-column prop="name"
+          <el-table-column show-overflow-tooltip
+                           label="商品编码">
+            <template slot-scope="scope">
+              <div>
+                <el-input v-model=" scope.row.name"
+                          style="width: 200px;border:none"
+                          clearable>
+                </el-input>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column prop="date"
                            show-overflow-tooltip
-                           label="发布时间">
+                           label="所属分类"
+                           width="180">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="所属商铺"
+                           width="180">
+          </el-table-column>
+          <el-table-column show-overflow-tooltip
+                           label="商城价格">
+            <template slot-scope="scope">
+              <div>
+                <el-input v-model=" scope.row.name"
+                          style="width: 200px;border:none"
+                          clearable>
+                </el-input>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="总库存"
+                           width="180">
+          </el-table-column>
+          <el-table-column prop="date"
+                           show-overflow-tooltip
+                           label="接受预定"
+                           width="180">
           </el-table-column>
           <el-table-column show-overflow-tooltip
                            label="操作"
@@ -133,24 +116,24 @@
                            min-width="60">
             <template slot-scope="scope">
               <div>
+
                 <el-button size="medium"
                            type="text"
                            class="yellowColor right20"
                            @click="editor(scope.$index, scope.row)">修改</el-button>
                 <el-button size="medium"
                            type="text"
-                           class="redColor"
+                           class="redColor  right20"
                            @click="checkTrackQueryFun(scope.$index, scope.row)">删除</el-button>
+                <el-button size="medium"
+                           type="text"
+                           @click="release"
+                           class="blueColor">发布</el-button>
               </div>
             </template>
           </el-table-column>
         </el-table>
         <div class="btootm_paination">
-          <!-- <el-pagination @current-change="handleCurrentChangeFun"
-                         :hide-on-single-page="false"
-                         :current-page="currentPage"
-                         layout="total, jumper,  ->, prev, pager, next"
-                         :total="totalData"></el-pagination> -->
           <el-pagination @size-change="handleSizeChange"
                          @current-change="handleCurrentChangeFun"
                          :current-page="currentPage"
@@ -167,12 +150,20 @@
 
 <script>
 export default {
-  name: 'editMagazineManagement',
+  name: 'generalMerchandise',
 
   data () {
     return {
-      city: '',
-      province: '',
+      time: [],
+      status: '',
+      options: [
+        { value: '', label: '全部' },
+        { value: 0, label: '离线' },
+        { value: 1, label: '在线' },
+        { value: 2, label: '维护' },
+        { value: 3, label: '故障' },
+        { value: 4, label: '失效' },
+      ],
       sName: '',
       tableData: [{
         date: '2016-05-02',
@@ -198,35 +189,21 @@ export default {
         date: '2016-05-03',
         name: '王小虎',
         address: '上海市普陀区516 弄'
-      }, {
-        date: '2016-05-01',
-        name: '王小虎',
-        address: '上海市 1519 弄'
-      }, {
-        date: '2016-05-03',
-        name: '王小虎',
-        address: '上海市普陀区516 弄'
-      }, {
-        date: '2016-05-01',
-        name: '王小虎',
-        address: '上海市 1519 弄'
-      }, {
-        date: '2016-05-03',
-        name: '王小虎',
-        address: '上海市普陀区516 弄'
       }],
       currentPage: 1, //当前页数
       totalData: 1, //总页数
+      activeName: ''
     }
   },
 
   methods: {
     editor () {
-      this.$router.push('/magazineManagement/addMagazineManagement?nameType=修改资讯')
+      this.$router.push('/commodityInformation/editGeneralMerchandise?nameType=修改商品信息')
     },
 
-    add () {
-      this.$router.push('/magazineManagement/addMagazineManagement?nameType=添加资讯')
+    release () {
+      this.$router.push('/commodityInformation/releaseGeneralMerchandise?nameType=发布广告')
+
     },
     // 分页
     handleCurrentChangeFun (val) {
@@ -237,12 +214,15 @@ export default {
     handleSizeChange (val) {
       console.log(`每页 ${val} 条`);
     },
+    handleClick (tab, event) {
+      console.log(tab, event);
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.editMagazineManagement {
+.generalMerchandise {
   width: 100%;
   height: 100%;
   display: flex;
@@ -257,9 +237,6 @@ export default {
     justify-content: space-between;
   }
 
-  .t-b {
-    margin: 10px 0 10px 10px;
-  }
   .table_bottom {
     width: 100%;
     height: auto;
@@ -274,6 +251,10 @@ export default {
   .el-table {
     flex: 1;
     overflow: auto;
+
+    /deep/ .el-input__inner {
+      border-color: #fff !important ;
+    }
   }
 
   .flex {
