@@ -30,7 +30,7 @@
           </el-select>
         </div>
       </el-form-item>
-      <el-form-item label="商品编号："
+      <el-form-item label="课程编号："
                     prop="displayName">
         <el-select v-model="form.province"
                    style="width: 100%"
@@ -47,14 +47,14 @@
     <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
       <i class="
        el-icon-edit"
-         style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 商品信息：
+         style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 课程信息：
     </p>
     <div class="form-item">
       <el-form ref="form"
                :rules="rules"
                :model="form"
                label-width="130px">
-        <el-form-item label="商品名称："
+        <el-form-item label="课程名称："
                       style="width: 100%"
                       prop="displayName">
           <el-input v-model="form.displayName"
@@ -66,13 +66,13 @@
             <span slot="suffix">件</span>
           </el-input>
         </el-form-item>
-        <el-form-item label="商品关键字："
+        <el-form-item label="课程关键字："
                       prop="displayName">
           <el-input v-model="form.displayName"
                     type="textarea"
                     placeholder></el-input>
         </el-form-item>
-        <el-form-item label="商品描述："
+        <el-form-item label="课程描述："
                       prop="displayName">
           <el-input v-model="form.displayName"
                     type="textarea"
@@ -90,7 +90,7 @@
             <span slot="suffix">元</span>
           </el-input>
         </el-form-item>
-        <el-form-item label="商城价："
+        <el-form-item label="课程价："
                       prop="name">
           <div class="form-item">
             <el-input v-model="form.name"
@@ -98,7 +98,7 @@
             <el-checkbox v-model="checked">会员折扣</el-checkbox>
           </div>
         </el-form-item>
-        <el-form-item label="商品展示："
+        <el-form-item label="课程展示："
                       prop="name">
           <el-checkbox-group v-model="checkList">
             <el-checkbox label="热门"></el-checkbox>
@@ -115,13 +115,14 @@
             <el-checkbox v-model="checked">接受预定</el-checkbox>
           </div>
         </el-form-item>
-        <el-form-item label="商品重量"
+        <el-form-item label="课程重量"
                       prop="name">
           <el-input v-model="form.name">
             <span slot="suffix">克</span>
           </el-input>
         </el-form-item>
-        <el-form-item label="商品品牌："
+
+        <el-form-item label="课程品牌："
                       prop="name">
           <div class="form-item">
             <el-select v-model="form.province"
@@ -138,7 +139,7 @@
             <p style="width: 20%;text-align: right; cursor: pointer;">搜索</p>
           </div>
         </el-form-item>
-        <el-form-item label="商品详细大图："
+        <el-form-item label="课程详细大图："
                       style="width: 100%"
                       prop="name">
           <el-upload action="https://jsonplaceholder.typicode.com/posts/"
@@ -153,7 +154,7 @@
                  alt="">
           </el-dialog>
         </el-form-item>
-        <el-form-item label="商品缩略图："
+        <el-form-item label="课程缩略图："
                       style="width: 100%"
                       prop="name">
           <el-upload action="https://jsonplaceholder.typicode.com/posts/"
@@ -161,7 +162,7 @@
                      :on-preview="handlePictureCardPreview"
                      :on-remove="handleRemove">
             <div slot="tip"
-                 class="el-upload__tip">不上传，系统自动用商品详细图等比例压缩</div>
+                 class="el-upload__tip">不上传，系统自动用课程详细图等比例压缩</div>
             <i class="el-icon-plus"></i>
           </el-upload>
           <el-dialog :visible.sync="dialogVisible">
@@ -177,7 +178,7 @@
       <i class="el-icon-edit"
          style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 销售属性 <span class="redColor"
             style="cursor: pointer;"
-            @click="addCoum">[添加]</span> （注意：属性值选完图片后，文字也必须填写。空白属性将被视为放弃。）特别说明：属性价格仅普通商品及会员优惠有效，即批发，组合和预定下等无效
+            @click="addCoum">[添加]</span> （注意：属性值选完图片后，文字也必须填写。空白属性将被视为放弃。）特别说明：属性价格仅普通课程及会员优惠有效，即批发，组合和预定下等无效
     </p>
     <el-form ref="form"
              :rules="rules"
@@ -210,13 +211,53 @@
     </el-form>
     <p style="font-size: 15px; margin-bottom: 20px;font-weight: 360; color:#000">
       <i class="el-icon-edit"
+         style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 批发设置：<span style="cursor: pointer;margin-left: 20px;"
+            class="redColor"
+            @click="addPf">增加</span>
+      <span style="cursor: pointer;margin-left: 20px;"
+            class="redColor"
+            @click="removePf">删除</span>
+    </p>
+    <el-form ref="form"
+             :rules="rules"
+             :model="form"
+             label-width="130px">
+      <el-form-item label="批发数量："
+                    style="width: 100%"
+                    v-for="(item, index) in pf"
+                    :key="index"
+                    prop="name">
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+        <span style="width: 17.5%">—</span>
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+        <span style="width: 17.5%">批发价格</span>
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+      </el-form-item>
+
+      <el-form-item label="批发数量："
+                    style="width: 100%"
+                    prop="name">
+        <span style="width: 17.5%">大于</span>
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+        <span style="width: 17.5%">批发价格</span>
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+      </el-form-item>
+
+    </el-form>
+    <p style="font-size: 15px; margin-bottom: 20px;font-weight: 360; color:#000">
+      <i class="el-icon-edit"
          style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 组合购买：
     </p>
     <el-form ref="form"
              :rules="rules"
              :model="form"
              label-width="130px">
-      <el-form-item label="组合商品："
+      <el-form-item label="组合课程："
                     style="width: 100%"
                     prop="name">
         <div class="form-item">
@@ -235,7 +276,7 @@
           </div>
         </div>
       </el-form-item>
-      <el-form-item label="组合商品："
+      <el-form-item label="组合课程："
                     style="width: 100%"
                     prop="name">
         <div class="form-item">

@@ -1,5 +1,5 @@
 <template>
-  <div class="editGeneralMerchandise"
+  <div class="editdisplayProducts"
        :style="{'height': height}">
     <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
       <i class="el-icon-edit"
@@ -90,7 +90,7 @@
             <span slot="suffix">元</span>
           </el-input>
         </el-form-item>
-        <el-form-item label="商城价："
+        <el-form-item label="销售价格："
                       prop="name">
           <div class="form-item">
             <el-input v-model="form.name"
@@ -105,15 +105,6 @@
             <el-checkbox label="推荐"></el-checkbox>
             <el-checkbox label="免邮"></el-checkbox>
           </el-checkbox-group>
-        </el-form-item>
-        <el-form-item label="定金："
-                      prop="name">
-          <div class="form-item">
-            <el-input v-model="form.name"
-                      style="width: 60%;margin-tight: 1%"><span slot="suffix">元</span></el-input>
-
-            <el-checkbox v-model="checked">接受预定</el-checkbox>
-          </div>
         </el-form-item>
         <el-form-item label="商品重量"
                       prop="name">
@@ -210,61 +201,31 @@
     </el-form>
     <p style="font-size: 15px; margin-bottom: 20px;font-weight: 360; color:#000">
       <i class="el-icon-edit"
-         style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 组合购买：
+         style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 展示商品信息：
     </p>
     <el-form ref="form"
              :rules="rules"
              :model="form"
              label-width="130px">
-      <el-form-item label="组合商品："
-                    style="width: 100%"
+      <el-form-item label="供应商公司："
                     prop="name">
-        <div class="form-item">
-          <div class="item-list"
-               style="width: 68px; height: 68px">
-            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2848120264,2778704476&fm=26&gp=0.jpg"
-                 style="width: 68px; height: 68px"
-                 alt="">
-          </div>
-          <p style="line-height: 68px; margin: 0 20px">➕</p>
-          <div class="item-list"
-               style="width: 68px; height: 68px; margin-right: 20px; border: solid 1px #eee; text-align:center; line-height: 68px"
-               v-for="(item, index) in 4"
-               :key="index">
-            ?
-          </div>
-        </div>
+        <el-input v-model="form.name"></el-input>
       </el-form-item>
-      <el-form-item label="组合商品："
-                    style="width: 100%"
+      <el-form-item label="商品展示网址："
                     prop="name">
-        <div class="form-item">
-          <div class="item-list"
-               style="width: 68px; height: 68px">
-
-            <el-input v-model="form.name"
-                      style="width: 100%"></el-input>
-          </div>
-          <p style="line-height: 40px; margin: 0 20px">➕</p>
-          <div class="item-list"
-               style="width: 68px; height: 68px; margin-right: 20px;"
-               v-for="(item, index) in 4"
-               :key="index">
-            <el-input v-model="form.name"
-                      style="width: 100%"></el-input>
-          </div>
-        </div>
+        <el-input v-model="form.name"></el-input>
       </el-form-item>
-      <el-form-item label="组合商品搜索："
-                    style="width: 100%"
+      <el-form-item label="供应商电话："
                     prop="name">
-        <div class="form-item">
-          <el-input v-model="form.name"
-                    style="width: 40%"></el-input>
-          <el-button type="primary"
-                     style="float: right">确定</el-button>
-          <span class="redColor"> （接索不到？请完善您的关键字）</span>
-        </div>
+        <el-input v-model="form.name"></el-input>
+      </el-form-item>
+      <el-form-item label="	供应商地址："
+                    prop="name">
+        <el-input v-model="form.name"></el-input>
+      </el-form-item>
+      <el-form-item label="供应商联系人："
+                    prop="name">
+        <el-input v-model="form.name"></el-input>
       </el-form-item>
     </el-form>
     <p style="font-size: 15px; margin-bottom: 20px;font-weight: 360; color:#000">
@@ -314,7 +275,7 @@
 <script>
 import E from "wangeditor";
 export default {
-  name: 'editGeneralMerchandise',
+  name: 'editdisplayProducts',
 
   data () {
     return {
@@ -463,7 +424,7 @@ export default {
     width: 45%;
   }
 }
-.editGeneralMerchandise {
+.editdisplayProducts {
   width: 100%;
   height: 100%;
   background: #fff;

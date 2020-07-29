@@ -194,7 +194,11 @@ export default {
         '/Amanagement/Alist',
         '/Amanagement/commentList',
         '/magazineManagement/magazineManagement',
-        '/commodityInformation/generalMerchandise'
+        '/commodityInformation/generalMerchandise',
+        '/commodityInformation/knowledgeCommodity',
+        '/commodityInformation/groupGoods',
+        '/commodityInformation/secondKill',
+        '/commodityInformation/displayProducts'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -208,7 +212,13 @@ export default {
         '/magazineManagement/editMagazineManagement',
         '/magazineManagement/addMagazineManagement',
         '/commodityInformation/editGeneralMerchandise',
-        '/commodityInformation/releaseGeneralMerchandise'
+        '/commodityInformation/releaseGeneralMerchandise',
+        '/commodityInformation/editknowledgeCommodity',
+        '/commodityInformation/releaseknowledgeCommodity',
+        '/commodityInformation/editgroupGoods',
+        '/commodityInformation/releasegroupGoods',
+        '/commodityInformation/editsecondKil',
+        '/commodityInformation/editdisplayProducts'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

@@ -1,5 +1,5 @@
 <template>
-  <div class="editGeneralMerchandise"
+  <div class="editsecondKil"
        :style="{'height': height}">
     <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
       <i class="el-icon-edit"
@@ -90,7 +90,7 @@
             <span slot="suffix">元</span>
           </el-input>
         </el-form-item>
-        <el-form-item label="商城价："
+        <el-form-item label="秒杀价："
                       prop="name">
           <div class="form-item">
             <el-input v-model="form.name"
@@ -170,7 +170,16 @@
                  alt="">
           </el-dialog>
         </el-form-item>
-
+        <el-form-item label="促销起止时间："
+                      style="width: 100%"
+                      prop="name">
+          <el-date-picker v-model="value1"
+                          type="daterange"
+                          range-separator="至"
+                          start-placeholder="开始日期"
+                          end-placeholder="结束日期">
+          </el-date-picker>
+        </el-form-item>
       </el-form>
     </div>
     <p style="font-size: 15px; margin-bottom: 20px;font-weight: 360; color:#000">
@@ -314,10 +323,11 @@
 <script>
 import E from "wangeditor";
 export default {
-  name: 'editGeneralMerchandise',
+  name: 'editsecondKil',
 
   data () {
     return {
+      value1: [],
       dialogImageUrl: '',
       dialogVisible: false,
       form: {
@@ -463,7 +473,7 @@ export default {
     width: 45%;
   }
 }
-.editGeneralMerchandise {
+.editsecondKil {
   width: 100%;
   height: 100%;
   background: #fff;

@@ -1,5 +1,5 @@
 <template>
-  <div class="editGeneralMerchandise"
+  <div class="editgroupGoods"
        :style="{'height': height}">
     <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
       <i class="el-icon-edit"
@@ -90,7 +90,7 @@
             <span slot="suffix">元</span>
           </el-input>
         </el-form-item>
-        <el-form-item label="商城价："
+        <el-form-item label="商品价："
                       prop="name">
           <div class="form-item">
             <el-input v-model="form.name"
@@ -121,6 +121,7 @@
             <span slot="suffix">克</span>
           </el-input>
         </el-form-item>
+
         <el-form-item label="商品品牌："
                       prop="name">
           <div class="form-item">
@@ -207,6 +208,46 @@
       </div>
       <p style="cursor: pointer;margin-left: 20px;margin-bottom: 20px"
          @click="clearAll">↓ 变更属性库存设置 ↓ <span class="redColor">（属性修改后点击此按钮，重新设置对应的库存）</span></p>
+    </el-form>
+    <p style="font-size: 15px; margin-bottom: 20px;font-weight: 360; color:#000">
+      <i class="el-icon-edit"
+         style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 批发设置：<span style="cursor: pointer;margin-left: 20px;"
+            class="redColor"
+            @click="addPf">增加</span>
+      <span style="cursor: pointer;margin-left: 20px;"
+            class="redColor"
+            @click="removePf">删除</span>
+    </p>
+    <el-form ref="form"
+             :rules="rules"
+             :model="form"
+             label-width="130px">
+      <el-form-item label="批发数量："
+                    style="width: 100%"
+                    v-for="(item, index) in pf"
+                    :key="index"
+                    prop="name">
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+        <span style="width: 17.5%">—</span>
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+        <span style="width: 17.5%">批发价格</span>
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+      </el-form-item>
+
+      <el-form-item label="批发数量："
+                    style="width: 100%"
+                    prop="name">
+        <span style="width: 17.5%">大于</span>
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+        <span style="width: 17.5%">批发价格</span>
+        <el-input v-model="form.name"
+                  style="width: 25%"></el-input>
+      </el-form-item>
+
     </el-form>
     <p style="font-size: 15px; margin-bottom: 20px;font-weight: 360; color:#000">
       <i class="el-icon-edit"
@@ -314,7 +355,7 @@
 <script>
 import E from "wangeditor";
 export default {
-  name: 'editGeneralMerchandise',
+  name: 'editgroupGoods',
 
   data () {
     return {
@@ -463,7 +504,7 @@ export default {
     width: 45%;
   }
 }
-.editGeneralMerchandise {
+.editgroupGoods {
   width: 100%;
   height: 100%;
   background: #fff;

@@ -193,23 +193,23 @@ let navArr = [
           },
           {
             name: '知识商品管理',
-            url: '/company/edit',
+            url: '/commodityInformation/knowledgeCommodity',
           },
           {
             name: '拼团商品管理',
-            url: '/shopManagement/mobilePhoneBy',
+            url: '/commodityInformation/groupGoods',
           },
           {
             name: '返利商品管理',
-            url: '/shopManagement/phoneBy',
+            url: '/commodityInformation/groupGoods',
           },
           {
             name: '秒杀商品管理',
-            url: '/shopManagement/imageAds',
+            url: '/commodityInformation/secondKill',
           },
           {
             name: '展示商品管理',
-            url: '/shopManagement/popUpAds',
+            url: '/commodityInformation/displayProducts',
           },
           {
             name: '团购商品管理',
