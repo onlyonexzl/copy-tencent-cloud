@@ -193,7 +193,8 @@ export default {
         '/focusOnManagement/followList',
         '/Amanagement/Alist',
         '/Amanagement/commentList',
-        '/magazineManagement/magazineManagement'
+        '/magazineManagement/magazineManagement',
+        '/commodityInformation/generalMerchandise'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {
@@ -205,7 +206,9 @@ export default {
     getTitleName () {
       const routerArray = [
         '/magazineManagement/editMagazineManagement',
-        '/magazineManagement/addMagazineManagement'
+        '/magazineManagement/addMagazineManagement',
+        '/commodityInformation/editGeneralMerchandise',
+        '/commodityInformation/releaseGeneralMerchandise'
       ]
 
       this.flagTttName = routerArray.indexOf(this.$route.path) > -1 ? true : false

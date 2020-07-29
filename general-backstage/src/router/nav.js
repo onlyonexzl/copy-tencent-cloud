@@ -189,7 +189,7 @@ let navArr = [
         actions: [
           {
             name: '常规商品管理',
-            url: '/shopManagement/shopManagement',
+            url: '/commodityInformation/generalMerchandise',
           },
           {
             name: '知识商品管理',

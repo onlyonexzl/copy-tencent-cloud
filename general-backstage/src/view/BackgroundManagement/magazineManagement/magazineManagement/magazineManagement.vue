@@ -24,13 +24,6 @@
       </div>
     </div>
     <div class="table_bottom">
-      <el-button slot="append"
-                 style="width: 120px;margin: 10px 0 10px 10px"
-                 type="primary"
-                 icon="el-icon-plus"
-                 @click="sesarchFun()">
-        添加文章
-      </el-button>
       <div class="flex">
         <el-table :data="tableData"
                   stripe

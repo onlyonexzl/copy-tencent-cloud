@@ -161,6 +161,24 @@ export default new Router({
           name: 'addMagazineManagement',
           component: (resolve) => require(['@/view/BackgroundManagement/magazineManagement/magazineManagement/addMagazineManagement.vue'], resolve),
           // meta: ['杂志管理', '杂志管理', '资讯一级分类']
+        },
+        {
+          path: '/commodityInformation/generalMerchandise',
+          name: 'generalMerchandise',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/generalMerchandise.vue'], resolve),
+          meta: ['商品管理', '商品信息', '常规商品管理']
+        },
+        {
+          path: '/commodityInformation/editGeneralMerchandise',
+          name: 'editGeneralMerchandise',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editGeneralMerchandise.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '常规商品管理']
+        },
+        {
+          path: '/commodityInformation/releaseGeneralMerchandise',
+          name: 'releaseGeneralMerchandise',
+          component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/releaseGeneralMerchandise.vue'], resolve),
+          // meta: ['商品管理', '商品信息', '常规商品管理']
         }
       ]
     }
