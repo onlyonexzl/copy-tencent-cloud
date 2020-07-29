@@ -204,7 +204,8 @@ export default {
         '/commodityInformation/wholesaleGoods',
         '/commodityInformation/consignmentGoods',
         '/commodityInformation/notOn',
-        '/commodityInformation/rebateGoods'
+        '/commodityInformation/rebateGoods',
+        '/shopOrder/customerOrder'
       ]
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false
       if (this.$route.meta.length) {

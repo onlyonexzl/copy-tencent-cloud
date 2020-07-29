@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import LARouter from './LARouter.js'
 
-console.log(LARouter[0])
 Vue.use(Router)
 
 export default new Router({
@@ -298,9 +297,14 @@ export default new Router({
           name: 'editNotOn',
           component: (resolve) => require(['@/view/BackgroundManagement/commodityManagement/commodityInformation/editNotOn.vue'], resolve),
           // meta: ['商品管理', '商品信息', '未上架商品列表']
+        },
+        {
+          path: '/shopOrder/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/shopOrder/customerOrder.vue'], resolve),
+          meta: ['交易管理', '商铺订单', '客户订单']
         }
       ]
     }
-
   ]
 })

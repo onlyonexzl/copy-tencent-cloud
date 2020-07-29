@@ -260,53 +260,100 @@ let navArr = [
     subset: [
       {
         id: 'PRODUCT_LIST',
-        name: '商品管理',
+        name: '商铺订单',
         icon: 'el-icon-menu',
         url: '/product/list',
         menu: true,
         actions: [{
-          name: '常规商品管理',
-          url: '/commodity/conventionalKnowledge'
+          name: '客户订单',
+          url: '/shopOrder/customerOrder'
         }, {
-          name: '知识商品管理',
+          name: '知识订单',
           url: '/commodity/productsKnowledge'
         }, {
-          name: '拼团商品管理',
+          name: '退货通道',
           url: '/commodity/spellMassGoods'
         }, {
-          name: '返利商品管理',
+          name: '拼团订单',
           url: '/commodity/rebateGoods'
         }, {
-          name: '秒杀商品管理',
+          name: '提现申请',
           url: '/commodity/secondsKillGoods'
         }, {
-          name: '团购商品管理',
+          name: '拼团退货',
           url: '/commodity/bulkGoods'
-        }, {
-          name: '拍卖商品管理',
-          url: '/commodity/auctionGoods'
-        }, {
-          name: '分销商品管理',
-          url: '/commodity/distributionGoods'
-        }, {
-          name: '批发商品管理',
-          url: '/commodity/wholesaleGoods'
-        }, {
-          name: '未上架商品',
-          url: '/commodity/notGoods'
         }]
       },
       {
         id: 'PRODUCT_LIST',
-        name: '分类设置',
+        name: '配送方式',
         icon: 'el-icon-menu',
         url: '/product/category/list',
         menu: true,
         actions: [{
-          name: '常规商品分类',
+          name: '物流工具',
           url: '/conventionalProducts/conventionalProducts'
         }]
-      },
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '商品咨询管理',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '销售商品咨询',
+          url: '/conventionalProducts/conventionalProducts'
+        }, {
+          name: '展示商品咨询',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '评价留言',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '评价买家',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '支付方式',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '收款设置',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '交易明细',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '积分明细',
+          url: '/conventionalProducts/conventionalProducts'
+        }, {
+          name: '资金明细',
+          url: '/conventionalProducts/conventionalProducts'
+        }, {
+          name: '消保明细',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }, {
+        id: 'PRODUCT_LIST',
+        name: '信用管理',
+        icon: 'el-icon-menu',
+        url: '/product/category/list',
+        menu: true,
+        actions: [{
+          name: '信用管理',
+          url: '/conventionalProducts/conventionalProducts'
+        }]
+      }
       // {
       //   id: 'PRODUCT_CATEGORY_LIST',
       //   name: '产品分类列表',
