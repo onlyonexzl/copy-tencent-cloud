@@ -9,7 +9,7 @@
       <el-button type="primary" icon="el-icon-search" size="medium"></el-button>
     </div>
     <div class="task_con">
-      <el-table :data="tableData" style="width: 100%">
+      <el-table :data="tableData" style="width: 100%" max-height="500px" border>
         <el-table-column
           prop="img_url"
           label="封面图片"
@@ -20,9 +20,14 @@
             <el-image :src="scope.row.img_url"></el-image>
           </template>
         </el-table-column>
-        <el-table-column prop="title" label="标题" align="center">
+        <el-table-column prop="title" label="标题" align="center" width="200">
         </el-table-column>
-        <el-table-column prop="classify" label="所属分类" align="center">
+        <el-table-column
+          prop="classify"
+          label="所属分类"
+          align="center"
+          width="200"
+        >
         </el-table-column>
         <el-table-column prop="time" label="发布时间" align="center">
         </el-table-column>
@@ -30,12 +35,13 @@
         </el-table-column>
         <el-table-column prop="num" label="留言数量" align="center">
         </el-table-column>
-        <el-table-column label="操作">
+        <el-table-column label="操作" align="center">
           <template slot-scope="scope">
             <el-button
-              size="mini"
-              type="danger"
-              @click="handleDelete(scope.$index, scope.row)"
+              size="medium"
+              type="text"
+              class="redColor  right20"
+              @click="checkTrackQueryFun(scope.$index, scope.row)"
               >删除</el-button
             >
           </template>
@@ -103,7 +109,8 @@ export default {
   },
   methods: {
     handleSizeChange() {},
-    handleCurrentChangeFun() {}
+    handleCurrentChangeFun() {},
+    checkTrackQueryFun() {}
   }
 };
 </script>

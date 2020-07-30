@@ -2,32 +2,28 @@
   <div class="pageHome">
     <el-container>
       <el-aside width="auto">
-        <div class="all_mp"
-             :style="{ height: +height + 'px' }">
+        <div class="all_mp" :style="{ height: +height + 'px' }">
           <div class="tit">
             <div class="item">
               <div>
-                <img src="../../assets/img/favicon.png"
-                     @click="right"
-                     alt="" />
+                <img src="../../assets/img/favicon.png" @click="right" alt="" />
               </div>
-              <span v-if="!isCollapse"
-                    @click="geColund">总后台管理</span>
+              <span v-if="!isCollapse" @click="geColund">总后台管理</span>
             </div>
-            <i class="el-icon-s-fold"
-               v-if="!isCollapse"
-               @click="left"></i>
+            <i class="el-icon-s-fold" v-if="!isCollapse" @click="left"></i>
           </div>
           <div class="menu">
-            <el-menu :default-active="index_menu"
-                     class="el-menu-vertical-demo"
-                     @open="handleOpen"
-                     background-color="#2f3e69"
-                     text-color="#fff"
-                     :unique-opened="true"
-                     active-text-color="rgb(101, 206, 167)"
-                     @close="handleClose"
-                     :collapse="isCollapse">
+            <el-menu
+              :default-active="index_menu"
+              class="el-menu-vertical-demo"
+              @open="handleOpen"
+              background-color="#2f3e69"
+              text-color="#fff"
+              :unique-opened="true"
+              active-text-color="rgb(101, 206, 167)"
+              @close="handleClose"
+              :collapse="isCollapse"
+            >
               <!-- <el-menu-item index="0"
                             @click="goRightDetial('one')">
                 <template slot="title">
@@ -37,25 +33,29 @@
               </el-menu-item> -->
 
               <!-- 一级菜单 -->
-              <el-submenu v-for="(menu_one, index_one) in menu"
-                          :index="index_one + 1 + ''"
-                          :key="index_one">
+              <el-submenu
+                v-for="(menu_one, index_one) in menu"
+                :index="index_one + 1 + ''"
+                :key="index_one"
+              >
                 <template slot="title">
                   <i :class="menu_one.icon"></i>
                   <span slot="title">{{ menu_one.name }}</span>
                 </template>
                 <!-- 二级菜单  没有子集菜单-->
-                <el-menu-item v-for="(menu_two, index_two) in menu_one.subset"
-                              v-if="!menu_two.actions"
-                              :key="index_two"
-                              @click="
+                <el-menu-item
+                  v-for="(menu_two, index_two) in menu_one.subset"
+                  v-if="!menu_two.actions"
+                  :key="index_two"
+                  @click="
                     goRightDetial(
                       'two',
                       menu_two,
                       index_one + 1 + '-' + (index_two + 1)
                     )
                   "
-                              :index="index_one + 1 + '-' + (index_two + 1)">
+                  :index="index_one + 1 + '-' + (index_two + 1)"
+                >
                   <template slot="title">
                     <i :class="menu_two.icon"></i>
                     <span slot="title">{{ menu_two.name }}</span>
@@ -63,17 +63,20 @@
                 </el-menu-item>
 
                 <!-- 二级菜单 有子集-->
-                <el-submenu v-for="(menu_two, index_two) in menu_one.subset"
-                            v-if="menu_two.actions"
-                            :key="index_two"
-                            :index="index_one + 1 + '-' + (index_two + 1)">
+                <el-submenu
+                  v-for="(menu_two, index_two) in menu_one.subset"
+                  v-if="menu_two.actions"
+                  :key="index_two"
+                  :index="index_one + 1 + '-' + (index_two + 1)"
+                >
                   <template slot="title">
                     <i :class="menu_two.icon"></i>
                     <span slot="title">{{ menu_two.name }}</span>
                   </template>
-                  <el-menu-item v-for="(menu_three, index_three) in menu_two.actions"
-                                :key="index_three"
-                                @click="
+                  <el-menu-item
+                    v-for="(menu_three, index_three) in menu_two.actions"
+                    :key="index_three"
+                    @click="
                       goRightDetial(
                         'three',
                         menu_three,
@@ -85,9 +88,10 @@
                           index_three
                       )
                     "
-                                :index="
+                    :index="
                       index_one + 1 + '-' + (index_two + 1) + '-' + index_three
-                    ">
+                    "
+                  >
                     <template slot="title">
                       <i :class="menu_three.icon"></i>
                       <span slot="title">{{ menu_three.name }}</span>
@@ -102,16 +106,14 @@
       <el-container>
         <el-header>
           <div class="mp_header">
-            <el-popover placement="top-start"
-                        trigger="hover">
+            <el-popover placement="top-start" trigger="hover">
               <div class="tip">
                 <ul>
                   <li><i class="el-icon-unlock"></i> 修改密码</li>
                   <li><i class="el-icon-lock"></i> 退出登陆</li>
                 </ul>
               </div>
-              <div class="rightIcon"
-                   slot="reference">
+              <div class="rightIcon" slot="reference">
                 <i class="el-icon-user-solid"></i> 超管
                 <i class="el-icon-arrow-down"></i>
               </div>
@@ -119,22 +121,22 @@
           </div>
         </el-header>
         <el-main>
-          <div class="item-box"
-               v-if="flagtit">
+          <div class="item-box" v-if="flagtit">
             <ul class="box pad">
-              <li v-for="(item, index) in meta"
-                  :key="index">
+              <li v-for="(item, index) in meta" :key="index">
                 {{ item }}
-                <i class="el-icon-arrow-right"
-                   v-if="index !== meta.length - 1"></i>
+                <i
+                  class="el-icon-arrow-right"
+                  v-if="index !== meta.length - 1"
+                ></i>
               </li>
             </ul>
           </div>
           <!-- v-if="goReturn" -->
-          <div class="item_title"
-               v-if="flagTttName">
-            <span class="left"
-                  @click="goBack"><i class="el-icon-arrow-left"></i> 返回</span>
+          <div class="item_title" v-if="flagTttName">
+            <span class="left" @click="goBack"
+              ><i class="el-icon-arrow-left"></i> 返回</span
+            >
             <p>|</p>
             <span>{{ titleName }}</span>
           </div>
@@ -149,7 +151,7 @@
 import nav from "../../router/nav";
 export default {
   name: "page",
-  data () {
+  data() {
     return {
       isCollapse: false,
       height: window.innerHeight,
@@ -162,19 +164,19 @@ export default {
     };
   },
   methods: {
-    left () {
+    left() {
       this.isCollapse = true;
     },
 
-    geColund () {
+    geColund() {
       this.$router.push("/home/product");
     },
 
-    right () {
+    right() {
       this.isCollapse = false;
     },
 
-    goRightDetial (type, item, index) {
+    goRightDetial(type, item, index) {
       sessionStorage.setItem("index_menu", index);
       switch (type) {
         case "one":
@@ -186,16 +188,16 @@ export default {
       }
     },
 
-    handleOpen (key, keyPath) {
+    handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
 
-    handleClose (key, keyPath) {
+    handleClose(key, keyPath) {
       console.log(key, keyPath);
     },
 
     // 顶部title显示
-    getTitleBox () {
+    getTitleBox() {
       const routerArray = [
         "/DataBackup/dataBackup",
         "/DataBackup/recoverData",
@@ -232,15 +234,16 @@ export default {
         "/through/classify/classList",
         "/through/throughThe/management",
         "/through/throughThe/passOrder",
-        '/shopOrder/knowledgeOrder',
-        '/shopOrder/returnChannel',
-        '/shopOrder/withdrawalApplication',
-        '/commodityConsultation/sellingGoods',
-        '/commodityConsultation/displayProducts',
-        '/paymentMethod/collectionSettings',
-        '/transactionDetails/creditDetails',
-        '/transactionDetails/capitalDetails',
-        '/transactionDetails/protectionDetails'
+        "/shopOrder/knowledgeOrder",
+        "/shopOrder/returnChannel",
+        "/shopOrder/withdrawalApplication",
+        "/commodityConsultation/sellingGoods",
+        "/commodityConsultation/displayProducts",
+        "/paymentMethod/collectionSettings",
+        "/transactionDetails/creditDetails",
+        "/transactionDetails/capitalDetails",
+        "/transactionDetails/protectionDetails",
+        "/through/throughThe/addManagement"
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {
@@ -249,7 +252,7 @@ export default {
     },
 
     // 顶部t返回显示
-    getTitleName () {
+    getTitleName() {
       const routerArray = [
         "/magazineManagement/editMagazineManagement",
         "/magazineManagement/addMagazineManagement",
@@ -275,11 +278,11 @@ export default {
       }
     },
 
-    goBack () {
+    goBack() {
       this.$router.go(-1);
     },
 
-    getmenu () {
+    getmenu() {
       if (sessionStorage.getItem("index_menu"))
         this.index_menu = sessionStorage.getItem("index_menu") + "";
       nav.forEach((item, index) => {
@@ -307,7 +310,7 @@ export default {
     }
   },
 
-  mounted () {
+  mounted() {
     this.getTitleBox();
     this.getTitleName();
     this.getmenu();
@@ -315,7 +318,7 @@ export default {
 
   watch: {
     $route: {
-      handler: function (val, oldVal) {
+      handler: function(val, oldVal) {
         this.getTitleBox();
         this.getTitleName();
         this.getmenu();

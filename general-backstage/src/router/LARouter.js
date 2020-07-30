@@ -79,6 +79,13 @@ let LARouter = [
     meta: ["通证管理", "通证管理", "通证订单"],
     component: resolve =>
       require(["@/view/through/throughThe/passOrder.vue"], resolve)
+  },
+  {
+    path: "/through/throughThe/addManagement",
+    name: "addManagement",
+    meta: ["添加通证"],
+    component: resolve =>
+      require(["@/view/through/throughThe/addManagement.vue"], resolve)
   }
 ];
 
