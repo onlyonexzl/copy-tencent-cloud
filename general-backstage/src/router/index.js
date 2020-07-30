@@ -303,6 +303,12 @@ export default new Router({
           name: 'customerOrder',
           component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/shopOrder/customerOrder.vue'], resolve),
           meta: ['交易管理', '商铺订单', '客户订单']
+        },
+        {
+          path: '/shopOrder/orderDetails',
+          name: 'orderDetails',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/orderDetails.vue'], resolve),
+          meta: ['交易管理', '订单详情',]
         }
       ]
     }

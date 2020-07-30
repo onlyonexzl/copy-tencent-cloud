@@ -165,6 +165,7 @@
                            label="商品名称">
             <template slot-scope="scope">
               <span class="blueColor"
+                    @click="goOrder"
                     style="cursor: pointer;">{{scope.row.date}}</span>
             </template>
           </el-table-column>
@@ -337,6 +338,9 @@ export default {
   },
 
   methods: {
+    goOrder () {
+      this.$router.push('/shopOrder/orderDetails')
+    },
     editor () {
       this.dialogVisible = true
     },
