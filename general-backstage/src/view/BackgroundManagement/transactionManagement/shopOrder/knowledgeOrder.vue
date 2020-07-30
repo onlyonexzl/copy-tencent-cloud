@@ -1,5 +1,5 @@
 <template>
-  <div class="customerOrder">
+  <div class="knowledgeOrder">
     <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
       <i class="el-icon-edit"
          style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 订单搜索：
@@ -278,7 +278,7 @@
 
 <script>
 export default {
-  name: 'customerOrder',
+  name: 'knowledgeOrder',
   data () {
     return {
       form: {
@@ -373,7 +373,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.customerOrder {
+.knowledgeOrder {
   width: 100%;
   height: 100%;
   box-sizing: border-box;

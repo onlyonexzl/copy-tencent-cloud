@@ -309,6 +309,60 @@ export default new Router({
           name: 'orderDetails',
           component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/orderDetails.vue'], resolve),
           meta: ['交易管理', '订单详情',]
+        },
+        {
+          path: '/shopOrder/knowledgeOrder',
+          name: 'knowledgeOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/shopOrder/knowledgeOrder.vue'], resolve),
+          meta: ['交易管理', '商铺订单', '知识订单']
+        },
+        {
+          path: '/shopOrder/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/shopOrder/returnChannel.vue'], resolve),
+          meta: ['交易管理', '商铺订单', '退货通道']
+        },
+        {
+          path: '/shopOrder/withdrawalApplication',
+          name: 'withdrawalApplication',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/shopOrder/withdrawalApplication.vue'], resolve),
+          meta: ['交易管理', '商铺订单', '提现申请']
+        },
+        {
+          path: '/commodityConsultation/sellingGoods',
+          name: 'sellingGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/commodityConsultation/sellingGoods.vue'], resolve),
+          meta: ['交易管理', '商铺订单', '提现申请']
+        },
+        {
+          path: '/commodityConsultation/displayProducts',
+          name: 'displayProducts',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/commodityConsultation/displayProducts.vue'], resolve),
+          meta: ['交易管理', '商品咨询管理', '展示商品咨询']
+        },
+        {
+          path: '/paymentMethod/collectionSettings',
+          name: 'collectionSettings',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/paymentMethod/collectionSettings.vue'], resolve),
+          meta: ['交易管理', '商品咨询管理', '展示商品咨询']
+        },
+        {
+          path: '/transactionDetails/creditDetails',
+          name: 'creditDetails',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/transactionDetails/creditDetails.vue'], resolve),
+          meta: ['交易管理', '交易明细', '积分明细']
+        },
+        {
+          path: '/transactionDetails/capitalDetails',
+          name: 'capitalDetails',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/transactionDetails/capitalDetails.vue'], resolve),
+          meta: ['交易管理', '交易明细', '资金明细']
+        },
+        {
+          path: '/transactionDetails/protectionDetails',
+          name: 'protectionDetails',
+          component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/transactionDetails/protectionDetails.vue'], resolve),
+          meta: ['交易管理', '交易明细', '消保明细']
         }
       ]
     }

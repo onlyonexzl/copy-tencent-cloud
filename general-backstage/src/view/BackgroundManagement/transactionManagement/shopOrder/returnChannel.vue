@@ -7,7 +7,7 @@
     <el-form ref="form"
              :model="form"
              label-width="130px">
-      <el-form-item label="下单时间："
+      <el-form-item label="订购时间："
                     prop="name">
         <el-date-picker v-model="value1"
                         style="width: 100%"
@@ -21,15 +21,7 @@
                     prop="name">
         <el-input v-model="form.name"></el-input>
       </el-form-item>
-      <el-form-item label="收货人："
-                    prop="name">
-        <el-input v-model="form.name"></el-input>
-      </el-form-item>
-      <el-form-item label="订单状态："
-                    prop="name">
-        <el-input v-model="form.name"></el-input>
-      </el-form-item>
-      <el-form-item label="买家ID："
+      <el-form-item label="卖家："
                     prop="name">
         <el-input v-model="form.name"></el-input>
       </el-form-item>
@@ -38,24 +30,10 @@
         <el-button type="primary">订单查询</el-button>
       </el-form-item>
     </el-form>
-    <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
-      <i class="el-icon-edit"
-         style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 订单统计：
-    </p>
-    <div class="top-list">
-      <ul>
-        <li>今日订单数：0个</li>
-        <li>周订单数：0个</li>
-        <li>月订单数：1个</li>
-        <li>今日交易金额：￥0.00元</li>
-        <li>周交易金额：￥0.00元</li>
-        <li>月交易金额：￥890.00元</li>
-      </ul>
-    </div>
+
     <div class="table"
          ref="table">
       <el-table :data="tableData"
-                stripe
                 :style="{'height' : height}">
         <el-table-column show-overflow-tooltip
                          type="index"
@@ -179,87 +157,93 @@
           </el-table-column>
           <el-table-column prop="date"
                            show-overflow-tooltip
-                           label="单价">
-          </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="余款单价">
+                           label="客户单价">
           </el-table-column>
           <el-table-column prop="date"
                            show-overflow-tooltip
                            label="销售积分">
           </el-table-column>
-          <el-table-column prop="date"
-                           show-overflow-tooltip
-                           label="购买数量">
-          </el-table-column>
         </el-table>
-        <p>商品总数: <span class="redColor">1</span> 商品总价: ￥890.00 + 运费: ￥0.00 - 折扣金额：￥0.00 = 订单总金额：<span class="redColor">￥890.00</span> (还有余款￥0.00未支付)</p>
         <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
           <i class="el-icon-edit"
-             style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 收货人信息：
+             style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 退货信息：
         </p>
         <el-form ref="form"
                  :model="form"
                  label-width="130px">
-          <el-form-item label="发货单号："
+          <el-form-item label="退货原因："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
+            <span>不要</span>
           </el-form-item>
-          <el-form-item label="收货人姓名："
+          <el-form-item label="退货金额："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
+            <span>￥1.00</span>
           </el-form-item>
-          <el-form-item label="收货人手机："
+          <el-form-item label="图片："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
+            <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2800361346,2907707833&fm=26&gp=0.jpg"
+                 style="width: 200px;height: 200px"
+                 alt="">
           </el-form-item>
-          <el-form-item label="收货地址："
+          <el-form-item label="退货说明："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
+            <!-- <el-input v-model="form.name"></el-input> -->
           </el-form-item>
-          <el-form-item label="配送方式："
+          <el-form-item label="物流公司："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
+            <!-- <el-input v-model="form.name"></el-input> -->
           </el-form-item>
-          <el-form-item label="运费："
+          <el-form-item label="	发货单号："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
+            <!-- <el-input v-model="form.name"></el-input> -->
           </el-form-item>
-          <el-form-item label="发票票头："
+          <el-form-item label="发货凭证："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
+            <!-- <el-input v-model="form.name"></el-input> -->
+            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2833261185,1598448584&fm=26&gp=0.jpg"
+                 style="width: 200px;height: 200px"
+                 alt="">
           </el-form-item>
-          <el-form-item label="买家："
+          <el-form-item label="	退货收件："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
+            <!-- <el-input v-model="form.name"></el-input> -->
+            <div>
+              地址：
+            </div>
+            <div>
+              收件人：
+            </div>
           </el-form-item>
-          <el-form-item label="邮政编码："
+          <el-form-item label="当前状态："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
-          </el-form-item>
-          <el-form-item label="客户留言："
-                        prop="name">
-            <el-input v-model="form.name"
-                      type="textarea"></el-input>
+            <!-- <el-input v-model="form.name"></el-input> -->
+            <span class="redColor">等待卖家审核</span>
           </el-form-item>
         </el-form>
         <p style="font-size: 15px; margin-bottom: 10px;font-weight: 360; color:#000">
           <i class="el-icon-edit"
-             style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 订单信息：
+             style="color: #f5a623 !important;font-weight: 360;margin-right: 10px"></i> 卖家意见：
         </p>
         <el-form ref="form"
                  :model="form"
                  label-width="130px">
-          <el-form-item label="订单状态："
+          <el-form-item label="是否同意："
+                        prop="name">
+            <el-radio v-model="radio"
+                      label="1">同意</el-radio>
+            <el-radio v-model="radio"
+                      label="2">拒绝</el-radio>
+          </el-form-item>
+          <el-form-item label="退货地址："
                         prop="name">
             <el-input v-model="form.name"></el-input>
           </el-form-item>
-          <el-form-item label="折扣金额："
+          <el-form-item label="收件人："
                         prop="name">
-            <el-input v-model="form.name"></el-input>
+            <el-input v-model="form.name"
+                      type="textarea"></el-input>
           </el-form-item>
-          <el-form-item label="管理员笔记："
+          <el-form-item label="拒绝理由："
                         prop="name">
             <el-input v-model="form.name"
                       type="textarea"></el-input>
@@ -281,6 +265,7 @@ export default {
   name: 'customerOrder',
   data () {
     return {
+      radio: '1',
       form: {
         name: ''
       },

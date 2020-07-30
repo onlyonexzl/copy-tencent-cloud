@@ -269,32 +269,37 @@ let navArr = [
           url: '/shopOrder/customerOrder'
         }, {
           name: '知识订单',
-          url: '/commodity/productsKnowledge'
+          url: '/shopOrder/knowledgeOrder'
         }, {
           name: '退货通道',
-          url: '/commodity/spellMassGoods'
-        }, {
-          name: '拼团订单',
-          url: '/commodity/rebateGoods'
-        }, {
+          url: '/shopOrder/returnChannel'
+        },
+        // , {
+        //   name: '拼团订单',
+        //   url: '/commodity/rebateGoods'
+        // }, 
+        {
           name: '提现申请',
-          url: '/commodity/secondsKillGoods'
-        }, {
-          name: '拼团退货',
-          url: '/commodity/bulkGoods'
-        }]
+          url: '/shopOrder/withdrawalApplication'
+        }
+          // , {
+          //   name: '拼团退货',
+          //   url: '/commodity/bulkGoods'
+          // }
+        ]
       },
+      // {
+      //   id: 'PRODUCT_LIST',
+      //   name: '配送方式',
+      //   icon: 'el-icon-menu',
+      //   url: '/product/category/list',
+      //   menu: true,
+      //   actions: [{
+      //     name: '物流工具',
+      //     url: '/conventionalProducts/conventionalProducts'
+      //   }]
+      // },
       {
-        id: 'PRODUCT_LIST',
-        name: '配送方式',
-        icon: 'el-icon-menu',
-        url: '/product/category/list',
-        menu: true,
-        actions: [{
-          name: '物流工具',
-          url: '/conventionalProducts/conventionalProducts'
-        }]
-      }, {
         id: 'PRODUCT_LIST',
         name: '商品咨询管理',
         icon: 'el-icon-menu',
@@ -302,22 +307,24 @@ let navArr = [
         menu: true,
         actions: [{
           name: '销售商品咨询',
-          url: '/conventionalProducts/conventionalProducts'
+          url: '/commodityConsultation/sellingGoods'
         }, {
           name: '展示商品咨询',
-          url: '/conventionalProducts/conventionalProducts'
+          url: '/commodityConsultation/displayProducts'
         }]
-      }, {
-        id: 'PRODUCT_LIST',
-        name: '评价留言',
-        icon: 'el-icon-menu',
-        url: '/product/category/list',
-        menu: true,
-        actions: [{
-          name: '评价买家',
-          url: '/conventionalProducts/conventionalProducts'
-        }]
-      }, {
+      },
+      // {
+      //   id: 'PRODUCT_LIST',
+      //   name: '评价留言',
+      //   icon: 'el-icon-menu',
+      //   url: '/product/category/list',
+      //   menu: true,
+      //   actions: [{
+      //     name: '评价买家',
+      //     url: '/conventionalProducts/conventionalProducts'
+      //   }]
+      // },
+      {
         id: 'PRODUCT_LIST',
         name: '支付方式',
         icon: 'el-icon-menu',
@@ -325,7 +332,7 @@ let navArr = [
         menu: true,
         actions: [{
           name: '收款设置',
-          url: '/conventionalProducts/conventionalProducts'
+          url: '/paymentMethod/collectionSettings'
         }]
       }, {
         id: 'PRODUCT_LIST',
@@ -335,25 +342,26 @@ let navArr = [
         menu: true,
         actions: [{
           name: '积分明细',
-          url: '/conventionalProducts/conventionalProducts'
+          url: '/transactionDetails/creditDetails'
         }, {
           name: '资金明细',
-          url: '/conventionalProducts/conventionalProducts'
+          url: '/transactionDetails/capitalDetails'
         }, {
           name: '消保明细',
-          url: '/conventionalProducts/conventionalProducts'
+          url: '/transactionDetails/protectionDetails'
         }]
-      }, {
-        id: 'PRODUCT_LIST',
-        name: '信用管理',
-        icon: 'el-icon-menu',
-        url: '/product/category/list',
-        menu: true,
-        actions: [{
-          name: '信用管理',
-          url: '/conventionalProducts/conventionalProducts'
-        }]
-      }
+      },
+      //  {
+      //   id: 'PRODUCT_LIST',
+      //   name: '信用管理',
+      //   icon: 'el-icon-menu',
+      //   url: '/product/category/list',
+      //   menu: true,
+      //   actions: [{
+      //     name: '信用管理',
+      //     url: '/conventionalProducts/conventionalProducts'
+      //   }]
+      // }
       // {
       //   id: 'PRODUCT_CATEGORY_LIST',
       //   name: '产品分类列表',
