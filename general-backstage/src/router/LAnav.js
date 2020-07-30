@@ -598,6 +598,41 @@ let LAMenu = [
   },
   {
     id: "SYSTEM",
+    name: "通证管理",
+    icon: "el-icon-setting",
+    subset: [
+      {
+        id: "ADMIN_LIST",
+        name: "分类信息管理",
+        icon: "el-icon-user",
+        menu: true,
+        actions: [
+          {
+            name: "分类信息列表",
+            url: "/through/classify/classList"
+          }
+        ]
+      },
+      {
+        id: "ADMIN_LIST",
+        name: "通证管理",
+        icon: "el-icon-user",
+        menu: true,
+        actions: [
+          {
+            name: "通证管理",
+            url: "/through/throughThe/management"
+          },
+          {
+            name: "通证订单",
+            url: "/through/throughThe/passOrder"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "SYSTEM",
     name: "开放平台",
     icon: "el-icon-setting",
     subset: [
@@ -661,6 +696,54 @@ let LAMenu = [
           {
             name: "后台菜单",
             url: "/develop/management/backMenu"
+          },
+          {
+            name: "图片管理",
+            url: "/develop/management/imageMent"
+          },
+          {
+            name: "短信发送",
+            url: "/develop/management/textMessage"
+          },
+          {
+            name: "邮件群发",
+            url: "/develop/management/groupMail"
+          },
+          {
+            name: "淘宝转换",
+            url: "/develop/management/taobaoConversion"
+          },
+          {
+            name: "托管管理",
+            url: "/develop/management/trustManagement"
+          }
+        ]
+      },
+      {
+        id: "WECHAT_CON",
+        name: "微信整合",
+        icon: "el-icon-user",
+        menu: true,
+        actions: [
+          {
+            name: "微信菜单管理",
+            url: "/develop/wechat/weChatmenu"
+          }
+        ]
+      },
+      {
+        id: "LOG_CON",
+        name: "日志管理",
+        icon: "el-icon-user",
+        menu: true,
+        actions: [
+          {
+            name: "后台管理日志",
+            url: "/develop/log/adminLog"
+          },
+          {
+            name: "定期任务日志",
+            url: "/develop/log/taskLog"
           }
         ]
       }

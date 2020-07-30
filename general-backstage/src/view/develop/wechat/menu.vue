@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    微信菜单整合
+  </div>
 </template>
 
 <script>
