@@ -332,7 +332,7 @@ export default new Router({
           path: '/commodityConsultation/sellingGoods',
           name: 'sellingGoods',
           component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/commodityConsultation/sellingGoods.vue'], resolve),
-          meta: ['交易管理', '商铺订单', '提现申请']
+          meta: ['交易管理', '商铺订单', '销售商品咨询']
         },
         {
           path: '/commodityConsultation/displayProducts',
@@ -344,7 +344,7 @@ export default new Router({
           path: '/paymentMethod/collectionSettings',
           name: 'collectionSettings',
           component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/paymentMethod/collectionSettings.vue'], resolve),
-          meta: ['交易管理', '商品咨询管理', '展示商品咨询']
+          meta: ['交易管理', '商品咨询管理', '收款设置']
         },
         {
           path: '/transactionDetails/creditDetails',
