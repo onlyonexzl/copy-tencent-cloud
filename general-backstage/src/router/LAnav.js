@@ -598,6 +598,61 @@ let LAMenu = [
   },
   {
     id: "SYSTEM",
+    name: "平台设置",
+    icon: "el-icon-setting",
+    subset: [
+      {
+        id: "ADMIN_LIST",
+        name: "基本设置",
+        icon: "el-icon-user",
+        menu: true,
+        actions: [
+          {
+            name: "商家设置",
+            url: "/setPlatform/setBasic/merchant"
+          },
+          {
+            name: "基础信息",
+            url: "/setPlatform/setBasic/foundational"
+          },
+          {
+            name: "客服设置",
+            url: "/setPlatform/setBasic/service"
+          },
+          {
+            name: "邮件平台",
+            url: "/setPlatform/setBasic/emailPlatform"
+          },
+          {
+            name: "短信设置",
+            url: "/setPlatform/setBasic/setNote"
+          },
+          {
+            name: "注册设置",
+            url: "/setPlatform/setBasic/register"
+          },
+          {
+            name: "分值比例",
+            url: "/setPlatform/setBasic/scoreValue"
+          },
+          {
+            name: "保留域名",
+            url: "/setPlatform/setBasic/domain"
+          },
+          {
+            name: "商铺认证",
+            url: "/setPlatform/setBasic/shopCertification"
+          },
+          {
+            name: "域名设置",
+            url: "/setPlatform/setBasic/setDomain"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "SYSTEM",
     name: "通证管理",
     icon: "el-icon-setting",
     subset: [

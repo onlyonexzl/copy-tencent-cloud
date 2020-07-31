@@ -20,7 +20,7 @@
         :data="tableData"
         border
         style="width: 100%"
-        max-height="500px"
+        max-height="470px"
         @selection-change="handleSelectionChange"
       >
         <el-table-column
@@ -159,6 +159,9 @@ export default {
 
 <style lang="scss" scoped>
 .man_look {
+  background: #fff;
+  height: 610px;
+  border-radius: 4px;
   .man_top {
     width: 100%;
     background: #fff;

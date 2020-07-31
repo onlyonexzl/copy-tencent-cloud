@@ -22,7 +22,7 @@
         :data="tableData"
         border
         style="width: 100%"
-        max-height="500px"
+        max-height="470px"
         @selection-change="handleSelectionChange"
       >
         <el-table-column
@@ -188,6 +188,51 @@ export default {
           verification: "0%",
           shops: "美家",
           status: "0"
+        },
+        {
+          type: "",
+          style:
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596116811161&di=b7e3f1a63fb54c436e57239b4e31e5ae&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F17%2F12%2F01300000433093126093125172516.jpg",
+          name: "美家商品代金券",
+          num: "12",
+          commodity: "",
+          start_time: "2020-04-01",
+          end_time: "2020-04-01",
+          rule: "用1积分，可抵用1.00元",
+          redemption: "0%",
+          verification: "0%",
+          shops: "美家",
+          status: "0"
+        },
+        {
+          type: "",
+          style:
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596116811161&di=b7e3f1a63fb54c436e57239b4e31e5ae&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F17%2F12%2F01300000433093126093125172516.jpg",
+          name: "美家商品代金券",
+          num: "12",
+          commodity: "",
+          start_time: "2020-04-01",
+          end_time: "2020-04-01",
+          rule: "用1积分，可抵用1.00元",
+          redemption: "0%",
+          verification: "0%",
+          shops: "美家",
+          status: "0"
+        },
+        {
+          type: "",
+          style:
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596116811161&di=b7e3f1a63fb54c436e57239b4e31e5ae&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F17%2F12%2F01300000433093126093125172516.jpg",
+          name: "美家商品代金券",
+          num: "12",
+          commodity: "",
+          start_time: "2020-04-01",
+          end_time: "2020-04-01",
+          rule: "用1积分，可抵用1.00元",
+          redemption: "0%",
+          verification: "0%",
+          shops: "美家",
+          status: "0"
         }
       ]
     };
@@ -205,6 +250,9 @@ export default {
 
 <style lang="scss" scoped>
 .man_look {
+  background: #fff;
+  height: 610px;
+  border-radius: 4px;
   .man_top {
     width: 100%;
     background: #fff;

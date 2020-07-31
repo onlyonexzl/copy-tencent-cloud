@@ -9,7 +9,7 @@
       <el-button type="primary" icon="el-icon-search" size="medium"></el-button>
     </div>
     <div class="task_con">
-      <el-table :data="tableData" style="width: 100%" max-height="500px" border>
+      <el-table :data="tableData" style="width: 100%" max-height="470px" border>
         <el-table-column
           prop="img_url"
           label="封面图片"
@@ -117,6 +117,9 @@ export default {
 
 <style lang="scss" scoped>
 .task_look {
+  background: #fff;
+  height: 610px;
+  border-radius: 4px;
   .task_top {
     width: 100%;
     background: #fff;
