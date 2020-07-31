@@ -363,6 +363,24 @@ export default new Router({
           name: 'protectionDetails',
           component: (resolve) => require(['@/view/BackgroundManagement/transactionManagement/transactionDetails/protectionDetails.vue'], resolve),
           meta: ['交易管理', '交易明细', '消保明细']
+        },
+        {
+          path: '/userProfile/userList',
+          name: 'userList',
+          component: (resolve) => require(['@/view/BackgroundManagement/userManagement/userProfile/userList.vue'], resolve),
+          meta: ['用户管理', '用户资料', '用户列表']
+        },
+        {
+          path: '/userProfile/recommendedSettings',
+          name: 'recommendedSettings',
+          component: (resolve) => require(['@/view/BackgroundManagement/userManagement/userProfile/recommendedSettings.vue'], resolve),
+          meta: ['用户管理', '分销设置', '推荐设置']
+        },
+        {
+          path: '/userProfile/rankList',
+          name: 'rankList',
+          component: (resolve) => require(['@/view/BackgroundManagement/userManagement/userProfile/rankList.vue'], resolve),
+          meta: ['用户管理', '分销设置', '等级列表']
         }
       ]
     }

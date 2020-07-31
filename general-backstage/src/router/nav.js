@@ -390,42 +390,41 @@ let navArr = [
     subset: [
       {
         id: 'INFORMATION_LIST',
-        name: '杂志管理',
+        name: '用户资料',
         icon: 'el-icon-menu',
         url: '/contentManagement/magazineManagement',
         menu: true,
-        // actions: [
-        //   {
-        //     name: '新增资讯',
-        //     url: '/information/add',
-        //     parent: '/information/list'
-        //   },
-        //   {
-        //     name: '修改资讯',
-        //     url: '/information/edit',
-        //     parent: '/information/list'
-        //   }
-        // ]
+        actions: [
+          {
+            name: '用户列表',
+            url: '/userProfile/userList'
+          }
+        ]
+      }, {
+        id: 'INFORMATION_LIST',
+        name: '等级管理',
+        icon: 'el-icon-menu',
+        url: '/contentManagement/magazineManagement',
+        menu: true,
+        actions: [
+          {
+            name: '等级列表',
+            url: '/userProfile/rankList'
+          }
+        ]
+      }, {
+        id: 'INFORMATION_LIST',
+        name: '分销设置',
+        icon: 'el-icon-menu',
+        url: '/contentManagement/magazineManagement',
+        menu: true,
+        actions: [
+          {
+            name: '推荐设置',
+            url: '/userProfile/recommendedSettings'
+          }
+        ]
       },
-      // {
-      // id: 'INFORMATION_TYPE_LIST',
-      // name: '资讯类型列表',
-      // icon: 'el-icon-menu',
-      // url: '/information/type/list',
-      // menu: true,
-      // actions: [
-      //   {
-      //     name: '新增资讯类型',
-      //     url: '/information/type/add',
-      //     parent: '/information/type/list'
-      //   },
-      //   {
-      //     name: '修改资讯类型',
-      //     url: '/information/type/edit',
-      //     parent: '/information/type/list'
-      //   }
-      // ]
-      // }
     ]
   },
   {
