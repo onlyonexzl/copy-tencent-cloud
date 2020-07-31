@@ -434,228 +434,57 @@ let navArr = [
     subset: [
       {
         id: 'IOT_REPORT',
-        name: '交易管理',
+        name: '动态管理',
         icon: 'el-icon-link',
         url: '/report/main',
         menu: true,
         actions: [
           {
-            name: '知识订单',
+            name: '动态话题管理',
+            url: '/dynamicManagement/dynamicTopics'
+          },
+          {
+            name: '动态类目删除',
+            url: '/dynamicManagement/dynamicCategory'
+          }
+        ]
+      }, {
+        id: 'IOT_REPORT',
+        name: '圈子管理',
+        icon: 'el-icon-link',
+        url: '/report/main',
+        menu: true,
+        actions: [
+          {
+            name: '圈子管理',
             url: '/transactionManagement/magazineManagement'
           },
           {
-            name: '客户订单',
-            url: '/transactionManagement/customerOrder'
+            name: '成员管理',
+            url: '/circleManagement/memberManagement'
           },
           {
-            name: '退货通道',
-            url: '/transactionManagement/returnsChannel'
+            name: '帖子管理',
+            url: '/circleManagement/postManagement'
           },
           {
-            name: '拼团订单',
-            url: '/transactionManagement/spellGroupOrder'
-          },
+            name: '评论管理',
+            url: '/circleManagement/comment'
+          }
+        ]
+      }, {
+        id: 'IOT_REPORT',
+        name: '视频管理',
+        icon: 'el-icon-link',
+        url: '/report/main',
+        menu: true,
+        actions: [
           {
-            name: '体现申请',
-            url: '/transactionManagement/toApplyFor'
-          },
-          {
-            name: '拼团退货',
-            url: '/transactionManagement/spellGroupReturns'
-          },
-          {
-            name: '物流工具',
-            url: '/transactionManagement/logisticsTools'
-          },
-          {
-            name: '销售商品咨询',
-            url: '/transactionManagement/consultation'
-          },
-          {
-            name: '评价买家',
-            url: '/transactionManagement/evaluationOfTheBuyer'
-          },
-          {
-            name: '消保明细',
-            url: '/transactionManagement/fromTheDetail'
-          },
-          // {
-          //   name: '信用管理',
-          //   url: '/group/edit',
-          //   parent: '/group/list'
-          // },
-          {
-            name: '我的返佣订单',
-            url: '/transactionManagement/orderManagement'
+            name: '短视频管理',
+            url: '/shortVideoMa/shortVideo'
           }
         ]
       }
-      // ,
-      // {
-      //   id: 'GROUP_LIST',
-      //   name: '设备分组列表',
-      //   icon: 'el-icon-link',
-      //   url: '/group/list',
-      //   menu: true,
-
-      // },
-      // {
-      //   id: 'DEVICE_LIST',
-      //   name: '设备列表',
-      //   icon: 'el-icon-link',
-      //   url: '/device/list',
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: '新增设备',
-      //   //     url: '/device/add',
-      //   //     parent: '/device/list'
-      //   //   },
-      //   //   {
-      //   //     name: '修改设备',
-      //   //     url: '/device/edit',
-      //   //     parent: '/device/list'
-      //   //   }
-      //   // ]
-      // },
-      // {
-      //   id: 'DRIVER_LIST',
-      //   name: '驱动列表',
-      //   icon: 'el-icon-link',
-      //   url: '/driver/list',
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: '新增驱动',
-      //   //     url: '/driver/add',
-      //   //     parent: '/driver/list'
-      //   //   },
-      //   //   {
-      //   //     name: '修改驱动',
-      //   //     url: '/driver/edit',
-      //   //     parent: '/driver/list'
-      //   //   }
-      //   // ]
-      // },
-
-      // {
-      //   id: 'DRIVER_ATTRIBUTE_LIST',
-      //   name: '驱动属性列表',
-      //   icon: 'el-icon-link',
-      //   url: '/driverAttribute/list',
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: '新增驱动属性',
-      //   //     url: '/driverAttribute/add',
-      //   //     parent: '/driverAttribute/list'
-      //   //   },
-      //   //   {
-      //   //     name: '修改驱动属性',
-      //   //     url: '/driverAttribute/edit',
-      //   //     parent: '/driverAttribute/list'
-      //   //   }
-      //   // ]
-      // },
-      // {
-      //   id: 'DRIVER_INFO_LIST',
-      //   name: '驱动配置列表',
-      //   icon: 'el-icon-link',
-      //   url: '/driverInfo/list',
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: '新增驱动配置',
-      //   //     url: '/driverInfo/add',
-      //   //     parent: '/driverInfo/list'
-      //   //   },
-      //   //   {
-      //   //     name: '修改驱动配置',
-      //   //     url: '/driverInfo/edit',
-      //   //     parent: '/driverInfo/list'
-      //   //   }
-      //   // ]
-      // },
-
-      // {
-      //   id: 'POINT_ATTRIBUTE_LIST',
-      //   name: '位号属性列表',
-      //   icon: 'el-icon-link',
-      //   url: '/pointAttribute/list',
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: '新增位号属性',
-      //   //     url: '/pointAttribute/add',
-      //   //     parent: '/pointAttribute/list'
-      //   //   },
-      //   //   {
-      //   //     name: '修改位号属性',
-      //   //     url: '/pointAttribute/edit',
-      //   //     parent: '/pointAttribute/list'
-      //   //   }
-      //   // ]
-      // },
-
-      // {
-      //   id: 'PROFILE_LIST',
-      //   name: '模板列表',
-      //   icon: 'el-icon-link',
-      //   url: '/profile/list',
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: '新增模板',
-      //   //     url: '/profile/add',
-      //   //     parent: '/profile/list'
-      //   //   },
-      //   //   {
-      //   //     name: '修改模板',
-      //   //     url: '/profile/edit',
-      //   //     parent: '/profile/list'
-      //   //   }
-      //   // ]
-      // },
-
-      // {
-      //   id: 'POINT_LIST',
-      //   name: '位号列表',
-      //   icon: 'el-icon-link',
-      //   url: '/point/list',
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: '新增位号',
-      //   //     url: '/point/add',
-      //   //     parent: '/point/list'
-      //   //   },
-      //   //   {
-      //   //     name: '修改位号',
-      //   //     url: '/point/edit',
-      //   //     parent: '/point/list'
-      //   //   }
-      //   // ]
-      // },
-
-      // {
-      //   id: 'POINT_INFO_LIST',
-      //   name: '位号配置列表',
-      //   icon: 'el-icon-link',
-      //   url: '/pointInfo/list',
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: '新增位号配置',
-      //   //     url: '/pointInfo/add',
-      //   //     parent: '/pointInfo/list'
-      //   //   },
-      //   //   {
-      //   //     name: '修改位号配置',
-      //   //     url: '/pointInfo/edit',
-      //   //     parent: '/pointInfo/list'
-      //   //   }
-      //   // ]
-      // },
     ]
   },
   {

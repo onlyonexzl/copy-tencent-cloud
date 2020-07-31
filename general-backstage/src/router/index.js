@@ -381,6 +381,48 @@ export default new Router({
           name: 'rankList',
           component: (resolve) => require(['@/view/BackgroundManagement/userManagement/userProfile/rankList.vue'], resolve),
           meta: ['用户管理', '分销设置', '等级列表']
+        },
+        {
+          path: '/dynamicManagement/dynamicTopics',
+          name: 'dynamicTopics',
+          component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/dynamicManagement/dynamicTopics.vue'], resolve),
+          meta: ['社区管理', '动态管理', '动态话题管理']
+        },
+        {
+          path: '/dynamicManagement/dynamicCategory',
+          name: 'dynamicCategory',
+          component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/dynamicManagement/dynamicCategory.vue'], resolve),
+          meta: ['社区管理', '动态管理', '动态类目删除']
+        },
+        {
+          path: '/shortVideoMa/shortVideo',
+          name: 'shortVideo',
+          component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/shortVideoMa/shortVideo.vue'], resolve),
+          meta: ['社区管理', '视频管理', '短视频管理']
+        },
+        {
+          path: '/circleManagement/memberManagement',
+          name: 'memberManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/circleManagement/memberManagement.vue'], resolve),
+          meta: ['社区管理', '视频管理', '成员管理']
+        },
+        {
+          path: '/circleManagement/postManagement',
+          name: 'postManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/circleManagement/postManagement.vue'], resolve),
+          meta: ['社区管理', '视频管理', '帖子管理']
+        },
+        {
+          path: '/circleManagement/editpostManagement',
+          name: 'editpostManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/circleManagement/editpostManagement.vue'], resolve),
+          // meta: ['社区管理', '视频管理', '帖子管理']
+        },
+        {
+          path: '/circleManagement/comment',
+          name: 'comment',
+          component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/circleManagement/comment.vue'], resolve),
+          meta: ['社区管理', '视频管理', '评论管理']
         }
       ]
     }
