@@ -242,6 +242,16 @@ export default {
         "/transactionDetails/capitalDetails",
         "/transactionDetails/protectionDetails",
         "/through/throughThe/addManagement",
+        "/setPlatform/setBasic/merchant",
+        "/setPlatform/setBasic/foundational",
+        "/setPlatform/setBasic/service",
+        "/setPlatform/setBasic/emailPlatform",
+        "/setPlatform/setBasic/setNote",
+        "/setPlatform/setBasic/register",
+        "/setPlatform/setBasic/scoreValue",
+        "/setPlatform/setBasic/domain",
+        "/setPlatform/setBasic/shopCertification",
+        "/setPlatform/setBasic/setDomain",
         '/userProfile/userList',
         '/userProfile/rankList',
         '/userProfile/recommendedSettings',
@@ -251,7 +261,6 @@ export default {
         '/circleManagement/postManagement',
         '/circleManagement/comment',
         '/shortVideoMa/shortVideo'
-
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {
