@@ -268,7 +268,20 @@ export default {
         "/classSetting/commodity",
         "/classSetting/vipClass",
         "/classSetting/knowledgeGood",
-        "/classSetting/comKnow"
+        "/classSetting/comKnow",
+        "/userProfile/userList",
+        "/userProfile/rankList",
+        "/userProfile/recommendedSettings",
+        "/dynamicManagement/dynamicTopics",
+        "/dynamicManagement/dynamicCategory",
+        "/circleManagement/memberManagement",
+        "/circleManagement/postManagement",
+        "/circleManagement/comment",
+        "/shortVideoMa/shortVideo",
+        "/circleManagement/circleManagement",
+        "/cloudsAndWarehouses/gatheringCommodities",
+        "/cloudsAndWarehouses/warehouseGoods",
+        "/luckyDraw/lotteryResults"
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {
@@ -292,7 +305,9 @@ export default {
         "/commodityInformation/editauctionGoods",
         "/commodityInformation/editwholesaleGoods",
         "/commodityInformation/releasewholesaleGoods",
-        "/commodityInformation/editnotOn"
+        "/commodityInformation/editnotOn",
+        "/circleManagement/editpostManagement",
+        "/circleManagement/editCircleManagement"
       ];
 
       this.flagTttName =
