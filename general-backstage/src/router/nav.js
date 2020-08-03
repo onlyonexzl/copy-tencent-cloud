@@ -457,7 +457,7 @@ let navArr = [
         actions: [
           {
             name: '圈子管理',
-            url: '/transactionManagement/magazineManagement'
+            url: '/circleManagement/circleManagement'
           },
           {
             name: '成员管理',
@@ -575,6 +575,151 @@ let navArr = [
 
     ]
   },
+  {
+    id: "SYSTEM",
+    name: "营销管理",
+    icon: "el-icon-s-cooperation",
+    subset: [
+      {
+        id: 'ADMIN_LIST',
+        name: "云集云仓",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "云集商品",
+            url: "/cloudsAndWarehouses/gatheringCommodities"
+          },
+          {
+            name: "云仓商品",
+            url: "/cloudsAndWarehouses/warehouseGoods"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "幸运抽奖",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "抽奖活动",
+            url: "/marketingManagement/couponManagement"
+          },
+          {
+            name: "抽奖结果",
+            url: "/luckyDraw/lotteryResults"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "优惠管理",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "优惠券管理",
+            url: "/marketingManagement/couponManagement"
+          },
+          {
+            name: "积分汇专区",
+            url: "/marketingManagement/bonusPointArea"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "广告管理",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "广告管理",
+            url: "/marketingManagement/couponManagement"
+          },
+          {
+            name: "已展示",
+            url: "/marketingManagement/bonusPointArea"
+          },
+          {
+            name: "待申请",
+            url: "/marketingManagement/bonusPointArea"
+          },
+          {
+            name: "将到期",
+            url: "/marketingManagement/bonusPointArea"
+          },
+          {
+            name: "待审核",
+            url: "/marketingManagement/bonusPointArea"
+          },
+          {
+            name: "待展示",
+            url: "/marketingManagement/bonusPointArea"
+          },
+          {
+            name: "自定义区域",
+            url: "/marketingManagement/bonusPointArea"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "楼层营销",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "专题页面",
+            url: "/marketingManagement/couponManagement"
+          },
+          {
+            name: "首页楼层",
+            url: "/marketingManagement/bonusPointArea"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "品牌信息",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "品牌管理",
+            url: "/marketingManagement/couponManagement"
+          },
+          {
+            name: "水印设置",
+            url: "/marketingManagement/bonusPointArea"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "数据中心",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "商铺排行",
+            url: "/marketingManagement/couponManagement"
+          },
+          {
+            name: "消费排行",
+            url: "/marketingManagement/bonusPointArea"
+          },
+          {
+            name: "商品排行",
+            url: "/marketingManagement/bonusPointArea"
+          }
+        ]
+      },
+    ]
+  },
+
 
   ...LAnav
   // {

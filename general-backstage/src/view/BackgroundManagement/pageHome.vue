@@ -260,7 +260,11 @@ export default {
         '/circleManagement/memberManagement',
         '/circleManagement/postManagement',
         '/circleManagement/comment',
-        '/shortVideoMa/shortVideo'
+        '/shortVideoMa/shortVideo',
+        '/circleManagement/circleManagement',
+        '/cloudsAndWarehouses/gatheringCommodities',
+        '/cloudsAndWarehouses/warehouseGoods',
+        '/luckyDraw/lotteryResults'
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {
@@ -285,7 +289,8 @@ export default {
         "/commodityInformation/editwholesaleGoods",
         "/commodityInformation/releasewholesaleGoods",
         "/commodityInformation/editnotOn",
-        '/circleManagement/editpostManagement'
+        '/circleManagement/editpostManagement',
+        '/circleManagement/editCircleManagement'
       ];
 
       this.flagTttName =

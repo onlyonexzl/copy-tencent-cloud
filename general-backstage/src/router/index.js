@@ -404,13 +404,13 @@ export default new Router({
           path: '/circleManagement/memberManagement',
           name: 'memberManagement',
           component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/circleManagement/memberManagement.vue'], resolve),
-          meta: ['社区管理', '视频管理', '成员管理']
+          meta: ['社区管理', '圈子管理', '成员管理']
         },
         {
           path: '/circleManagement/postManagement',
           name: 'postManagement',
           component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/circleManagement/postManagement.vue'], resolve),
-          meta: ['社区管理', '视频管理', '帖子管理']
+          meta: ['社区管理', '圈子管理', '帖子管理']
         },
         {
           path: '/circleManagement/editpostManagement',
@@ -422,7 +422,37 @@ export default new Router({
           path: '/circleManagement/comment',
           name: 'comment',
           component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/circleManagement/comment.vue'], resolve),
-          meta: ['社区管理', '视频管理', '评论管理']
+          meta: ['社区管理', '圈子管理', '评论管理']
+        },
+        {
+          path: '/circleManagement/circleManagement',
+          name: 'circleManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/circleManagement/circleManagement.vue'], resolve),
+          meta: ['社区管理', '圈子管理', '圈子管理']
+        },
+        {
+          path: '/circleManagement/editCircleManagement',
+          name: 'circleManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/communityManagement/circleManagement/editCircleManagement.vue'], resolve),
+          // meta: ['社区管理', '圈子管理', '圈子管理']
+        },
+        {
+          path: '/cloudsAndWarehouses/gatheringCommodities',
+          name: 'gatheringCommodities',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/cloudsAndWarehouses/gatheringCommodities.vue'], resolve),
+          meta: ['营销管理', '云集云仓', '云集商品']
+        },
+        {
+          path: '/cloudsAndWarehouses/warehouseGoods',
+          name: 'warehouseGoods',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/cloudsAndWarehouses/warehouseGoods.vue'], resolve),
+          meta: ['营销管理', '云集云仓', '云仓商品']
+        },
+        {
+          path: '/luckyDraw/lotteryResults',
+          name: 'lotteryResults',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/luckyDraw/lotteryResults.vue'], resolve),
+          meta: ['营销管理', '幸运抽奖', '抽奖结果']
         }
       ]
     }
