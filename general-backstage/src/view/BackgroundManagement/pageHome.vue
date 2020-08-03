@@ -253,7 +253,22 @@ export default {
         "/setPlatform/setBasic/scoreValue",
         "/setPlatform/setBasic/domain",
         "/setPlatform/setBasic/shopCertification",
-        "/setPlatform/setBasic/setDomain"
+        "/setPlatform/setBasic/setDomain",
+        "/classSetting/classified",
+        "/classSetting/induStandard",
+        "/classSetting/jobCategory",
+        "/classSetting/partTimeJob",
+        "/classSetting/regional",
+        "/classSetting/operation",
+        "/classSetting/carSystem",
+        "/classSetting/vehicleTypes",
+        "/classSetting/rentalCar",
+        "/classSetting/parameter",
+        "/classSetting/photoAlbum",
+        "/classSetting/commodity",
+        "/classSetting/vipClass",
+        "/classSetting/knowledgeGood",
+        "/classSetting/comKnow"
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {

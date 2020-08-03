@@ -156,6 +156,115 @@ let LARouter = [
     meta: ["平台设置", "基本设置", "域名设置"],
     component: resolve =>
       require(["@/view/setPlatform/setBasic/setDomain.vue"], resolve)
+  },
+  {
+    path: "/classSetting/classified",
+    name: "classified",
+    meta: ["分类设置", "分类信息"],
+    component: resolve =>
+      require(["@/view/classSetting/classified.vue"], resolve)
+  },
+  {
+    path: "/classSetting/induStandard",
+    name: "induStandard",
+    meta: ["分类设置", "行业分类"],
+    component: resolve =>
+      require(["@/view/classSetting/induStandard.vue"], resolve)
+  },
+  {
+    path: "/classSetting/jobCategory",
+    name: "jobCategory",
+    meta: ["分类设置", "招聘职位分类"],
+    component: resolve =>
+      require(["@/view/classSetting/jobCategory.vue"], resolve)
+  },
+  {
+    path: "/classSetting/partTimeJob",
+    name: "partTimeJob",
+    meta: ["分类设置", "兼职类别"],
+    component: resolve =>
+      require(["@/view/classSetting/partTimeJob.vue"], resolve)
+  },
+  {
+    path: "/classSetting/jobClassify",
+    name: "jobClassify",
+    meta: ["分类设置", "兼职职业分类"],
+    component: resolve =>
+      require(["@/view/classSetting/jobClassify.vue"], resolve)
+  },
+  {
+    path: "/classSetting/regional",
+    name: "regional",
+    meta: ["分类设置", "地区管理"],
+    component: resolve => require(["@/view/classSetting/regional.vue"], resolve)
+  },
+  {
+    path: "/classSetting/operation",
+    name: "operation",
+    meta: ["分类设置", "经营行业"],
+    component: resolve =>
+      require(["@/view/classSetting/operation.vue"], resolve)
+  },
+  {
+    path: "/classSetting/carSystem",
+    name: "carSystem",
+    meta: ["分类设置", "品牌车系分类"],
+    component: resolve =>
+      require(["@/view/classSetting/carSystem.vue"], resolve)
+  },
+  {
+    path: "/classSetting/vehicleTypes",
+    name: "vehicleTypes",
+    meta: ["分类设置", "车类车型分类"],
+    component: resolve =>
+      require(["@/view/classSetting/vehicleTypes.vue"], resolve)
+  },
+  {
+    path: "/classSetting/rentalCar",
+    name: "rentalCar",
+    meta: ["分类设置", "租车分类"],
+    component: resolve =>
+      require(["@/view/classSetting/rentalCar.vue"], resolve)
+  },
+  {
+    path: "/classSetting/parameter",
+    name: "parameter",
+    meta: ["分类设置", "参数管理"],
+    component: resolve =>
+      require(["@/view/classSetting/parameter.vue"], resolve)
+  },
+  {
+    path: "/classSetting/photoAlbum",
+    name: "photoAlbum",
+    meta: ["分类设置", "相册分类"],
+    component: resolve =>
+      require(["@/view/classSetting/photoAlbum.vue"], resolve)
+  },
+  {
+    path: "/classSetting/commodity",
+    name: "commodity",
+    meta: ["分类设置", "常规商品分类"],
+    component: resolve =>
+      require(["@/view/classSetting/commodity.vue"], resolve)
+  },
+  {
+    path: "/classSetting/vipClass",
+    name: "vipClass",
+    meta: ["分类设置", "供求vip分类"],
+    component: resolve => require(["@/view/classSetting/vipClass.vue"], resolve)
+  },
+  {
+    path: "/classSetting/knowledgeGood",
+    name: "knowledgeGood",
+    meta: ["分类设置", "知识商品分类"],
+    component: resolve =>
+      require(["@/view/classSetting/knowledgeGood.vue"], resolve)
+  },
+  {
+    path: "/classSetting/comKnow",
+    name: "comKnow",
+    meta: ["分类设置", "知识型商品分类"],
+    component: resolve => require(["@/view/classSetting/comKnow.vue"], resolve)
   }
 ];
 

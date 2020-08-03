@@ -407,45 +407,73 @@ let LAMenu = [
     subset: [
       {
         id: "ADMIN_LIST",
-        name: "营销管理",
+        name: "分类设置",
         icon: "el-icon-user",
-        url: "/admin/list",
         menu: true,
         actions: [
           {
-            name: "优惠卷管理",
-            url: "/admin/add",
-            parent: "/admin/list"
+            name: "分类信息",
+            url: "/classSetting/classified"
           },
           {
-            name: "积分汇专区",
-            url: "/admin/edit",
-            parent: "/admin/list"
+            name: "行业分类",
+            url: "/classSetting/induStandard"
           },
           {
-            name: "广告管理",
-            url: "/admin/edit",
-            parent: "/admin/list"
+            name: "招聘职位分类",
+            url: "/classSetting/jobCategory"
           },
           {
-            name: "自定义区域",
-            url: "/admin/edit",
-            parent: "/admin/list"
+            name: "兼职类别",
+            url: "/classSetting/partTimeJob"
           },
           {
-            name: "商品排行",
-            url: "/admin/edit",
-            parent: "/admin/list"
+            name: "兼职职业分类",
+            url: "/classSetting/jobClassify"
           },
           {
-            name: "品牌管理",
-            url: "/admin/edit",
-            parent: "/admin/list"
+            name: "地区管理",
+            url: "/classSetting/regional"
           },
           {
-            name: "水印设置",
-            url: "/admin/edit",
-            parent: "/admin/list"
+            name: "经营行业",
+            url: "/classSetting/operation"
+          },
+          {
+            name: "品牌车系分类",
+            url: "/classSetting/carSystem"
+          },
+          {
+            name: "车类车型分类",
+            url: "/classSetting/vehicleTypes"
+          },
+          {
+            name: "租车分类",
+            url: "/classSetting/rentalCar"
+          },
+          {
+            name: "参数管理",
+            url: "/classSetting/parameter"
+          },
+          {
+            name: "相册分类",
+            url: "/classSetting/photoAlbum"
+          },
+          {
+            name: "常规商品分类",
+            url: "/classSetting/commodity"
+          },
+          {
+            name: "供求vip分类",
+            url: "/classSetting/vipClass"
+          },
+          {
+            name: "知识商品分类",
+            url: "/classSetting/knowledgeGood"
+          },
+          {
+            name: "知识型商品分类",
+            url: "/classSetting/comKnow"
           }
         ]
       }
