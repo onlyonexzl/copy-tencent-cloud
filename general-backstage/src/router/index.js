@@ -453,6 +453,98 @@ export default new Router({
           name: 'lotteryResults',
           component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/luckyDraw/lotteryResults.vue'], resolve),
           meta: ['营销管理', '幸运抽奖', '抽奖结果']
+        },
+        {
+          path: '/preferentialManagement/couponManagement',
+          name: 'couponManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/preferentialManagement/couponManagement.vue'], resolve),
+          meta: ['营销管理', '优惠管理', '优惠券管理']
+        },
+        {
+          path: '/preferentialManagement/editcouponManagement',
+          name: 'editcouponManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/preferentialManagement/editcouponManagement.vue'], resolve),
+          // meta: ['营销管理', '优惠管理', '优惠券管理']
+        },
+        {
+          path: '/preferentialManagement/pointsCollectionZone',
+          name: 'pointsCollectionZone',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/preferentialManagement/pointsCollectionZone.vue'], resolve),
+          meta: ['营销管理', '优惠管理', '积分汇专区']
+        },
+        {
+          path: '/preferentialManagement/editpointsCollectionZone',
+          name: 'editpointsCollectionZone',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/preferentialManagement/editpointsCollectionZone.vue'], resolve),
+          // meta: ['营销管理', '优惠管理', '积分汇专区']
+        },
+        {
+          path: '/advertisingManagement/advertisingManagement',
+          name: 'advertisingManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/advertisingManagement.vue'], resolve),
+          meta: ['营销管理', '广告管理', '广告管理']
+        },
+        {
+          path: '/advertisingManagement/editadvertisingManagement',
+          name: 'editadvertisingManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/editadvertisingManagement.vue'], resolve),
+          // meta: ['营销管理', '广告管理', '广告管理']
+        },
+        {
+          path: '/advertisingManagement/displayed',
+          name: 'displayed',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/displayed.vue'], resolve),
+          meta: ['营销管理', '广告管理', '已展示']
+        },
+        {
+          path: '/advertisingManagement/editdisplayed',
+          name: 'editdisplayed',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/editdisplayed.vue'], resolve),
+        },
+        {
+          path: '/advertisingManagement/pendingApplication',
+          name: 'pendingApplication',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/pendingApplication.vue'], resolve),
+          meta: ['营销管理', '广告管理', '待申请']
+        },
+        {
+          path: '/advertisingManagement/editpendingApplication',
+          name: 'editpendingApplication',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/editpendingApplication.vue'], resolve),
+        },
+        {
+          path: '/advertisingManagement/willExpire',
+          name: 'willExpire',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/willExpire.vue'], resolve),
+          meta: ['营销管理', '广告管理', '将到期']
+        },
+        {
+          path: '/advertisingManagement/editwillExpire',
+          name: 'editwillExpire',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/editwillExpire.vue'], resolve),
+        },
+        {
+          path: '/advertisingManagement/toBeReviewed',
+          name: 'toBeReviewed',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/toBeReviewed.vue'], resolve),
+          meta: ['营销管理', '广告管理', '待审核']
+        },
+        {
+          path: '/advertisingManagement/edittoBeReviewed',
+          name: 'edittoBeReviewed',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/edittoBeReviewed.vue'], resolve),
+        },
+        {
+          path: '/advertisingManagement/toBeShown',
+          name: 'toBeShown',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/toBeShown.vue'], resolve),
+          meta: ['营销管理', '广告管理', '待展示']
+        },
+        {
+          path: '/advertisingManagement/customArea',
+          name: 'customArea',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/customArea.vue'], resolve),
+          meta: ['营销管理', '广告管理', '自定义区域']
         }
       ]
     }

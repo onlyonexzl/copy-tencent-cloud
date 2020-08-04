@@ -621,11 +621,11 @@ let navArr = [
         actions: [
           {
             name: "优惠券管理",
-            url: "/marketingManagement/couponManagement"
+            url: "/preferentialManagement/couponManagement"
           },
           {
             name: "积分汇专区",
-            url: "/marketingManagement/bonusPointArea"
+            url: "/preferentialManagement/pointsCollectionZone"
           }
         ]
       }, {
@@ -637,31 +637,31 @@ let navArr = [
         actions: [
           {
             name: "广告管理",
-            url: "/marketingManagement/couponManagement"
+            url: "/advertisingManagement/advertisingManagement"
           },
           {
             name: "已展示",
-            url: "/marketingManagement/bonusPointArea"
+            url: "/advertisingManagement/displayed"
           },
           {
             name: "待申请",
-            url: "/marketingManagement/bonusPointArea"
+            url: "/advertisingManagement/pendingApplication"
           },
           {
             name: "将到期",
-            url: "/marketingManagement/bonusPointArea"
+            url: "/advertisingManagement/willExpire"
           },
           {
             name: "待审核",
-            url: "/marketingManagement/bonusPointArea"
+            url: "/advertisingManagement/toBeReviewed"
           },
           {
             name: "待展示",
-            url: "/marketingManagement/bonusPointArea"
+            url: "/advertisingManagement/toBeShown"
           },
           {
             name: "自定义区域",
-            url: "/marketingManagement/bonusPointArea"
+            url: "/advertisingManagement/customArea"
           }
         ]
       }, {
