@@ -281,7 +281,15 @@ export default {
         "/circleManagement/circleManagement",
         "/cloudsAndWarehouses/gatheringCommodities",
         "/cloudsAndWarehouses/warehouseGoods",
-        "/luckyDraw/lotteryResults"
+        "/luckyDraw/lotteryResults",
+        "/shopMagement/shoPermissions",
+        "/shopMagement/shoPermissions",
+        "/shopMagement/shopList",
+        "/shopMagement/starryShop",
+        "/shopMagement/cloundShop",
+        "/shopMagement/buyersEvaluation",
+        "/shopMagement/sellerEvaluation",
+        "/shopMagement/upgradeReview"
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {

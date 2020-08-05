@@ -265,6 +265,54 @@ let LARouter = [
     name: "comKnow",
     meta: ["分类设置", "知识型商品分类"],
     component: resolve => require(["@/view/classSetting/comKnow.vue"], resolve)
+  },
+  {
+    path: "/shopMagement/shoPermissions",
+    name: "shoPermissions",
+    meta: ["商家管理", "商铺管理", "商铺权限"],
+    component: resolve =>
+      require(["@/view/shopMagement/shoPermissions.vue"], resolve)
+  },
+  {
+    path: "/shopMagement/shopList",
+    name: "shopList",
+    meta: ["商家管理", "商铺管理", "商铺列表"],
+    component: resolve => require(["@/view/shopMagement/shopList.vue"], resolve)
+  },
+  {
+    path: "/shopMagement/starryShop",
+    name: "starryShop",
+    meta: ["商家管理", "商铺管理", "星店管理"],
+    component: resolve =>
+      require(["@/view/shopMagement/starryShop.vue"], resolve)
+  },
+  {
+    path: "/shopMagement/cloundShop",
+    name: "cloundShop",
+    meta: ["商家管理", "商铺管理", "云店管理"],
+    component: resolve =>
+      require(["@/view/shopMagement/cloundShop.vue"], resolve)
+  },
+  {
+    path: "/shopMagement/buyersEvaluation",
+    name: "buyersEvaluation",
+    meta: ["商家管理", "商铺管理", "买家评价"],
+    component: resolve =>
+      require(["@/view/shopMagement/buyersEvaluation.vue"], resolve)
+  },
+  {
+    path: "/shopMagement/sellerEvaluation",
+    name: "sellerEvaluation",
+    meta: ["商家管理", "商铺管理", "卖家评价"],
+    component: resolve =>
+      require(["@/view/shopMagement/sellerEvaluation.vue"], resolve)
+  },
+  {
+    path: "/shopMagement/upgradeReview",
+    name: "upgradeReview",
+    meta: ["商家管理", "商铺管理", "升级审核"],
+    component: resolve =>
+      require(["@/view/shopMagement/upgradeReview.vue"], resolve)
   }
 ];
 

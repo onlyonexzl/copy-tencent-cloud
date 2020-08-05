@@ -335,23 +335,41 @@ let LAMenu = [
   },
   {
     id: "SYSTEM",
-    name: "商铺管理",
+    name: "商家管理",
     icon: "el-icon-s-cooperation",
     subset: [
       {
         id: "ADMIN_LIST",
-        name: "通证",
+        name: "商铺管理",
         icon: "el-icon-user",
-        url: "/admin/list",
-        menu: true,
         actions: [
           {
-            name: "通证管理",
-            url: "/throughTheManagement/throughTheManagement"
+            name: "商铺权限",
+            url: "/shopMagement/shoPermissions"
           },
           {
-            name: "通证订单",
-            url: "/throughTheManagement/throughDd"
+            name: "商铺列表",
+            url: "/shopMagement/shopList"
+          },
+          {
+            name: "星店管理",
+            url: "/shopMagement/starryShop"
+          },
+          {
+            name: "云店管理",
+            url: "/shopMagement/cloundShop"
+          },
+          {
+            name: "买家评价",
+            url: "/shopMagement/buyersEvaluation"
+          },
+          {
+            name: "卖家评价",
+            url: "/shopMagement/sellerEvaluation"
+          },
+          {
+            name: "升级审核",
+            url: "/shopMagement/upgradeReview"
           }
         ]
       }
@@ -522,108 +540,108 @@ let LAMenu = [
       // }
     ]
   },
-  {
-    id: "SYSTEM",
-    name: "商铺设置",
-    icon: "el-icon-setting",
-    subset: [
-      {
-        id: "ADMIN_LIST",
-        name: "营销管理",
-        icon: "el-icon-user",
-        url: "/admin/list",
-        menu: true,
-        actions: [
-          {
-            name: "优惠卷管理",
-            url: "/admin/add",
-            parent: "/admin/list"
-          },
-          {
-            name: "积分汇专区",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "广告管理",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "自定义区域",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "商品排行",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "品牌管理",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "水印设置",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "SYSTEM",
-    name: "美城通",
-    icon: "el-icon-setting",
-    subset: [
-      {
-        id: "ADMIN_LIST",
-        name: "营销管理",
-        icon: "el-icon-user",
-        url: "/admin/list",
-        menu: true,
-        actions: [
-          {
-            name: "优惠卷管理",
-            url: "/admin/add",
-            parent: "/admin/list"
-          },
-          {
-            name: "积分汇专区",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "广告管理",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "自定义区域",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "商品排行",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "品牌管理",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          },
-          {
-            name: "水印设置",
-            url: "/admin/edit",
-            parent: "/admin/list"
-          }
-        ]
-      }
-    ]
-  },
+  // {
+  //   id: "SYSTEM",
+  //   name: "商铺设置",
+  //   icon: "el-icon-setting",
+  //   subset: [
+  //     {
+  //       id: "ADMIN_LIST",
+  //       name: "营销管理",
+  //       icon: "el-icon-user",
+  //       url: "/admin/list",
+  //       menu: true,
+  //       actions: [
+  //         {
+  //           name: "优惠卷管理",
+  //           url: "/admin/add",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "积分汇专区",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "广告管理",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "自定义区域",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "商品排行",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "品牌管理",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "水印设置",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "SYSTEM",
+  //   name: "美城通",
+  //   icon: "el-icon-setting",
+  //   subset: [
+  //     {
+  //       id: "ADMIN_LIST",
+  //       name: "营销管理",
+  //       icon: "el-icon-user",
+  //       url: "/admin/list",
+  //       menu: true,
+  //       actions: [
+  //         {
+  //           name: "优惠卷管理",
+  //           url: "/admin/add",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "积分汇专区",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "广告管理",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "自定义区域",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "商品排行",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "品牌管理",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         },
+  //         {
+  //           name: "水印设置",
+  //           url: "/admin/edit",
+  //           parent: "/admin/list"
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // },
   {
     id: "SYSTEM",
     name: "平台设置",
