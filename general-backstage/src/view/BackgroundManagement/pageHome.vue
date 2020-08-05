@@ -289,7 +289,16 @@ export default {
         "/shopMagement/cloundShop",
         "/shopMagement/buyersEvaluation",
         "/shopMagement/sellerEvaluation",
-        "/shopMagement/upgradeReview"
+        "/shopMagement/upgradeReview",
+        "/preferentialManagement/couponManagement",
+        "/preferentialManagement/pointsCollectionZone",
+        "/advertisingManagement/advertisingManagement",
+        "/advertisingManagement/displayed",
+        "/advertisingManagement/pendingApplication",
+        "/advertisingManagement/willExpire",
+        "/advertisingManagement/toBeReviewed",
+        "/advertisingManagement/toBeShown",
+        "/advertisingManagement/customArea"
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {
@@ -315,7 +324,14 @@ export default {
         "/commodityInformation/releasewholesaleGoods",
         "/commodityInformation/editnotOn",
         "/circleManagement/editpostManagement",
-        "/circleManagement/editCircleManagement"
+        "/circleManagement/editCircleManagement",
+        "/preferentialManagement/editcouponManagement",
+        "/preferentialManagement/editpointsCollectionZone",
+        "/advertisingManagement/editadvertisingManagement",
+        "/advertisingManagement/editdisplayed",
+        "/advertisingManagement/editpendingApplication",
+        "/advertisingManagement/editwillExpire",
+        "/advertisingManagement/edittoBeReviewed"
       ];
 
       this.flagTttName =
