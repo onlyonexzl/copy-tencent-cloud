@@ -605,7 +605,7 @@ let navArr = [
         actions: [
           {
             name: "抽奖活动",
-            url: "/marketingManagement/couponManagement"
+            url: "/luckyDraw/luckyDraw"
           },
           {
             name: "抽奖结果",
@@ -673,11 +673,11 @@ let navArr = [
         actions: [
           {
             name: "专题页面",
-            url: "/marketingManagement/couponManagement"
+            url: "/floorMarketing/specialPage"
           },
           {
             name: "首页楼层",
-            url: "/marketingManagement/bonusPointArea"
+            url: "/floorMarketing/homeFloor"
           }
         ]
       }, {
@@ -689,34 +689,35 @@ let navArr = [
         actions: [
           {
             name: "品牌管理",
-            url: "/marketingManagement/couponManagement"
+            url: "/brandInformation/brandManagement"
           },
-          {
-            name: "水印设置",
-            url: "/marketingManagement/bonusPointArea"
-          }
-        ]
-      }, {
-        id: 'ADMIN_LIST',
-        name: "数据中心",
-        icon: "el-icon-user",
-        url: "/admin/list",
-        menu: true,
-        actions: [
-          {
-            name: "商铺排行",
-            url: "/marketingManagement/couponManagement"
-          },
-          {
-            name: "消费排行",
-            url: "/marketingManagement/bonusPointArea"
-          },
-          {
-            name: "商品排行",
-            url: "/marketingManagement/bonusPointArea"
-          }
+          // {
+          //   name: "水印设置",
+          //   url: "/marketingManagement/bonusPointArea"
+          // }
         ]
       },
+      //  {
+      //   id: 'ADMIN_LIST',
+      //   name: "数据中心",
+      //   icon: "el-icon-user",
+      //   url: "/admin/list",
+      //   menu: true,
+      //   actions: [
+      //     {
+      //       name: "商铺排行",
+      //       url: "/marketingManagement/couponManagement"
+      //     },
+      //     {
+      //       name: "消费排行",
+      //       url: "/marketingManagement/bonusPointArea"
+      //     },
+      //     {
+      //       name: "商品排行",
+      //       url: "/marketingManagement/bonusPointArea"
+      //     }
+      //   ]
+      // },
     ]
   },
 

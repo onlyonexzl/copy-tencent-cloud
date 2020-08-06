@@ -82,6 +82,12 @@ export default new Router({
       component: (resolve) => require(['@/view/BackgroundManagement/pageHome.vue'], resolve),
       children: [
         ...LARouter,
+        {
+          path: '/homePage',
+          name: 'homePage',
+          component: (resolve) => require(['@/view/BackgroundManagement/homePage/homePage.vue'], resolve),
+          meta: ['首页', '数据备份', '数据备份']
+        },
         // 数据备份
         {
           path: '/DataBackup/dataBackup',
@@ -453,7 +459,18 @@ export default new Router({
           name: 'lotteryResults',
           component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/luckyDraw/lotteryResults.vue'], resolve),
           meta: ['营销管理', '幸运抽奖', '抽奖结果']
+        }, {
+          path: '/luckyDraw/luckyDraw',
+          name: 'luckyDraw',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/luckyDraw/luckyDraw.vue'], resolve),
+          meta: ['营销管理', '幸运抽奖', '抽奖活动']
+        }, {
+          path: '/luckyDraw/editluckyDraw',
+          name: 'editluckyDraw',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/luckyDraw/editluckyDraw.vue'], resolve),
+          meta: ['营销管理', '幸运抽奖', '抽奖活动']
         },
+
         {
           path: '/preferentialManagement/couponManagement',
           name: 'couponManagement',
@@ -545,6 +562,30 @@ export default new Router({
           name: 'customArea',
           component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/advertisingManagement/customArea.vue'], resolve),
           meta: ['营销管理', '广告管理', '自定义区域']
+        },
+        {
+          path: '/floorMarketing/specialPage',
+          name: 'specialPage',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/floorMarketing/specialPage.vue'], resolve),
+          meta: ['营销管理', '楼层营销', '专题页面']
+        },
+        {
+          path: '/floorMarketing/homeFloor',
+          name: 'homeFloor',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/floorMarketing/homeFloor.vue'], resolve),
+          meta: ['营销管理', '楼层营销', '首页楼层']
+        },
+        {
+          path: '/brandInformation/brandManagement',
+          name: 'brandManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/brandInformation/brandManagement.vue'], resolve),
+          meta: ['营销管理', '品牌信息', '品牌管理']
+        },
+        {
+          path: '/brandInformation/editbrandManagement',
+          name: 'editbrandManagement',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/brandInformation/editbrandManagement.vue'], resolve),
+          // meta: ['营销管理', '品牌信息', '品牌管理']
         }
       ]
     }

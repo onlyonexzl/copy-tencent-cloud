@@ -1,5 +1,5 @@
 <template>
-  <div class="lotteryResults">
+  <div class="luckyDraw">
     <div class="top_button">
       <div class="top_left">
         <span>获奖单号：</span>
@@ -172,7 +172,7 @@
 
 <script>
 export default {
-  name: 'lotteryResults',
+  name: 'luckyDraw',
 
   data () {
     return {
@@ -322,7 +322,7 @@ export default {
   justify-content: space-between;
 }
 
-.lotteryResults {
+.luckyDraw {
   width: 100%;
   height: 100%;
   display: flex;

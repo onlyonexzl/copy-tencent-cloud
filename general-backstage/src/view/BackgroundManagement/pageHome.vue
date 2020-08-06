@@ -316,7 +316,11 @@ export default {
         "/PlatForm/SpecialMangment/popUpad",
         "/PlatForm/BusinessCenter/showMerchants",
         "/PlatForm/BusinessCenter/templateTobuy",
-        "/PlatForm/partner/linksPage"
+        "/PlatForm/partner/linksPage",
+        "/floorMarketing/specialPage",
+        "/floorMarketing/homeFloor",
+        "/brandInformation/brandManagement",
+        "/luckyDraw/luckyDraw"
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {
@@ -349,7 +353,9 @@ export default {
         "/advertisingManagement/editdisplayed",
         "/advertisingManagement/editpendingApplication",
         "/advertisingManagement/editwillExpire",
-        "/advertisingManagement/edittoBeReviewed"
+        "/advertisingManagement/edittoBeReviewed",
+        "/brandInformation/editbrandManagement",
+        "/luckyDraw/editluckyDraw"
       ];
 
       this.flagTttName =
