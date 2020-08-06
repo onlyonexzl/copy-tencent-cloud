@@ -264,13 +264,17 @@ export default {
           width: 200,
           link: '/home/product'
         }, {
-          name: '服务市场',
+          name: '产品',
           width: 200,
           link: '/product'
         }, {
           name: '解决方案',
           width: 600,
           link: '/solution'
+        }, {
+          name: '市场',
+          width: 600,
+          link: '/marketHome/viewPage'
         }, {
           name: '云集',
           width: 700,
@@ -310,7 +314,7 @@ export default {
 
   methods: {
     goHomePage () {
-      this.$router.push('/homepage')
+      this.$router.push('/homePage')
     },
     mouseOver (e) {
       let name = e.srcElement.className
