@@ -298,7 +298,25 @@ export default {
         "/advertisingManagement/willExpire",
         "/advertisingManagement/toBeReviewed",
         "/advertisingManagement/toBeShown",
-        "/advertisingManagement/customArea"
+        "/advertisingManagement/customArea",
+        "/shopMagement/substation",
+        "/shopMagement/headOffice",
+        "/PlatForm/Navigation/naviment",
+        "/PlatForm/Navigation/headNaviment",
+        "/PlatForm/Navigation/middleNaviment",
+        "/PlatForm/Navigation/bottomNaviment",
+        "/PlatForm/Navigation/messageNaviment",
+        "/PlatForm/Navigation/helpNaviment",
+        "/PlatForm/PageInformation/pageMangement",
+        "/classSetting/jobClassify",
+        "/PlatForm/SpecialMangment/shopsMap",
+        "/PlatForm/SpecialMangment/webDvertising",
+        "/PlatForm/SpecialMangment/mobileRotation",
+        "/PlatForm/SpecialMangment/displayDvertising",
+        "/PlatForm/SpecialMangment/popUpad",
+        "/PlatForm/BusinessCenter/showMerchants",
+        "/PlatForm/BusinessCenter/templateTobuy",
+        "/PlatForm/partner/linksPage"
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {

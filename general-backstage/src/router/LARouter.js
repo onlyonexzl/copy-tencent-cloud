@@ -274,6 +274,20 @@ let LARouter = [
       require(["@/view/shopMagement/shoPermissions.vue"], resolve)
   },
   {
+    path: "/shopMagement/substation",
+    name: "substation",
+    meta: ["商家管理", "商铺管理", "分站管理"],
+    component: resolve =>
+      require(["@/view/shopMagement/substation.vue"], resolve)
+  },
+  {
+    path: "/shopMagement/headOffice",
+    name: "headOffice",
+    meta: ["商家管理", "商铺管理", "总店管理"],
+    component: resolve =>
+      require(["@/view/shopMagement/headOffice.vue"], resolve)
+  },
+  {
     path: "/shopMagement/shopList",
     name: "shopList",
     meta: ["商家管理", "商铺管理", "商铺列表"],
@@ -313,6 +327,120 @@ let LARouter = [
     meta: ["商家管理", "商铺管理", "升级审核"],
     component: resolve =>
       require(["@/view/shopMagement/upgradeReview.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/Navigation/naviment",
+    name: "naviment",
+    meta: ["平台装修", "导航信息", "导航管理"],
+    component: resolve =>
+      require(["@/view/PlatForm/Navigation/naviment.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/Navigation/headNaviment",
+    name: "headNaviment",
+    meta: ["平台装修", "导航信息", "头部导航"],
+    component: resolve =>
+      require(["@/view/PlatForm/Navigation/headNaviment.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/Navigation/middleNaviment",
+    name: "middleNaviment",
+    meta: ["平台装修", "导航信息", "中部导航"],
+    component: resolve =>
+      require(["@/view/PlatForm/Navigation/middleNaviment.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/Navigation/bottomNaviment",
+    name: "bottomNaviment",
+    meta: ["平台装修", "导航信息", "底部导航"],
+    component: resolve =>
+      require(["@/view/PlatForm/Navigation/bottomNaviment.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/Navigation/messageNaviment",
+    name: "messageNaviment",
+    meta: ["平台装修", "导航信息", "资讯导航"],
+    component: resolve =>
+      require(["@/view/PlatForm/Navigation/messageNaviment.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/Navigation/helpNaviment",
+    name: "helpNaviment",
+    meta: ["平台装修", "导航信息", "帮助中心"],
+    component: resolve =>
+      require(["@/view/PlatForm/Navigation/helpNaviment.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/PageInformation/pageMangement",
+    name: "pageMangement",
+    meta: ["平台装修", "页面信息", "页面管理"],
+    component: resolve =>
+      require(["@/view/PlatForm/PageInformation/pageMangement.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/PageInformation/addPageMangement",
+    name: "addPageMangement",
+    meta: ["平台装修", "页面信息", "添加页面管理"],
+    component: resolve =>
+      require(["@/view/PlatForm/PageInformation/addPageMangement.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/SpecialMangment/shopsMap",
+    name: "shopsMap",
+    meta: ["平台装修", "特殊广告管理", "商铺地图"],
+    component: resolve =>
+      require(["@/view/PlatForm/SpecialMangment/shopsMap.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/SpecialMangment/webDvertising",
+    name: "webDvertising",
+    meta: ["平台装修", "特殊广告管理", "轮转广告"],
+    component: resolve =>
+      require(["@/view/PlatForm/SpecialMangment/webDvertising.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/SpecialMangment/mobileRotation",
+    name: "mobileRotation",
+    meta: ["平台装修", "特殊广告管理", "手机轮转广告"],
+    component: resolve =>
+      require(["@/view/PlatForm/SpecialMangment/mobileRotation.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/SpecialMangment/displayDvertising",
+    name: "displayDvertising",
+    meta: ["平台装修", "特殊广告管理", "图片广告"],
+    component: resolve =>
+      require([
+        "@/view/PlatForm/SpecialMangment/displayDvertising.vue"
+      ], resolve)
+  },
+  {
+    path: "/PlatForm/SpecialMangment/popUpad",
+    name: "popUpad",
+    meta: ["平台装修", "特殊广告管理", "弹窗广告"],
+    component: resolve =>
+      require(["@/view/PlatForm/SpecialMangment/popUpad.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/BusinessCenter/showMerchants",
+    name: "showMerchants",
+    meta: ["平台装修", "商铺中心", "商家展示"],
+    component: resolve =>
+      require(["@/view/PlatForm/BusinessCenter/showMerchants.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/BusinessCenter/templateTobuy",
+    name: "templateTobuy",
+    meta: ["平台装修", "商铺中心", "模板购买"],
+    component: resolve =>
+      require(["@/view/PlatForm/BusinessCenter/templateTobuy.vue"], resolve)
+  },
+  {
+    path: "/PlatForm/partner/linksPage",
+    name: "linksPage",
+    meta: ["平台装修", "合作伙伴", "友情连接"],
+    component: resolve =>
+      require(["@/view/PlatForm/partner/linksPage.vue"], resolve)
   }
 ];
 
