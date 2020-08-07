@@ -1,5 +1,5 @@
 <template>
-  <div class="domain_page">
+  <div class="domain_page" :style="{ height: heights }">
     <div class="domain_top">
       <el-input placeholder="www|mydomain|shop|fff" v-model="value"></el-input>
       <el-button type="primary">提交</el-button>
@@ -12,6 +12,7 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
       value: ""
     };
   }
@@ -20,7 +21,6 @@ export default {
 
 <style lang="scss" scoped>
 .domain_page {
-  height: 590px;
   overflow: auto;
   background: #fff;
   border-radius: 4px;

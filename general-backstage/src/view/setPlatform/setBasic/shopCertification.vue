@@ -1,5 +1,5 @@
 <template>
-  <div class="shop_page">
+  <div class="shop_page" :style="{ height: heights }">
     <div class="page_top">
       会员ID
       <el-input v-model="value"></el-input>
@@ -12,7 +12,7 @@
       <el-button type="primary" size="medium">查询商铺</el-button>
     </div>
     <div class="page_con">
-      <el-table :data="tableData" style="width: 100%" max-height="570px">
+      <el-table :data="tableData" style="width: 100%" :height="tableHeight">
         <el-table-column prop="vip_id" label="会员ID" align="center">
           <template slot-scope="scope">
             {{ scope.row.vip_id }}
@@ -61,6 +61,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       radio: 3,
       value: "",
       currentPage: 1,
@@ -91,6 +93,11 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    var inHeight = document.getElementsByClassName("page_top");
+    this.tableHeight =
+      window.innerHeight - 210 - inHeight[0].clientHeight + "px";
   },
   methods: {
     audit() {},

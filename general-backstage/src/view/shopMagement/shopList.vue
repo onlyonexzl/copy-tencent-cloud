@@ -1,5 +1,5 @@
 <template>
-  <div class="shop_list">
+  <div class="shop_list" :style="{ height: heights }">
     <div class="list_top">
       <el-form ref="form" :model="form" label-width="80px">
         <div class="top_content">
@@ -57,7 +57,7 @@
       </el-form>
     </div>
     <div class="list_con">
-      <el-table :data="tableData" style="width: 100%" height="38vh">
+      <el-table :data="tableData" style="width: 100%" :height="tableHeight">
         <el-table-column prop="vip_id" label="会员ID（会员姓名）" width="150px">
         </el-table-column>
         <el-table-column prop="name" label="商铺名称"> </el-table-column>
@@ -96,6 +96,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       currentPage: 1,
       form: {
         name: "",
@@ -166,6 +168,11 @@ export default {
       ]
     };
   },
+  mounted() {
+    var inHeight = document.getElementsByClassName("list_top");
+    this.tableHeight =
+      window.innerHeight - 210 - inHeight[0].clientHeight + "px";
+  },
   methods: {
     onSubmit() {
       console.log("submit!");
@@ -179,7 +186,6 @@ export default {
 <style lang="scss" scoped>
 .shop_list {
   width: 100%;
-  height: calc(100% - 50px);
   border-radius: 5px;
   box-sizing: border-box;
   margin-bottom: 5px;
@@ -204,6 +210,7 @@ export default {
   }
   .list_con {
     margin-top: 5px;
+    flex: 1;
   }
 }
 </style>

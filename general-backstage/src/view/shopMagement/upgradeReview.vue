@@ -1,7 +1,7 @@
 <template>
-  <div class="buyer_tion">
+  <div class="buyer_tion" :style="{ height: heights }">
     <div class="tion_con">
-      <el-table :data="tableData" height="78vh" style="width: 100%">
+      <el-table :data="tableData" :height="tableHeight" style="width: 100%">
         <el-table-column prop="date" label="申请会员ID" width="180">
         </el-table-column>
         <el-table-column prop="name" label="商铺" width="180">
@@ -20,6 +20,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: window.innerHeight - 170 + "px",
       currentPage: 1,
       tableData: [
         {
@@ -80,6 +82,7 @@ export default {
       ]
     };
   },
+  mounted() {},
   methods: {
     handleSizeChange() {},
     handleCurrentChangeFun() {}

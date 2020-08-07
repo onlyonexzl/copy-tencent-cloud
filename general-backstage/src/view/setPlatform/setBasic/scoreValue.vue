@@ -1,5 +1,5 @@
 <template>
-  <div class="score_page">
+  <div class="score_page" :style="{ height: heights }">
     <el-form ref="form" :model="form" label-width="140px">
       <el-form-item label="商品库使用积分" prop="merchandise_credits">
         <el-input v-model="form.merchandise_credits"></el-input>
@@ -55,6 +55,7 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
       form: {
         name: "",
         region: "",
@@ -87,7 +88,6 @@ export default {
 
 <style lang="scss" scoped>
 .score_page {
-  height: 590px;
   overflow: auto;
   background: #fff;
   border-radius: 4px;

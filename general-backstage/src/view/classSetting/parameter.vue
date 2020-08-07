@@ -1,5 +1,5 @@
 <template>
-  <div class="class_fied">
+  <div class="class_fied" :style="{ height: heights }">
     <div class="fied_top">
       <el-button type="primary" size="medium" @click="addDialog"
         >添加分类</el-button
@@ -9,7 +9,7 @@
       <el-table
         :data="tableData"
         style="width: 100%"
-        height="60vh"
+        :height="tableHeight"
         @selection-change="handleSelectionChange"
         row-key="id"
         border
@@ -188,6 +188,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       tableData: [
         {
           id: 1,
@@ -260,6 +262,11 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    var inHeight = document.getElementsByClassName("fied_top");
+    this.tableHeight =
+      window.innerHeight - 250 - inHeight[0].clientHeight + "px";
   },
   methods: {
     handleSelectionChange() {},

@@ -9,7 +9,7 @@ let navArr = [
       id: 'PROVIDER_LIST',
       name: '后台首页',
       icon: 'el-icon-menu',
-      url: '/provider/list',
+      url: '/homePage',
       menu: true,
     }, {
       id: 'PROVIDER_LIST',
@@ -494,38 +494,472 @@ let navArr = [
     subset: [
       {
         id: 'ADMIN_LIST',
-        name: "营销管理",
+        name: "吃喝",
         icon: "el-icon-user",
         url: "/admin/list",
         menu: true,
         actions: [
           {
-            name: "优惠卷管理",
-            url: "/marketingManagement/couponManagement"
+            name: "吃喝分类",
+            url: "/eatAndDrink/classificationOfFood"
           },
           {
-            name: "积分汇专区",
-            url: "/marketingManagement/bonusPointArea"
+            name: "吃喝VIP分类",
+            url: "/eatAndDrink/classificationOfFoodVip"
           },
           {
-            name: "广告管理",
-            url: "/marketingManagement/advertisingManagement"
+            name: "吃喝商品",
+            url: "/eatAndDrink/foodAndDrink"
+          }, {
+            name: "吃喝商品vip",
+            url: "/eatAndDrink/foodAndDrinkVIP"
           },
           {
-            name: "自定义区域",
-            url: "/marketingManagement/customArea"
+            name: "吃喝需求",
+            url: "/eatAndDrink/drinkDemand"
           },
           {
-            name: "商品排行",
-            url: "/marketingManagement/commodityList"
+            name: "吃喝需求vip",
+            url: "/eatAndDrink/drinkDemandVIP"
           },
           {
-            name: "品牌管理",
-            url: "/marketingManagement/brandManagement"
+            name: "用户留言",
+            url: "/eatAndDrink/guestBook"
           },
           {
-            name: "水印设置",
-            url: "/marketingManagement/watermarkIsSet"
+            name: "客户留言vip",
+            url: "/eatAndDrink/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/eatAndDrink/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/eatAndDrink/returnChannel"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "玩乐",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "玩乐分类",
+            url: "/play/classificationOfFood"
+          },
+          {
+            name: "玩乐VIP分类",
+            url: "/play/classificationOfFoodVip"
+          },
+          {
+            name: "玩乐商品",
+            url: "/play/foodAndDrink"
+          }, {
+            name: "玩乐商品vip",
+            url: "/play/foodAndDrinkVIP"
+          },
+          {
+            name: "玩乐需求",
+            url: "/play/drinkDemand"
+          },
+          {
+            name: "玩乐需求vip",
+            url: "/play/drinkDemandVIP"
+          },
+          {
+            name: "用户留言",
+            url: "/play/guestBook"
+          },
+          {
+            name: "客户留言vip",
+            url: "/play/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/play/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/play/returnChannel"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "服饰",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "服饰分类",
+            url: "/accessories/classificationOfFood"
+          },
+          {
+            name: "服饰VIP分类",
+            url: "/accessories/classificationOfFoodVip"
+          },
+          {
+            name: "服饰商品",
+            url: "/accessories/foodAndDrink"
+          }, {
+            name: "服饰商品vip",
+            url: "/accessories/foodAndDrinkVIP"
+          },
+          {
+            name: "服饰需求",
+            url: "/accessories/drinkDemand"
+          },
+          {
+            name: "服饰需求vip",
+            url: "/accessories/drinkDemandVIP"
+          },
+          {
+            name: "用户留言",
+            url: "/accessories/guestBook"
+          },
+          {
+            name: "客户留言vip",
+            url: "/accessories/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/accessories/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/accessories/returnChannel"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "丽人",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "丽人分类",
+            url: "/beauty/classificationOfFood"
+          },
+          {
+            name: "丽人VIP分类",
+            url: "/beauty/classificationOfFoodVip"
+          },
+          {
+            name: "丽人商品",
+            url: "/beauty/foodAndDrink"
+          }, {
+            name: "丽人商品vip",
+            url: "/beauty/foodAndDrinkVIP"
+          },
+          {
+            name: "丽人需求",
+            url: "/beauty/drinkDemand"
+          },
+          {
+            name: "丽人需求vip",
+            url: "/beauty/drinkDemandVIP"
+          },
+          {
+            name: "用户留言",
+            url: "/beauty/guestBook"
+          },
+          {
+            name: "客户留言vip",
+            url: "/beauty/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/beauty/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/beauty/returnChannel"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "百货",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "百货分类",
+            url: "/departmentStores/classificationOfFood"
+          },
+          {
+            name: "百货VIP分类",
+            url: "/departmentStores/classificationOfFoodVip"
+          },
+          {
+            name: "百货商品",
+            url: "/departmentStores/foodAndDrink"
+          }, {
+            name: "百货商品vip",
+            url: "/departmentStores/foodAndDrinkVIP"
+          },
+          {
+            name: "百货需求",
+            url: "/departmentStores/drinkDemand"
+          },
+          {
+            name: "百货需求vip",
+            url: "/departmentStores/drinkDemandVIP"
+          },
+          {
+            name: "用户留言",
+            url: "/departmentStores/guestBook"
+          },
+          {
+            name: "客户留言vip",
+            url: "/departmentStores/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/departmentStores/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/departmentStores/returnChannel"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "闲置",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "闲置分类",
+            url: "/lieIdle/classificationOfFood"
+          },
+          {
+            name: "闲置VIP分类",
+            url: "/lieIdle/classificationOfFoodVip"
+          },
+          {
+            name: "闲置商品",
+            url: "/lieIdle/foodAndDrink"
+          }, {
+            name: "闲置商品vip",
+            url: "/lieIdle/foodAndDrinkVIP"
+          },
+          {
+            name: "闲置需求",
+            url: "/lieIdle/drinkDemand"
+          },
+          {
+            name: "闲置需求vip",
+            url: "/lieIdle/drinkDemandVIP"
+          },
+          {
+            name: "用户留言",
+            url: "/lieIdle/guestBook"
+          },
+          {
+            name: "客户留言vip",
+            url: "/lieIdle/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/lieIdle/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/lieIdle/returnChannel"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "健康",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "健康分类",
+            url: "/healthy/classificationOfFood"
+          },
+          {
+            name: "健康VIP分类",
+            url: "/healthy/classificationOfFoodVip"
+          },
+          {
+            name: "健康商品",
+            url: "/healthy/foodAndDrink"
+          }, {
+            name: "健康商品vip",
+            url: "/healthy/foodAndDrinkVIP"
+          },
+          {
+            name: "健康需求",
+            url: "/healthy/drinkDemand"
+          },
+          {
+            name: "健康需求vip",
+            url: "/healthy/drinkDemandVIP"
+          },
+          {
+            name: "用户留言",
+            url: "/healthy/guestBook"
+          },
+          {
+            name: "客户留言vip",
+            url: "/healthy/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/healthy/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/healthy/returnChannel"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "生活",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "生活分类",
+            url: "/life/classificationOfFood"
+          },
+          {
+            name: "生活VIP分类",
+            url: "/life/classificationOfFoodVip"
+          },
+          {
+            name: "生活商品",
+            url: "/life/foodAndDrink"
+          }, {
+            name: "生活商品vip",
+            url: "/life/foodAndDrinkVIP"
+          },
+          {
+            name: "生活需求",
+            url: "/life/drinkDemand"
+          },
+          {
+            name: "生活需求vip",
+            url: "/life/drinkDemandVIP"
+          },
+          {
+            name: "用户留言",
+            url: "/life/guestBook"
+          },
+          {
+            name: "客户留言vip",
+            url: "/life/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/life/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/life/returnChannel"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "房产",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "房产分类",
+            url: "/houseProperty/classificationOfFood"
+          },
+          {
+            name: "房产VIP分类",
+            url: "/houseProperty/classificationOfFoodVip"
+          },
+          {
+            name: "房产商品",
+            url: "/houseProperty/foodAndDrink"
+          }, {
+            name: "房产商品vip",
+            url: "/houseProperty/foodAndDrinkVIP"
+          },
+          {
+            name: "房产需求",
+            url: "/houseProperty/drinkDemand"
+          },
+          {
+            name: "房产需求vip",
+            url: "/houseProperty/drinkDemandVIP"
+          },
+          {
+            name: "用户留言",
+            url: "/houseProperty/guestBook"
+          },
+          {
+            name: "客户留言vip",
+            url: "/houseProperty/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/houseProperty/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/houseProperty/returnChannel"
+          }
+        ]
+      }, {
+        id: 'ADMIN_LIST',
+        name: "汽车",
+        icon: "el-icon-user",
+        url: "/admin/list",
+        menu: true,
+        actions: [
+          {
+            name: "汽车分类",
+            url: "/automobile/classificationOfFood"
+          },
+          {
+            name: "汽车VIP分类",
+            url: "/automobile/classificationOfFoodVip"
+          },
+          {
+            name: "汽车商品",
+            url: "/automobile/foodAndDrink"
+          }, {
+            name: "汽车商品vip",
+            url: "/automobile/foodAndDrinkVIP"
+          },
+          {
+            name: "汽车需求",
+            url: "/automobile/drinkDemand"
+          },
+          {
+            name: "汽车需求vip",
+            url: "/automobile/drinkDemandVIP"
+          },
+          {
+            name: "用户留言",
+            url: "/automobile/guestBook"
+          },
+          {
+            name: "客户留言vip",
+            url: "/automobile/customerOrderVIP"
+          },
+          {
+            name: "客户订单",
+            url: "/automobile/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/automobile/returnChannel"
           }
         ]
       },

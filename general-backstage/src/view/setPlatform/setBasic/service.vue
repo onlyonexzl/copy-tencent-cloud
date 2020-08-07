@@ -1,5 +1,5 @@
 <template>
-  <div class="service_page">
+  <div class="service_page" :style="{ height: heights }">
     <el-form ref="form" :model="form" label-width="100px">
       <el-form-item label="公司电话号码" prop="telephone_number">
         <el-input v-model="form.telephone_number"></el-input>
@@ -58,6 +58,7 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
       form: {
         name: "",
         region: "",
@@ -90,7 +91,6 @@ export default {
 
 <style lang="scss" scoped>
 .service_page {
-  height: 600px;
   overflow: auto;
   background: #fff;
   border-radius: 4px;

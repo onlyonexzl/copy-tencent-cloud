@@ -1,5 +1,5 @@
 <template>
-  <div class="email_page">
+  <div class="email_page" :style="{ height: heights }">
     <el-form
       :model="ruleForm"
       ref="ruleForm"
@@ -95,6 +95,7 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
       textarea: "",
       ruleForm: {
         name: "",
@@ -154,7 +155,6 @@ export default {
 
 <style lang="scss" scoped>
 .email_page {
-  max-height: 600px;
   background: #fff;
   border-radius: 4px;
   overflow: auto;

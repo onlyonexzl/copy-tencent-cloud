@@ -1,6 +1,6 @@
 <template>
-  <div class="setDomain_page">
-    <el-table :data="tableData" style="width: 100%" max-height="570px">
+  <div class="setDomain_page" :style="{ height: heights }">
+    <el-table :data="tableData" style="width: 100%" :height="tableHeight">
       <el-table-column prop="date" label="顶级域名" align="center">
         <template slot-scope="scope">
           <el-input v-model="scope.row.input"></el-input>
@@ -18,7 +18,7 @@
       </el-table-column>
       <el-table-column fixed="right" label="操作" width="100">
         <template slot-scope="scope">
-          <el-button type="danger" icon="el-icon-delete" circle></el-button>
+          <el-button type="text" style="color: #f00;">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -39,6 +39,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: window.innerHeight - 210 + "px",
       currentPage: 1,
       tableData: [
         {

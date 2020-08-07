@@ -1,10 +1,10 @@
 <template>
-  <div class="buyer_tion">
+  <div class="buyer_tion" :style="{ height: heights }">
     <div class="tion_top">
       <el-button type="primary" size="medium">删除所选</el-button>
     </div>
     <div class="tion_con">
-      <el-table :data="tableData" height="65vh" style="width: 100%">
+      <el-table :data="tableData" style="width: 100%" :height="tableHeight">
         <el-table-column type="selection" width="55"> </el-table-column>
         <el-table-column prop="date" label="评价" width="180">
         </el-table-column>
@@ -38,6 +38,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       currentPage: 1,
       tableData: [
         {
@@ -77,6 +79,11 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    var inHeight = document.getElementsByClassName("tion_top");
+    this.tableHeight =
+      window.innerHeight - 210 - inHeight[0].clientHeight + "px";
   },
   methods: {
     handleSizeChange() {},

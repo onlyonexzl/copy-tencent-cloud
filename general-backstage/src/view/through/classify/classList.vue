@@ -1,5 +1,5 @@
 <template>
-  <div class="task_look">
+  <div class="task_look" :style="{ height: heights }">
     <div class="task_top">
       <el-input
         v-model="input"
@@ -9,7 +9,12 @@
       <el-button type="primary" icon="el-icon-search" size="medium"></el-button>
     </div>
     <div class="task_con">
-      <el-table :data="tableData" style="width: 100%" max-height="470px" border>
+      <el-table
+        :data="tableData"
+        style="width: 100%"
+        :height="tableHeight"
+        border
+      >
         <el-table-column
           prop="img_url"
           label="封面图片"
@@ -65,6 +70,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       input: "",
       currentPage: 1,
       tableData: [
@@ -106,6 +113,11 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    var inHeight = document.getElementsByClassName("task_top");
+    this.tableHeight =
+      window.innerHeight - 210 - inHeight[0].clientHeight + "px";
   },
   methods: {
     handleSizeChange() {},

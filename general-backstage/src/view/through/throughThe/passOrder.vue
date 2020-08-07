@@ -1,5 +1,5 @@
 <template>
-  <div class="man_look">
+  <div class="man_look" :style="{ height: heights }">
     <div class="man_top">
       <div>
         订单筛选:
@@ -20,7 +20,7 @@
         :data="tableData"
         border
         style="width: 100%"
-        max-height="470px"
+        :height="tableHeight"
         @selection-change="handleSelectionChange"
       >
         <el-table-column
@@ -82,6 +82,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       value: "1",
       currentPage: 1,
       options: [
@@ -145,6 +147,11 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    var inHeight = document.getElementsByClassName("man_top");
+    this.tableHeight =
+      window.innerHeight - 210 - inHeight[0].clientHeight + "px";
   },
   methods: {
     handleSelectionChange() {},

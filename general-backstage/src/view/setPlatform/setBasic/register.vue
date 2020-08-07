@@ -1,5 +1,5 @@
 <template>
-  <div class="refister_page">
+  <div class="refister_page" :style="{ height: heights }">
     <el-form
       :model="ruleForm"
       ref="ruleForm"
@@ -136,6 +136,7 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
       ruleForm: {
         name: "",
         region: "",
@@ -154,7 +155,6 @@ export default {
 
 <style lang="scss" scoped>
 .refister_page {
-  height: 590px;
   background: #fff;
   border-radius: 4px;
   overflow: auto;

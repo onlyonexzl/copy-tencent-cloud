@@ -1,5 +1,5 @@
 <template>
-  <div class="setnode_page">
+  <div class="setnode_page" :style="{ height: heights }">
     <el-form
       :model="ruleForm"
       :rules="rules"
@@ -89,6 +89,7 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
       dialogVisible: false,
       ruleForm: {
         name: "",
@@ -141,7 +142,6 @@ export default {
 
 <style lang="scss" scoped>
 .setnode_page {
-  height: 590px;
   background: #fff;
   border-radius: 4px;
   overflow: auto;

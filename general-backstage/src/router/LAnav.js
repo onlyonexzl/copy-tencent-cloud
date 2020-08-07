@@ -327,153 +327,8 @@ let LAMenu = [
           }
         ]
       }
-      // {
-      //   id: 'ROLE_LIST',
-      //   name: "角色列表",
-      //   icon: "el-icon-edit",
-      //   url: "/role/list",
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: "新增角色",
-      //   //     url: "/role/add",
-      //   //     parent: '/role/list'
-      //   //   },
-      //   //   {
-      //   //     name: "修改角色",
-      //   //     url: "/role/edit",
-      //   //     parent: '/role/list'
-      //   //   },
-      //   //   {
-      //   //     name: "菜单功能权限",
-      //   //     url: "/role/menus",
-      //   //     parent: '/role/list'
-      //   //   }
-      //   // ]
-      // },
-      // {
-      //   id: 'MENU_LIST',
-      //   name: "菜单列表",
-      //   icon: "el-icon-edit",
-      //   url: "/menu/list",
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: "新增菜单",
-      //   //     url: "/menu/add",
-      //   //     parent: '/menu/list'
-      //   //   },
-      //   //   {
-      //   //     name: "修改菜单",
-      //   //     url: "/menu/edit",
-      //   //     parent: '/menu/list'
-      //   //   }
-      //   // ]
-      // }
     ]
   },
-  // {
-  //   id: "SYSTEM",
-  //   name: "商铺设置",
-  //   icon: "el-icon-setting",
-  //   subset: [
-  //     {
-  //       id: "ADMIN_LIST",
-  //       name: "营销管理",
-  //       icon: "el-icon-user",
-  //       url: "/admin/list",
-  //       menu: true,
-  //       actions: [
-  //         {
-  //           name: "优惠卷管理",
-  //           url: "/admin/add",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "积分汇专区",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "广告管理",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "自定义区域",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "商品排行",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "品牌管理",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "水印设置",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
-  // {
-  //   id: "SYSTEM",
-  //   name: "美城通",
-  //   icon: "el-icon-setting",
-  //   subset: [
-  //     {
-  //       id: "ADMIN_LIST",
-  //       name: "营销管理",
-  //       icon: "el-icon-user",
-  //       url: "/admin/list",
-  //       menu: true,
-  //       actions: [
-  //         {
-  //           name: "优惠卷管理",
-  //           url: "/admin/add",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "积分汇专区",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "广告管理",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "自定义区域",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "商品排行",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "品牌管理",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "水印设置",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
   {
     id: "SYSTEM",
     name: "平台设置",
@@ -489,10 +344,10 @@ let LAMenu = [
             name: "商家设置",
             url: "/setPlatform/setBasic/merchant"
           },
-          {
-            name: "基础信息",
-            url: "/setPlatform/setBasic/foundational"
-          },
+          // {
+          //   name: "基础信息",
+          //   url: "/setPlatform/setBasic/foundational"
+          // },
           {
             name: "客服设置",
             url: "/setPlatform/setBasic/service"
@@ -564,57 +419,6 @@ let LAMenu = [
       }
     ]
   },
-  // {
-  //   id: "SYSTEM",
-  //   name: "开放平台",
-  //   icon: "el-icon-setting",
-  //   subset: [
-  //     {
-  //       id: "ADMIN_LIST",
-  //       name: "营销管理",
-  //       icon: "el-icon-user",
-  //       url: "/admin/list",
-  //       menu: true,
-  //       actions: [
-  //         {
-  //           name: "优惠卷管理",
-  //           url: "/admin/add",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "积分汇专区",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "广告管理",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "自定义区域",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "商品排行",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "品牌管理",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         },
-  //         {
-  //           name: "水印设置",
-  //           url: "/admin/edit",
-  //           parent: "/admin/list"
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
   {
     id: "SYSTEM",
     name: "拓展管理",

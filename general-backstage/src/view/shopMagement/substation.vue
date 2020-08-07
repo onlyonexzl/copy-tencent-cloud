@@ -1,12 +1,12 @@
 <template>
-  <div class="substa_page">
+  <div class="substa_page" :style="{ height: heights }">
     <div class="subPage_top">
       <el-button size="medium" type="primary" @click="addRegion"
         >添加搜索地区</el-button
       >
     </div>
 
-    <ul class="subpage_ul">
+    <ul class="subpage_ul" :height="tableHeight">
       <h3>热门地区</h3>
       <li v-for="(item, index) in cityData" :key="index">
         <span>{{ item.name }}</span>
@@ -108,6 +108,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       cityData: [
         {
           name: "A",
@@ -164,6 +166,11 @@ export default {
       form: {},
       dialogRegion: false
     };
+  },
+  mounted() {
+    var inHeight = document.getElementsByClassName("subPage_top");
+    this.tableHeight =
+      window.innerHeight - 210 - inHeight[0].clientHeight + "px";
   },
   methods: {
     setAdmin(name) {
