@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ height: heights }">
+  <div :style="{ height: heights }" class="trust_page">
     <el-table :data="tableData" style="width: 100%" :height="tableHeight">
       <el-table-column prop="name" label="申请商铺名" width="200">
       </el-table-column>
@@ -93,4 +93,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.trust_page {
+  overflow: auto;
+}
+</style>

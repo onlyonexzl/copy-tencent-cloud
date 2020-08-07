@@ -6,7 +6,7 @@
           :data="tableData"
           :span-method="objectSpanMethod"
           style="width: 100%"
-          :height="tableHeight"
+          :max-height="tableHeight"
         >
           <el-table-column label="一级菜单1" align="center">
             <el-table-column align="center" label="名称">
@@ -115,6 +115,7 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: auto;
   .top_button {
     width: 100%;
     height: auto;

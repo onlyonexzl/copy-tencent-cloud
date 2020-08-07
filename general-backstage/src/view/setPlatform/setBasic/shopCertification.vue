@@ -12,7 +12,7 @@
       <el-button type="primary" size="medium">查询商铺</el-button>
     </div>
     <div class="page_con">
-      <el-table :data="tableData" style="width: 100%" :height="tableHeight">
+      <el-table :data="tableData" style="width: 100%" :max-height="tableHeight">
         <el-table-column prop="vip_id" label="会员ID" align="center">
           <template slot-scope="scope">
             {{ scope.row.vip_id }}
@@ -109,8 +109,6 @@ export default {
 
 <style lang="scss" scoped>
 .shop_page {
-  height: 590px;
-  // background: #fff;
   border-radius: 4px;
   overflow: auto;
   .page_top {

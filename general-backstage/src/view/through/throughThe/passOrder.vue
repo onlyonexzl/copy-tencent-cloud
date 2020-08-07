@@ -20,7 +20,7 @@
         :data="tableData"
         border
         style="width: 100%"
-        :height="tableHeight"
+        :max-height="tableHeight"
         @selection-change="handleSelectionChange"
       >
         <el-table-column

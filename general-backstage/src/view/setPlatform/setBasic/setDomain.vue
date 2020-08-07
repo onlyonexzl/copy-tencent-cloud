@@ -1,6 +1,6 @@
 <template>
   <div class="setDomain_page" :style="{ height: heights }">
-    <el-table :data="tableData" style="width: 100%" :height="tableHeight">
+    <el-table :data="tableData" style="width: 100%" :max-height="tableHeight">
       <el-table-column prop="date" label="顶级域名" align="center">
         <template slot-scope="scope">
           <el-input v-model="scope.row.input"></el-input>
@@ -83,7 +83,6 @@ export default {
 
 <style lang="scss" scoped>
 .setDomain_page {
-  height: 590px;
   background: #fff;
   border-radius: 4px;
   overflow: auto;

@@ -6,7 +6,7 @@
         :span-method="objectSpanMethod"
         border
         style="width: 100%; margin-top: 20px"
-        :height="tableHeight"
+        :max-height="tableHeight"
       >
         <el-table-column label="一级菜单" align="center">
           <el-table-column prop="id" label="名称" width="180" align="center">
@@ -132,5 +132,6 @@ export default {
 <style lang="scss" scoped>
 .task_look {
   background: #fff;
+  overflow: auto;
 }
 </style>

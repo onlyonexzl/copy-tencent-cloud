@@ -92,6 +92,7 @@ export default {
   border-radius: 5px;
   padding-top: 10px;
   padding-left: 20px;
+  overflow: auto;
   .text_form {
     width: 50%;
     .el-input {
