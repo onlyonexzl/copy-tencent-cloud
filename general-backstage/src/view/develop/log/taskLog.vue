@@ -1,11 +1,12 @@
 <template>
-  <div class="task_look">
+  <div class="task_look" :style="{ height: heights }">
     <div class="task_con">
       <el-table
         :data="tableData"
         :span-method="objectSpanMethod"
         border
         style="width: 100%; margin-top: 20px"
+        :height="tableHeight"
       >
         <el-table-column label="一级菜单" align="center">
           <el-table-column prop="id" label="名称" width="180" align="center">
@@ -44,6 +45,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: window.innerHeight - 220 + "px",
       input: "",
       currentPage: 1,
       tableData: [
@@ -92,6 +95,7 @@ export default {
       ]
     };
   },
+  mounted() {},
   methods: {
     handleSizeChange() {},
     handleCurrentChangeFun() {},
@@ -127,5 +131,6 @@ export default {
 
 <style lang="scss" scoped>
 .task_look {
+  background: #fff;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="text_mess">
+  <div class="text_mess" :style="{ height: heights }">
     <el-form
       ref="ruleForm"
       :model="form"
@@ -57,6 +57,7 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 170 + "px",
       form: {
         send: "1",
         phone: "",
@@ -101,6 +102,7 @@ export default {
   border-radius: 5px;
   padding-top: 10px;
   padding-left: 20px;
+  overflow: auto;
   .text_form {
     width: 50%;
     .el-input {

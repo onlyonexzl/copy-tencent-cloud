@@ -1,5 +1,5 @@
 <template>
-  <div class="task_look">
+  <div class="task_look" :style="{ height: heights }">
     <div class="task_top">
       会员ID
       <el-input
@@ -10,7 +10,7 @@
       <el-button type="primary" icon="el-icon-search" size="medium"></el-button>
     </div>
     <div class="task_con">
-      <el-table :data="tableData" style="width: 100%">
+      <el-table :data="tableData" style="width: 100%" :height="tableHeight">
         <el-table-column prop="id" label="ID" width="100" align="center">
         </el-table-column>
         <el-table-column
@@ -43,6 +43,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       input: "",
       currentPage: 1,
       tableData: [
@@ -79,6 +81,11 @@ export default {
       ]
     };
   },
+  mounted() {
+    var inHeight = document.getElementsByClassName("task_top");
+    this.tableHeight =
+      window.innerHeight - 210 - inHeight[0].clientHeight + "px";
+  },
   methods: {
     handleSizeChange() {},
     handleCurrentChangeFun() {}
@@ -88,6 +95,8 @@ export default {
 
 <style lang="scss" scoped>
 .task_look {
+  display: flex;
+  flex-direction: column;
   .task_top {
     width: 100%;
     background: #fff;
@@ -99,6 +108,10 @@ export default {
       width: 300px;
       margin-left: 5px;
     }
+  }
+  .task_con {
+    flex: 1;
+    background: #fff;
   }
 }
 </style>

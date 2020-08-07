@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <el-table :data="tableData" style="width: 100%">
+  <div :style="{ height: heights }">
+    <el-table :data="tableData" style="width: 100%" :height="tableHeight">
       <el-table-column prop="name" label="申请商铺名" width="200">
       </el-table-column>
       <el-table-column prop="link_man" label="联系人" width="180">
@@ -37,6 +37,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: window.innerHeight - 180 + "px",
       tableData: [
         {
           name: "TB阿拉伯",

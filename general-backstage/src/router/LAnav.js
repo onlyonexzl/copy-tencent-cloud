@@ -446,10 +446,10 @@ let LAMenu = [
             name: "邮件群发",
             url: "/develop/management/groupMail"
           },
-          {
-            name: "淘宝转换",
-            url: "/develop/management/taobaoConversion"
-          },
+          // {
+          //   name: "淘宝转换",
+          //   url: "/develop/management/taobaoConversion"
+          // },
           {
             name: "托管管理",
             url: "/develop/management/trustManagement"
