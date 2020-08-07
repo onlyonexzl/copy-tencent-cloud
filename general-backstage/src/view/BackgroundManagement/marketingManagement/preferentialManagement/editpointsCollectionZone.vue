@@ -263,6 +263,11 @@
                      type="primary">点击上传</el-button>
         </el-upload>
       </el-form-item>
+      <el-form-item label="详细说明："
+                    style="width: 100%">
+        <div ref="editorElem"
+             style="text-align:left;width: 100%;"></div>
+      </el-form-item>
     </el-form>
     <el-button type="primary"
                style="float: right">确定</el-button>

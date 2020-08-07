@@ -586,6 +586,606 @@ export default new Router({
           name: 'editbrandManagement',
           component: (resolve) => require(['@/view/BackgroundManagement/marketingManagement/brandInformation/editbrandManagement.vue'], resolve),
           // meta: ['营销管理', '品牌信息', '品牌管理']
+        },
+        {
+          path: '/eatAndDrink/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '吃喝', '吃喝分类']
+        },
+        {
+          path: '/eatAndDrink/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '吃喝', '吃喝VIP分类']
+        },
+        {
+          path: '/eatAndDrink/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '吃喝', '吃喝商品']
+        },
+        {
+          path: '/eatAndDrink/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '吃喝', '吃喝需求']
+        },
+        {
+          path: '/eatAndDrink/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '吃喝', '吃喝商品VIP']
+        },
+        {
+          path: '/eatAndDrink/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '吃喝', '吃喝需求VIP']
+        },
+        {
+          path: '/eatAndDrink/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/guestBook.vue'], resolve),
+          meta: ['集市管理', '吃喝', '用户留言']
+        }, {
+          path: '/eatAndDrink/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '吃喝', '客户留言vip']
+        },
+        {
+          path: '/eatAndDrink/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/customerOrder.vue'], resolve),
+          meta: ['集市管理', '吃喝', '客户订单']
+        },
+        {
+          path: '/eatAndDrink/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/eatAndDrink/returnChannel.vue'], resolve),
+          meta: ['集市管理', '吃喝', '退货通道']
+          //--- 
+        },
+        {
+          path: '/Play/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '玩乐', '玩乐分类']
+        },
+        {
+          path: '/Play/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '玩乐', '玩乐VIP分类']
+        },
+        {
+          path: '/Play/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '玩乐', '玩乐商品']
+        },
+        {
+          path: '/Play/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '玩乐', '玩乐需求']
+        },
+        {
+          path: '/Play/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '玩乐', '玩乐商品VIP']
+        },
+        {
+          path: '/Play/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '玩乐', '玩乐需求VIP']
+        },
+        {
+          path: '/Play/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/guestBook.vue'], resolve),
+          meta: ['集市管理', '玩乐', '用户留言']
+        }, {
+          path: '/Play/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '玩乐', '客户留言vip']
+        },
+        {
+          path: '/Play/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/customerOrder.vue'], resolve),
+          meta: ['集市管理', '玩乐', '客户订单']
+        },
+        {
+          path: '/Play/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/Play/returnChannel.vue'], resolve),
+          meta: ['集市管理', '玩乐', '退货通道']
+          //--
+        },
+        {
+          path: '/accessories/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '服饰', '服饰分类']
+        },
+        {
+          path: '/accessories/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '服饰', '服饰VIP分类']
+        },
+        {
+          path: '/accessories/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '服饰', '服饰商品']
+        },
+        {
+          path: '/accessories/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '服饰', '服饰需求']
+        },
+        {
+          path: '/accessories/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '服饰', '服饰商品VIP']
+        },
+        {
+          path: '/accessories/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '服饰', '服饰需求VIP']
+        },
+        {
+          path: '/accessories/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/guestBook.vue'], resolve),
+          meta: ['集市管理', '服饰', '用户留言']
+        }, {
+          path: '/accessories/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '服饰', '客户留言vip']
+        },
+        {
+          path: '/accessories/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/customerOrder.vue'], resolve),
+          meta: ['集市管理', '服饰', '客户订单']
+        },
+        {
+          path: '/accessories/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/accessories/returnChannel.vue'], resolve),
+          meta: ['集市管理', '服饰', '退货通道']
+          //--
+        },
+        {
+          path: '/beauty/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '丽人', '丽人分类']
+        },
+        {
+          path: '/beauty/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '丽人', '丽人VIP分类']
+        },
+        {
+          path: '/beauty/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '丽人', '丽人商品']
+        },
+        {
+          path: '/beauty/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '丽人', '丽人需求']
+        },
+        {
+          path: '/beauty/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '丽人', '丽人商品VIP']
+        },
+        {
+          path: '/beauty/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '丽人', '丽人需求VIP']
+        },
+        {
+          path: '/beauty/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/guestBook.vue'], resolve),
+          meta: ['集市管理', '丽人', '用户留言']
+        }, {
+          path: '/beauty/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '丽人', '客户留言vip']
+        },
+        {
+          path: '/beauty/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/customerOrder.vue'], resolve),
+          meta: ['集市管理', '丽人', '客户订单']
+        },
+        {
+          path: '/beauty/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/beauty/returnChannel.vue'], resolve),
+          meta: ['集市管理', '丽人', '退货通道']
+          //--
+        },
+        {
+          path: '/departmentStores/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '百货', '百货分类']
+        },
+        {
+          path: '/departmentStores/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '百货', '百货VIP分类']
+        },
+        {
+          path: '/departmentStores/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '百货', '百货商品']
+        },
+        {
+          path: '/departmentStores/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '百货', '百货需求']
+        },
+        {
+          path: '/departmentStores/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '百货', '百货商品VIP']
+        },
+        {
+          path: '/departmentStores/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '百货', '百货需求VIP']
+        },
+        {
+          path: '/departmentStores/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/guestBook.vue'], resolve),
+          meta: ['集市管理', '百货', '用户留言']
+        }, {
+          path: '/departmentStores/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '百货', '客户留言vip']
+        },
+        {
+          path: '/departmentStores/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/customerOrder.vue'], resolve),
+          meta: ['集市管理', '百货', '客户订单']
+        },
+        {
+          path: '/departmentStores/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/departmentStores/returnChannel.vue'], resolve),
+          meta: ['集市管理', '百货', '退货通道']
+          //--
+        },
+        {
+          path: '/lieIdle/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '闲置', '闲置分类']
+        },
+        {
+          path: '/lieIdle/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '闲置', '闲置VIP分类']
+        },
+        {
+          path: '/lieIdle/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '闲置', '闲置商品']
+        },
+        {
+          path: '/lieIdle/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '闲置', '闲置需求']
+        },
+        {
+          path: '/lieIdle/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '闲置', '闲置商品VIP']
+        },
+        {
+          path: '/lieIdle/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '闲置', '闲置需求VIP']
+        },
+        {
+          path: '/lieIdle/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/guestBook.vue'], resolve),
+          meta: ['集市管理', '闲置', '用户留言']
+        }, {
+          path: '/lieIdle/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '闲置', '客户留言vip']
+        },
+        {
+          path: '/lieIdle/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/customerOrder.vue'], resolve),
+          meta: ['集市管理', '闲置', '客户订单']
+        },
+        {
+          path: '/lieIdle/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/lieIdle/returnChannel.vue'], resolve),
+          meta: ['集市管理', '闲置', '退货通道']
+          //--
+        },
+        {
+          path: '/healthy/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '健康', '健康分类']
+        },
+        {
+          path: '/healthy/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '健康', '健康VIP分类']
+        },
+        {
+          path: '/healthy/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '健康', '健康商品']
+        },
+        {
+          path: '/healthy/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '健康', '健康需求']
+        },
+        {
+          path: '/healthy/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '健康', '健康商品VIP']
+        },
+        {
+          path: '/healthy/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '健康', '健康需求VIP']
+        },
+        {
+          path: '/healthy/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/guestBook.vue'], resolve),
+          meta: ['集市管理', '健康', '用户留言']
+        }, {
+          path: '/healthy/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '健康', '客户留言vip']
+        },
+        {
+          path: '/healthy/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/customerOrder.vue'], resolve),
+          meta: ['集市管理', '健康', '客户订单']
+        },
+        {
+          path: '/healthy/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/healthy/returnChannel.vue'], resolve),
+          meta: ['集市管理', '健康', '退货通道']
+          //--
+        },
+        {
+          path: '/life/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '生活', '生活分类']
+        },
+        {
+          path: '/life/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '生活', '生活VIP分类']
+        },
+        {
+          path: '/life/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '生活', '生活商品']
+        },
+        {
+          path: '/life/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '生活', '生活需求']
+        },
+        {
+          path: '/life/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '生活', '生活商品VIP']
+        },
+        {
+          path: '/life/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '生活', '生活需求VIP']
+        },
+        {
+          path: '/life/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/guestBook.vue'], resolve),
+          meta: ['集市管理', '生活', '用户留言']
+        }, {
+          path: '/life/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '生活', '客户留言vip']
+        },
+        {
+          path: '/life/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/customerOrder.vue'], resolve),
+          meta: ['集市管理', '生活', '客户订单']
+        },
+        {
+          path: '/life/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/life/returnChannel.vue'], resolve),
+          meta: ['集市管理', '生活', '退货通道']
+          //--
+        },
+        {
+          path: '/houseProperty/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '房产', '房产分类']
+        },
+        {
+          path: '/houseProperty/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '房产', '房产VIP分类']
+        },
+        {
+          path: '/houseProperty/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '房产', '房产商品']
+        },
+        {
+          path: '/houseProperty/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '房产', '房产需求']
+        },
+        {
+          path: '/houseProperty/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '房产', '房产商品VIP']
+        },
+        {
+          path: '/houseProperty/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '房产', '房产需求VIP']
+        },
+        {
+          path: '/houseProperty/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/guestBook.vue'], resolve),
+          meta: ['集市管理', '房产', '用户留言']
+        }, {
+          path: '/houseProperty/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '房产', '客户留言vip']
+        },
+        {
+          path: '/houseProperty/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/customerOrder.vue'], resolve),
+          meta: ['集市管理', '房产', '客户订单']
+        },
+        {
+          path: '/houseProperty/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/houseProperty/returnChannel.vue'], resolve),
+          meta: ['集市管理', '房产', '退货通道']
+          //--
+        },
+        {
+          path: '/automobile/classificationOfFood',
+          name: 'classificationOfFood',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/classificationOfFood.vue'], resolve),
+          meta: ['集市管理', '汽车', '汽车分类']
+        },
+        {
+          path: '/automobile/classificationOfFoodVip',
+          name: 'classificationOfFoodVip',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/classificationOfFoodVip.vue'], resolve),
+          meta: ['集市管理', '汽车', '汽车VIP分类']
+        },
+        {
+          path: '/automobile/foodAndDrink',
+          name: 'foodAndDrink',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/foodAndDrink.vue'], resolve),
+          meta: ['集市管理', '汽车', '汽车商品']
+        },
+        {
+          path: '/automobile/drinkDemand',
+          name: 'drinkDemand',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/drinkDemand.vue'], resolve),
+          meta: ['集市管理', '汽车', '汽车需求']
+        },
+        {
+          path: '/automobile/foodAndDrinkVIP',
+          name: 'foodAndDrinkVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/foodAndDrinkVIP.vue'], resolve),
+          meta: ['集市管理', '汽车', '汽车商品VIP']
+        },
+        {
+          path: '/automobile/drinkDemandVIP',
+          name: 'drinkDemandVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/drinkDemandVIP.vue'], resolve),
+          meta: ['集市管理', '汽车', '汽车需求VIP']
+        },
+        {
+          path: '/automobile/guestBook',
+          name: 'guestBook',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/guestBook.vue'], resolve),
+          meta: ['集市管理', '汽车', '用户留言']
+        }, {
+          path: '/automobile/customerOrderVIP',
+          name: 'customerOrderVIP',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/customerOrderVIP.vue'], resolve),
+          meta: ['集市管理', '汽车', '客户留言vip']
+        },
+        {
+          path: '/automobile/customerOrder',
+          name: 'customerOrder',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/customerOrder.vue'], resolve),
+          meta: ['集市管理', '汽车', '客户订单']
+        },
+        {
+          path: '/automobile/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) => require(['@/view/BackgroundManagement/marketManagement/automobile/returnChannel.vue'], resolve),
+          meta: ['集市管理', '汽车', '退货通道']
+          //--
         }
       ]
     }

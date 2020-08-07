@@ -1,86 +1,95 @@
 <template>
   <div class="class_fied">
     <div class="fied_top">
-      <el-button type="primary" size="medium" @click="addDialog"
-        >添加分类</el-button
-      >
+      <el-button type="primary"
+                 size="medium"
+                 @click="addDialog">添加分类</el-button>
     </div>
     <div class="fied_con">
-      <el-table
-        :data="tableData"
-        style="width: 100%"
-        height="60vh"
-        @selection-change="handleSelectionChange"
-        row-key="id"
-        border
-        :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
-      >
-        <el-table-column type="selection" width="55"> </el-table-column>
-        <el-table-column prop="id" label="参数ID" width="100">
+      <el-table :data="tableData"
+                style="width: 100%"
+                height="60vh"
+                @selection-change="handleSelectionChange"
+                row-key="id"
+                border
+                :tree-props="{ children: 'children', hasChildren: 'hasChildren' }">
+        <el-table-column type="selection"
+                         width="55"> </el-table-column>
+        <el-table-column prop="id"
+                         label="参数ID"
+                         width="100">
         </el-table-column>
-        <el-table-column prop="name" label="分类名称" align="center">
+        <el-table-column prop="name"
+                         label="分类名称"
+                         align="center">
         </el-table-column>
-        <el-table-column prop="id" label="输出顺序" width="100" align="center">
+        <el-table-column prop="id"
+                         label="输出顺序"
+                         width="100"
+                         align="center">
         </el-table-column>
-        <el-table-column label="添加下级分类" align="center" width="150">
+        <el-table-column label="添加下级分类"
+                         align="center"
+                         width="150">
           <template>
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="添加分类"
-              placement="top"
-            >
-              <i class="el-icon-circle-plus" @click="addDialog"></i>
+            <el-tooltip class="item"
+                        effect="dark"
+                        content="添加分类"
+                        placement="top">
+              <i class="el-icon-circle-plus"
+                 @click="addDialog"></i>
             </el-tooltip>
           </template>
         </el-table-column>
-        <el-table-column label="批量添加下级分类" align="center" width="150"
-          ><template>
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="添加分类"
-              placement="top"
-            >
-              <i class="el-icon-circle-plus" @click="addDialog"></i>
+        <el-table-column label="批量添加下级分类"
+                         align="center"
+                         width="150"><template>
+            <el-tooltip class="item"
+                        effect="dark"
+                        content="添加分类"
+                        placement="top">
+              <i class="el-icon-circle-plus"
+                 @click="addDialog"></i>
             </el-tooltip>
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="160">
+        <el-table-column label="操作"
+                         width="160">
           <template slot-scope="scope">
-            <el-button type="text" size="small">广告</el-button>
-            <el-button type="text" size="small" @click="priceDialog"
-              >价位</el-button
-            >
-            <el-button type="text" size="small" @click="addDialog"
-              >别名</el-button
-            >
-            <el-button type="text" size="small" @click="addDialog"
-              >属性</el-button
-            >
-            <el-button type="text" size="small" @click="addDialog"
-              >相册分类</el-button
-            >
-            <el-button type="text" size="small" @click="addDialog"
-              >列显</el-button
-            >
-            <el-button type="text" size="small">编辑</el-button>
-            <el-button type="text" size="small">查看</el-button>
-            <el-button type="text" size="small" style="color: #f00;"
-              >删除</el-button
-            >
+            <el-button type="text"
+                       size="small">广告</el-button>
+            <el-button type="text"
+                       size="small"
+                       @click="priceDialog">价位</el-button>
+            <el-button type="text"
+                       size="small"
+                       @click="addDialog">别名</el-button>
+            <el-button type="text"
+                       size="small"
+                       @click="addDialog">属性</el-button>
+            <el-button type="text"
+                       size="small"
+                       @click="addDialog">相册分类</el-button>
+            <el-button type="text"
+                       size="small"
+                       @click="addDialog">列显</el-button>
+            <el-button type="text"
+                       size="small">编辑</el-button>
+            <el-button type="text"
+                       size="small">查看</el-button>
+            <el-button type="text"
+                       size="small"
+                       style="color: #f00;">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
-      <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChangeFun"
-        :current-page="currentPage"
-        :page-sizes="[100, 200, 300, 400]"
-        :page-size="100"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="400"
-      >
+      <el-pagination @size-change="handleSizeChange"
+                     @current-change="handleCurrentChangeFun"
+                     :current-page="currentPage"
+                     :page-sizes="[100, 200, 300, 400]"
+                     :page-size="100"
+                     layout="total, sizes, prev, pager, next, jumper"
+                     :total="400">
       </el-pagination>
 
       <div class="bot_btn">
@@ -90,15 +99,15 @@
       </div>
     </div>
 
-    <el-dialog
-      title="添加分类"
-      :visible.sync="dialogVisible"
-      width="60%"
-      center
-      class="add_dislog"
-    >
+    <el-dialog title="添加分类"
+               :visible.sync="dialogVisible"
+               width="60%"
+               center
+               class="add_dislog">
       <div class="dislog_con">
-        <el-form ref="form" :model="form" label-width="100px">
+        <el-form ref="form"
+                 :model="form"
+                 label-width="100px">
           <div class="form_lins">
             <el-form-item label="分类名称">
               <el-input v-model="form.name"></el-input>
@@ -112,7 +121,8 @@
               <el-input v-model="form.name"></el-input>
             </el-form-item>
             <el-form-item label="分类描述">
-              <el-input type="textarea" v-model="form.desc"></el-input>
+              <el-input type="textarea"
+                        v-model="form.desc"></el-input>
             </el-form-item>
           </div>
           <div class="form_lins">
@@ -131,37 +141,37 @@
           </div>
 
           <el-form-item label="分类图标">
-            <el-upload
-              class="upload-demo"
-              action="https://jsonplaceholder.typicode.com/posts/"
-              :on-preview="handlePreview"
-              :on-remove="handleRemove"
-              :before-remove="beforeRemove"
-              multiple
-              :limit="3"
-              :on-exceed="handleExceed"
-              :file-list="fileList"
-            >
-              <el-button size="small" type="primary">点击上传</el-button>
-              <div slot="tip" class="el-upload__tip">
+            <el-upload class="upload-demo"
+                       action="https://jsonplaceholder.typicode.com/posts/"
+                       :on-preview="handlePreview"
+                       :on-remove="handleRemove"
+                       :before-remove="beforeRemove"
+                       multiple
+                       :limit="3"
+                       :on-exceed="handleExceed"
+                       :file-list="fileList">
+              <el-button size="small"
+                         type="primary">点击上传</el-button>
+              <div slot="tip"
+                   class="el-upload__tip">
                 为达到最佳显示效果，请上传36*36像素的图片
               </div>
             </el-upload>
           </el-form-item>
           <el-form-item label="分类LOGO">
-            <el-upload
-              class="upload-demo"
-              action="https://jsonplaceholder.typicode.com/posts/"
-              :on-preview="handlePreview"
-              :on-remove="handleRemove"
-              :before-remove="beforeRemove"
-              multiple
-              :limit="3"
-              :on-exceed="handleExceed"
-              :file-list="fileList"
-            >
-              <el-button size="small" type="primary">点击上传</el-button>
-              <div slot="tip" class="el-upload__tip">
+            <el-upload class="upload-demo"
+                       action="https://jsonplaceholder.typicode.com/posts/"
+                       :on-preview="handlePreview"
+                       :on-remove="handleRemove"
+                       :before-remove="beforeRemove"
+                       multiple
+                       :limit="3"
+                       :on-exceed="handleExceed"
+                       :file-list="fileList">
+              <el-button size="small"
+                         type="primary">点击上传</el-button>
+              <div slot="tip"
+                   class="el-upload__tip">
                 为达到最佳显示效果，请上传36*36像素的图片
               </div>
             </el-upload>
@@ -174,63 +184,57 @@
             <el-form-item label=""></el-form-item>
           </div>
           <div class="attribute_screen">
-            <label
-              >筛选属性<i class="el-icon-circle-plus" @click="addInput"></i
-            ></label>
+            <label>筛选属性<i class="el-icon-circle-plus"
+                 @click="addInput"></i></label>
             <div class="screen_input">
-              <div v-for="(item, index) in inputData" :key="index">
-                <el-input
-                  v-for="(itm, idx) in item.data"
-                  :key="idx"
-                  v-model="itm.value"
-                ></el-input>
-                <i class="el-icon-circle-plus" @click="addValue(index)"></i>
+              <div v-for="(item, index) in inputData"
+                   :key="index">
+                <el-input v-for="(itm, idx) in item.data"
+                          :key="idx"
+                          v-model="itm.value"></el-input>
+                <i class="el-icon-circle-plus"
+                   @click="addValue(index)"></i>
               </div>
             </div>
           </div>
         </el-form>
       </div>
-      <span slot="footer" class="dialog-footer">
+      <span slot="footer"
+            class="dialog-footer">
         <el-button @click="dialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="dialogVisible = false"
-          >确 定</el-button
-        >
+        <el-button type="primary"
+                   @click="dialogVisible = false">确 定</el-button>
       </span>
     </el-dialog>
 
-    <el-dialog
-      title="添加价位"
-      :visible.sync="priceDialogPrice"
-      width="30%"
-      center
-      :before-close="handleClose"
-    >
-      <el-form
-        :model="ruleForm"
-        :rules="rules"
-        ref="ruleForm"
-        label-width="100px"
-        class="demo-ruleForm"
-      >
-        <el-form-item label="价格" prop="name">
+    <el-dialog title="添加价位"
+               :visible.sync="priceDialogPrice"
+               width="30%"
+               center
+               :before-close="handleClose">
+      <el-form :model="ruleForm"
+               :rules="rules"
+               ref="ruleForm"
+               label-width="100px"
+               class="demo-ruleForm">
+        <el-form-item label="价格"
+                      prop="name">
           <el-input v-model="ruleForm.name"></el-input>
         </el-form-item>
-        <el-form-item label="价格对应单位" prop="unit">
+        <el-form-item label="价格对应单位"
+                      prop="unit">
           <el-input v-model="ruleForm.unit"></el-input>
         </el-form-item>
       </el-form>
-      <span slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="priceDialogPrice = false"
-          >确定</el-button
-        >
-        <el-button
-          @click="
+      <span slot="footer"
+            class="dialog-footer">
+        <el-button type="primary"
+                   @click="priceDialogPrice = false">确定</el-button>
+        <el-button @click="
             () => {
               this.$refs['ruleForm'].resetFields();
             }
-          "
-          >重置</el-button
-        >
+          ">重置</el-button>
       </span>
     </el-dialog>
   </div>
@@ -238,7 +242,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       priceDialogPrice: false,
       tableData: [
@@ -315,23 +319,23 @@ export default {
     };
   },
   methods: {
-    handleSelectionChange() {},
-    addDialog() {
+    handleSelectionChange () { },
+    addDialog () {
       this.dialogVisible = true;
     },
-    handlePreview() {},
-    handleRemove() {},
-    beforeRemove() {},
-    handleExceed() {},
-    handleSizeChange() {},
-    handleCurrentChangeFun() {},
-    addInput() {
+    handlePreview () { },
+    handleRemove () { },
+    beforeRemove () { },
+    handleExceed () { },
+    handleSizeChange () { },
+    handleCurrentChangeFun () { },
+    addInput () {
       this.inputData.push({ data: [{}] });
     },
-    addValue(index) {
+    addValue (index) {
       this.inputData[index].data.push({ data: [{}] });
     },
-    priceDialog() {
+    priceDialog () {
       this.priceDialogPrice = true;
     }
   }
