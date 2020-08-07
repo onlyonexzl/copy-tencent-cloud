@@ -216,7 +216,6 @@ export default {
 
 <style lang="scss" scoped>
 .merchant_page {
-  // max-height: 600px;
   background: #fff;
   border-radius: 4px;
   overflow: auto;

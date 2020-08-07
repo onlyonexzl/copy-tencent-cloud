@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ height: heights }">
+  <div :style="{ height: heights }" class="b_page">
     <div>
       <el-table
         :data="tableData"
@@ -7,7 +7,7 @@
         row-key="id"
         border
         default-expand-all
-        :height="tableHeight"
+        :max-height="tableHeight"
         :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
       >
         <el-table-column type="selection" width="55"> </el-table-column>
@@ -122,4 +122,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.b_page {
+  overflow: auto;
+}
+</style>

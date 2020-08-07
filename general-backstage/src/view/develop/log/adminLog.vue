@@ -10,7 +10,7 @@
       <el-button type="primary" icon="el-icon-search" size="medium"></el-button>
     </div>
     <div class="task_con">
-      <el-table :data="tableData" style="width: 100%" :height="tableHeight">
+      <el-table :data="tableData" style="width: 100%" :max-height="tableHeight">
         <el-table-column prop="id" label="ID" width="100" align="center">
         </el-table-column>
         <el-table-column
@@ -97,6 +97,7 @@ export default {
 .task_look {
   display: flex;
   flex-direction: column;
+  overflow: auto;
   .task_top {
     width: 100%;
     background: #fff;

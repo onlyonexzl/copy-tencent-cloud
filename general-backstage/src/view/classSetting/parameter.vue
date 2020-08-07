@@ -9,7 +9,7 @@
       <el-table
         :data="tableData"
         style="width: 100%"
-        :height="tableHeight"
+        :max-height="tableHeight"
         @selection-change="handleSelectionChange"
         row-key="id"
         border
@@ -295,9 +295,9 @@ export default {
   border-radius: 5px;
   box-sizing: border-box;
   margin-bottom: 5px;
-  height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
+  overflow: auto;
   .fied_top {
     width: 100%;
     border-radius: 5px;

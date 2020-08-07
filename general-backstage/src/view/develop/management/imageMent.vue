@@ -7,7 +7,7 @@
         :data="tableData"
         tooltip-effect="dark"
         style="width: 100%"
-        :height="tableHeight"
+        :max-height="tableHeight"
         border
         @selection-change="handleSelectionChange"
       >
@@ -79,6 +79,7 @@ export default {
 
 <style lang="scss" scoped>
 .image_ment {
+  overflow: auto;
   .image_table {
     .table_ima {
       /deep/ .el-image {
