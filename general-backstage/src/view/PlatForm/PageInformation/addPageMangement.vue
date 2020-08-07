@@ -1,5 +1,5 @@
 <template>
-  <div class="addPage_ment">
+  <div class="addPage_ment" :style="{ height: heights }">
     <el-form ref="form" :model="form" label-width="80px">
       <el-form-item label="英文名称" prop="ename">
         <el-input v-model="form.ename"></el-input>
@@ -49,6 +49,7 @@ import file from "./../../../../static/file.png";
 export default {
   data() {
     return {
+      heights: window.innerHeight - 100 + "px",
       form: {
         name: "",
         region: "",

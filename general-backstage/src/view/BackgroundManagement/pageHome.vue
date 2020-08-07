@@ -320,7 +320,15 @@ export default {
         "/floorMarketing/specialPage",
         "/floorMarketing/homeFloor",
         "/brandInformation/brandManagement",
-        "/luckyDraw/luckyDraw"
+        "/luckyDraw/luckyDraw",
+        "/serveMent/CarpooInformation/supplyGood",
+        "/serveMent/CarpooInformation/demandInfo",
+        "/serveMent/CarpooInformation/busMessage",
+        "/serveMent/CarpoolingOrders/customerOrder",
+        "/serveMent/CarpoolingOrders/returnsChannel",
+        "/serveMent/CarpoolingVIP/commInfoVip",
+        "/serveMent/CarpoolingVIP/taskInfoVip",
+        "/serveMent/CarpoolingVIP/custInfoVip"
       ];
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
       if (this.$route.meta.length) {

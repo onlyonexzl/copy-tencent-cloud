@@ -1,5 +1,5 @@
 <template>
-  <div class="nav_page">
+  <div class="nav_page" :style="{ height: heights }">
     <div class="navPage_top">
       <el-button size="medium" type="primary">删除所选</el-button>
       <el-button size="medium" type="primary" @click="addNav"
@@ -7,7 +7,7 @@
       >
     </div>
     <div class="navPage_con">
-      <el-table :data="tableData" style="width: 100%">
+      <el-table :data="tableData" style="width: 100%" :height="tableHeight">
         <el-table-column type="selection" width="55"> </el-table-column>
         <el-table-column prop="column_name" label="页面名称"> </el-table-column>
         <el-table-column prop="superior_column" label="页面英文名称">
@@ -41,6 +41,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       fileList: [],
       dialogVisible: false,
       tableData: [
@@ -65,8 +67,9 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      let height = document.getElementsByClassName("navPage_con");
-      console.log(height);
+      var inHeight = document.getElementsByClassName("navPage_top");
+      this.tableHeight =
+        window.innerHeight - 210 - inHeight[0].clientHeight + "px";
     });
   },
   methods: {

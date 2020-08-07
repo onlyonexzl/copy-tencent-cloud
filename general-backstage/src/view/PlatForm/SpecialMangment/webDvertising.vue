@@ -1,5 +1,5 @@
 <template>
-  <div class="webDev_page">
+  <div class="webDev_page" :style="{ height: heights }">
     <div class="webPage_flash">
       <h3>Flash 编辑</h3>
       <ul>
@@ -37,7 +37,7 @@
         </li>
       </ul>
     </div>
-    <div class="webPage_bot">
+    <div class="webPage_bot" :height="tableHeight">
       <h3>上传轮转广告</h3>
       <div class="bot_con">
         <p>
@@ -134,11 +134,18 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       fileList: [],
       input: "",
       form: {},
       dialogVisible: false
     };
+  },
+  mounted() {
+    var inHeight = document.getElementsByClassName("navPage_top");
+    this.tableHeight =
+      window.innerHeight - 210 - inHeight[0].clientHeight + "px";
   },
   methods: {
     handlePreview() {},
@@ -201,6 +208,7 @@ export default {
     width: 100%;
     border: 1px solid #cccccc;
     margin-top: 5px;
+
     h3 {
       padding-left: 5px;
       background: rgb(64, 167, 226);

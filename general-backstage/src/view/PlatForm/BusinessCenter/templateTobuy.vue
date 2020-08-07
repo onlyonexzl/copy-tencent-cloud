@@ -1,10 +1,10 @@
 <template>
-  <div class="tobuy_page">
+  <div class="tobuy_page" :style="{ height: heights }">
     <div class="tobuy_top">
       <el-button size="medium" type="primary">同步模板数据</el-button>
     </div>
     <div class="tobuy_con">
-      <el-table :data="tableData" style="width: 100%">
+      <el-table :data="tableData" style="width: 100%" :height="tableHeight">
         <el-table-column prop="name" label="模板名称">
           <template slot-scope="scope">
             <span
@@ -42,6 +42,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       tableData: [
         {
           name: "美城模板007",
@@ -63,6 +65,11 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    var inHeight = document.getElementsByClassName("tobuy_top");
+    this.tableHeight =
+      window.innerHeight - 180 - inHeight[0].clientHeight + "px";
   },
   methods: {
     handleClick(rows) {},

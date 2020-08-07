@@ -441,6 +441,68 @@ let LARouter = [
     meta: ["平台装修", "合作伙伴", "友情连接"],
     component: resolve =>
       require(["@/view/PlatForm/partner/linksPage.vue"], resolve)
+  },
+  {
+    path: "/serveMent/CarpooInformation/supplyGood",
+    name: "supplyGood",
+    meta: ["服务管理", "拼车信息", "供应商品"],
+    component: resolve =>
+      require(["@/view/serveMent/CarpooInformation/supplyGood.vue"], resolve)
+  },
+  {
+    path: "/serveMent/CarpooInformation/demandInfo",
+    name: "demandInfo",
+    meta: ["服务管理", "拼车信息", "需求信息"],
+    component: resolve =>
+      require(["@/view/serveMent/CarpooInformation/demandInfo.vue"], resolve)
+  },
+  {
+    path: "/serveMent/CarpooInformation/busMessage",
+    name: "busMessage",
+    meta: ["服务管理", "拼车信息", "商机留言"],
+    component: resolve =>
+      require(["@/view/serveMent/CarpooInformation/busMessage.vue"], resolve)
+  },
+  {
+    path: "/serveMent/CarpoolingOrders/customerOrder",
+    name: "customerOrder",
+    meta: ["服务管理", "拼车订单", "客户订单"],
+    component: resolve =>
+      require(["@/view/serveMent/CarpoolingOrders/customerOrder.vue"], resolve)
+  },
+  {
+    path: "/serveMent/CarpoolingOrders/returnsChannel",
+    name: "returnsChannel",
+    meta: ["服务管理", "拼车订单", "退货通道"],
+    component: resolve =>
+      require(["@/view/serveMent/CarpoolingOrders/returnsChannel.vue"], resolve)
+  },
+  {
+    path: "/serveMent/CarpoolingVIP/commInfoVip",
+    name: "commInfoVip",
+    meta: ["服务管理", "拼车VIP", "商品信息vip"],
+    component: resolve =>
+      require(["@/view/serveMent/CarpoolingVIP/commInfoVip.vue"], resolve)
+  },
+  {
+    path: "/serveMent/CarpoolingVIP/taskInfoVip",
+    name: "taskInfoVip",
+    meta: ["服务管理", "拼车VIP", "任务信息vip"],
+    component: resolve =>
+      require(["@/view/serveMent/CarpoolingVIP/taskInfoVip.vue"], resolve)
+  },
+  {
+    path: "/serveMent/CarpoolingVIP/custInfoVip",
+    name: "custInfoVip",
+    meta: ["服务管理", "拼车VIP", "客户留言vip"],
+    component: resolve =>
+      require(["@/view/serveMent/CarpoolingVIP/custInfoVip.vue"], resolve)
+  },
+  {
+    path: "/orderDetail",
+    name: "orderDetail",
+    component: resolve =>
+      require(["@/view/serveMent/CarpoolingOrders/orderDetail.vue"], resolve)
   }
 ];
 

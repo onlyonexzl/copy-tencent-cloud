@@ -6,10 +6,56 @@ let LAMenu = [
     subset: [
       {
         id: "IOT_REPORT",
-        name: "数据报表",
-        icon: "el-icon-link",
-        url: "/homepage",
-        menu: true
+        name: "拼车信息",
+        menu: true,
+        actions: [
+          {
+            name: "供应商品",
+            url: "/serveMent/CarpooInformation/supplyGood"
+          },
+          {
+            name: "需求信息",
+            url: "/serveMent/CarpooInformation/demandInfo"
+          },
+          {
+            name: "商机留言",
+            url: "/serveMent/CarpooInformation/busMessage"
+          }
+        ]
+      },
+      {
+        id: "IOT_REPORT",
+        name: "拼车订单",
+        menu: true,
+        actions: [
+          {
+            name: "客户订单",
+            url: "/serveMent/CarpoolingOrders/customerOrder"
+          },
+          {
+            name: "退货通道",
+            url: "/serveMent/CarpoolingOrders/returnsChannel"
+          }
+        ]
+      },
+      {
+        id: "IOT_REPORT",
+        name: "拼车VIP",
+        menu: true,
+        actions: [
+          {
+            name: "商品信息vip",
+            url: "/serveMent/CarpoolingVIP/commInfoVip"
+          },
+          {
+            name: "任务信息vip",
+            url: "/serveMent/CarpoolingVIP/taskInfoVip"
+          },
+          {
+            name: "客户留言vip",
+            url: "/serveMent/CarpoolingVIP/custInfoVip"
+          }
+        ]
       }
     ]
   },

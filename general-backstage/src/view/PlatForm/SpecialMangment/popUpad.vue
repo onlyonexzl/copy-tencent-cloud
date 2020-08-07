@@ -1,5 +1,5 @@
 <template>
-  <div class="addPage_ment">
+  <div class="addPage_ment" :style="{ height: heights }">
     <el-form ref="form" :model="form" label-width="100px">
       <el-form-item label="清除弹窗内容">
         <span>点击清除弹窗内容</span>
@@ -43,6 +43,7 @@ import file from "./../../../../static/file.png";
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
       form: {
         name: "",
         region: "",

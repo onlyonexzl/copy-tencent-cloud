@@ -1,5 +1,5 @@
 <template>
-  <div class="link_page">
+  <div class="link_page" :style="{ height: heights }">
     <div class="linkPage_top">
       <el-button size="medium" type="primary">删除所选</el-button>
       <el-button size="medium" type="primary" @click="addUrl"
@@ -7,7 +7,7 @@
       >
     </div>
     <div class="linkPage_con">
-      <el-table :data="tableData" style="width: 100%">
+      <el-table :data="tableData" style="width: 100%" :height="tableHeight">
         <el-table-column type="selection" width="55"> </el-table-column>
         <el-table-column prop="name" label="网站名称"> </el-table-column>
         <el-table-column prop="url" label="链接网址">
@@ -83,6 +83,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: null,
       dialogVisible: false,
       fileList: [],
       tableData: [
@@ -107,6 +109,11 @@ export default {
       ],
       form: {}
     };
+  },
+  mounted() {
+    var inHeight = document.getElementsByClassName("linkPage_top");
+    this.tableHeight =
+      window.innerHeight - 180 - inHeight[0].clientHeight + "px";
   },
   methods: {
     addUrl() {

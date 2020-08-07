@@ -1,6 +1,6 @@
 <template>
-  <div class="permiss_sion">
-    <el-table :data="tableData" style="width: 100%">
+  <div class="permiss_sion" :style="{ height: heights }">
+    <el-table :data="tableData" style="width: 100%" :height="tableHeight">
       <el-table-column prop="explain" label="说明" width="180">
       </el-table-column>
       <el-table-column prop="common" label="普通商铺">
@@ -45,6 +45,8 @@
 export default {
   data() {
     return {
+      heights: window.innerHeight - 160 + "px",
+      tableHeight: window.innerHeight - 210 + "px",
       tableData: [
         {
           explain: "升级费用(元)",
