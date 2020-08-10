@@ -2,7 +2,8 @@
   <div class="viewPage">
     <div class="block">
       <el-carousel height="100%">
-        <el-carousel-item v-for="item in 4" :key="item">
+        <el-carousel-item v-for="item in 4"
+                          :key="item">
           <h3 class="small">{{ item }}</h3>
         </el-carousel-item>
       </el-carousel>
@@ -36,19 +37,21 @@
         <div class="tab">
           <!-- @tab-click="handleClick" -->
           <el-tabs v-model="activeName">
-            <el-tab-pane label="小程序" name="first"> </el-tab-pane>
-            <el-tab-pane label="网站建设" name="second"> </el-tab-pane>
-            <el-tab-pane label="企业应用" name="third"></el-tab-pane>
-            <el-tab-pane label="定时任务补偿" name="fourth"></el-tab-pane>
+            <el-tab-pane label="小程序"
+                         name="first"> </el-tab-pane>
+            <el-tab-pane label="网站建设"
+                         name="second"> </el-tab-pane>
+            <el-tab-pane label="企业应用"
+                         name="third"></el-tab-pane>
+            <el-tab-pane label="定时任务补偿"
+                         name="fourth"></el-tab-pane>
           </el-tabs>
         </div>
         <ul class="mp__tryout-list">
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -71,10 +74,8 @@
           </li>
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -97,10 +98,8 @@
           </li>
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -123,10 +122,8 @@
           </li>
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -149,10 +146,8 @@
           </li>
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -175,10 +170,8 @@
           </li>
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -201,10 +194,8 @@
           </li>
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -227,10 +218,8 @@
           </li>
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -253,10 +242,8 @@
           </li>
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -279,10 +266,8 @@
           </li>
           <li>
             <div class="product-card-hd">
-              <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
-                alt=""
-              />
+              <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1922255603,2274620061&fm=26&gp=0.jpg"
+                   alt="" />
             </div>
             <p>分销商城小程序</p>
             <div class="product-card-text">
@@ -321,10 +306,8 @@
           <div class="mp__seller-list">
             <div class="mp__seller-list-left">
               <div class="mp_img">
-                <img
-                  src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
-                  alt=""
-                />
+                <img src="http://img1.imgtn.bdimg.com/it/u=1642549833,2447185174&fm=26&gp=0.jpg"
+                     alt="" />
               </div>
               <div class="mp__seller-classify-hd">
                 <span>人气分类</span>
@@ -344,10 +327,8 @@
               <ul>
                 <li>
                   <div class="mp_r_img">
-                    <img
-                      src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
-                      alt=""
-                    />
+                    <img src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
+                         alt="" />
                   </div>
                   <div class="map_list">
                     <p>三级分销 · 秒杀 · 拼团等</p>
@@ -363,10 +344,8 @@
                 </li>
                 <li>
                   <div class="mp_r_img">
-                    <img
-                      src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
-                      alt=""
-                    />
+                    <img src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
+                         alt="" />
                   </div>
                   <div class="map_list">
                     <p>三级分销 · 秒杀 · 拼团等</p>
@@ -382,10 +361,8 @@
                 </li>
                 <li>
                   <div class="mp_r_img">
-                    <img
-                      src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
-                      alt=""
-                    />
+                    <img src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
+                         alt="" />
                   </div>
                   <div class="map_list">
                     <p>三级分销 · 秒杀 · 拼团等</p>
@@ -401,10 +378,8 @@
                 </li>
                 <li>
                   <div class="mp_r_img">
-                    <img
-                      src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
-                      alt=""
-                    />
+                    <img src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
+                         alt="" />
                   </div>
                   <div class="map_list">
                     <p>三级分销 · 秒杀 · 拼团等</p>
@@ -420,10 +395,8 @@
                 </li>
                 <li>
                   <div class="mp_r_img">
-                    <img
-                      src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
-                      alt=""
-                    />
+                    <img src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
+                         alt="" />
                   </div>
                   <div class="map_list">
                     <p>三级分销 · 秒杀 · 拼团等</p>
@@ -439,10 +412,8 @@
                 </li>
                 <li>
                   <div class="mp_r_img">
-                    <img
-                      src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
-                      alt=""
-                    />
+                    <img src="http://img5.imgtn.bdimg.com/it/u=3138434373,2661146484&fm=26&gp=0.jpg"
+                         alt="" />
                   </div>
                   <div class="map_list">
                     <p>三级分销 · 秒杀 · 拼团等</p>
@@ -905,7 +876,7 @@
 <script>
 export default {
   name: "viewPage",
-  data() {
+  data () {
     return {
       activeName: "first"
     };
@@ -1699,12 +1670,8 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
     > li {
-<<<<<<< HEAD
-      width: 19%;
-=======
       // width: 216px;
       width: 17%;
->>>>>>> 7fc0a3f2092f419e663f4171f3b0935aaa0036ac
       height: 250px;
       border: solid 1px #eee;
       .product-card-hd {
