@@ -1,23 +1,31 @@
 <template>
-  <div class="homePage">
-
-    <div class="bottom-content">
-      <div class="tip">
-        <span>发现美好生活</span>
-        <p>Discover a good life</p>
-      </div>
-      <div class="c-banner">
-        <span v-for="(item, index) in bannerTwo"
-              :class="Cindex === index ? 'c-active' : ''"
-              @click="() => {
-                Cindex = index
-              }"
-              :key="index">
-          {{item.name}}
-        </span>
-      </div>
+  <div class="shop">
+    <div class="banner-seletc">
+      <ul>
+        <div class="left">分类：</div>
+        <div class="list">
+          <li v-for="(item, index) in oneJson"
+              :class="oneIndex === index ? 'active': ''"
+              :key="index">{{item.name}}</li>
+        </div>
+      </ul>
+      <ul>
+        <div class="left">配送地区：</div>
+        <div class="list">
+          <li v-for="(item, index) in twoJson"
+              :class="twoIndex === index ? 'active': ''"
+              :key="index">{{item.name}}</li>
+        </div>
+      </ul>
+      <ul>
+        <div class="left">排序：</div>
+        <div class="list">
+          <li v-for="(item, index) in threeJson"
+              :class="threeIndex === index ? 'active': ''"
+              :key="index">{{item.name}}</li>
+        </div>
+      </ul>
     </div>
-
     <div class="all-c">
       <div class="mock">
         <div class="cont">
@@ -35,6 +43,10 @@
                    alt="">
               <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1784602414,3412521658&fm=26&gp=0.jpg"
                    style="margin-top: 1%"
+                   alt="">
+              <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2986114791,2667770254&fm=26&gp=0.jpg"
+                   alt="">
+              <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1805460763,2866488258&fm=26&gp=0.jpg"
                    alt="">
             </div>
           </div>
@@ -57,6 +69,10 @@
               <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1784602414,3412521658&fm=26&gp=0.jpg"
                    style="margin-top: 1%"
                    alt="">
+              <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2986114791,2667770254&fm=26&gp=0.jpg"
+                   alt="">
+              <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1805460763,2866488258&fm=26&gp=0.jpg"
+                   alt="">
             </div>
           </div>
         </div>
@@ -78,6 +94,10 @@
               <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1784602414,3412521658&fm=26&gp=0.jpg"
                    style="margin-top: 1%"
                    alt="">
+              <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2986114791,2667770254&fm=26&gp=0.jpg"
+                   alt="">
+              <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1805460763,2866488258&fm=26&gp=0.jpg"
+                   alt="">
             </div>
           </div>
         </div>
@@ -89,62 +109,95 @@
 
 <script>
 export default {
-  name: 'homePage',
+  name: 'shop',
   data () {
     return {
-      Cindex: 0,
-      bannerTwo: [{
-        name: '美食'
-      }, {
-        name: '娱乐'
-      }, {
-        name: '美妆'
-      }, {
-        name: '服饰'
-      }, {
-        name: '时尚'
-      }, {
-        name: '文化'
-      }, {
-        name: '艺术'
-      }, {
-        name: '商业'
-      }, {
-        name: '酒店'
-      }, {
-        name: '旅行'
-      }, {
+      oneJson: [{
         name: '全部'
-      }]
-    }
-  },
-
-  methods: {
-    goDetial (e, index) {
-      this.Cindex = index
-      if (window.location.href.split('#')[1] === e.link) return false
-      if (e.link) {
-        this.navIndex = index
-        this.$router.push(e.link)
-      }
+      }, {
+        name: '主题床品'
+      }, {
+        name: '抑菌防螨'
+      }, {
+        name: '春夏好物'
+      }, {
+        name: '口碑好物'
+      }, {
+        name: '床套件套'
+      }, {
+        name: '保证娃大王'
+      }, {
+        name: '全请问请问请问部'
+      }, {
+        name: '企鹅我委屈'
+      }, {
+        name: '请问大叔的小炒'
+      }, {
+        name: '中小城镇'
+      }, {
+        name: '阿斯顿'
+      }, {
+        name: 'v 吃不饱'
+      }, {
+        name: '饭翻盖翻盖的'
+      }, {
+        name: '保证娃大王'
+      }, {
+        name: '全请问请问请问部'
+      }, {
+        name: '企鹅我委屈'
+      }, {
+        name: '请问大叔的小炒'
+      }, {
+        name: '中小城镇'
+      }, {
+        name: '阿斯顿'
+      }, {
+        name: 'v 吃不饱'
+      }, {
+        name: '饭翻盖翻盖的'
+      }],
+      oneIndex: 0,
+      twoJson: [{
+        name: '全部'
+      }, {
+        name: '香港'
+      }, {
+        name: '澳门'
+      }, {
+        name: '台湾'
+      }, {
+        name: '日韩'
+      }, {
+        name: '欧洲'
+      }, {
+        name: '美洲'
+      }],
+      twoIndex: 0,
+      threeJson: [{
+        name: '全部'
+      }, {
+        name: '价格'
+      }, {
+        name: '上架时间'
+      }],
+      threeIndex: 0
     }
   }
 }
 </script>
-
 <style lang="scss" scoped>
-.c-active {
+.active {
   cursor: pointer;
   color: rgba(195, 171, 135, 1) !important;
 }
-.homePage {
-  width: 100%;
-  height: 100%;
 
+.shop {
+  width: 100%;
   .all-c {
     width: 100%;
 
-    > :nth-child(even) {
+    > :nth-child(odd) {
       background: rgba(242, 242, 242, 1);
     }
     .mock {
@@ -182,7 +235,7 @@ export default {
         justify-content: space-between;
 
         .left {
-          width: 716px;
+          width: 580px;
           height: 100%;
           img {
             width: 100%;
@@ -191,48 +244,54 @@ export default {
         }
 
         .right {
-          width: 470px;
+          width: 580px;
           height: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
           img {
-            width: 100%;
+            width: 49%;
             height: 49%;
           }
         }
       }
     }
   }
-  .bottom-content {
+  .banner-seletc {
     width: 1190px;
     margin: 0 auto;
-    text-align: center;
-
-    .c-banner {
+    padding-top: 55px;
+    padding-bottom: 80px;
+    ul {
       width: 100%;
-      height: 85px;
+      border-bottom: 1px dotted rgba(221, 221, 221, 1);
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: solid 1px rgba(241, 241, 241, 1);
-      border-bottom: solid 1px rgba(241, 241, 241, 1);
-      > span:hover {
-        cursor: pointer;
-        color: rgba(195, 171, 135, 1) !important;
-      }
-    }
-    .tip {
-      margin-top: 80px;
-      margin-bottom: 79px;
-      > span {
-        font-size: 42px;
-        font-family: PingFang SC;
-        font-weight: bold;
-        color: rgba(0, 0, 0, 1);
-      }
-      > p {
-        font-size: 27px;
+      padding: 20px 0;
+      .left {
+        min-width: 100px;
+        font-size: 16px;
         font-family: PingFang SC;
         font-weight: 400;
-        color: rgba(119, 119, 119, 1);
+        color: rgba(156, 156, 156, 1);
+        line-height: 26px;
+        padding-top: 4px;
+      }
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        > li {
+          padding: 0 10px;
+          font-size: 16px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: rgba(51, 51, 51, 1);
+          line-height: 36px;
+          cursor: pointer;
+        }
+        > li:hover {
+          cursor: pointer;
+          color: rgba(195, 171, 135, 1) !important;
+        }
       }
     }
   }

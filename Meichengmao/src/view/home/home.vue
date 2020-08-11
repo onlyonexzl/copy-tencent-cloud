@@ -24,9 +24,88 @@
         </ul>
       </div>
     </div>
-
+    <div class="bannerOrSearch">
+      <div class="icon"
+           v-if="flag">
+        <h1>美城茂</h1>
+      </div>
+      <div class="search"
+           v-if="flag">
+        <div class="left">
+          <el-select v-model="selectV"
+                     style="width: 15%; border:none"
+                     placeholder="请选择">
+            <el-option v-for="item in options"
+                       :key="item.value"
+                       :label="item.label"
+                       :value="item.value">
+            </el-option>
+          </el-select>
+          <span>|</span>
+          <el-input placeholder="请输入内容"
+                    style="width: 84%"
+                    v-model="value"
+                    clearable>
+          </el-input>
+        </div>
+        <div class="button">
+          <i class="el-icon-search"></i>
+        </div>
+      </div>
+      <div class="banner">
+        <span v-for="(item, index) in banner"
+              :class="Aindex === index ? 'active' : ''"
+              @click="goDetial(item, index)"
+              :key="index">
+          {{item.name}}
+        </span>
+      </div>
+    </div>
+    <div class="carousel"
+         v-if="flag">
+      <el-carousel style="height: 450px">
+        <el-carousel-item v-for="item in 4"
+                          :key="item">
+          <h3 class="small">{{ item }}</h3>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
     <router-view></router-view>
-
+    <div class="c-footer">
+      <div class="f-content">
+        <div class="f-title">
+          <p>美城茂</p>
+          <span>发 现 美 好 生 活</span>
+        </div>
+        <ul>
+          <li>
+            <i class="el-icon-s-shop"></i>
+            <p>新媒体</p>
+            <span>本地生活杂志等美学内容</span>
+          </li>
+          <li>
+            <i class="el-icon-s-custom"></i>
+            <p>新社交</p>
+            <span>同城交友、聊天兴趣社区服务</span>
+          </li>
+          <li>
+            <i class="el-icon-s-release"></i>
+            <p>新零售</p>
+            <span>线上线下一体化实体零售服务</span>
+          </li>
+          <li>
+            <i class="el-icon-office-building"></i>
+            <p>新服务</p>
+            <span>房产招聘出行打车等生活服务</span>
+          </li>
+          <li>
+            <i class="el-icon-receiving"></i>
+            <p>新会员</p>
+            <span>商家会员及城市联名会员服务</span>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="footer">
       <div class="footer-website">
         <div class="websiteL">
@@ -176,121 +255,75 @@ export default {
   name: 'home',
   data () {
     return {
+      flag: true,
+      banner: [{
+        name: '杂志',
+        link: '/homePage'
+      }, {
+        name: '商店',
+        link: '/shop'
+      }, {
+        name: '问答',
+        link: '/question'
+      }, {
+        name: '分享',
+        link: '/share'
+      }, {
+        name: '特价'
+      }, {
+        name: '拍卖'
+      }, {
+        name: '集市'
+      }, {
+        name: '团购'
+      }, {
+        name: '服务'
+      }, {
+        name: '交友'
+      }, {
+        name: '视频'
+      }, {
+        name: '社区'
+      }],
+      routerIndex: ['homePage', 'shop', 'question', 'share'],
+      value: '',
+      Aindex: 0,
       LocationProvince: "正在定位所在省",    //给渲染层定义一个初始值
       LocationCity: "正在定位所在市",    //给渲染层定义一个初始值
-      value: '3.3',
-      navIndex: null,
-      navJson: [{
-        name: '最新活动',
-        width: 200,
-        // link: '/home/product'
+      options: [{
+        value: '选项1',
+        label: '商品'
       }, {
-        name: '首页',
-        width: 200,
-        link: '/home/product'
+        value: '选项2',
+        label: '知识'
       }, {
-        name: '产品',
-        width: 200,
-        link: '/product'
+        value: '选项3',
+        label: '商铺'
       }, {
-        name: '解决方案',
-        width: 600,
-        link: '/solution'
-      }, {
-        name: '文档',
-        width: 700,
-        link: '/price'
-      }, {
-        name: '云市场',
-        width: 300,
-        link: '/marketHome/viewPage'
-      }, {
-        name: '人工智能',
-        width: 100
-      }, {
-        name: '金融科技',
-        width: 20
-      }, {
-        name: '开放平台',
-        width: 500
-      }, {
-        name: '开源社区',
-        width: 800
-      }, {
-        name: '产业互联',
-        width: 300
-      }, {
-        name: '生态合作'
+        value: '选项4',
+        label: '资讯'
       }],
-
-      left: 0,
-
-      activeQ: false,
-      activeF: false,
+      selectV: '全部',
     }
   },
 
   methods: {
-    goHomePage () {
-      this.$router.push('/homepage')
-    },
-    mouseOver (e) {
-      let name = e.srcElement.className
-      if (name !== 'hoverColor') return false
-      if (name === 'hoverColor') {
-        let width = e.srcElement.children[0].children[1].clientWidth,
-          x = e.target.offsetLeft
-        if (x - 20 > width / 2) {
-          this.left = - (width / 2) + 10 + 'px'
-        } else {
-          this.left = (- x + 20) + 'px'
-        }
-      }
-    },
-    mouseLeave (e) {
-      // console.log(e)
-    },
-
-    login () {
-      this.$router.push('/login')
-    },
-
-    registered () {
-      this.$router.push('/registered')
-    },
-
-    registereDteil (res) {
-      if (res === 'f') {
-        this.$router.push({
-          path: '/registeredQ',
-        })
-      } else {
-        this.$router.push({
-          path: '/registeredF',
-        })
-      }
-    },
-
     goDetial (e, index) {
-      if (e === 'home') {
-        this.$router.push('/home/product')
-        this.navIndex = null
-        return false
-      }
       if (window.location.href.split('#')[1] === e.link) return false
       if (e.link) {
         this.navIndex = index
         this.$router.push(e.link)
       }
+    },
+
+    changeFlag () {
+      let array = ['/question', '/share', '/share/shareDetails']
+      this.Aindex = this.routerIndex.indexOf(window.location.href.split('#')[1].split('/')[1])
+      this.flag = array.indexOf(window.location.href.split('#')[1]) > -1 ? false : true
     }
   },
 
   mounted () {
-    this.navJson.forEach((item, index) => {
-      if (item.link === window.location.href.split('#')[1]) {
-        this.navIndex = index
-      }
-    })
     const geolocation = new BMap.Geolocation();
     var _this = this
     geolocation.getCurrentPosition(function getinfo (position) {
@@ -301,12 +334,159 @@ export default {
     }, function (e) {
       _this.LocationCity = "定位失败"
     }, { provider: 'baidu' });
+
+    this.changeFlag()
+  },
+
+  watch: {
+    $route (to, from) {
+      this.changeFlag()
+    }
   },
 }
 
 </script>
 
 <style lang="scss" scoped>
+.active {
+  cursor: pointer;
+  color: rgba(195, 171, 135, 1) !important;
+  border-bottom: solid 2px rgba(195, 171, 135, 1);
+}
+
+/deep/ .el-input--suffix .el-input__inner {
+  border-color: #fff !important;
+}
+
+/deep/ .el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+/deep/ .el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+
+/deep/ .el-carousel__container {
+  height: 100%;
+}
+
+.bannerOrSearch {
+  width: 1190px;
+  margin: 0 auto;
+  text-align: center;
+  .icon {
+    margin: 16px 0 19px 0;
+  }
+  .search {
+    width: 646px;
+    height: 55px;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 28px;
+    border: 2px solid rgba(195, 171, 135, 1);
+    overflow: hidden;
+    .left {
+      width: 545px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: rgba(188, 188, 188, 1);
+    }
+    .button {
+      width: 113px;
+      height: 100%;
+      background: rgba(195, 171, 135, 1);
+      line-height: 55px;
+      text-align: center;
+      font-size: 21px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    margin-top: 39px;
+    margin-bottom: 20px;
+    > span {
+      display: inline-block;
+    }
+    > span:hover {
+      cursor: pointer;
+      color: rgba(195, 171, 135, 1) !important;
+      border-bottom: solid 2px rgba(195, 171, 135, 1);
+    }
+  }
+}
+
+.c-footer {
+  width: 100%;
+  height: 400px;
+  background: rgba(195, 171, 135, 1);
+  .f-content {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    .f-title {
+      color: #fff;
+      padding: 52px 0;
+
+      > p {
+        font-size: 38px;
+      }
+
+      > span {
+        height: 21px;
+        font-size: 21px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        line-height: 26px;
+      }
+    }
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      > li {
+        width: 25%;
+        > i {
+          width: 70px;
+          height: 71px;
+          font-size: 45px;
+          text-align: center;
+          line-height: 71px;
+          border: 2px solid rgba(255, 255, 255, 1);
+          border-radius: 50%;
+        }
+        > p {
+          font-size: 28px;
+          font-family: PingFang SC;
+          font-weight: bold;
+          color: rgba(255, 255, 255, 1);
+          line-height: 24px;
+          margin-top: 28px;
+          margin-bottom: 9px;
+        }
+
+        > span {
+          font-size: 17px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 1);
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
 .home {
   width: 100%;
   height: 100%;
