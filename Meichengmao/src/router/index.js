@@ -33,9 +33,39 @@ export default new Router({
           require(['@/view/share/share'], resolve),
       }, {
         path: '/share/shareDetails',
-        name: 'share',
+        name: 'shareDetails',
         component: (resolve) =>
           require(['@/view/share/shareDetails'], resolve),
+      }, {
+        path: '/specialOffer',
+        name: 'specialOffer',
+        component: (resolve) =>
+          require(['@/view/specialOffer/specialOffer'], resolve),
+      }, {
+        path: '/auction',
+        name: 'auction',
+        component: (resolve) =>
+          require(['@/view/auction/auction'], resolve),
+      }, {
+        path: '/market',
+        name: 'market',
+        component: (resolve) =>
+          require(['@/view/market/market'], resolve),
+      }, {
+        path: '/groupBuying',
+        name: 'groupBuying',
+        component: (resolve) =>
+          require(['@/view/groupBuying/groupBuying'], resolve),
+      }, {
+        path: '/service',
+        name: 'service',
+        component: (resolve) =>
+          require(['@/view/service/service'], resolve),
+      }, {
+        path: '/friends',
+        name: 'friends',
+        component: (resolve) =>
+          require(['@/view/friends/friends'], resolve),
       }]
     }
   ]

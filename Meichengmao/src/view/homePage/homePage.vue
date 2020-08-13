@@ -34,7 +34,6 @@
               <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2890046181,2272525541&fm=26&gp=0.jpg"
                    alt="">
               <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1784602414,3412521658&fm=26&gp=0.jpg"
-                   style="margin-top: 1%"
                    alt="">
             </div>
           </div>
@@ -55,7 +54,6 @@
               <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2890046181,2272525541&fm=26&gp=0.jpg"
                    alt="">
               <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1784602414,3412521658&fm=26&gp=0.jpg"
-                   style="margin-top: 1%"
                    alt="">
             </div>
           </div>
@@ -76,7 +74,6 @@
               <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2890046181,2272525541&fm=26&gp=0.jpg"
                    alt="">
               <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1784602414,3412521658&fm=26&gp=0.jpg"
-                   style="margin-top: 1%"
                    alt="">
             </div>
           </div>

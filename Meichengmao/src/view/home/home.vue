@@ -3,7 +3,8 @@
     <div class="banner-title">
       <div class="b-content">
         <ul>
-          <li>美城茂首页</li>
+          <li class="homeLogin"> <img src="../../assets/img/loginFFF.png"
+                 alt=""> 美城茂首页</li>
           <span>|</span>
           <li> {{LocationProvince}}-{{LocationCity}}[切换]</li>
         </ul>
@@ -27,7 +28,8 @@
     <div class="bannerOrSearch">
       <div class="icon"
            v-if="flag">
-        <h1>美城茂</h1>
+        <h1 class="titleHome"> <img src="../../assets/img/login.png"
+               alt=""></h1>
       </div>
       <div class="search"
            v-if="flag">
@@ -74,7 +76,8 @@
     <div class="c-footer">
       <div class="f-content">
         <div class="f-title">
-          <p>美城茂</p>
+          <p><img src="../../assets/img/bLogin.png"
+                 alt=""></p>
           <span>发 现 美 好 生 活</span>
         </div>
         <ul>
@@ -269,23 +272,29 @@ export default {
         name: '分享',
         link: '/share'
       }, {
-        name: '特价'
+        name: '特价',
+        link: '/specialOffer'
       }, {
-        name: '拍卖'
+        name: '拍卖',
+        link: '/auction'
       }, {
-        name: '集市'
+        name: '集市',
+        link: '/market'
       }, {
-        name: '团购'
+        name: '团购',
+        link: '/groupBuying'
       }, {
-        name: '服务'
+        name: '服务',
+        link: '/service'
       }, {
-        name: '交友'
+        name: '交友',
+        link: '/friends'
       }, {
         name: '视频'
       }, {
         name: '社区'
       }],
-      routerIndex: ['homePage', 'shop', 'question', 'share'],
+      routerIndex: ['homePage', 'shop', 'question', 'share', 'specialOffer', 'auction', 'market', 'groupBuying', 'service', 'friends'],
       value: '',
       Aindex: 0,
       LocationProvince: "正在定位所在省",    //给渲染层定义一个初始值
@@ -368,6 +377,24 @@ export default {
 
 /deep/ .el-carousel__container {
   height: 100%;
+}
+
+.titleHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > img {
+    width: 227px;
+    margin-right: 10px;
+  }
+}
+
+.homeLogin {
+  display: flex;
+  align-items: center;
+  > img {
+    margin-right: 10px;
+  }
 }
 
 .bannerOrSearch {
