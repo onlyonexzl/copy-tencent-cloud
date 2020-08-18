@@ -32,7 +32,267 @@
           <div class="left"
                @click="change"
                v-if="flag">
-            <img src="../../assets/img/love.png"
+            <img style="width:20px; height: 20px"
+                 src="../../assets/img/love.png"
+                 alt="">
+            <p>已关注</p>
+          </div>
+          <div>
+            <img src="../../assets/img/xxi.png"
+                 alt="">
+            <p>聊天</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
+             alt="">
+        <p>默默大师</p>
+        <div class="tip">
+          30岁
+          <span>|</span>
+          巨蟹座
+          <span>|</span>
+          170cm
+        </div>
+        <div class="text">
+          每日拥有好心情每日好心情
+        </div>
+        <div class="bottom">
+          <div class="left o"
+               v-if="!flag"
+               @click="change">
+            <img src="../../assets/img/loveFalse.png"
+                 alt="">
+            <p>关注</p>
+          </div>
+          <div class="left"
+               @click="change"
+               v-if="flag">
+            <img style="width:20px; height: 20px"
+                 src="../../assets/img/love.png"
+                 alt="">
+            <p>已关注</p>
+          </div>
+          <div>
+            <img src="../../assets/img/xxi.png"
+                 alt="">
+            <p>聊天</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
+             alt="">
+        <p>默默大师</p>
+        <div class="tip">
+          30岁
+          <span>|</span>
+          巨蟹座
+          <span>|</span>
+          170cm
+        </div>
+        <div class="text">
+          每日拥有好心情每日好心情
+        </div>
+        <div class="bottom">
+          <div class="left o"
+               v-if="!flag"
+               @click="change">
+            <img src="../../assets/img/loveFalse.png"
+                 alt="">
+            <p>关注</p>
+          </div>
+          <div class="left"
+               @click="change"
+               v-if="flag">
+            <img style="width:20px; height: 20px"
+                 src="../../assets/img/love.png"
+                 alt="">
+            <p>已关注</p>
+          </div>
+          <div>
+            <img src="../../assets/img/xxi.png"
+                 alt="">
+            <p>聊天</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
+             alt="">
+        <p>默默大师</p>
+        <div class="tip">
+          30岁
+          <span>|</span>
+          巨蟹座
+          <span>|</span>
+          170cm
+        </div>
+        <div class="text">
+          每日拥有好心情每日好心情
+        </div>
+        <div class="bottom">
+          <div class="left o"
+               v-if="!flag"
+               @click="change">
+            <img src="../../assets/img/loveFalse.png"
+                 alt="">
+            <p>关注</p>
+          </div>
+          <div class="left"
+               @click="change"
+               v-if="flag">
+            <img style="width:20px; height: 20px"
+                 src="../../assets/img/love.png"
+                 alt="">
+            <p>已关注</p>
+          </div>
+          <div>
+            <img src="../../assets/img/xxi.png"
+                 alt="">
+            <p>聊天</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
+             alt="">
+        <p>默默大师</p>
+        <div class="tip">
+          30岁
+          <span>|</span>
+          巨蟹座
+          <span>|</span>
+          170cm
+        </div>
+        <div class="text">
+          每日拥有好心情每日好心情
+        </div>
+        <div class="bottom">
+          <div class="left o"
+               v-if="!flag"
+               @click="change">
+            <img src="../../assets/img/loveFalse.png"
+                 alt="">
+            <p>关注</p>
+          </div>
+          <div class="left"
+               @click="change"
+               v-if="flag">
+            <img style="width:20px; height: 20px"
+                 src="../../assets/img/love.png"
+                 alt="">
+            <p>已关注</p>
+          </div>
+          <div>
+            <img src="../../assets/img/xxi.png"
+                 alt="">
+            <p>聊天</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
+             alt="">
+        <p>默默大师</p>
+        <div class="tip">
+          30岁
+          <span>|</span>
+          巨蟹座
+          <span>|</span>
+          170cm
+        </div>
+        <div class="text">
+          每日拥有好心情每日好心情
+        </div>
+        <div class="bottom">
+          <div class="left o"
+               v-if="!flag"
+               @click="change">
+            <img src="../../assets/img/loveFalse.png"
+                 alt="">
+            <p>关注</p>
+          </div>
+          <div class="left"
+               @click="change"
+               v-if="flag">
+            <img style="width:20px; height: 20px"
+                 src="../../assets/img/love.png"
+                 alt="">
+            <p>已关注</p>
+          </div>
+          <div>
+            <img src="../../assets/img/xxi.png"
+                 alt="">
+            <p>聊天</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
+             alt="">
+        <p>默默大师</p>
+        <div class="tip">
+          30岁
+          <span>|</span>
+          巨蟹座
+          <span>|</span>
+          170cm
+        </div>
+        <div class="text">
+          每日拥有好心情每日好心情
+        </div>
+        <div class="bottom">
+          <div class="left o"
+               v-if="!flag"
+               @click="change">
+            <img src="../../assets/img/loveFalse.png"
+                 alt="">
+            <p>关注</p>
+          </div>
+          <div class="left"
+               @click="change"
+               v-if="flag">
+            <img style="width:20px; height: 20px"
+                 src="../../assets/img/love.png"
+                 alt="">
+            <p>已关注</p>
+          </div>
+          <div>
+            <img src="../../assets/img/xxi.png"
+                 alt="">
+            <p>聊天</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
+             alt="">
+        <p>默默大师</p>
+        <div class="tip">
+          30岁
+          <span>|</span>
+          巨蟹座
+          <span>|</span>
+          170cm
+        </div>
+        <div class="text">
+          每日拥有好心情每日好心情
+        </div>
+        <div class="bottom">
+          <div class="left o"
+               v-if="!flag"
+               @click="change">
+            <img src="../../assets/img/loveFalse.png"
+                 alt="">
+            <p>关注</p>
+          </div>
+          <div class="left"
+               @click="change"
+               v-if="flag">
+            <img style="width:20px; height: 20px"
+                 src="../../assets/img/love.png"
                  alt="">
             <p>已关注</p>
           </div>
@@ -69,6 +329,7 @@
                @click="change"
                v-if="flag">
             <img src="../../assets/img/love.png"
+                 style="width:20px; height: 20px"
                  alt="">
             <p>已关注</p>
           </div>
@@ -104,259 +365,8 @@
           <div class="left"
                @click="change"
                v-if="flag">
-            <img src="../../assets/img/love.png"
-                 alt="">
-            <p>已关注</p>
-          </div>
-          <div>
-            <img src="../../assets/img/xxi.png"
-                 alt="">
-            <p>聊天</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
-             alt="">
-        <p>默默大师</p>
-        <div class="tip">
-          30岁
-          <span>|</span>
-          巨蟹座
-          <span>|</span>
-          170cm
-        </div>
-        <div class="text">
-          每日拥有好心情每日好心情
-        </div>
-        <div class="bottom">
-          <div class="left o"
-               v-if="!flag"
-               @click="change">
-            <img src="../../assets/img/loveFalse.png"
-                 alt="">
-            <p>关注</p>
-          </div>
-          <div class="left"
-               @click="change"
-               v-if="flag">
-            <img src="../../assets/img/love.png"
-                 alt="">
-            <p>已关注</p>
-          </div>
-          <div>
-            <img src="../../assets/img/xxi.png"
-                 alt="">
-            <p>聊天</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
-             alt="">
-        <p>默默大师</p>
-        <div class="tip">
-          30岁
-          <span>|</span>
-          巨蟹座
-          <span>|</span>
-          170cm
-        </div>
-        <div class="text">
-          每日拥有好心情每日好心情
-        </div>
-        <div class="bottom">
-          <div class="left o"
-               v-if="!flag"
-               @click="change">
-            <img src="../../assets/img/loveFalse.png"
-                 alt="">
-            <p>关注</p>
-          </div>
-          <div class="left"
-               @click="change"
-               v-if="flag">
-            <img src="../../assets/img/love.png"
-                 alt="">
-            <p>已关注</p>
-          </div>
-          <div>
-            <img src="../../assets/img/xxi.png"
-                 alt="">
-            <p>聊天</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
-             alt="">
-        <p>默默大师</p>
-        <div class="tip">
-          30岁
-          <span>|</span>
-          巨蟹座
-          <span>|</span>
-          170cm
-        </div>
-        <div class="text">
-          每日拥有好心情每日好心情
-        </div>
-        <div class="bottom">
-          <div class="left o"
-               v-if="!flag"
-               @click="change">
-            <img src="../../assets/img/loveFalse.png"
-                 alt="">
-            <p>关注</p>
-          </div>
-          <div class="left"
-               @click="change"
-               v-if="flag">
-            <img src="../../assets/img/love.png"
-                 alt="">
-            <p>已关注</p>
-          </div>
-          <div>
-            <img src="../../assets/img/xxi.png"
-                 alt="">
-            <p>聊天</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
-             alt="">
-        <p>默默大师</p>
-        <div class="tip">
-          30岁
-          <span>|</span>
-          巨蟹座
-          <span>|</span>
-          170cm
-        </div>
-        <div class="text">
-          每日拥有好心情每日好心情
-        </div>
-        <div class="bottom">
-          <div class="left o"
-               v-if="!flag"
-               @click="change">
-            <img src="../../assets/img/loveFalse.png"
-                 alt="">
-            <p>关注</p>
-          </div>
-          <div class="left"
-               @click="change"
-               v-if="flag">
-            <img src="../../assets/img/love.png"
-                 alt="">
-            <p>已关注</p>
-          </div>
-          <div>
-            <img src="../../assets/img/xxi.png"
-                 alt="">
-            <p>聊天</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
-             alt="">
-        <p>默默大师</p>
-        <div class="tip">
-          30岁
-          <span>|</span>
-          巨蟹座
-          <span>|</span>
-          170cm
-        </div>
-        <div class="text">
-          每日拥有好心情每日好心情
-        </div>
-        <div class="bottom">
-          <div class="left o"
-               v-if="!flag"
-               @click="change">
-            <img src="../../assets/img/loveFalse.png"
-                 alt="">
-            <p>关注</p>
-          </div>
-          <div class="left"
-               @click="change"
-               v-if="flag">
-            <img src="../../assets/img/love.png"
-                 alt="">
-            <p>已关注</p>
-          </div>
-          <div>
-            <img src="../../assets/img/xxi.png"
-                 alt="">
-            <p>聊天</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
-             alt="">
-        <p>默默大师</p>
-        <div class="tip">
-          30岁
-          <span>|</span>
-          巨蟹座
-          <span>|</span>
-          170cm
-        </div>
-        <div class="text">
-          每日拥有好心情每日好心情
-        </div>
-        <div class="bottom">
-          <div class="left o"
-               v-if="!flag"
-               @click="change">
-            <img src="../../assets/img/loveFalse.png"
-                 alt="">
-            <p>关注</p>
-          </div>
-          <div class="left"
-               @click="change"
-               v-if="flag">
-            <img src="../../assets/img/love.png"
-                 alt="">
-            <p>已关注</p>
-          </div>
-          <div>
-            <img src="../../assets/img/xxi.png"
-                 alt="">
-            <p>聊天</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3396083117,1072163643&fm=26&gp=0.jpg"
-             alt="">
-        <p>默默大师</p>
-        <div class="tip">
-          30岁
-          <span>|</span>
-          巨蟹座
-          <span>|</span>
-          170cm
-        </div>
-        <div class="text">
-          每日拥有好心情每日好心情
-        </div>
-        <div class="bottom">
-          <div class="left o"
-               v-if="!flag"
-               @click="change">
-            <img src="../../assets/img/loveFalse.png"
-                 alt="">
-            <p>关注</p>
-          </div>
-          <div class="left"
-               @click="change"
-               v-if="flag">
-            <img src="../../assets/img/love.png"
+            <img style="width:20px; height: 20px"
+                 src="../../assets/img/love.png"
                  alt="">
             <p>已关注</p>
           </div>
@@ -509,6 +519,10 @@ export default {
           font-weight: 400;
           color: rgba(155, 155, 155, 1);
           line-height: 24px;
+          > img {
+            width: 22px !important;
+            height: 22px !important;
+          }
         }
       }
     }

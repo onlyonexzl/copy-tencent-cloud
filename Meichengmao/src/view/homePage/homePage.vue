@@ -217,16 +217,16 @@ export default {
       }
     }
     .tip {
-      margin-top: 80px;
-      margin-bottom: 79px;
+      margin-top: 60px;
+      margin-bottom: 59px;
       > span {
-        font-size: 42px;
+        font-size: 34px;
         font-family: PingFang SC;
         font-weight: bold;
         color: rgba(0, 0, 0, 1);
       }
       > p {
-        font-size: 27px;
+        font-size: 25px;
         font-family: PingFang SC;
         font-weight: 400;
         color: rgba(119, 119, 119, 1);

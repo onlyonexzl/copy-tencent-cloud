@@ -9,9 +9,9 @@
           <li> {{LocationProvince}}-{{LocationCity}}[切换]</li>
         </ul>
         <ul>
-          <li>登陆</li>
-          <li>注册</li>
-          <li>我的美城</li>
+          <li @click="goLogin">登陆</li>
+          <li @click="$router.push('/registered')">注册</li>
+          <li @click="$router.push('/myShopping/myOrder')">我的美城</li>
           <span>|</span>
           <li>购物车1件</li>
           <span>|</span>
@@ -25,7 +25,8 @@
         </ul>
       </div>
     </div>
-    <div class="bannerOrSearch">
+    <div class="
+              bannerOrSearch">
       <div class="icon"
            v-if="flag">
         <h1 class="titleHome"> <img src="../../assets/img/login.png"
@@ -35,7 +36,7 @@
            v-if="flag">
         <div class="left">
           <el-select v-model="selectV"
-                     style="width: 15%; border:none"
+                     style="width: 20%; border:none"
                      placeholder="请选择">
             <el-option v-for="item in options"
                        :key="item.value"
@@ -54,8 +55,10 @@
           <i class="el-icon-search"></i>
         </div>
       </div>
-      <div class="banner">
+      <div class="banner"
+           v-if="navFlag">
         <span v-for="(item, index) in banner"
+              style="border-bottom: solid 1px #fff"
               :class="Aindex === index ? 'active' : ''"
               @click="goDetial(item, index)"
               :key="index">
@@ -64,7 +67,7 @@
       </div>
     </div>
     <div class="carousel"
-         v-if="flag">
+         v-if="flag && bannerFlag">
       <el-carousel style="height: 450px">
         <el-carousel-item v-for="item in 4"
                           :key="item">
@@ -264,7 +267,7 @@ export default {
         link: '/homePage'
       }, {
         name: '商店',
-        link: '/shop'
+        link: '/shop/shopContent'
       }, {
         name: '问答',
         link: '/question'
@@ -290,12 +293,16 @@ export default {
         name: '交友',
         link: '/friends'
       }, {
-        name: '视频'
+        name: '视频',
+        link: '/video'
       }, {
-        name: '社区'
+        name: '社区',
+        link: '/community'
       }],
-      routerIndex: ['homePage', 'shop', 'question', 'share', 'specialOffer', 'auction', 'market', 'groupBuying', 'service', 'friends'],
+      routerIndex: ['homePage', 'shop', 'question', 'share', 'specialOffer', 'auction', 'market', 'groupBuying', 'service', 'friends', 'video', 'community'],
       value: '',
+      bannerFlag: true,
+      navFlag: true,
       Aindex: 0,
       LocationProvince: "正在定位所在省",    //给渲染层定义一个初始值
       LocationCity: "正在定位所在市",    //给渲染层定义一个初始值
@@ -326,9 +333,46 @@ export default {
     },
 
     changeFlag () {
-      let array = ['/question', '/share', '/share/shareDetails']
+      let array = [
+        '/share/shareDetails',
+        '/management',
+        '/myShopping/myOrder',
+        '/myShopping/knowledgeOrder',
+        '/myShopping/doubleOrder',
+        '/myShopping/returnChannel',
+        '/myShopping/myAuction',
+        '/myShopping/luckyDraw',
+        '/myShopping/coupon',
+        '/myShopping/credit',
+        '/myShopping/evaluate'
+      ]
       this.Aindex = this.routerIndex.indexOf(window.location.href.split('#')[1].split('/')[1])
       this.flag = array.indexOf(window.location.href.split('#')[1]) > -1 ? false : true
+    },
+
+    bannerFlags () {
+      let array = ['/login', '/password', '/registered', '/management']
+      this.bannerFlag = array.indexOf(window.location.href.split('#')[1]) > -1 ? false : true
+    },
+
+    navFlags () {
+      let array = [
+        '/management',
+        '/myShopping/myOrder',
+        '/myShopping/knowledgeOrder',
+        '/myShopping/doubleOrder',
+        '/myShopping/returnChannel',
+        '/myShopping/myAuction',
+        '/myShopping/luckyDraw',
+        '/myShopping/coupon',
+        '/myShopping/credit',
+        '/myShopping/evaluate'
+      ]
+      this.navFlag = array.indexOf(window.location.href.split('#')[1]) > -1 ? false : true
+    },
+
+    goLogin () {
+      this.$router.push('/login')
     }
   },
 
@@ -345,11 +389,15 @@ export default {
     }, { provider: 'baidu' });
 
     this.changeFlag()
+    this.bannerFlags()
+    this.navFlags()
   },
 
   watch: {
     $route (to, from) {
       this.changeFlag()
+      this.bannerFlags()
+      this.navFlags()
     }
   },
 }
@@ -357,16 +405,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.active {
-  cursor: pointer;
-  color: rgba(195, 171, 135, 1) !important;
-  border-bottom: solid 2px rgba(195, 171, 135, 1);
+.titleHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  padding-top: 20px;
+  > img {
+    width: 150px;
+    margin-right: 10px;
+  }
 }
 
-/deep/ .el-input--suffix .el-input__inner {
-  border-color: #fff !important;
+.homeLogin {
+  display: flex;
+  align-items: center;
+  > img {
+    margin-right: 10px;
+  }
 }
-
 /deep/ .el-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
 }
@@ -379,25 +436,17 @@ export default {
   height: 100%;
 }
 
-.titleHome {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  > img {
-    width: 227px;
-    margin-right: 10px;
-  }
-}
-
-.homeLogin {
-  display: flex;
-  align-items: center;
-  > img {
-    margin-right: 10px;
-  }
-}
-
 .bannerOrSearch {
+  .active {
+    cursor: pointer;
+    color: rgba(195, 171, 135, 1) !important;
+    border-bottom: solid 2px rgba(195, 171, 135, 1) !important;
+  }
+
+  /deep/ .el-input--suffix .el-input__inner {
+    border-color: #fff !important;
+  }
+
   width: 1190px;
   margin: 0 auto;
   text-align: center;
@@ -405,8 +454,8 @@ export default {
     margin: 16px 0 19px 0;
   }
   .search {
-    width: 646px;
-    height: 55px;
+    width: 550px;
+    height: 45px;
     margin: 0 auto;
     display: flex;
     border-radius: 28px;
@@ -423,7 +472,7 @@ export default {
       width: 113px;
       height: 100%;
       background: rgba(195, 171, 135, 1);
-      line-height: 55px;
+      line-height: 50px;
       text-align: center;
       font-size: 21px;
       font-family: PingFang SC;
@@ -445,7 +494,7 @@ export default {
     > span:hover {
       cursor: pointer;
       color: rgba(195, 171, 135, 1) !important;
-      border-bottom: solid 2px rgba(195, 171, 135, 1);
+      border-bottom: solid 2px rgba(195, 171, 135, 1) !important;
     }
   }
 }
@@ -465,11 +514,14 @@ export default {
 
       > p {
         font-size: 38px;
+        > img {
+          width: 200px;
+        }
       }
 
       > span {
         height: 21px;
-        font-size: 21px;
+        font-size: 18px;
         font-family: PingFang SC;
         font-weight: 400;
         color: rgba(255, 255, 255, 1);
@@ -484,16 +536,16 @@ export default {
       > li {
         width: 25%;
         > i {
-          width: 70px;
-          height: 71px;
-          font-size: 45px;
+          width: 50px;
+          height: 51px;
+          font-size: 25px;
           text-align: center;
-          line-height: 71px;
+          line-height: 51px;
           border: 2px solid rgba(255, 255, 255, 1);
           border-radius: 50%;
         }
         > p {
-          font-size: 28px;
+          font-size: 21px;
           font-family: PingFang SC;
           font-weight: bold;
           color: rgba(255, 255, 255, 1);
@@ -503,7 +555,7 @@ export default {
         }
 
         > span {
-          font-size: 17px;
+          font-size: 15px;
           font-family: PingFang SC;
           font-weight: 400;
           color: rgba(255, 255, 255, 1);
