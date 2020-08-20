@@ -14,7 +14,7 @@
                      alt="" />
               </div>
               <span v-if="!isCollapse"
-                    @click="geColund">个人管理中心</span>
+                    @click="geColund">我的美城</span>
             </div>
             <i class="el-icon-s-fold"
                v-if="!isCollapse"
@@ -23,6 +23,7 @@
           <el-menu :default-active="index_menu"
                    class="el-menu-vertical-demo"
                    @open="handleOpen"
+                   active-text-color="#c3ab87"
                    :unique-opened="true"
                    @close="handleClose"
                    :collapse="isCollapse">
@@ -205,7 +206,87 @@ export default {
         '/myShopping/luckyDraw',
         '/myShopping/coupon',
         '/myShopping/credit',
-        '/myShopping/evaluate'
+        '/myShopping/evaluate',
+        '/bellesLettres/article',
+        '/bellesLettres/release',
+        '/President/community',
+        '/participateIn/joinTheCommunity',
+        '/participateIn/myFriend',
+        '/participateIn/conversation',
+        '/participateIn/myComment',
+        '/participateIn/share',
+        '/ask/askList',
+        '/ask/commentList',
+        '/follow/followList',
+        '/mySocialLife/information',
+        '/mySocialLife/wantToBuy',
+        '/mySocialLife/informationVIP',
+        '/mySocialLife/wantToBuyVIP',
+        '/mySocialLife/leaveAmessage',
+        '/mySocialLife/myMessage',
+        '/myZhiyun/information',
+        '/myZhiyun/editInformation',
+        '/myZhiyun/wantToBuy',
+        '/myZhiyun/informationVIP',
+        '/myZhiyun/wantToBuyVIP',
+        '/myZhiyun/leaveAmessage',
+        '/myZhiyun/myMessage',
+        '/myZhiyun/orderList',
+        '/myZhiyun/returnChannel',
+        '/manufacturing/editInformation',
+        '/manufacturing/wantToBuy',
+        '/manufacturing/informationVIP',
+        '/manufacturing/wantToBuyVIP',
+        '/manufacturing/leaveAmessage',
+        '/manufacturing/myMessage',
+        '/manufacturing/orderList',
+        '/manufacturing/returnChannel',
+        '/meichengManagement/information', //----------------meichengManagement
+        '/meichengManagement/editInformation',
+        '/meichengManagement/wantToBuy',
+        '/meichengManagement/informationVIP',
+        '/meichengManagement/wantToBuyVIP',
+        '/meichengManagement/leaveAmessage',
+        '/meichengManagement/myMessage',
+        '/meichengManagement/orderList',
+        '/meichengManagement/returnChannel',
+        '/consulting/information', //----------------consulting
+        '/consulting/editInformation',
+        '/consulting/wantToBuy',
+        '/consulting/informationVIP',
+        '/consulting/wantToBuyVIP',
+        '/consulting/leaveAmessage',
+        '/consulting/myMessage',
+        '/consulting/orderList',
+        '/consulting/returnChannel',
+        '/innovation/information', //----------------meichengService
+        '/innovation/editInformation',
+        '/innovation/wantToBuy',
+        '/innovation/informationVIP',
+        '/innovation/wantToBuyVIP',
+        '/innovation/leaveAmessage',
+        '/innovation/myMessage',
+        '/innovation/orderList',
+        '/innovation/returnChannel',
+        '/meichengService/information', //----------------ventureCapital
+        '/meichengService/editInformation',
+        '/meichengService/wantToBuy',
+        '/meichengService/informationVIP',
+        '/meichengService/wantToBuyVIP',
+        '/meichengService/leaveAmessage',
+        '/meichengService/myMessage',
+        '/meichengService/orderList',
+        '/meichengService/returnChannel',
+        '/ventureCapital/information', //----------------ventureCapital
+        '/ventureCapital/editInformation',
+        '/ventureCapital/wantToBuy',
+        '/ventureCapital/informationVIP',
+        '/ventureCapital/wantToBuyVIP',
+        '/ventureCapital/leaveAmessage',
+        '/ventureCapital/myMessage',
+        '/ventureCapital/orderList',
+        '/ventureCapital/returnChannel',
+        '/myCollection'
       ];
 
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
@@ -217,6 +298,9 @@ export default {
     // 顶部t返回显示
     getTitleName () {
       const routerArray = [
+        '/bellesLettres/addArticle',
+        '/President/addCommunity',
+        '/mySocialLife/editInformation'
       ];
 
       this.flagTttName =
@@ -279,8 +363,6 @@ export default {
 }
 </script>
 
-<style lang="">
-</style>
 
 <style lang="scss" scoped>
 .el-aside {

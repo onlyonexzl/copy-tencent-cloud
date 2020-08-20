@@ -64,7 +64,7 @@ let navArr = [
         actions: [
           {
             name: '文章管理',
-            url: '/shopManagement/shopManagement',
+            url: '/bellesLettres/article',
             // parent: '/company/list'
           },
           // {
@@ -74,7 +74,7 @@ let navArr = [
           // },
           {
             name: '发布文章',
-            url: '/shopManagement/mobilePhoneBy',
+            url: '/bellesLettres/release',
           }
         ]
       }, {
@@ -85,34 +85,36 @@ let navArr = [
         menu: true,
         actions: [{
           name: '我的社区',
-          url: '/setUpShops/information'
+          url: '/President/community'
         }, {
           name: '成员管理',
-          url: '/setUpShops/settingService'
+          url: '/errorMessage'
         }, {
           name: '话题管理',
-          url: '/setUpShops/SMSSettings',
+          url: '/errorMessage',
         }, {
           name: '评论管理',
-          url: '/setUpShops/shopCertification'
+          url: '/errorMessage'
         }, {
           name: '我加入的社区',
-          url: '/setUpShops/theHttp'
+          url: '/participateIn/joinTheCommunity'
         }, {
           name: '我的好友',
-          url: '/setUpShops/theHttp'
+          url: '/participateIn/myFriend'
         }, {
           name: '我发表的话题',
-          url: '/setUpShops/theHttp'
+          url: '/participateIn/conversation'
         }, {
           name: '我发表的评论',
-          url: '/setUpShops/theHttp'
-        }, {
-          name: '我的参与',
-          url: '/setUpShops/theHttp'
-        }, {
+          url: '/participateIn/myComment'
+        },
+        // {
+        //   name: '我的参与',
+        //   url: '/setUpShops/theHttp'
+        // }, 
+        {
           name: '时光管理',
-          url: '/setUpShops/theHttp'
+          url: '/participateIn/share'
         }]
       }, {
         id: 'PROVIDER_LIST',
@@ -122,10 +124,10 @@ let navArr = [
         menu: true,
         actions: [{
           name: '问答列表',
-          url: '/developManagement/imageManagement'
+          url: '/ask/askList'
         }, {
           name: '评论列表',
-          url: '/developManagement/taobaoConversion'
+          url: '/ask/commentList'
         }
           // {
           //   name: '微信菜单管理',
@@ -141,7 +143,7 @@ let navArr = [
         menu: true,
         actions: [{
           name: '关注列表',
-          url: '/developManagement/imageManagement'
+          url: '/follow/followList'
         }
           // {
           //   name: '微信菜单管理',
@@ -179,22 +181,22 @@ let navArr = [
         menu: true,
         actions: [{
           name: '供应信息',
-          url: '/commodity/conventionalKnowledge'
+          url: '/mySocialLife/information'
         }, {
           name: '求购信息',
-          url: '/commodity/productsKnowledge'
+          url: '/mySocialLife/wantToBuy'
         }, {
           name: '供应信息_vip',
-          url: '/commodity/spellMassGoods'
+          url: '/mySocialLife/informationVIP'
         }, {
           name: '求购信息_vip',
-          url: '/commodity/rebateGoods'
+          url: '/mySocialLife/wantToBuyVIP'
         }, {
           name: '我给别人的留言',
-          url: '/commodity/secondsKillGoods'
+          url: '/mySocialLife/leaveAmessage'
         }, {
           name: '别人给我的留言',
-          url: '/commodity/bulkGoods'
+          url: '/mySocialLife/myMessage'
         }]
       }
     ]
@@ -213,31 +215,246 @@ let navArr = [
         actions: [
           {
             name: '供应信息',
-            url: '/transactionManagement/magazineManagement'
-          },
-          {
+            url: '/myZhiyun/information'
+          }, {
             name: '求购信息',
-            url: '/transactionManagement/customerOrder'
-          },
-          {
+            url: '/myZhiyun/wantToBuy'
+          }, {
             name: '供应信息_vip',
-            url: '/transactionManagement/returnsChannel'
-          },
-          {
+            url: '/myZhiyun/informationVIP'
+          }, {
             name: '求购信息_vip',
-            url: '/transactionManagement/spellGroupOrder'
-          },
-          {
+            url: '/myZhiyun/wantToBuyVIP'
+          }, {
             name: '我给别人的留言',
-            url: '/transactionManagement/toApplyFor'
-          },
-          {
+            url: '/myZhiyun/leaveAmessage'
+          }, {
             name: '别人给我的留言',
-            url: '/transactionManagement/spellGroupReturns'
+            url: '/myZhiyun/myMessage'
           },
           {
             name: '供应信息订单列表',
-            url: '/transactionManagement/logisticsTools'
+            url: '/myZhiyun/orderList'
+          },
+          {
+            name: '退货通道',
+            url: '/myZhiyun/returnChannel'
+          }
+        ]
+      },
+      {
+        id: 'IOT_REPORT',
+        name: '我的美城智造',
+        icon: 'el-icon-link',
+        url: '/report/main',
+        menu: true,
+        actions: [
+          {
+            name: '供应信息',
+            url: '/manufacturing/information'
+          }, {
+            name: '求购信息',
+            url: '/manufacturing/wantToBuy'
+          }, {
+            name: '供应信息_vip',
+            url: '/manufacturing/informationVIP'
+          }, {
+            name: '求购信息_vip',
+            url: '/manufacturing/wantToBuyVIP'
+          }, {
+            name: '我给别人的留言',
+            url: '/manufacturing/leaveAmessage'
+          }, {
+            name: '别人给我的留言',
+            url: '/manufacturing/myMessage'
+          },
+          {
+            name: '供应信息订单列表',
+            url: '/manufacturing/orderList'
+          },
+          {
+            name: '退货通道',
+            url: '/manufacturing/returnChannel'
+          }
+        ]
+      },
+      {
+        id: 'IOT_REPORT',
+        name: '我的美城管理',
+        icon: 'el-icon-link',
+        url: '/report/main',
+        menu: true,
+        actions: [
+          {
+            name: '供应信息',
+            url: '/meichengManagement/information'
+          }, {
+            name: '求购信息',
+            url: '/meichengManagement/wantToBuy'
+          }, {
+            name: '供应信息_vip',
+            url: '/meichengManagement/informationVIP'
+          }, {
+            name: '求购信息_vip',
+            url: '/meichengManagement/wantToBuyVIP'
+          }, {
+            name: '我给别人的留言',
+            url: '/meichengManagement/leaveAmessage'
+          }, {
+            name: '别人给我的留言',
+            url: '/meichengManagement/myMessage'
+          },
+          {
+            name: '供应信息订单列表',
+            url: '/meichengManagement/orderList'
+          },
+          {
+            name: '退货通道',
+            url: '/meichengManagement/returnChannel'
+          }
+        ]
+      },
+      {
+        id: 'IOT_REPORT',
+        name: '我的美城咨询',
+        icon: 'el-icon-link',
+        url: '/report/main',
+        menu: true,
+        actions: [
+          {
+            name: '供应信息',
+            url: '/consulting/information'
+          }, {
+            name: '求购信息',
+            url: '/consulting/wantToBuy'
+          }, {
+            name: '供应信息_vip',
+            url: '/consulting/informationVIP'
+          }, {
+            name: '求购信息_vip',
+            url: '/consulting/wantToBuyVIP'
+          }, {
+            name: '我给别人的留言',
+            url: '/consulting/leaveAmessage'
+          }, {
+            name: '别人给我的留言',
+            url: '/consulting/myMessage'
+          },
+          {
+            name: '供应信息订单列表',
+            url: '/consulting/orderList'
+          },
+          {
+            name: '退货通道',
+            url: '/consulting/returnChannel'
+          }
+        ]
+      },
+      {
+        id: 'IOT_REPORT',
+        name: '我的美城创新',
+        icon: 'el-icon-link',
+        url: '/report/main',
+        menu: true,
+        actions: [
+          {
+            name: '供应信息',
+            url: '/innovation/information'
+          }, {
+            name: '求购信息',
+            url: '/innovation/wantToBuy'
+          }, {
+            name: '供应信息_vip',
+            url: '/innovation/informationVIP'
+          }, {
+            name: '求购信息_vip',
+            url: '/innovation/wantToBuyVIP'
+          }, {
+            name: '我给别人的留言',
+            url: '/innovation/leaveAmessage'
+          }, {
+            name: '别人给我的留言',
+            url: '/innovation/myMessage'
+          },
+          {
+            name: '供应信息订单列表',
+            url: '/innovation/orderList'
+          },
+          {
+            name: '退货通道',
+            url: '/innovation/returnChannel'
+          }
+        ]
+      },
+      {
+        id: 'IOT_REPORT',
+        name: '我的美城服务',
+        icon: 'el-icon-link',
+        url: '/report/main',
+        menu: true,
+        actions: [
+          {
+            name: '供应信息',
+            url: '/meichengService/information'
+          }, {
+            name: '求购信息',
+            url: '/meichengService/wantToBuy'
+          }, {
+            name: '供应信息_vip',
+            url: '/meichengService/informationVIP'
+          }, {
+            name: '求购信息_vip',
+            url: '/meichengService/wantToBuyVIP'
+          }, {
+            name: '我给别人的留言',
+            url: '/meichengService/leaveAmessage'
+          }, {
+            name: '别人给我的留言',
+            url: '/meichengService/myMessage'
+          },
+          {
+            name: '供应信息订单列表',
+            url: '/meichengService/orderList'
+          },
+          {
+            name: '退货通道',
+            url: '/meichengService/returnChannel'
+          }
+        ]
+      },
+      {
+        id: 'IOT_REPORT',
+        name: '我的美城创投',
+        icon: 'el-icon-link',
+        url: '/report/main',
+        menu: true,
+        actions: [
+          {
+            name: '供应信息',
+            url: '/ventureCapital/information'
+          }, {
+            name: '求购信息',
+            url: '/ventureCapital/wantToBuy'
+          }, {
+            name: '供应信息_vip',
+            url: '/ventureCapital/informationVIP'
+          }, {
+            name: '求购信息_vip',
+            url: '/ventureCapital/wantToBuyVIP'
+          }, {
+            name: '我给别人的留言',
+            url: '/ventureCapital/leaveAmessage'
+          }, {
+            name: '别人给我的留言',
+            url: '/ventureCapital/myMessage'
+          },
+          {
+            name: '供应信息订单列表',
+            url: '/ventureCapital/orderList'
+          },
+          {
+            name: '退货通道',
+            url: '/ventureCapital/returnChannel'
           }
         ]
       }
@@ -257,7 +474,7 @@ let navArr = [
         actions: [
           {
             name: "我的收藏",
-            url: "/marketingManagement/couponManagement"
+            url: "/myCollection"
           }
         ]
       }

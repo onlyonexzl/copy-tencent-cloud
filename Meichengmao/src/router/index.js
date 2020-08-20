@@ -108,6 +108,12 @@ export default new Router({
         component: (resolve) =>
           require(['@/view/management/management'], resolve),
         children: [{
+          path: '/errorMessage',
+          name: 'errorMessage',
+          component: (resolve) =>
+            require(['@/view/management/errorMessage'], resolve),
+          // meta: ['我的购物', '我的购物', '我的订单']
+        }, {
           path: '/myShopping/myOrder',
           name: 'myOrder',
           component: (resolve) =>
@@ -161,6 +167,504 @@ export default new Router({
           component: (resolve) =>
             require(['@/view/management/myShopping/evaluate'], resolve),
           meta: ['我的购物', '我的购物', '评价商家']
+        }, {
+          path: '/bellesLettres/article',
+          name: 'article',
+          component: (resolve) =>
+            require(['@/view/management/myContent/bellesLettres/article'], resolve),
+          meta: ['我的内容', '美文管理', '文章管理']
+        }, {
+          path: '/bellesLettres/addArticle',
+          name: 'addArticle',
+          component: (resolve) =>
+            require(['@/view/management/myContent/bellesLettres/addArticle'], resolve),
+          meta: ['我的内容', '美文管理', '发布文章']
+        }, {
+          path: '/bellesLettres/release',
+          name: 'release',
+          component: (resolve) =>
+            require(['@/view/management/myContent/bellesLettres/release'], resolve),
+          meta: ['我的内容', '美文管理', '发布文章']
+        }, {
+          path: '/President/community',
+          name: 'community',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/President/community'], resolve),
+          meta: ['我的内容', '社区管理', '我是社长', '我的社区']
+        }, {
+          path: '/President/addCommunity',
+          name: 'addCommunity',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/President/addCommunity'], resolve),
+          // meta: ['我的内容', '社区管理', '我是社长', '我的社区']
+        }, {
+          path: '/participateIn/joinTheCommunity',
+          name: 'joinTheCommunity',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/participateIn/joinTheCommunity'], resolve),
+          meta: ['我的内容', '社区管理', '我的参与', '我加入的社区']
+        }, {
+          path: '/participateIn/myFriend',
+          name: 'myFriend',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/participateIn/myFriend'], resolve),
+          meta: ['我的内容', '社区管理', '我的参与', '我的好友']
+        }, {
+          path: '/participateIn/conversation',
+          name: 'conversation',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/participateIn/conversation'], resolve),
+          meta: ['我的内容', '社区管理', '我的参与', '我发表的话题']
+        }, {
+          path: '/participateIn/myComment',
+          name: 'myComment',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/participateIn/myComment'], resolve),
+          meta: ['我的内容', '社区管理', '我的参与', '我发表的评论']
+        }, {
+          path: '/participateIn/share',
+          name: 'share',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/participateIn/share'], resolve),
+          meta: ['我的内容', '社区管理', '我的参与', '时光管理']
+        }, {
+          path: '/ask/askList',
+          name: 'askList',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/ask/askList'], resolve),
+          meta: ['我的内容', '社区管理', '问答管理', '问答列表']
+        }, {
+          path: '/ask/commentList',
+          name: 'commentList',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/ask/commentList'], resolve),
+          meta: ['我的内容', '社区管理', '问答管理', '评论列表']
+        }, {
+          path: '/follow/followList',
+          name: 'followList',
+          component: (resolve) =>
+            require(['@/view/management/myContent/community/follow/followList'], resolve),
+          meta: ['我的内容', '社区管理', '关注管理', '关注列表']
+        }, {
+          path: '/mySocialLife/information',
+          name: 'information',
+          component: (resolve) =>
+            require(['@/view/management/mySocialLife/information'], resolve),
+          meta: ['我的社交', '我的社交', '供应信息']
+        }, {
+          path: '/mySocialLife/editInformation',
+          name: 'editInformation',
+          component: (resolve) =>
+            require(['@/view/management/mySocialLife/editInformation'], resolve),
+          // meta: ['我的社交', '我的社交', '供应信息']
+        }, {
+          path: '/mySocialLife/wantToBuy',
+          name: 'wantToBuy',
+          component: (resolve) =>
+            require(['@/view/management/mySocialLife/wantToBuy'], resolve),
+          meta: ['我的社交', '我的社交', '求购信息']
+        }, {
+          path: '/mySocialLife/informationVIP',
+          name: 'informationVIP',
+          component: (resolve) =>
+            require(['@/view/management/mySocialLife/informationVIP'], resolve),
+          meta: ['我的社交', '我的社交', '供应信息VIP']
+        }, {
+          path: '/mySocialLife/wantToBuyVIP',
+          name: 'wantToBuyVIP',
+          component: (resolve) =>
+            require(['@/view/management/mySocialLife/wantToBuyVIP'], resolve),
+          meta: ['我的社交', '我的社交', '求购信息VIP']
+        }, {
+          path: '/mySocialLife/leaveAmessage',
+          name: 'leaveAmessage',
+          component: (resolve) =>
+            require(['@/view/management/mySocialLife/leaveAmessage'], resolve),
+          meta: ['我的社交', '我的社交', '我给别人的留言']
+        }, {
+          path: '/mySocialLife/myMessage',
+          name: 'myMessage',
+          component: (resolve) =>
+            require(['@/view/management/mySocialLife/myMessage'], resolve),
+          meta: ['我的社交', '我的社交', '别人给我的留言']
+
+        }, { // -----------------
+          path: '/myZhiyun/information',
+          name: 'information',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengMarketing/information'], resolve),
+          meta: ['我的智云', '我的美城营销', '供应信息']
+        }, {
+          path: '/myZhiyun/editInformation',
+          name: 'editInformation',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengMarketing/editInformation'], resolve),
+        }, {
+          path: '/myZhiyun/wantToBuy',
+          name: 'wantToBuy',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengMarketing/wantToBuy'], resolve),
+          meta: ['我的智云', '我的美城营销', '求购信息']
+        }, {
+          path: '/myZhiyun/informationVIP',
+          name: 'informationVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengMarketing/informationVIP'], resolve),
+          meta: ['我的智云', '我的美城营销', '供应信息VIP']
+        }, {
+          path: '/myZhiyun/wantToBuyVIP',
+          name: 'wantToBuyVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengMarketing/wantToBuyVIP'], resolve),
+          meta: ['我的智云', '我的美城营销', '求购信息VIP']
+        }, {
+          path: '/myZhiyun/leaveAmessage',
+          name: 'leaveAmessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengMarketing/leaveAmessage'], resolve),
+          meta: ['我的智云', '我的美城营销', '我给别人的留言']
+        }, {
+          path: '/myZhiyun/myMessage',
+          name: 'myMessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengMarketing/myMessage'], resolve),
+          meta: ['我的智云', '我的美城营销', '别人给我的留言']
+        }, {
+          path: '/myZhiyun/orderList',
+          name: 'orderList',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengMarketing/orderList'], resolve),
+          meta: ['我的智云', '我的美城营销', '供应信息订单列表']
+        }, {
+          path: '/myZhiyun/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengMarketing/returnChannel'], resolve),
+          meta: ['我的智云', '我的美城营销', '退货通道']
+        }, { // -------------------------------------------------------------------------------------------
+          path: '/manufacturing/information',
+          name: 'information',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/manufacturing/information'], resolve),
+          meta: ['我的智云', '我的美城智造', '供应信息']
+        }, {
+          path: '/manufacturing/editInformation',
+          name: 'editInformation',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/manufacturing/editInformation'], resolve),
+        }, {
+          path: '/manufacturing/wantToBuy',
+          name: 'wantToBuy',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/manufacturing/wantToBuy'], resolve),
+          meta: ['我的智云', '我的美城智造', '求购信息']
+        }, {
+          path: '/manufacturing/informationVIP',
+          name: 'informationVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/manufacturing/informationVIP'], resolve),
+          meta: ['我的智云', '我的美城智造', '供应信息VIP']
+        }, {
+          path: '/manufacturing/wantToBuyVIP',
+          name: 'wantToBuyVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/manufacturing/wantToBuyVIP'], resolve),
+          meta: ['我的智云', '我的美城智造', '求购信息VIP']
+        }, {
+          path: '/manufacturing/leaveAmessage',
+          name: 'leaveAmessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/manufacturing/leaveAmessage'], resolve),
+          meta: ['我的智云', '我的美城智造', '我给别人的留言']
+        }, {
+          path: '/manufacturing/myMessage',
+          name: 'myMessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/manufacturing/myMessage'], resolve),
+          meta: ['我的智云', '我的美城智造', '别人给我的留言']
+        }, {
+          path: '/manufacturing/orderList',
+          name: 'orderList',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/manufacturing/orderList'], resolve),
+          meta: ['我的智云', '我的美城智造', '供应信息订单列表']
+        }, {
+          path: '/manufacturing/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/manufacturing/returnChannel'], resolve),
+          meta: ['我的智云', '我的美城智造', '退货通道']
+        }, { // -------------------------------------------------------------------------------------------
+          path: '/meichengManagement/information',
+          name: 'information',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengManagement/information'], resolve),
+          meta: ['我的智云', '我的美城管理', '供应信息']
+        }, {
+          path: '/meichengManagement/editInformation',
+          name: 'editInformation',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengManagement/editInformation'], resolve),
+        }, {
+          path: '/meichengManagement/wantToBuy',
+          name: 'wantToBuy',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengManagement/wantToBuy'], resolve),
+          meta: ['我的智云', '我的美城管理', '求购信息']
+        }, {
+          path: '/meichengManagement/informationVIP',
+          name: 'informationVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengManagement/informationVIP'], resolve),
+          meta: ['我的智云', '我的美城管理', '供应信息VIP']
+        }, {
+          path: '/meichengManagement/wantToBuyVIP',
+          name: 'wantToBuyVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengManagement/wantToBuyVIP'], resolve),
+          meta: ['我的智云', '我的美城管理', '求购信息VIP']
+        }, {
+          path: '/meichengManagement/leaveAmessage',
+          name: 'leaveAmessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengManagement/leaveAmessage'], resolve),
+          meta: ['我的智云', '我的美城管理', '我给别人的留言']
+        }, {
+          path: '/meichengManagement/myMessage',
+          name: 'myMessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengManagement/myMessage'], resolve),
+          meta: ['我的智云', '我的美城管理', '别人给我的留言']
+        }, {
+          path: '/meichengManagement/orderList',
+          name: 'orderList',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengManagement/orderList'], resolve),
+          meta: ['我的智云', '我的美城管理', '供应信息订单列表']
+        }, {
+          path: '/meichengManagement/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengManagement/returnChannel'], resolve),
+          meta: ['我的智云', '我的美城管理', '退货通道']
+        }, { // -------------------------------------------------------------------------------------------
+          path: '/consulting/information',
+          name: 'information',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/consulting/information'], resolve),
+          meta: ['我的智云', '我的美城咨询', '供应信息']
+        }, {
+          path: '/consulting/editInformation',
+          name: 'editInformation',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/consulting/editInformation'], resolve),
+        }, {
+          path: '/consulting/wantToBuy',
+          name: 'wantToBuy',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/consulting/wantToBuy'], resolve),
+          meta: ['我的智云', '我的美城咨询', '求购信息']
+        }, {
+          path: '/consulting/informationVIP',
+          name: 'informationVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/consulting/informationVIP'], resolve),
+          meta: ['我的智云', '我的美城咨询', '供应信息VIP']
+        }, {
+          path: '/consulting/wantToBuyVIP',
+          name: 'wantToBuyVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/consulting/wantToBuyVIP'], resolve),
+          meta: ['我的智云', '我的美城咨询', '求购信息VIP']
+        }, {
+          path: '/consulting/leaveAmessage',
+          name: 'leaveAmessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/consulting/leaveAmessage'], resolve),
+          meta: ['我的智云', '我的美城咨询', '我给别人的留言']
+        }, {
+          path: '/consulting/myMessage',
+          name: 'myMessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/consulting/myMessage'], resolve),
+          meta: ['我的智云', '我的美城咨询', '别人给我的留言']
+        }, {
+          path: '/consulting/orderList',
+          name: 'orderList',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/consulting/orderList'], resolve),
+          meta: ['我的智云', '我的美城咨询', '供应信息订单列表']
+        }, {
+          path: '/consulting/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/consulting/returnChannel'], resolve),
+          meta: ['我的智云', '我的美城咨询', '退货通道']
+        }, { // -------------------------------------------------------------------------------------------
+          path: '/innovation/information',
+          name: 'information',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/innovation/information'], resolve),
+          meta: ['我的智云', '我的美城创新', '供应信息']
+        }, {
+          path: '/innovation/editInformation',
+          name: 'editInformation',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/innovation/editInformation'], resolve),
+        }, {
+          path: '/innovation/wantToBuy',
+          name: 'wantToBuy',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/innovation/wantToBuy'], resolve),
+          meta: ['我的智云', '我的美城创新', '求购信息']
+        }, {
+          path: '/innovation/informationVIP',
+          name: 'informationVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/innovation/informationVIP'], resolve),
+          meta: ['我的智云', '我的美城创新', '供应信息VIP']
+        }, {
+          path: '/innovation/wantToBuyVIP',
+          name: 'wantToBuyVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/innovation/wantToBuyVIP'], resolve),
+          meta: ['我的智云', '我的美城创新', '求购信息VIP']
+        }, {
+          path: '/innovation/leaveAmessage',
+          name: 'leaveAmessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/innovation/leaveAmessage'], resolve),
+          meta: ['我的智云', '我的美城创新', '我给别人的留言']
+        }, {
+          path: '/innovation/myMessage',
+          name: 'myMessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/innovation/myMessage'], resolve),
+          meta: ['我的智云', '我的美城创新', '别人给我的留言']
+        }, {
+          path: '/innovation/orderList',
+          name: 'orderList',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/innovation/orderList'], resolve),
+          meta: ['我的智云', '我的美城创新', '供应信息订单列表']
+        }, {
+          path: '/innovation/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/innovation/returnChannel'], resolve),
+          meta: ['我的智云', '我的美城创新', '退货通道']
+        }, { // -------------------------------------------------------------------------------------------
+          path: '/meichengService/information',
+          name: 'information',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengService/information'], resolve),
+          meta: ['我的智云', '我的美城服务', '供应信息']
+        }, {
+          path: '/meichengService/editInformation',
+          name: 'editInformation',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengService/editInformation'], resolve),
+        }, {
+          path: '/meichengService/wantToBuy',
+          name: 'wantToBuy',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengService/wantToBuy'], resolve),
+          meta: ['我的智云', '我的美城服务', '求购信息']
+        }, {
+          path: '/meichengService/informationVIP',
+          name: 'informationVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengService/informationVIP'], resolve),
+          meta: ['我的智云', '我的美城服务', '供应信息VIP']
+        }, {
+          path: '/meichengService/wantToBuyVIP',
+          name: 'wantToBuyVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengService/wantToBuyVIP'], resolve),
+          meta: ['我的智云', '我的美城服务', '求购信息VIP']
+        }, {
+          path: '/meichengService/leaveAmessage',
+          name: 'leaveAmessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengService/leaveAmessage'], resolve),
+          meta: ['我的智云', '我的美城服务', '我给别人的留言']
+        }, {
+          path: '/meichengService/myMessage',
+          name: 'myMessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengService/myMessage'], resolve),
+          meta: ['我的智云', '我的美城服务', '别人给我的留言']
+        }, {
+          path: '/meichengService/orderList',
+          name: 'orderList',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengService/orderList'], resolve),
+          meta: ['我的智云', '我的美城服务', '供应信息订单列表']
+        }, {
+          path: '/meichengService/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/meichengService/returnChannel'], resolve),
+          meta: ['我的智云', '我的美城服务', '退货通道']
+        }, { // -------------------------------------------------------------------------------------------
+          path: '/ventureCapital/information',
+          name: 'information',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/ventureCapital/information'], resolve),
+          meta: ['我的智云', '我的美城创投', '供应信息']
+        }, {
+          path: '/ventureCapital/editInformation',
+          name: 'editInformation',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/ventureCapital/editInformation'], resolve),
+        }, {
+          path: '/ventureCapital/wantToBuy',
+          name: 'wantToBuy',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/ventureCapital/wantToBuy'], resolve),
+          meta: ['我的智云', '我的美城创投', '求购信息']
+        }, {
+          path: '/ventureCapital/informationVIP',
+          name: 'informationVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/ventureCapital/informationVIP'], resolve),
+          meta: ['我的智云', '我的美城创投', '供应信息VIP']
+        }, {
+          path: '/ventureCapital/wantToBuyVIP',
+          name: 'wantToBuyVIP',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/ventureCapital/wantToBuyVIP'], resolve),
+          meta: ['我的智云', '我的美城创投', '求购信息VIP']
+        }, {
+          path: '/ventureCapital/leaveAmessage',
+          name: 'leaveAmessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/ventureCapital/leaveAmessage'], resolve),
+          meta: ['我的智云', '我的美城创投', '我给别人的留言']
+        }, {
+          path: '/ventureCapital/myMessage',
+          name: 'myMessage',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/ventureCapital/myMessage'], resolve),
+          meta: ['我的智云', '我的美城创投', '别人给我的留言']
+        }, {
+          path: '/ventureCapital/orderList',
+          name: 'orderList',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/ventureCapital/orderList'], resolve),
+          meta: ['我的智云', '我的美城创投', '供应信息订单列表']
+        }, {
+          path: '/ventureCapital/returnChannel',
+          name: 'returnChannel',
+          component: (resolve) =>
+            require(['@/view/management/myZhiyun/ventureCapital/returnChannel'], resolve),
+          meta: ['我的智云', '我的美城创投', '退货通道']
+        }, {
+          path: '/myCollection',
+          name: 'myCollection',
+          component: (resolve) =>
+            require(['@/view/management/myCollection/myCollection'], resolve),
+          meta: ['我的收藏', '我的收藏']
         }]
       }]
     }
