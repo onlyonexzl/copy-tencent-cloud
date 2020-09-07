@@ -69,9 +69,11 @@
     <div class="carousel"
          v-if="flag && bannerFlag">
       <el-carousel style="height: 450px">
-        <el-carousel-item v-for="item in 4"
-                          :key="item">
-          <h3 class="small">{{ item }}</h3>
+        <el-carousel-item v-for="(item, index) in bannerList"
+                          :key="index">
+          <img :src="item.img"
+               style="width: 100%; height: 100%"
+               alt="">
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -320,6 +322,7 @@ export default {
         label: '资讯'
       }],
       selectV: '全部',
+      bannerList: []
     }
   },
 
@@ -429,7 +432,22 @@ export default {
         '/ventureCapital/myMessage',
         '/ventureCapital/orderList',
         '/ventureCapital/returnChannel',
-        '/myCollection'
+        '/myCollection',
+        '/myMoney/browse',
+        '/myMoney/creditDetails',
+        '/myMoney/capitalDetails',
+        '/myMoney/editadvertisingManagement',
+        '/myAccount/address',
+        '/myAccount/addAddress',
+        '/myAccount/modifyData',
+        '/myPromotion/iWantTo',
+        '/myPromotion/promotionMembers',
+        '/myPromotion/promotionDetails',
+        '/myPromotion/ofCommodities',
+        '/myPromotion/promotionList',
+        '/myPass/myPass',
+        '/myPass/passOrder',
+        '/shop/shopDetailPage'
       ]
       console.log(window.location.href.split('#')[1].split('?')[0])
       this.Aindex = this.routerIndex.indexOf(window.location.href.split('#')[1].split('/')[1])
@@ -537,13 +555,41 @@ export default {
         '/ventureCapital/myMessage',
         '/ventureCapital/orderList',
         '/ventureCapital/returnChannel',
-        '/myCollection'
+        '/myCollection',
+        '/myMoney/browse',
+        '/myMoney/creditDetails',
+        '/myMoney/capitalDetails',
+        '/myMoney/editadvertisingManagement',
+        '/myAccount/address',
+        '/myAccount/addAddress',
+        '/myAccount/modifyData',
+        '/myPromotion/iWantTo',
+        '/myPromotion/promotionMembers',
+        '/myPromotion/promotionDetails',
+        '/myPromotion/ofCommodities',
+        '/myPromotion/promotionList',
+        '/myPass/myPass',
+        '/myPass/passOrder'
       ]
       this.navFlag = array.indexOf(window.location.href.split('#')[1].split('?')[0]) > -1 ? false : true
     },
 
     goLogin () {
       this.$router.push('/login')
+    },
+
+    getAxios () {
+      // this.$api.getMusicList().then(res => {
+      //   console.log(res)
+      // })
+      this.$api.POST_BANNER().then(res => {
+        this.bannerList = res.data
+      }).catch(res => {
+        this.$message({
+          message: res.data.err_msg,
+          type: 'warning'
+        });
+      })
     }
   },
 
@@ -562,6 +608,7 @@ export default {
     this.changeFlag()
     this.bannerFlags()
     this.navFlags()
+    this.getAxios()
   },
 
   watch: {

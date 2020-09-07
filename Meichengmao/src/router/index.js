@@ -38,6 +38,11 @@ export default new Router({
         component: (resolve) =>
           require(['@/view/question/question'], resolve),
       }, {
+        path: '/shop/shopDetailPage',
+        name: 'shopDetailPage',
+        component: (resolve) =>
+          require(['@/view/shop/shopDetailPage'], resolve),
+      }, {
         path: '/share',
         name: 'share',
         component: (resolve) =>
@@ -665,6 +670,89 @@ export default new Router({
           component: (resolve) =>
             require(['@/view/management/myCollection/myCollection'], resolve),
           meta: ['我的收藏', '我的收藏']
+        }, {
+          path: '/myMoney/browse',
+          name: 'browse',
+          component: (resolve) =>
+            require(['@/view/management/myMoney/browse'], resolve),
+          meta: ['我的资金', '我的资金', '账户浏览']
+        }, {
+          path: '/myMoney/creditDetails',
+          name: 'creditDetails',
+          component: (resolve) =>
+            require(['@/view/management/myMoney/creditDetails'], resolve),
+          meta: ['我的资金', '我的资金', '积分明细']
+        }, {
+          path: '/myMoney/capitalDetails',
+          name: 'capitalDetails',
+          component: (resolve) =>
+            require(['@/view/management/myMoney/capitalDetails'], resolve),
+          meta: ['我的资金', '我的资金', '资金明细']
+        }, {
+          path: '/myMoney/editadvertisingManagement',
+          name: 'editadvertisingManagement',
+          component: (resolve) =>
+            require(['@/view/management/myMoney/editadvertisingManagement'], resolve),
+          meta: ['我的资金', '我的资金', '帮助中心']
+        }, {
+          path: '/myAccount/address',
+          name: 'address',
+          component: (resolve) =>
+            require(['@/view/management/myAccount/address'], resolve),
+          meta: ['我的账号', '我的账号', '收货地址']
+        }, {
+          path: '/myAccount/addAddress',
+          name: 'addAddress',
+          component: (resolve) =>
+            require(['@/view/management/myAccount/addAddress'], resolve),
+        }, {
+          path: '/myAccount/modifyData',
+          name: 'modifyData',
+          component: (resolve) =>
+            require(['@/view/management/myAccount/modifyData'], resolve),
+          meta: ['我的账号', '我的账号', '修改资料']
+        }, {
+          path: '/myPromotion/iWantTo',
+          name: 'iWantTo',
+          component: (resolve) =>
+            require(['@/view/management/myPromotion/iWantTo'], resolve),
+          meta: ['我的推广', '我的推广', '我要推广']
+        }, {
+          path: '/myPromotion/promotionMembers',
+          name: 'promotionMembers',
+          component: (resolve) =>
+            require(['@/view/management/myPromotion/promotionMembers'], resolve),
+          meta: ['我的推广', '我的推广', '我要推广会员']
+        }, {
+          path: '/myPromotion/promotionDetails',
+          name: 'promotionDetails',
+          component: (resolve) =>
+            require(['@/view/management/myPromotion/promotionDetails'], resolve),
+          meta: ['我的推广', '我的推广', '我要推广明细']
+        }, {
+          path: '/myPromotion/ofCommodities',
+          name: 'ofCommodities',
+          component: (resolve) =>
+            require(['@/view/management/myPromotion/ofCommodities'], resolve),
+          meta: ['我的推广', '我的推广', '我要推广商品']
+        }, {
+          path: '/myPromotion/promotionList',
+          name: 'promotionList',
+          component: (resolve) =>
+            require(['@/view/management/myPromotion/promotionList'], resolve),
+          meta: ['我的推广', '我的推广', '我要推广列表']
+        }, {
+          path: '/myPass/myPass',
+          name: 'myPass',
+          component: (resolve) =>
+            require(['@/view/management/myPass/myPass'], resolve),
+          meta: ['我的推广', '我的通证', '我要通证']
+        }, {
+          path: '/myPass/passOrder',
+          name: 'passOrder',
+          component: (resolve) =>
+            require(['@/view/management/myPass/passOrder'], resolve),
+          meta: ['我的推广', '我的通证', '通证订单']
         }]
       }]
     }

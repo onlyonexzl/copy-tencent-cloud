@@ -494,18 +494,15 @@ let navArr = [
         actions: [
           {
             name: '帐户概览',
-            url: '/group/add',
-            parent: '/group/list'
+            url: '/myMoney/browse'
           },
           {
             name: '积分明细',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/myMoney/creditDetails',
           },
           {
             name: '资金明细',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/myMoney/capitalDetails',
           }
         ]
       }
@@ -525,18 +522,15 @@ let navArr = [
         actions: [
           {
             name: '收货地址',
-            url: '/group/add',
-            parent: '/group/list'
+            url: '/myAccount/address'
           },
           {
             name: '修改资料',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/myAccount/modifyData'
           },
           {
             name: '短消息',
-            url: '/group/edit',
-            parent: '/group/list'
+            url: '/group/edit'
           }
         ]
       }
@@ -556,123 +550,123 @@ let navArr = [
         actions: [
           {
             name: "我要推广",
-            url: "/throughTheManagement/throughTheManagement"
+            url: "/myPromotion/iWantTo"
           },
           {
             name: "我的推广会员",
-            url: "/throughTheManagement/throughDd"
+            url: "/myPromotion/promotionMembers"
           },
           {
             name: "我的推广明细",
-            url: "/throughTheManagement/throughDd"
+            url: "/myPromotion/promotionDetails"
           },
           {
             name: "商品库列表",
-            url: "/throughTheManagement/throughDd"
+            url: "/myPromotion/promotionList"
           },
           {
             name: "我的推广商品",
-            url: "/throughTheManagement/throughDd"
+            url: "/myPromotion/ofCommodities"
           }
         ]
       }
     ]
   },
-  {
-    id: "SYSTEM",
-    name: "我是会员",
-    icon: "el-icon-setting",
-    subset: [
-      {
-        id: 'ADMIN_LIST',
-        name: "营销管理",
-        icon: "el-icon-user",
-        url: "/admin/list",
-        menu: true,
-        actions: [
-          {
-            name: "优惠卷管理",
-            url: "/admin/add",
-            parent: '/admin/list'
-          },
-          {
-            name: "积分汇专区",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "广告管理",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "自定义区域",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "商品排行",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "品牌管理",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          },
-          {
-            name: "水印设置",
-            url: "/admin/edit",
-            parent: '/admin/list'
-          }
-        ]
-      },
-      // {
-      //   id: 'ROLE_LIST',
-      //   name: "角色列表",
-      //   icon: "el-icon-edit",
-      //   url: "/role/list",
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: "新增角色",
-      //   //     url: "/role/add",
-      //   //     parent: '/role/list'
-      //   //   },
-      //   //   {
-      //   //     name: "修改角色",
-      //   //     url: "/role/edit",
-      //   //     parent: '/role/list'
-      //   //   },
-      //   //   {
-      //   //     name: "菜单功能权限",
-      //   //     url: "/role/menus",
-      //   //     parent: '/role/list'
-      //   //   }
-      //   // ]
-      // },
-      // {
-      //   id: 'MENU_LIST',
-      //   name: "菜单列表",
-      //   icon: "el-icon-edit",
-      //   url: "/menu/list",
-      //   menu: true,
-      //   // actions: [
-      //   //   {
-      //   //     name: "新增菜单",
-      //   //     url: "/menu/add",
-      //   //     parent: '/menu/list'
-      //   //   },
-      //   //   {
-      //   //     name: "修改菜单",
-      //   //     url: "/menu/edit",
-      //   //     parent: '/menu/list'
-      //   //   }
-      //   // ]
-      // }
+  // {
+  //   id: "SYSTEM",
+  //   name: "我是会员",
+  //   icon: "el-icon-setting",
+  //   subset: [
+  //     {
+  //       id: 'ADMIN_LIST',
+  //       name: "营销管理",
+  //       icon: "el-icon-user",
+  //       url: "/admin/list",
+  //       menu: true,
+  //       actions: [
+  //         {
+  //           name: "优惠卷管理",
+  //           url: "/admin/add",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "积分汇专区",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "广告管理",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "自定义区域",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "商品排行",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "品牌管理",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         },
+  //         {
+  //           name: "水印设置",
+  //           url: "/admin/edit",
+  //           parent: '/admin/list'
+  //         }
+  //       ]
+  //     },
+  //     // {
+  //     //   id: 'ROLE_LIST',
+  //     //   name: "角色列表",
+  //     //   icon: "el-icon-edit",
+  //     //   url: "/role/list",
+  //     //   menu: true,
+  //     //   // actions: [
+  //     //   //   {
+  //     //   //     name: "新增角色",
+  //     //   //     url: "/role/add",
+  //     //   //     parent: '/role/list'
+  //     //   //   },
+  //     //   //   {
+  //     //   //     name: "修改角色",
+  //     //   //     url: "/role/edit",
+  //     //   //     parent: '/role/list'
+  //     //   //   },
+  //     //   //   {
+  //     //   //     name: "菜单功能权限",
+  //     //   //     url: "/role/menus",
+  //     //   //     parent: '/role/list'
+  //     //   //   }
+  //     //   // ]
+  //     // },
+  //     // {
+  //     //   id: 'MENU_LIST',
+  //     //   name: "菜单列表",
+  //     //   icon: "el-icon-edit",
+  //     //   url: "/menu/list",
+  //     //   menu: true,
+  //     //   // actions: [
+  //     //   //   {
+  //     //   //     name: "新增菜单",
+  //     //   //     url: "/menu/add",
+  //     //   //     parent: '/menu/list'
+  //     //   //   },
+  //     //   //   {
+  //     //   //     name: "修改菜单",
+  //     //   //     url: "/menu/edit",
+  //     //   //     parent: '/menu/list'
+  //     //   //   }
+  //     //   // ]
+  //     // }
 
-    ]
-  },
+  //   ]
+  // },
   {
     id: "SYSTEM",
     name: "我的通证",
@@ -687,13 +681,11 @@ let navArr = [
         actions: [
           {
             name: "我的通证",
-            url: "/admin/add",
-            parent: '/admin/list'
+            url: "/myPass/myPass",
           },
           {
             name: "通证订单",
-            url: "/admin/edit",
-            parent: '/admin/list'
+            url: "/myPass/passOrder",
           }
         ]
       }

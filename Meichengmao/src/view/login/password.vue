@@ -24,6 +24,15 @@
                       v-model="ruleForm.checkPass"
                       autocomplete="off"></el-input>
           </el-form-item>
+          <el-form-item label="确认密码"
+                        v-if="!seleCtChange"
+                        prop="newcheckPass">
+            <el-input type="password"
+                      placeholder='登录密码'
+                      show-password
+                      v-model="ruleForm.newcheckPass"
+                      autocomplete="off"></el-input>
+          </el-form-item>
           <el-form-item label="手机号"
                         v-if="seleCtChange"
                         prop="phe">
@@ -84,6 +93,14 @@ export default {
         callback();
       }
     }
+    var newvalidatePass2 = (rule, value, callback) => {
+      if (value === '') {
+        callback(new Error('请确认密码'));
+      } else {
+        callback();
+      }
+    }
+
     var phenum = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请填写手机号'));
@@ -110,15 +127,21 @@ export default {
       ruleForm: {
         pass: '',
         checkPass: '',
+        newcheckPass: '',
         phe: '',
-        getNum: ''
+        getNum: '',
       },
+      phone: '',
+      code: '',
       rules: {
         pass: [
           { validator: validatePass, trigger: 'blur' }
         ],
         checkPass: [
           { validator: validatePass2, trigger: 'blur' }
+        ],
+        newcheckPass: [
+          { validator: newvalidatePass2, trigger: 'blur' }
         ],
         phe: [
           { validator: phenum, trigger: 'blur' }
@@ -160,16 +183,37 @@ export default {
         });
         return false;
       }
-      if (!this.thenum) return false
-      this.thenum = false
-      let time = setInterval(() => {
-        if (this.num === 0) {
-          window.clearInterval(time)
-          this.thenum = true
-          this.num = 60
+
+      this.$api.POST_FYCODE({ mobile: this.ruleForm.phe }).then(res => {
+        if (res.data.err_code !== 400) {
+          this.$message({
+            message: res.data.msg,
+            type: 'success'
+          });
+          this.code = res.data.code
+          // this.ruleForm.code = res.data.code
+          // if (!this.thenum) return false
+          this.thenum = false
+          let time = setInterval(() => {
+            if (this.num === 0) {
+              window.clearInterval(time)
+              this.thenum = true
+              this.num = 60
+            }
+            this.num--
+          }, 1000);
+        } else {
+          this.$message({
+            message: res.data.err_msg,
+            type: 'warning'
+          });
         }
-        this.num--
-      }, 1000);
+      }).catch(res => {
+        this.$message({
+          message: res.data.err_msg,
+          type: 'warning'
+        });
+      })
       // } else {
       //   console.log('error submit!!');
       //   return false;
@@ -183,11 +227,26 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           if (this.seleCtChange) {
-            this.$refs.ruleForm.resetFields();
-            this.seleCtChange = !this.seleCtChange
+            if (this.ruleForm.getNum === this.code) {
+              // 记录手机号 登陆code
+              this.phone = this.ruleForm.phe
+              this.$refs.ruleForm.resetFields();
+              this.seleCtChange = !this.seleCtChange
+            }
           } else {
-            alert('submit!');
+            this.POST_LOSTPASSWD({
+              login_id: this.phone,
+              pass1: this.checkPass,
+              pass2: this.newcheckPass,
+              mobile_code: this.code
+            }).then(res => {
 
+            }).catch(res => {
+              this.$message({
+                message: res.data.err_msg,
+                type: 'warning'
+              });
+            })
           }
         } else {
           console.log('error submit!!');

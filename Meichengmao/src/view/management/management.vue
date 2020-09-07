@@ -286,7 +286,20 @@ export default {
         '/ventureCapital/myMessage',
         '/ventureCapital/orderList',
         '/ventureCapital/returnChannel',
-        '/myCollection'
+        '/myCollection',
+        '/myMoney/browse',
+        '/myMoney/creditDetails',
+        '/myMoney/capitalDetails',
+        '/myMoney/editadvertisingManagement',
+        '/myAccount/address',
+        '/myAccount/modifyData',
+        '/myPromotion/iWantTo',
+        '/myPromotion/promotionMembers',
+        '/myPromotion/promotionDetails',
+        '/myPromotion/ofCommodities',
+        '/myPromotion/promotionList',
+        '/myPass/myPass',
+        '/myPass/passOrder'
       ];
 
       this.flagtit = routerArray.indexOf(this.$route.path) > -1 ? true : false;
@@ -300,7 +313,8 @@ export default {
       const routerArray = [
         '/bellesLettres/addArticle',
         '/President/addCommunity',
-        '/mySocialLife/editInformation'
+        '/mySocialLife/editInformation',
+        '/myAccount/addAddress'
       ];
 
       this.flagTttName =

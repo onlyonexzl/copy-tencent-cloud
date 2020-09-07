@@ -165,27 +165,43 @@ export default {
       if (!this.ruleForm.phe.length) {
         this.$message({
           message: '请填写手机号',
-          type: 'warning'
+          type: 'danger'
         });
         return
       }
       if (!myreg.test(this.ruleForm.phe)) {
         this.$message({
           message: '请填写正确的手机号',
-          type: 'warning'
+          type: 'danger'
         });
         return false;
       }
-      if (!this.thenum) return false
-      this.thenum = false
-      let time = setInterval(() => {
-        if (this.num === 0) {
-          window.clearInterval(time)
-          this.thenum = true
-          this.num = 60
+
+      this.$api.POST_PHCODE({ mobile: this.ruleForm.phe }).then(res => {
+        if (res.data.err_code !== 400) {
+          this.$message({
+            message: res.data.msg,
+            type: 'success'
+          });
+          this.ruleForm.code = res.data.code
+          // if (!this.thenum) return false
+          this.thenum = false
+          let time = setInterval(() => {
+            if (this.num === 0) {
+              window.clearInterval(time)
+              this.thenum = true
+              this.num = 60
+            }
+            this.num--
+          }, 1000);
+        } else {
+          this.$message({
+            message: res.data.err_msg,
+            type: 'warning'
+          });
         }
-        this.num--
-      }, 1000);
+      })
+
       // } else {
       //   console.log('error submit!!');
       //   return false;
@@ -198,7 +214,55 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          alert('submit!');
+          if (this.seleCtChange) {
+            this.$api.POST_PASLOGIN({
+              login_id: this.ruleForm.pass,
+              login_pass: this.ruleForm.checkPass,
+              platform: 'PC',
+            }).then(res => {
+              if (res.data.err_code !== 400) {
+                this.$message({
+                  message: res.data.msg,
+                  type: 'success'
+                });
+              } else {
+                this.$message({
+                  message: res.data.err_msg,
+                  type: 'warning'
+                });
+              }
+            })
+              .catch(res => {
+                this.$message({
+                  message: res.data.err_msg,
+                  type: 'warning'
+                });
+              })
+          } else {
+            this.$api.POST_PHLOGIN({
+              login_id: this.ruleForm.phe,
+              mobile_code: this.ruleForm.getNum,
+              platform: 'PC',
+            }).then(res => {
+              if (res.data.err_code !== 400) {
+                this.$message({
+                  message: res.data.msg,
+                  type: 'success'
+                });
+              } else {
+                this.$message({
+                  message: res.data.err_msg,
+                  type: 'warning'
+                });
+              }
+            })
+              .catch(res => {
+                this.$message({
+                  message: res.data.err_msg,
+                  type: 'warning'
+                });
+              })
+          }
         } else {
           console.log('error submit!!');
           return false;

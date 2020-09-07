@@ -15,11 +15,12 @@
                  label-width="100px"
                  class="demo-ruleForm">
           <el-form-item label="手机号"
-                        prop="phe">
+                        required
+                        prop="mobile">
             <el-input type="input"
                       clearable
                       placeholder='建议使用常用手机'
-                      v-model="ruleForm.phe">
+                      v-model="ruleForm.mobile">
             </el-input>
           </el-form-item>
           <el-form-item label="验证码"
@@ -69,6 +70,7 @@
                       v-model="ruleForm.emial"></el-input>
           </el-form-item> -->
           <el-form-item label="所在地区"
+                        v-if="false"
                         prop="region">
             <div style="width:100%; display: flex">
               <el-select v-model="ruleForm.province"
@@ -148,10 +150,11 @@ export default {
 
     return {
       ruleForm: {
-        phe: '',
+        mobile: '',
+        code: '',
         getNum: '',
         user: '',
-        emial: '',
+        // emial: '',
         newpwd: '',
         pwd: '',
         province: '',
@@ -162,7 +165,7 @@ export default {
       thenum: true,
 
       rules: {
-        phe: [
+        mobile: [
           { required: true, validator: phenum, trigger: 'blur' }
         ],
         getNum: [
@@ -175,10 +178,10 @@ export default {
           { required: true, message: '请填写联系邮箱', trigger: 'blur' }
         ],
         newpwd: [
-          { type: 'date', required: true, message: '请填写二次密码', trigger: 'blur' }
+          { required: true, message: '请填写二次密码', trigger: 'blur' }
         ],
         pwd: [
-          { type: 'date', required: true, message: '请填写密码', trigger: 'blur' }
+          { required: true, message: '请填写密码', trigger: 'blur' }
         ],
         province: [
           { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
@@ -214,9 +217,23 @@ export default {
     },
 
     submitForm (formName) {
-      this.$refs[formName].validate((valid) => {
+      this.$refs.ruleForm.validate((valid) => {
         if (valid) {
           alert('submit!');
+          this.$api.getMusicList({
+            login_id: this.ruleForm.user,
+            pass1: this.ruleForm.newpwd,
+            mobile_code: this.ruleForm.getNum,
+          }).then(res => {
+            if (res.err_code !== 400) {
+
+            } else {
+              this.$message({
+                message: res.data.err_msg,
+                type: 'warning'
+              });
+            }
+          })
         } else {
           console.log('error submit!!');
           return false;
@@ -227,31 +244,45 @@ export default {
     getSeleNum () {
       var myreg = /^[1][3,4,5,7,8,9][0-9]{9}$/;
 
-      if (!this.ruleForm.phe.length) {
+      if (!this.ruleForm.mobile.length) {
         this.$message({
           message: '请输入手机号',
           type: 'warning'
         });
         return
       }
-      if (!myreg.test(this.ruleForm.phe)) {
+      if (!myreg.test(this.ruleForm.mobile)) {
         this.$message({
           message: '请输入正确的手机号',
           type: 'warning'
         });
         return false;
       }
-      if (!this.thenum) return false
-      this.thenum = false
-      let time = setInterval(() => {
-        if (this.num === 0) {
-          window.clearInterval(time)
-          this.thenum = true
-          this.num = 60
-        }
-        this.num--
-      }, 1000);
 
+      this.$api.getPthomeCode({ mobile: this.ruleForm.mobile }).then(res => {
+        if (res.data.err_code !== 400) {
+          this.$message({
+            message: res.data.msg,
+            type: 'success'
+          });
+          this.ruleForm.code = res.data.code
+          if (!this.thenum) return false
+          this.thenum = false
+          let time = setInterval(() => {
+            if (this.num === 0) {
+              window.clearInterval(time)
+              this.thenum = true
+              this.num = 60
+            }
+            this.num--
+          }, 1000);
+        } else {
+          this.$message({
+            message: res.data.err_msg,
+            type: 'warning'
+          });
+        }
+      })
     },
   },
 

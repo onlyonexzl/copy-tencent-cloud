@@ -3,18 +3,29 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+const globalApi = require('../src/request/globalApi')
 
+console.log(globalApi.devUrl)
 module.exports = {
   dev: {
 
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/': {
+        target: globalApi.devUrl,
+        changeOrigin: true,
+        secure: false,
+        pathRewrite: {
+          '/api': globalApi.localUrl
+        }
+      }
+    },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: globalApi.localHost, // can be overwritten by process.env.HOST
+    port: globalApi.localPort, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,

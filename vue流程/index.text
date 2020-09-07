@@ -1,0 +1,18 @@
+Win+R 后，在运行bai框里输入cmd确定就行了
+打开终端
+
+1.vue运行是基于node环境的,构建vue框架之前,需要确保node环境安装成功
+  https://nodejs.org/zh-cn/
+  node -v以后显示了版本号
+2.安装vue-cli
+  cnpm install -g vue-cli,
+  安装好以后,命令框npm -v ,检测是否安装成功
+3.进入项目文件夹
+  输入 npm install
+4.npm run dev  
+  运行项目
+
+------------------
+打包项目
+
+1.打包项目  npm run builld

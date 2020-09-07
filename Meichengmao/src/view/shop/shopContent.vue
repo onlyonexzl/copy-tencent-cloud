@@ -7,7 +7,8 @@
           <span @click="goDetil">查看更多 <i class="el-icon-arrow-right"></i></span>
         </div>
         <div class="img">
-          <div class="left">
+          <div class="left"
+               @click="$router.push('/shop/shopDetailPage')">
             <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=449491736,484517162&fm=26&gp=0.jpg"
                  alt="">
           </div>
